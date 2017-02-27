@@ -1,0 +1,13 @@
+Instructions for Archiving this project into an SDSoC Platform:
+===================================================================
+
+1) Open project in Vivado like normal using create_project.tcl
+2) Archive the project. Uncheck "Use config options" and "Include runs".
+3) Decompress the new archive
+4) Open the .xpr in a text editor change the line below so that it matches:
+
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/Arty_Z7_20.ipdefs/vivado-boards/new/board_files"/>
+	
+5) Save and close the .xpr file
+6) Copy the vivado-boards folder (from Digilent github repo) into the Arty_Z7_20.ipdefs folder. Delete all board files except the one used by the project
+7) You can now copy the entire project folder over to the SDSoC platform
