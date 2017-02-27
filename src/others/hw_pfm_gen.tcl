@@ -2,7 +2,7 @@
 
 #First run source -notrace <SDSoC Install dir>/scripts/vivado/sdsoc_pfm.tcl
 
-set pfm [sdsoc::create_pfm Arty_Z7_20_hw.pfm]
+set pfm [sdsoc::create_pfm Arty_Z7_20.hpfm]
 sdsoc::pfm_name $pfm "digilentinc.com" "xd" "Arty_Z7_20" "1.0"
 sdsoc::pfm_description $pfm "Arty Z7-20 Board"
 sdsoc::pfm_clock $pfm FCLK_CLK0 processing_system7_0 0 true rst_processing_system7_0_100M
