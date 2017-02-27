@@ -1,0 +1,23 @@
+Instructions for Creating an SDSoC Platform using these files:
+===================================================================
+***This will only work on SamB's computer for now due to platform_builder.xml***
+***To fix this you need to edit the file and change all abosolute paths      ***
+
+1) Open SDx Terminal 2016.4 (in Windows)
+2) cd into a directory with a very short filepath (e.g. "C:/work/temp/")
+3) execute sdspfm -gui
+4) In the GUI, open the platform_builder.xml project.
+
+* FYI, here is where all files come from:
+	boot_*/*.bif -- handwritten
+	lscript.ld -- Generated from a simple helloworld project in sdk with heap and stack increased
+	boot/fsbl.elf -- Included in the sdk folder of this project.
+
+5) Click Generate
+6) copy the vivado-boards folder included here to output\Arty_Z7_20\hw\vivado\Arty_Z7_20.ipdefs\
+7) Open output\Arty_Z7_20\hw\vivado\Arty_Z7_20.xpr in a text editor and change the line below so that it matches:
+
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/Arty_Z7_20.ipdefs/vivado-boards/new/board_files"/>
+	
+8) Save and close the .xpr file
+9) The platform is now ready!
