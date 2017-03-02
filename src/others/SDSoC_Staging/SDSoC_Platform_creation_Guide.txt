@@ -12,6 +12,7 @@ Instructions for Creating an SDSoC Platform using these files:
 	boot_*/*.bif -- handwritten
 	lscript.ld -- Generated from a simple helloworld project in sdk with heap and stack increased
 	boot/fsbl.elf -- Included in the sdk folder of this project.
+	lib_bsp and include_bsp -- from displaydemo_bsp in sdk folder
 
 5) Click Generate
 6) copy the vivado-boards folder included here to output\Arty_Z7_20\hw\vivado\Arty_Z7_20.ipdefs\
@@ -20,4 +21,14 @@ Instructions for Creating an SDSoC Platform using these files:
     <Option Name="BoardPartRepoPaths" Val="$PPRDIR/Arty_Z7_20.ipdefs/vivado-boards/new/board_files"/>
 	
 8) Save and close the .xpr file
-9) The platform is now ready!
+9) If the Vivado IPI project was not changed since the last build you can skip this step. Otherwise you will 
+   need to take the platform, build a simple project in SDSoC with it, and copy the files as indicated on page
+   23 of ug1146 to the prebuilt_platform folder.
+10) Copy the prebuilt_platform folder to the output\Arty_Z7_20\sw\ folder.
+11) Open output\Arty_Z7_20\sw\Arty_Z7_20.spfm and add the following line before every instance of </sdx:configuration>:
+
+<sdx:prebuilt sdx:data="prebuilt_platform"/>
+
+12) Save and close the file.    
+
+13) The platform is now ready!
