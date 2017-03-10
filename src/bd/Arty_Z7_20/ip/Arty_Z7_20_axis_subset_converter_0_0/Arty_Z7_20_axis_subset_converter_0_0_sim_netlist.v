@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Feb 24 16:00:31 2017
+// Date        : Fri Feb 24 16:00:30 2017
 // Host        : WK73 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim
-//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axis_subset_converter_0_0/Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_axis_subset_converter_0_0 -prefix
+//               Arty_Z7_20_axis_subset_converter_0_0_ Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.v
 // Design      : Arty_Z7_20_axis_subset_converter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -131,7 +131,7 @@ endmodule
 (* G_MASK_SS_TDEST = "64" *) (* G_MASK_SS_TID = "32" *) (* G_MASK_SS_TKEEP = "8" *) 
 (* G_MASK_SS_TLAST = "16" *) (* G_MASK_SS_TREADY = "1" *) (* G_MASK_SS_TSTRB = "4" *) 
 (* G_MASK_SS_TUSER = "128" *) (* G_TASK_SEVERITY_ERR = "2" *) (* G_TASK_SEVERITY_INFO = "0" *) 
-(* G_TASK_SEVERITY_WARNING = "1" *) (* ORIG_REF_NAME = "top_Arty_Z7_20_axis_subset_converter_0_0" *) 
+(* G_TASK_SEVERITY_WARNING = "1" *) 
 module Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0
    (aclk,
     aresetn,

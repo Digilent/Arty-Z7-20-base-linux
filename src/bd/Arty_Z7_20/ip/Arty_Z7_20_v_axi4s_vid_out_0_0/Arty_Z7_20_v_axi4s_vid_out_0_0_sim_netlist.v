@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Feb 24 16:05:07 2017
+// Date        : Fri Feb 24 16:05:05 2017
 // Host        : WK73 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim
-//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_v_axi4s_vid_out_0_0/Arty_Z7_20_v_axi4s_vid_out_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_v_axi4s_vid_out_0_0 -prefix
+//               Arty_Z7_20_v_axi4s_vid_out_0_0_ Arty_Z7_20_v_axi4s_vid_out_0_0_sim_netlist.v
 // Design      : Arty_Z7_20_v_axi4s_vid_out_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -157,7 +157,7 @@ endmodule
 (* C_HAS_ASYNC_CLK = "1" *) (* C_HYSTERESIS_LEVEL = "12" *) (* C_NATIVE_COMPONENT_WIDTH = "8" *) 
 (* C_NATIVE_DATA_WIDTH = "24" *) (* C_PIXELS_PER_CLOCK = "1" *) (* C_SYNC_LOCK_THRESHOLD = "4" *) 
 (* C_S_AXIS_COMPONENT_WIDTH = "8" *) (* C_S_AXIS_TDATA_WIDTH = "24" *) (* C_VTG_MASTER_SLAVE = "1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "v_axi4s_vid_out_v4_0_5" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5
    (aclk,
     aclken,
@@ -337,7 +337,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5
         .vtg_vsync(vtg_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "v_axi4s_vid_out_v4_0_5_coupler" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_coupler
    (dout,
     overflow,
@@ -995,7 +994,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_coupler
         .O(s_axis_video_tready));
 endmodule
 
-(* ORIG_REF_NAME = "v_axi4s_vid_out_v4_0_5_formatter" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_formatter
    (vid_active_video,
     vid_vsync,
@@ -1359,7 +1357,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_formatter
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "v_axi4s_vid_out_v4_0_5_sync" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_sync
    (fifo_eol_dly,
     fifo_sof_dly,
@@ -4349,7 +4346,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_v_axi4s_vid_out_v4_0_5_sync
         .R(vid_io_out_reset));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_generic_cstr
    (dout,
     wr_clk,
@@ -4418,7 +4414,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_generic_cstr
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_prim_width
    (dout,
     wr_clk,
@@ -4559,7 +4554,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_prim_width__parameterized1
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_prim_wrapper
    (dout,
     wr_clk,
@@ -5330,7 +5324,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_prim_wrapper__parameterized1
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_top
    (dout,
     wr_clk,
@@ -5377,7 +5370,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_top
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_5" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_v8_3_5
    (dout,
     wr_clk,
@@ -5424,7 +5416,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_v8_3_5
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_5_synth" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_v8_3_5_synth
    (dout,
     wr_clk,
@@ -5471,7 +5462,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_blk_mem_gen_v8_3_5_synth
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_clk_x_pntrs
    (S,
     WR_PNTR_RD,
@@ -6010,7 +6000,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_clk_x_pntrs
         .O(S[0]));
 endmodule
 
-(* ORIG_REF_NAME = "compare" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_compare
    (comp1,
     Q,
@@ -6378,7 +6367,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_compare_5
         .O(v1_reg[5]));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_ramfifo
    (wr_rst_busy,
     dout,
@@ -6516,7 +6504,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_ramfifo
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_top
    (wr_rst_busy,
     dout,
@@ -6642,7 +6629,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "12" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "12" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "12" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "12" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_3" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_v13_1_3
    (backup,
     backup_marker,
@@ -7679,7 +7666,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_v13_1_3
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_3_synth" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_v13_1_3_synth
    (wr_rst_busy,
     dout,
@@ -7738,7 +7724,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_fifo_generator_v13_1_3_synth
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_memory
    (dout,
     wr_clk,
@@ -7785,7 +7770,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_memory
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_bin_cntr
    (D,
     Q,
@@ -8194,7 +8178,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_bin_cntr
         .O(I4[9]));
 endmodule
 
-(* ORIG_REF_NAME = "rd_dc_fwft_ext_as" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_dc_fwft_ext_as
    (rd_data_count,
     WR_PNTR_RD,
@@ -8553,7 +8536,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_dc_fwft_ext_as
         .O(plusOp_carry_i_4_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_fwft
    (out,
     empty,
@@ -8762,7 +8744,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_fwft
         .O(p_1_out));
 endmodule
 
-(* ORIG_REF_NAME = "rd_handshaking_flags" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_handshaking_flags
    (underflow,
     p_1_out,
@@ -8785,7 +8766,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_handshaking_flags
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_logic
    (empty,
     underflow,
@@ -8882,7 +8862,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_logic
         .rd_clk(rd_clk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_status_flags_as
    (out,
     rd_clk,
@@ -8957,7 +8936,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_rd_status_flags_as
         .Q(ram_empty_i));
 endmodule
 
-(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_reset_blk_ramfifo
    (out,
     \gc0.count_reg[0] ,
@@ -9180,7 +9158,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_reset_blk_ramfifo
         .Q(wr_rst_reg[2]));
 endmodule
 
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
@@ -10158,7 +10135,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_synchronizer_ff__parameterized3
         .O(\gnxpm_cdc.rd_pntr_bin_reg[10] [9]));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_bin_cntr
    (D,
     Q,
@@ -10666,7 +10642,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_bin_cntr
         .O(bin2gray[9]));
 endmodule
 
-(* ORIG_REF_NAME = "wr_handshaking_flags" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_handshaking_flags
    (overflow,
     wr_clk,
@@ -10703,7 +10678,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_handshaking_flags
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_logic
    (full,
     overflow,
@@ -10770,7 +10744,6 @@ module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_logic
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module Arty_Z7_20_v_axi4s_vid_out_0_0_wr_status_flags_as
    (full,
     out,

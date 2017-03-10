@@ -77,7 +77,6 @@ ENTITY Arty_Z7_20_axi_gpio_shield_1_0 IS
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    ip2intc_irpt : OUT STD_LOGIC;
     gpio_io_i : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
     gpio_io_o : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
     gpio_io_t : OUT STD_LOGIC_VECTOR(13 DOWNTO 0)
@@ -139,7 +138,7 @@ ARCHITECTURE Arty_Z7_20_axi_gpio_shield_1_0_arch OF Arty_Z7_20_axi_gpio_shield_1
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Arty_Z7_20_axi_gpio_shield_1_0_arch : ARCHITECTURE IS "Arty_Z7_20_axi_gpio_shield_1_0,axi_gpio,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF Arty_Z7_20_axi_gpio_shield_1_0_arch: ARCHITECTURE IS "Arty_Z7_20_axi_gpio_shield_1_0,axi_gpio,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=14,C_GPIO2_WIDTH=32,C_ALL_INPUTS=0,C_ALL_INPUTS_2=0,C_ALL_OUTPUTS=0,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=1,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=0,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFFFFF}";
+  ATTRIBUTE CORE_GENERATION_INFO OF Arty_Z7_20_axi_gpio_shield_1_0_arch: ARCHITECTURE IS "Arty_Z7_20_axi_gpio_shield_1_0,axi_gpio,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=14,C_GPIO2_WIDTH=32,C_ALL_INPUTS=0,C_ALL_INPUTS_2=0,C_ALL_OUTPUTS=0,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=0,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=0,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFFFFF}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
@@ -160,7 +159,6 @@ ARCHITECTURE Arty_Z7_20_axi_gpio_shield_1_0_arch OF Arty_Z7_20_axi_gpio_shield_1
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  ATTRIBUTE X_INTERFACE_INFO OF ip2intc_irpt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 IP2INTC_IRQ INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF gpio_io_i: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO TRI_I";
   ATTRIBUTE X_INTERFACE_INFO OF gpio_io_o: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO TRI_O";
   ATTRIBUTE X_INTERFACE_INFO OF gpio_io_t: SIGNAL IS "xilinx.com:interface:gpio:1.0 GPIO TRI_T";
@@ -176,7 +174,7 @@ BEGIN
       C_ALL_INPUTS_2 => 0,
       C_ALL_OUTPUTS => 0,
       C_ALL_OUTPUTS_2 => 0,
-      C_INTERRUPT_PRESENT => 1,
+      C_INTERRUPT_PRESENT => 0,
       C_DOUT_DEFAULT => X"00000000",
       C_TRI_DEFAULT => X"FFFFFFFF",
       C_IS_DUAL => 0,
@@ -203,7 +201,6 @@ BEGIN
       s_axi_rresp => s_axi_rresp,
       s_axi_rvalid => s_axi_rvalid,
       s_axi_rready => s_axi_rready,
-      ip2intc_irpt => ip2intc_irpt,
       gpio_io_i => gpio_io_i,
       gpio_io_o => gpio_io_o,
       gpio_io_t => gpio_io_t,

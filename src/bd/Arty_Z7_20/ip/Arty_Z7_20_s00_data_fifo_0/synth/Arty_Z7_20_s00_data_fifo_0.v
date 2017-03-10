@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axi_data_fifo_v2_1_10_axi_data_fifo,Vivado 2016.4" *)
 (* CHECK_LICENSE_TYPE = "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_10_axi_data_fifo,{}" *)
-(* CORE_GENERATION_INFO = "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_10_axi_data_fifo,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_data_fifo,x_ipVersion=2.1,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=1,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_WRITE_FIFO_DEPTH=0,C_AXI_WRITE_FIFO_TYPE=lut,C_A\
+(* CORE_GENERATION_INFO = "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_10_axi_data_fifo,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_data_fifo,x_ipVersion=2.1,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_WRITE_FIFO_DEPTH=0,C_AXI_WRITE_FIFO_TYPE=lut,C_A\
 XI_WRITE_FIFO_DELAY=0,C_AXI_READ_FIFO_DEPTH=512,C_AXI_READ_FIFO_TYPE=bram,C_AXI_READ_FIFO_DELAY=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Arty_Z7_20_s00_data_fifo_0 (
@@ -65,6 +65,7 @@ module Arty_Z7_20_s00_data_fifo_0 (
   s_axi_arlock,
   s_axi_arcache,
   s_axi_arprot,
+  s_axi_arregion,
   s_axi_arqos,
   s_axi_arvalid,
   s_axi_arready,
@@ -80,6 +81,7 @@ module Arty_Z7_20_s00_data_fifo_0 (
   m_axi_arlock,
   m_axi_arcache,
   m_axi_arprot,
+  m_axi_arregion,
   m_axi_arqos,
   m_axi_arvalid,
   m_axi_arready,
@@ -97,17 +99,19 @@ input wire aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *)
 input wire [31 : 0] s_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARLEN" *)
-input wire [3 : 0] s_axi_arlen;
+input wire [7 : 0] s_axi_arlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARSIZE" *)
 input wire [2 : 0] s_axi_arsize;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARBURST" *)
 input wire [1 : 0] s_axi_arburst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARLOCK" *)
-input wire [1 : 0] s_axi_arlock;
+input wire [0 : 0] s_axi_arlock;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARCACHE" *)
 input wire [3 : 0] s_axi_arcache;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *)
 input wire [2 : 0] s_axi_arprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREGION" *)
+input wire [3 : 0] s_axi_arregion;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARQOS" *)
 input wire [3 : 0] s_axi_arqos;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *)
@@ -127,17 +131,19 @@ input wire s_axi_rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *)
 output wire [31 : 0] m_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARLEN" *)
-output wire [3 : 0] m_axi_arlen;
+output wire [7 : 0] m_axi_arlen;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARSIZE" *)
 output wire [2 : 0] m_axi_arsize;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARBURST" *)
 output wire [1 : 0] m_axi_arburst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARLOCK" *)
-output wire [1 : 0] m_axi_arlock;
+output wire [0 : 0] m_axi_arlock;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARCACHE" *)
 output wire [3 : 0] m_axi_arcache;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARPROT" *)
 output wire [2 : 0] m_axi_arprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARREGION" *)
+output wire [3 : 0] m_axi_arregion;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARQOS" *)
 output wire [3 : 0] m_axi_arqos;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARVALID" *)
@@ -157,7 +163,7 @@ output wire m_axi_rready;
 
   axi_data_fifo_v2_1_10_axi_data_fifo #(
     .C_FAMILY("zynq"),
-    .C_AXI_PROTOCOL(1),
+    .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(1),
     .C_AXI_ADDR_WIDTH(32),
     .C_AXI_DATA_WIDTH(64),
@@ -178,10 +184,10 @@ output wire m_axi_rready;
     .aresetn(aresetn),
     .s_axi_awid(1'H0),
     .s_axi_awaddr(32'H00000000),
-    .s_axi_awlen(4'H0),
+    .s_axi_awlen(8'H00),
     .s_axi_awsize(3'H0),
     .s_axi_awburst(2'H1),
-    .s_axi_awlock(2'H0),
+    .s_axi_awlock(1'H0),
     .s_axi_awcache(4'H0),
     .s_axi_awprot(3'H0),
     .s_axi_awregion(4'H0),
@@ -209,7 +215,7 @@ output wire m_axi_rready;
     .s_axi_arlock(s_axi_arlock),
     .s_axi_arcache(s_axi_arcache),
     .s_axi_arprot(s_axi_arprot),
-    .s_axi_arregion(4'H0),
+    .s_axi_arregion(s_axi_arregion),
     .s_axi_arqos(s_axi_arqos),
     .s_axi_aruser(1'H0),
     .s_axi_arvalid(s_axi_arvalid),
@@ -254,7 +260,7 @@ output wire m_axi_rready;
     .m_axi_arlock(m_axi_arlock),
     .m_axi_arcache(m_axi_arcache),
     .m_axi_arprot(m_axi_arprot),
-    .m_axi_arregion(),
+    .m_axi_arregion(m_axi_arregion),
     .m_axi_arqos(m_axi_arqos),
     .m_axi_aruser(),
     .m_axi_arvalid(m_axi_arvalid),

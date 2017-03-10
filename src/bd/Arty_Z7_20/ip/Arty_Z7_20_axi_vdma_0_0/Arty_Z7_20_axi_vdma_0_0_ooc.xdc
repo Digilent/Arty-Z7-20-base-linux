@@ -55,3 +55,7 @@
 ## set_property HD.CLK_SRC BUFGCTRL_X0Y1 [get_ports m_axi_mm2s_aclk]
  create_clock -name m_axis_mm2s_aclk -period 20 [get_ports m_axis_mm2s_aclk]
 ## set_property HD.CLK_SRC BUFGCTRL_X0Y4 [get_ports m_axis_mm2s_aclk]
+ create_clock -name m_axi_s2mm_aclk -period 10 [get_ports m_axi_s2mm_aclk]
+## set_property HD.CLK_SRC BUFGCTRL_X0Y2 [get_ports m_axi_s2mm_aclk]
+ create_clock -name s_axis_s2mm_aclk -period 20 [get_ports s_axis_s2mm_aclk]
+## set_property HD.CLK_SRC BUFGCTRL_X0Y5 [get_ports s_axis_s2mm_aclk]

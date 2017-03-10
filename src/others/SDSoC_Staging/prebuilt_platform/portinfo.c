@@ -1,4 +1,4 @@
-/* File: C:/sam_work/sdx/16_4/next_test2/my_arty/Debug/_sds/p0/.cf_work/portinfo.c */
+/* File: C:/sam_work/sdx/16_4/next_test_10/platform_create/Debug/_sds/p0/.cf_work/portinfo.c */
 #include "cf_lib.h"
 #include "cf_request.h"
 #include "sds_lib.h"

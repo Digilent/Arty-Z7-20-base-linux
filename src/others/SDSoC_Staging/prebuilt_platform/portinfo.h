@@ -1,6 +1,6 @@
 #ifndef _SDS_PORTINFO_H
 #define _SDS_PORTINFO_H
-/* File: C:/sam_work/sdx/16_4/next_test2/my_arty/Debug/_sds/p0/.cf_work/portinfo.h */
+/* File: C:/sam_work/sdx/16_4/next_test_10/platform_create/Debug/_sds/p0/.cf_work/portinfo.h */
 #ifdef __cplusplus
 extern "C" {
 #endif

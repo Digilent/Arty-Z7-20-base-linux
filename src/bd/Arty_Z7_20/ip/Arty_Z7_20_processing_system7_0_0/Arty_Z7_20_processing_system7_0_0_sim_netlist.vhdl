@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Mon Feb 27 10:06:33 2017
+-- Date        : Sun Mar 05 18:57:19 2017
 -- Host        : WK73 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.vhdl
@@ -599,7 +599,7 @@ entity Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
     IRQ_P2F_SPI1 : out STD_LOGIC;
     IRQ_P2F_UART1 : out STD_LOGIC;
     IRQ_P2F_CAN1 : out STD_LOGIC;
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Core0_nFIQ : in STD_LOGIC;
     Core0_nIRQ : in STD_LOGIC;
     Core1_nFIQ : in STD_LOGIC;
@@ -751,7 +751,7 @@ entity Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   attribute C_M_AXI_GP1_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_GP1_THREAD_ID_WIDTH of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 12;
   attribute C_NUM_F2P_INTR_INPUTS : integer;
-  attribute C_NUM_F2P_INTR_INPUTS of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 7;
+  attribute C_NUM_F2P_INTR_INPUTS of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 8;
   attribute C_PACKAGE_NAME : string;
   attribute C_PACKAGE_NAME of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "clg400";
   attribute C_PS7_SI_REV : string;
@@ -1502,8 +1502,8 @@ PS7_i: unisim.vcomponents.PS7
       IRQF2P(18) => Core0_nFIQ,
       IRQF2P(17) => Core1_nIRQ,
       IRQF2P(16) => Core0_nIRQ,
-      IRQF2P(15 downto 7) => B"000000000",
-      IRQF2P(6 downto 0) => IRQ_F2P(6 downto 0),
+      IRQF2P(15 downto 8) => B"00000000",
+      IRQF2P(7 downto 0) => IRQ_F2P(7 downto 0),
       IRQP2F(28) => IRQ_P2F_DMAC_ABORT,
       IRQP2F(27) => IRQ_P2F_DMAC7,
       IRQP2F(26) => IRQ_P2F_DMAC6,
@@ -2998,7 +2998,7 @@ entity Arty_Z7_20_processing_system7_0_0 is
     S_AXI_HP0_WID : in STD_LOGIC_VECTOR ( 5 downto 0 );
     S_AXI_HP0_WDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
     S_AXI_HP0_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 7 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
     FCLK_CLK2 : out STD_LOGIC;
@@ -3339,7 +3339,7 @@ architecture STRUCTURE of Arty_Z7_20_processing_system7_0_0 is
   attribute C_M_AXI_GP1_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_GP1_THREAD_ID_WIDTH of inst : label is 12;
   attribute C_NUM_F2P_INTR_INPUTS : integer;
-  attribute C_NUM_F2P_INTR_INPUTS of inst : label is 7;
+  attribute C_NUM_F2P_INTR_INPUTS of inst : label is 8;
   attribute C_PACKAGE_NAME : string;
   attribute C_PACKAGE_NAME of inst : label is "clg400";
   attribute C_PS7_SI_REV : string;
@@ -3851,7 +3851,7 @@ inst: entity work.Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_proc
       I2C1_SDA_I => I2C1_SDA_I,
       I2C1_SDA_O => I2C1_SDA_O,
       I2C1_SDA_T => I2C1_SDA_T,
-      IRQ_F2P(6 downto 0) => IRQ_F2P(6 downto 0),
+      IRQ_F2P(7 downto 0) => IRQ_F2P(7 downto 0),
       IRQ_P2F_CAN0 => NLW_inst_IRQ_P2F_CAN0_UNCONNECTED,
       IRQ_P2F_CAN1 => NLW_inst_IRQ_P2F_CAN1_UNCONNECTED,
       IRQ_P2F_CTI => NLW_inst_IRQ_P2F_CTI_UNCONNECTED,

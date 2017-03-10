@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Mon Feb 27 10:04:54 2017
+--Date        : Mon Mar 06 11:44:15 2017
 --Host        : WK73 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target Arty_Z7_20_wrapper.bd
 --Design      : Arty_Z7_20_wrapper
@@ -34,6 +34,10 @@ entity Arty_Z7_20_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    TMDS_In_clk_n : in STD_LOGIC;
+    TMDS_In_clk_p : in STD_LOGIC;
+    TMDS_In_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    TMDS_In_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_clk_n : out STD_LOGIC;
     TMDS_clk_p : out STD_LOGIC;
     TMDS_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -59,9 +63,12 @@ entity Arty_Z7_20_wrapper is
     Vp_Vn_v_n : in STD_LOGIC;
     Vp_Vn_v_p : in STD_LOGIC;
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    ddc_in_scl_io : inout STD_LOGIC;
+    ddc_in_sda_io : inout STD_LOGIC;
     hdmi_ddc_scl_io : inout STD_LOGIC;
     hdmi_ddc_sda_io : inout STD_LOGIC;
     hdmi_hpd_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    hdmi_in_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     rgbled_tri_io : inout STD_LOGIC_VECTOR ( 5 downto 0 );
     shield_dp0_dp13_tri_io : inout STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -164,6 +171,17 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
     shield_dp26_dp41_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
     shield_dp26_dp41_tri_t : out STD_LOGIC_VECTOR ( 15 downto 0 );
     sws_2bits_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    TMDS_In_clk_p : in STD_LOGIC;
+    TMDS_In_clk_n : in STD_LOGIC;
+    TMDS_In_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    TMDS_In_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    DDC_In_scl_i : in STD_LOGIC;
+    DDC_In_scl_o : out STD_LOGIC;
+    DDC_In_scl_t : out STD_LOGIC;
+    DDC_In_sda_i : in STD_LOGIC;
+    DDC_In_sda_o : out STD_LOGIC;
+    DDC_In_sda_t : out STD_LOGIC;
+    hdmi_in_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clock : in STD_LOGIC
   );
   end component Arty_Z7_20;
@@ -175,6 +193,12 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
     IO : inout STD_LOGIC
   );
   end component IOBUF;
+  signal ddc_in_scl_i : STD_LOGIC;
+  signal ddc_in_scl_o : STD_LOGIC;
+  signal ddc_in_scl_t : STD_LOGIC;
+  signal ddc_in_sda_i : STD_LOGIC;
+  signal ddc_in_sda_o : STD_LOGIC;
+  signal ddc_in_sda_t : STD_LOGIC;
   signal hdmi_ddc_scl_i : STD_LOGIC;
   signal hdmi_ddc_scl_o : STD_LOGIC;
   signal hdmi_ddc_scl_t : STD_LOGIC;
@@ -362,6 +386,12 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
 begin
 Arty_Z7_20_i: component Arty_Z7_20
      port map (
+      DDC_In_scl_i => ddc_in_scl_i,
+      DDC_In_scl_o => ddc_in_scl_o,
+      DDC_In_scl_t => ddc_in_scl_t,
+      DDC_In_sda_i => ddc_in_sda_i,
+      DDC_In_sda_o => ddc_in_sda_o,
+      DDC_In_sda_t => ddc_in_sda_t,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -408,6 +438,10 @@ Arty_Z7_20_i: component Arty_Z7_20
       RGBLED_tri_t(2) => rgbled_tri_t_2(2),
       RGBLED_tri_t(1) => rgbled_tri_t_1(1),
       RGBLED_tri_t(0) => rgbled_tri_t_0(0),
+      TMDS_In_clk_n => TMDS_In_clk_n,
+      TMDS_In_clk_p => TMDS_In_clk_p,
+      TMDS_In_data_n(2 downto 0) => TMDS_In_data_n(2 downto 0),
+      TMDS_In_data_p(2 downto 0) => TMDS_In_data_p(2 downto 0),
       TMDS_clk_n => TMDS_clk_n,
       TMDS_clk_p => TMDS_clk_p,
       TMDS_data_n(2 downto 0) => TMDS_data_n(2 downto 0),
@@ -433,6 +467,7 @@ Arty_Z7_20_i: component Arty_Z7_20
       Vp_Vn_v_n => Vp_Vn_v_n,
       Vp_Vn_v_p => Vp_Vn_v_p,
       btns_4bits_tri_i(3 downto 0) => btns_4bits_tri_i(3 downto 0),
+      hdmi_in_hpd_tri_o(0) => hdmi_in_hpd_tri_o(0),
       leds_4bits_tri_i(3) => leds_4bits_tri_i_3(3),
       leds_4bits_tri_i(2) => leds_4bits_tri_i_2(2),
       leds_4bits_tri_i(1) => leds_4bits_tri_i_1(1),
@@ -555,6 +590,20 @@ Arty_Z7_20_i: component Arty_Z7_20
       shield_dp26_dp41_tri_t(0) => shield_dp26_dp41_tri_t_0(0),
       sws_2bits_tri_i(1 downto 0) => sws_2bits_tri_i(1 downto 0),
       sys_clock => sys_clock
+    );
+ddc_in_scl_iobuf: component IOBUF
+     port map (
+      I => ddc_in_scl_o,
+      IO => ddc_in_scl_io,
+      O => ddc_in_scl_i,
+      T => ddc_in_scl_t
+    );
+ddc_in_sda_iobuf: component IOBUF
+     port map (
+      I => ddc_in_sda_o,
+      IO => ddc_in_sda_io,
+      O => ddc_in_sda_i,
+      T => ddc_in_sda_t
     );
 hdmi_ddc_scl_iobuf: component IOBUF
      port map (

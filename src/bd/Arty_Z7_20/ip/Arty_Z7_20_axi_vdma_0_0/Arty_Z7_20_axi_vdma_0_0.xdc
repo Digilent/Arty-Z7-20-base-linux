@@ -60,3 +60,8 @@ set_false_path -to [get_pins -leaf -of_objects [get_cells -hier *cdc_tig* -filte
   set_false_path -to   [get_pins  -hierarchical  -filter {NAME =~*MM2S*LB_BUILT_IN*/*rstbt*/*PRE}]
 
 
+
+  set_false_path -to   [get_pins  -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*PRE}]
+  set_false_path -from [get_cells -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*rst_reg_reg && IS_SEQUENTIAL}]
+  set_false_path -from [get_cells -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*rst_reg[*]}]
+
