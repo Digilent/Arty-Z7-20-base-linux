@@ -1,7 +1,14 @@
 Instructions for Creating an SDSoC Platform using these files:
 ===================================================================
+********************************************************************************
+***WARNINGS                                                                  ***
+********************************************************************************
 ***This will only work on SamB's computer for now due to platform_builder.xml***
 ***To fix this you need to edit the file and change all abosolute paths      ***
+********************************************************************************
+***Currently Linux support is not working because the files were built in    ***
+***Petalinux 2016.4 instead of petalinux 2016.3                              ***
+********************************************************************************
 
 1) Open SDx Terminal 2016.4 (in Windows)
 2) cd into a directory with a very short filepath (e.g. "C:/work/temp/")
