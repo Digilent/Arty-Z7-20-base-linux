@@ -48,11 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:v_axi4s_vid_out:4.0
-// IP Revision: 5
+// IP Revision: 6
 
-(* X_CORE_INFO = "v_axi4s_vid_out_v4_0_5,Vivado 2016.4" *)
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_5,{}" *)
-(* CORE_GENERATION_INFO = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_5,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=3,C_S_AXIS_COMPONENT_WIDTH=8,C_NATIVE_COMPONENT_WIDTH=8,C_NATIVE_DATA_WIDTH=24,C_S_AXIS_TDATA_WIDTH=24,C_HAS_ASYNC_CLK=1,C_ADDR_WIDTH=12,C_VTG_MASTER_SLAVE=1,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4}" *)
+(* X_CORE_INFO = "v_axi4s_vid_out_v4_0_6,Vivado 2017.1_sdx" *)
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_6,{}" *)
+(* CORE_GENERATION_INFO = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_6,{x_ipProduct=Vivado 2017.1_sdx,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=6,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=3,C_S_AXIS_COMPONENT_WIDTH=8,C_NATIVE_COMPONENT_WIDTH=8,C_NATIVE_DATA_WIDTH=24,C_S_AXIS_TDATA_WIDTH=24,C_HAS_ASYNC_CLK=1,C_ADDR_WIDTH=12,C_VTG_MASTER_SLAVE=1,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4,C_INCLUDE_PIXEL_\
+REPEAT=0,C_INCLUDE_PIXEL_REMAP_420=0,C_ADDR_WIDTH_PIXEL_REMAP_420=10}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Arty_Z7_20_v_axi4s_vid_out_0_0 (
   aclk,
@@ -142,7 +143,7 @@ output wire overflow;
 output wire underflow;
 output wire [31 : 0] status;
 
-  v_axi4s_vid_out_v4_0_5 #(
+  v_axi4s_vid_out_v4_0_6 #(
     .C_FAMILY("zynq"),
     .C_PIXELS_PER_CLOCK(1),
     .C_COMPONENTS_PER_PIXEL(3),
@@ -154,7 +155,10 @@ output wire [31 : 0] status;
     .C_ADDR_WIDTH(12),
     .C_VTG_MASTER_SLAVE(1),
     .C_HYSTERESIS_LEVEL(12),
-    .C_SYNC_LOCK_THRESHOLD(4)
+    .C_SYNC_LOCK_THRESHOLD(4),
+    .C_INCLUDE_PIXEL_REPEAT(0),
+    .C_INCLUDE_PIXEL_REMAP_420(0),
+    .C_ADDR_WIDTH_PIXEL_REMAP_420(10)
   ) inst (
     .aclk(aclk),
     .aclken(aclken),
@@ -185,6 +189,8 @@ output wire [31 : 0] status;
     .locked(locked),
     .overflow(overflow),
     .underflow(underflow),
-    .status(status)
+    .status(status),
+    .repeat_en(1'B0),
+    .remap_420_en(1'B0)
   );
 endmodule

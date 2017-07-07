@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sat Mar 04 18:56:32 2017
--- Host        : WK73 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_v_vid_in_axi4s_0_0 -prefix
---               Arty_Z7_20_v_vid_in_axi4s_0_0_ Arty_Z7_20_v_vid_in_axi4s_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+-- Date        : Tue Jun 20 16:35:33 2017
+-- Host        : localhost.localdomain running 64-bit unknown
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_v_vid_in_axi4s_0_0/Arty_Z7_20_v_vid_in_axi4s_0_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_v_vid_in_axi4s_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,15 +14,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter is
   port (
-    vtd_vblank : out STD_LOGIC;
-    vtd_vsync : out STD_LOGIC;
     vtd_active_video : out STD_LOGIC;
+    vtd_vblank : out STD_LOGIC;
     vtd_hblank : out STD_LOGIC;
+    vtd_vsync : out STD_LOGIC;
     vtd_hsync : out STD_LOGIC;
     vtd_field_id : out STD_LOGIC;
-    FIFO_WR_DATA : out STD_LOGIC_VECTOR ( 26 downto 0 );
+    din : out STD_LOGIC_VECTOR ( 26 downto 0 );
     de_3 : out STD_LOGIC;
     vtd_locked_reg_0 : out STD_LOGIC;
     vid_io_in_reset : in STD_LOGIC;
@@ -34,16 +34,18 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter is
     vid_vsync : in STD_LOGIC;
     vid_hsync : in STD_LOGIC;
     vid_field_id : in STD_LOGIC;
-    vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    axis_enable : in STD_LOGIC
+    axis_enable : in STD_LOGIC;
+    vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter : entity is "v_vid_in_axi4s_v4_0_6_formatter";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter is
-  signal \^fifo_wr_data\ : STD_LOGIC_VECTOR ( 26 downto 0 );
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter is
   signal data_1 : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal data_2 : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal de_2 : STD_LOGIC;
+  signal \^din\ : STD_LOGIC_VECTOR ( 26 downto 0 );
   signal eol_i_1_n_0 : STD_LOGIC;
   signal field_id_2 : STD_LOGIC;
   signal sof : STD_LOGIC;
@@ -62,7 +64,7 @@ architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_fo
   attribute SOFT_HLUTNM of eol_i_1 : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of sof_i_1 : label is "soft_lutpair10";
 begin
-  FIFO_WR_DATA(26 downto 0) <= \^fifo_wr_data\(26 downto 0);
+  din(26 downto 0) <= \^din\(26 downto 0);
   vtd_active_video <= \^vtd_active_video\;
   vtd_field_id <= \^vtd_field_id\;
   vtd_locked_reg_0 <= \^vtd_locked_reg_0\;
@@ -604,7 +606,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(0),
-      Q => \^fifo_wr_data\(0),
+      Q => \^din\(0),
       R => vid_io_in_reset
     );
 \data_3_reg[10]\: unisim.vcomponents.FDRE
@@ -615,7 +617,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(10),
-      Q => \^fifo_wr_data\(10),
+      Q => \^din\(10),
       R => vid_io_in_reset
     );
 \data_3_reg[11]\: unisim.vcomponents.FDRE
@@ -626,7 +628,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(11),
-      Q => \^fifo_wr_data\(11),
+      Q => \^din\(11),
       R => vid_io_in_reset
     );
 \data_3_reg[12]\: unisim.vcomponents.FDRE
@@ -637,7 +639,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(12),
-      Q => \^fifo_wr_data\(12),
+      Q => \^din\(12),
       R => vid_io_in_reset
     );
 \data_3_reg[13]\: unisim.vcomponents.FDRE
@@ -648,7 +650,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(13),
-      Q => \^fifo_wr_data\(13),
+      Q => \^din\(13),
       R => vid_io_in_reset
     );
 \data_3_reg[14]\: unisim.vcomponents.FDRE
@@ -659,7 +661,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(14),
-      Q => \^fifo_wr_data\(14),
+      Q => \^din\(14),
       R => vid_io_in_reset
     );
 \data_3_reg[15]\: unisim.vcomponents.FDRE
@@ -670,7 +672,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(15),
-      Q => \^fifo_wr_data\(15),
+      Q => \^din\(15),
       R => vid_io_in_reset
     );
 \data_3_reg[16]\: unisim.vcomponents.FDRE
@@ -681,7 +683,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(16),
-      Q => \^fifo_wr_data\(16),
+      Q => \^din\(16),
       R => vid_io_in_reset
     );
 \data_3_reg[17]\: unisim.vcomponents.FDRE
@@ -692,7 +694,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(17),
-      Q => \^fifo_wr_data\(17),
+      Q => \^din\(17),
       R => vid_io_in_reset
     );
 \data_3_reg[18]\: unisim.vcomponents.FDRE
@@ -703,7 +705,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(18),
-      Q => \^fifo_wr_data\(18),
+      Q => \^din\(18),
       R => vid_io_in_reset
     );
 \data_3_reg[19]\: unisim.vcomponents.FDRE
@@ -714,7 +716,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(19),
-      Q => \^fifo_wr_data\(19),
+      Q => \^din\(19),
       R => vid_io_in_reset
     );
 \data_3_reg[1]\: unisim.vcomponents.FDRE
@@ -725,7 +727,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(1),
-      Q => \^fifo_wr_data\(1),
+      Q => \^din\(1),
       R => vid_io_in_reset
     );
 \data_3_reg[20]\: unisim.vcomponents.FDRE
@@ -736,7 +738,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(20),
-      Q => \^fifo_wr_data\(20),
+      Q => \^din\(20),
       R => vid_io_in_reset
     );
 \data_3_reg[21]\: unisim.vcomponents.FDRE
@@ -747,7 +749,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(21),
-      Q => \^fifo_wr_data\(21),
+      Q => \^din\(21),
       R => vid_io_in_reset
     );
 \data_3_reg[22]\: unisim.vcomponents.FDRE
@@ -758,7 +760,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(22),
-      Q => \^fifo_wr_data\(22),
+      Q => \^din\(22),
       R => vid_io_in_reset
     );
 \data_3_reg[23]\: unisim.vcomponents.FDRE
@@ -769,7 +771,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(23),
-      Q => \^fifo_wr_data\(23),
+      Q => \^din\(23),
       R => vid_io_in_reset
     );
 \data_3_reg[2]\: unisim.vcomponents.FDRE
@@ -780,7 +782,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(2),
-      Q => \^fifo_wr_data\(2),
+      Q => \^din\(2),
       R => vid_io_in_reset
     );
 \data_3_reg[3]\: unisim.vcomponents.FDRE
@@ -791,7 +793,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(3),
-      Q => \^fifo_wr_data\(3),
+      Q => \^din\(3),
       R => vid_io_in_reset
     );
 \data_3_reg[4]\: unisim.vcomponents.FDRE
@@ -802,7 +804,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(4),
-      Q => \^fifo_wr_data\(4),
+      Q => \^din\(4),
       R => vid_io_in_reset
     );
 \data_3_reg[5]\: unisim.vcomponents.FDRE
@@ -813,7 +815,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(5),
-      Q => \^fifo_wr_data\(5),
+      Q => \^din\(5),
       R => vid_io_in_reset
     );
 \data_3_reg[6]\: unisim.vcomponents.FDRE
@@ -824,7 +826,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(6),
-      Q => \^fifo_wr_data\(6),
+      Q => \^din\(6),
       R => vid_io_in_reset
     );
 \data_3_reg[7]\: unisim.vcomponents.FDRE
@@ -835,7 +837,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(7),
-      Q => \^fifo_wr_data\(7),
+      Q => \^din\(7),
       R => vid_io_in_reset
     );
 \data_3_reg[8]\: unisim.vcomponents.FDRE
@@ -846,7 +848,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(8),
-      Q => \^fifo_wr_data\(8),
+      Q => \^din\(8),
       R => vid_io_in_reset
     );
 \data_3_reg[9]\: unisim.vcomponents.FDRE
@@ -857,7 +859,7 @@ begin
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => data_2(9),
-      Q => \^fifo_wr_data\(9),
+      Q => \^din\(9),
       R => vid_io_in_reset
     );
 de_1_reg: unisim.vcomponents.FDRE
@@ -907,7 +909,7 @@ eol_reg: unisim.vcomponents.FDRE
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => eol_i_1_n_0,
-      Q => \^fifo_wr_data\(24),
+      Q => \^din\(24),
       R => vid_io_in_reset
     );
 field_id_1_reg: unisim.vcomponents.FDRE
@@ -940,7 +942,7 @@ field_id_3_reg: unisim.vcomponents.FDRE
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => field_id_2,
-      Q => \^fifo_wr_data\(26),
+      Q => \^din\(26),
       R => vid_io_in_reset
     );
 hblank_1_reg: unisim.vcomponents.FDRE
@@ -970,7 +972,7 @@ sof_1_reg: unisim.vcomponents.FDRE
       C => vid_io_in_clk,
       CE => vid_io_in_ce,
       D => sof,
-      Q => \^fifo_wr_data\(25),
+      Q => \^din\(25),
       R => vid_io_in_reset
     );
 sof_i_1: unisim.vcomponents.LUT3
@@ -1063,7 +1065,7 @@ vtd_locked_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^vtd_locked_reg_0\,
-      I1 => \^fifo_wr_data\(25),
+      I1 => \^din\(25),
       I2 => vid_io_in_ce,
       I3 => sof,
       I4 => axis_enable,
@@ -1096,6 +1098,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper is
@@ -1109,8 +1113,6 @@ architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "INDEPENDENT";
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
@@ -1370,8 +1372,6 @@ architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrappe
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "INDEPENDENT";
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
@@ -1631,8 +1631,6 @@ architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrappe
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "INDEPENDENT";
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
@@ -1870,6 +1868,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_compare is
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     RD_PNTR_WR : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_compare : entity is "compare";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_compare;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_compare is
@@ -2371,6 +2371,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr is
     rd_clk : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr is
@@ -2958,6 +2960,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft is
     ram_empty_fb_i_reg : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft : entity is "rd_fwft";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft is
@@ -2966,7 +2970,7 @@ architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft is
   attribute DONT_TOUCH of aempty_fwft_fb_i : signal is std.standard.true;
   signal aempty_fwft_i : STD_LOGIC;
   attribute DONT_TOUCH of aempty_fwft_i : signal is std.standard.true;
-  signal \aempty_fwft_i0__0\ : STD_LOGIC;
+  signal aempty_fwft_i0 : STD_LOGIC;
   signal curr_fwft_state : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute DONT_TOUCH of curr_fwft_state : signal is std.standard.true;
   signal empty_fwft_fb_i : STD_LOGIC;
@@ -3018,8 +3022,8 @@ begin
       I0 => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\(0),
       I1 => ram_empty_fb_i_reg,
       I2 => rd_en,
-      I3 => curr_fwft_state(0),
-      I4 => curr_fwft_state(1),
+      I3 => curr_fwft_state(1),
+      I4 => curr_fwft_state(0),
       O => tmp_ram_rd_en
     );
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_3\: unisim.vcomponents.LUT4
@@ -3035,14 +3039,26 @@ begin
     );
 RAM_RD_EN_FWFT: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00BF"
+      INIT => X"4555"
+    )
+        port map (
+      I0 => ram_empty_fb_i_reg,
+      I1 => rd_en,
+      I2 => curr_fwft_state(1),
+      I3 => curr_fwft_state(0),
+      O => p_7_out
+    );
+aempty_fwft_fb_i_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFCB8000"
     )
         port map (
       I0 => rd_en,
       I1 => curr_fwft_state(0),
       I2 => curr_fwft_state(1),
       I3 => ram_empty_fb_i_reg,
-      O => p_7_out
+      I4 => aempty_fwft_fb_i,
+      O => aempty_fwft_i0
     );
 aempty_fwft_fb_i_reg: unisim.vcomponents.FDPE
     generic map(
@@ -3051,21 +3067,9 @@ aempty_fwft_fb_i_reg: unisim.vcomponents.FDPE
         port map (
       C => rd_clk,
       CE => '1',
-      D => \aempty_fwft_i0__0\,
+      D => aempty_fwft_i0,
       PRE => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\(1),
       Q => aempty_fwft_fb_i
-    );
-aempty_fwft_i0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"EEFD8000"
-    )
-        port map (
-      I0 => curr_fwft_state(0),
-      I1 => ram_empty_fb_i_reg,
-      I2 => rd_en,
-      I3 => curr_fwft_state(1),
-      I4 => aempty_fwft_fb_i,
-      O => \aempty_fwft_i0__0\
     );
 aempty_fwft_i_reg: unisim.vcomponents.FDPE
     generic map(
@@ -3074,7 +3078,7 @@ aempty_fwft_i_reg: unisim.vcomponents.FDPE
         port map (
       C => rd_clk,
       CE => '1',
-      D => \aempty_fwft_i0__0\,
+      D => aempty_fwft_i0,
       PRE => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\(1),
       Q => aempty_fwft_i
     );
@@ -3207,6 +3211,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags is
     p_1_out : in STD_LOGIC;
     rd_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags : entity is "rd_handshaking_flags";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags is
@@ -3234,6 +3240,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff : entity is "synchronizer_ff";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff is
@@ -3613,7 +3621,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\ is
+entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6\ is
   port (
     D : out STD_LOGIC_VECTOR ( 11 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -3621,10 +3629,10 @@ entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\ is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\ : entity is "synchronizer_ff";
-end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6\ : entity is "synchronizer_ff";
+end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6\;
 
-architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\ is
+architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 11 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -3807,7 +3815,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\ is
+entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7\ is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gnxpm_cdc.wr_pntr_bin_reg[10]\ : out STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -3816,10 +3824,10 @@ entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\ is
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\ : entity is "synchronizer_ff";
-end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7\ : entity is "synchronizer_ff";
+end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7\;
 
-architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\ is
+architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 11 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -4155,7 +4163,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\ is
+entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8\ is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gnxpm_cdc.rd_pntr_bin_reg[10]\ : out STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -4164,10 +4172,10 @@ entity \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\ is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\ : entity is "synchronizer_ff";
-end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8\ : entity is "synchronizer_ff";
+end \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8\;
 
-architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\ is
+architecture STRUCTURE of \Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 11 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -4513,6 +4521,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr is
     wr_clk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr is
@@ -5228,6 +5238,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags is
     \out\ : in STD_LOGIC;
     wr_rst_busy : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags : entity is "wr_handshaking_flags";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags is
@@ -5272,6 +5284,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width is
@@ -5379,6 +5393,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs is
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     I4 : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs : entity is "clk_x_pntrs";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs is
@@ -5409,14 +5425,14 @@ begin
       \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0) => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
       rd_clk => rd_clk
     );
-\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1\
+\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6\
      port map (
       AR(0) => AR(0),
       D(11 downto 0) => p_4_out(11 downto 0),
       Q(11 downto 0) => rd_pntr_gc(11 downto 0),
       wr_clk => wr_clk
     );
-\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2\
+\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7\
      port map (
       D(11 downto 0) => p_3_out(11 downto 0),
       \gnxpm_cdc.wr_pntr_bin_reg[10]\(10) => p_0_out,
@@ -5425,7 +5441,7 @@ begin
       \out\(0) => p_5_out(11),
       rd_clk => rd_clk
     );
-\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3\
+\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8\
      port map (
       AR(0) => AR(0),
       D(11 downto 0) => p_4_out(11 downto 0),
@@ -5987,6 +6003,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as is
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     D : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as : entity is "rd_status_flags_as";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as is
@@ -6033,14 +6051,14 @@ ram_empty_fb_i_reg: unisim.vcomponents.FDPE
     );
 ram_empty_i0: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAEFFFAAAAAAAA"
+      INIT => X"BABBBBBBAAAAAAAA"
     )
         port map (
       I0 => comp0,
-      I1 => rd_en,
-      I2 => \gpregsm1.curr_fwft_state_reg[1]\(0),
+      I1 => ram_empty_fb_i,
+      I2 => rd_en,
       I3 => \gpregsm1.curr_fwft_state_reg[1]\(1),
-      I4 => ram_empty_fb_i,
+      I4 => \gpregsm1.curr_fwft_state_reg[1]\(0),
       I5 => comp1,
       O => ram_empty_i0_n_0
     );
@@ -6070,6 +6088,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo is
@@ -6366,6 +6386,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_wr_status_flags_as is
     RD_PNTR_WR : in STD_LOGIC_VECTOR ( 11 downto 0 );
     D : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_status_flags_as : entity is "wr_status_flags_as";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_wr_status_flags_as;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_status_flags_as is
@@ -6460,6 +6482,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 26 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr is
@@ -6522,6 +6546,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic is
     WR_PNTR_RD : in STD_LOGIC_VECTOR ( 11 downto 0 );
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic : entity is "rd_logic";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic is
@@ -6594,6 +6620,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic is
     RD_PNTR_WR : in STD_LOGIC_VECTOR ( 11 downto 0 );
     wr_rst_busy : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic : entity is "wr_logic";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic is
@@ -6651,6 +6679,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 26 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top is
@@ -6673,7 +6703,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth is
   port (
     dout : out STD_LOGIC_VECTOR ( 26 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -6686,9 +6716,11 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 26 downto 0 )
   );
-end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth is
 begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top
      port map (
@@ -6708,7 +6740,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5 is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6 is
   port (
     dout : out STD_LOGIC_VECTOR ( 26 downto 0 );
     wr_clk : in STD_LOGIC;
@@ -6721,11 +6753,13 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5 is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 26 downto 0 )
   );
-end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5 is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6 is
 begin
-inst_blk_mem_gen: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth
+inst_blk_mem_gen: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth
      port map (
       Q(11 downto 0) => Q(11 downto 0),
       din(26 downto 0) => din(26 downto 0),
@@ -6756,11 +6790,13 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_memory is
     \gc0.count_d1_reg[11]\ : in STD_LOGIC_VECTOR ( 11 downto 0 );
     din : in STD_LOGIC_VECTOR ( 26 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_memory : entity is "memory";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_memory;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_memory is
 begin
-\gbm.gbmg.gbmgb.ngecc.bmg\: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5
+\gbm.gbmg.gbmgb.ngecc.bmg\: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6
      port map (
       Q(11 downto 0) => Q(11 downto 0),
       din(26 downto 0) => din(26 downto 0),
@@ -6793,6 +6829,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo is
@@ -6925,6 +6963,8 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top : entity is "fifo_generator_top";
 end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top is
@@ -6949,7 +6989,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth is
   port (
     wr_rst_busy : out STD_LOGIC;
     dout : out STD_LOGIC_VECTOR ( 26 downto 0 );
@@ -6964,9 +7004,11 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth is
     rst : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth : entity is "fifo_generator_v13_1_4_synth";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth is
 begin
 \gconvfifo.rf\: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top
      port map (
@@ -6988,7 +7030,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 is
   port (
     backup : in STD_LOGIC;
     backup_marker : in STD_LOGIC;
@@ -7223,412 +7265,414 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 is
     axis_prog_empty : out STD_LOGIC
   );
   attribute C_ADD_NGC_CONSTRAINT : integer;
-  attribute C_ADD_NGC_CONSTRAINT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ADD_NGC_CONSTRAINT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_AXIS : integer;
-  attribute C_APPLICATION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_RACH : integer;
-  attribute C_APPLICATION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_RDCH : integer;
-  attribute C_APPLICATION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_WACH : integer;
-  attribute C_APPLICATION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_WDCH : integer;
-  attribute C_APPLICATION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_APPLICATION_TYPE_WRCH : integer;
-  attribute C_APPLICATION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_APPLICATION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_AXIS_TDATA_WIDTH : integer;
-  attribute C_AXIS_TDATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 8;
+  attribute C_AXIS_TDATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 8;
   attribute C_AXIS_TDEST_WIDTH : integer;
-  attribute C_AXIS_TDEST_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXIS_TDEST_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXIS_TID_WIDTH : integer;
-  attribute C_AXIS_TID_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXIS_TID_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXIS_TKEEP_WIDTH : integer;
-  attribute C_AXIS_TKEEP_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXIS_TKEEP_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXIS_TSTRB_WIDTH : integer;
-  attribute C_AXIS_TSTRB_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXIS_TSTRB_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXIS_TUSER_WIDTH : integer;
-  attribute C_AXIS_TUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4;
+  attribute C_AXIS_TUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_AXIS_TYPE : integer;
-  attribute C_AXIS_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_AXIS_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 64;
+  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_ID_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_LEN_WIDTH : integer;
-  attribute C_AXI_LEN_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 8;
+  attribute C_AXI_LEN_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 8;
   attribute C_AXI_LOCK_WIDTH : integer;
-  attribute C_AXI_LOCK_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_LOCK_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_COMMON_CLOCK : integer;
-  attribute C_COMMON_CLOCK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_COMMON_CLOCK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_COUNT_TYPE : integer;
-  attribute C_COUNT_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_COUNT_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_DATA_COUNT_WIDTH : integer;
-  attribute C_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 13;
+  attribute C_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 13;
   attribute C_DEFAULT_VALUE : string;
-  attribute C_DEFAULT_VALUE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "BlankString";
+  attribute C_DEFAULT_VALUE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "BlankString";
   attribute C_DIN_WIDTH : integer;
-  attribute C_DIN_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 27;
+  attribute C_DIN_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 27;
   attribute C_DIN_WIDTH_AXIS : integer;
-  attribute C_DIN_WIDTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_DIN_WIDTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_DIN_WIDTH_RACH : integer;
-  attribute C_DIN_WIDTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 32;
+  attribute C_DIN_WIDTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 32;
   attribute C_DIN_WIDTH_RDCH : integer;
-  attribute C_DIN_WIDTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 64;
+  attribute C_DIN_WIDTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 64;
   attribute C_DIN_WIDTH_WACH : integer;
-  attribute C_DIN_WIDTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 32;
+  attribute C_DIN_WIDTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 32;
   attribute C_DIN_WIDTH_WDCH : integer;
-  attribute C_DIN_WIDTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 64;
+  attribute C_DIN_WIDTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 64;
   attribute C_DIN_WIDTH_WRCH : integer;
-  attribute C_DIN_WIDTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 2;
+  attribute C_DIN_WIDTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 2;
   attribute C_DOUT_RST_VAL : string;
-  attribute C_DOUT_RST_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "0";
+  attribute C_DOUT_RST_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "0";
   attribute C_DOUT_WIDTH : integer;
-  attribute C_DOUT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 27;
+  attribute C_DOUT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 27;
   attribute C_ENABLE_RLOCS : integer;
-  attribute C_ENABLE_RLOCS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ENABLE_RLOCS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ENABLE_RST_SYNC : integer;
-  attribute C_ENABLE_RST_SYNC of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_ENABLE_RST_SYNC of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_EN_SAFETY_CKT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE : integer;
-  attribute C_ERROR_INJECTION_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_AXIS : integer;
-  attribute C_ERROR_INJECTION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_RACH : integer;
-  attribute C_ERROR_INJECTION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_RDCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WACH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WDCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_ERROR_INJECTION_TYPE_WRCH : integer;
-  attribute C_ERROR_INJECTION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_ERROR_INJECTION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "zynq";
   attribute C_FULL_FLAGS_RST_VAL : integer;
-  attribute C_FULL_FLAGS_RST_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_FULL_FLAGS_RST_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_ALMOST_EMPTY : integer;
-  attribute C_HAS_ALMOST_EMPTY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_ALMOST_EMPTY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_ALMOST_FULL : integer;
-  attribute C_HAS_ALMOST_FULL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_ALMOST_FULL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TDATA : integer;
-  attribute C_HAS_AXIS_TDATA of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_AXIS_TDATA of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_AXIS_TDEST : integer;
-  attribute C_HAS_AXIS_TDEST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXIS_TDEST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TID : integer;
-  attribute C_HAS_AXIS_TID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXIS_TID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TKEEP : integer;
-  attribute C_HAS_AXIS_TKEEP of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXIS_TKEEP of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TLAST : integer;
-  attribute C_HAS_AXIS_TLAST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXIS_TLAST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TREADY : integer;
-  attribute C_HAS_AXIS_TREADY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_AXIS_TREADY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_AXIS_TSTRB : integer;
-  attribute C_HAS_AXIS_TSTRB of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXIS_TSTRB of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXIS_TUSER : integer;
-  attribute C_HAS_AXIS_TUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_AXIS_TUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_AXI_ARUSER : integer;
-  attribute C_HAS_AXI_ARUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_ARUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXI_AWUSER : integer;
-  attribute C_HAS_AXI_AWUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_AWUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXI_BUSER : integer;
-  attribute C_HAS_AXI_BUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_BUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_ID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXI_RD_CHANNEL : integer;
-  attribute C_HAS_AXI_RD_CHANNEL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_AXI_RD_CHANNEL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_AXI_RUSER : integer;
-  attribute C_HAS_AXI_RUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_RUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_AXI_WR_CHANNEL : integer;
-  attribute C_HAS_AXI_WR_CHANNEL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_AXI_WR_CHANNEL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_AXI_WUSER : integer;
-  attribute C_HAS_AXI_WUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_AXI_WUSER of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_BACKUP : integer;
-  attribute C_HAS_BACKUP of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_BACKUP of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNT : integer;
-  attribute C_HAS_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_AXIS : integer;
-  attribute C_HAS_DATA_COUNTS_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_RACH : integer;
-  attribute C_HAS_DATA_COUNTS_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_RDCH : integer;
-  attribute C_HAS_DATA_COUNTS_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_WACH : integer;
-  attribute C_HAS_DATA_COUNTS_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_WDCH : integer;
-  attribute C_HAS_DATA_COUNTS_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_DATA_COUNTS_WRCH : integer;
-  attribute C_HAS_DATA_COUNTS_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_DATA_COUNTS_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_INT_CLK : integer;
-  attribute C_HAS_INT_CLK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_INT_CLK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_MASTER_CE : integer;
-  attribute C_HAS_MASTER_CE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_MASTER_CE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_MEMINIT_FILE : integer;
-  attribute C_HAS_MEMINIT_FILE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_MEMINIT_FILE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_OVERFLOW : integer;
-  attribute C_HAS_OVERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_OVERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_PROG_FLAGS_AXIS : integer;
-  attribute C_HAS_PROG_FLAGS_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_PROG_FLAGS_RACH : integer;
-  attribute C_HAS_PROG_FLAGS_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_PROG_FLAGS_RDCH : integer;
-  attribute C_HAS_PROG_FLAGS_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WACH : integer;
-  attribute C_HAS_PROG_FLAGS_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WDCH : integer;
-  attribute C_HAS_PROG_FLAGS_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_PROG_FLAGS_WRCH : integer;
-  attribute C_HAS_PROG_FLAGS_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_PROG_FLAGS_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_RD_DATA_COUNT : integer;
-  attribute C_HAS_RD_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_RD_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_RD_RST : integer;
-  attribute C_HAS_RD_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_RD_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_RST : integer;
-  attribute C_HAS_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_SLAVE_CE : integer;
-  attribute C_HAS_SLAVE_CE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_SLAVE_CE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_SRST : integer;
-  attribute C_HAS_SRST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_SRST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_UNDERFLOW : integer;
-  attribute C_HAS_UNDERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_UNDERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_VALID : integer;
-  attribute C_HAS_VALID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_VALID of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_WR_ACK : integer;
-  attribute C_HAS_WR_ACK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_WR_ACK of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_HAS_WR_DATA_COUNT : integer;
-  attribute C_HAS_WR_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_HAS_WR_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_HAS_WR_RST : integer;
-  attribute C_HAS_WR_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_HAS_WR_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_IMPLEMENTATION_TYPE : integer;
-  attribute C_IMPLEMENTATION_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 2;
+  attribute C_IMPLEMENTATION_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 2;
   attribute C_IMPLEMENTATION_TYPE_AXIS : integer;
-  attribute C_IMPLEMENTATION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_RACH : integer;
-  attribute C_IMPLEMENTATION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_RDCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_WACH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_WDCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_IMPLEMENTATION_TYPE_WRCH : integer;
-  attribute C_IMPLEMENTATION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_IMPLEMENTATION_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_INIT_WR_PNTR_VAL : integer;
-  attribute C_INIT_WR_PNTR_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_INIT_WR_PNTR_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_INTERFACE_TYPE : integer;
-  attribute C_INTERFACE_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_INTERFACE_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_MEMORY_TYPE : integer;
-  attribute C_MEMORY_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_MEMORY_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_MIF_FILE_NAME : string;
-  attribute C_MIF_FILE_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "BlankString";
+  attribute C_MIF_FILE_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "BlankString";
   attribute C_MSGON_VAL : integer;
-  attribute C_MSGON_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_MSGON_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_OPTIMIZATION_MODE : integer;
-  attribute C_OPTIMIZATION_MODE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_OPTIMIZATION_MODE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_OVERFLOW_LOW : integer;
-  attribute C_OVERFLOW_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_OVERFLOW_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_POWER_SAVING_MODE : integer;
-  attribute C_POWER_SAVING_MODE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_POWER_SAVING_MODE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PRELOAD_LATENCY : integer;
-  attribute C_PRELOAD_LATENCY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PRELOAD_LATENCY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PRELOAD_REGS : integer;
-  attribute C_PRELOAD_REGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_PRELOAD_REGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_PRIM_FIFO_TYPE : string;
-  attribute C_PRIM_FIFO_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "1kx36";
+  attribute C_PRIM_FIFO_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "1kx36";
   attribute C_PRIM_FIFO_TYPE_AXIS : string;
-  attribute C_PRIM_FIFO_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "1kx18";
+  attribute C_PRIM_FIFO_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "1kx18";
   attribute C_PRIM_FIFO_TYPE_RACH : string;
-  attribute C_PRIM_FIFO_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "512x36";
+  attribute C_PRIM_FIFO_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "512x36";
   attribute C_PRIM_FIFO_TYPE_RDCH : string;
-  attribute C_PRIM_FIFO_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "1kx36";
+  attribute C_PRIM_FIFO_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "1kx36";
   attribute C_PRIM_FIFO_TYPE_WACH : string;
-  attribute C_PRIM_FIFO_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "512x36";
+  attribute C_PRIM_FIFO_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "512x36";
   attribute C_PRIM_FIFO_TYPE_WDCH : string;
-  attribute C_PRIM_FIFO_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "1kx36";
+  attribute C_PRIM_FIFO_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "1kx36";
   attribute C_PRIM_FIFO_TYPE_WRCH : string;
-  attribute C_PRIM_FIFO_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is "512x36";
+  attribute C_PRIM_FIFO_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "512x36";
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1022;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 5;
+  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 5;
   attribute C_PROG_EMPTY_TYPE : integer;
-  attribute C_PROG_EMPTY_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_AXIS : integer;
-  attribute C_PROG_EMPTY_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_RACH : integer;
-  attribute C_PROG_EMPTY_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_RDCH : integer;
-  attribute C_PROG_EMPTY_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_WACH : integer;
-  attribute C_PROG_EMPTY_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_WDCH : integer;
-  attribute C_PROG_EMPTY_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_WRCH : integer;
-  attribute C_PROG_EMPTY_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_EMPTY_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4095;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4095;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1023;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1023;
   attribute C_PROG_FULL_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_FULL_THRESH_NEGATE_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4094;
+  attribute C_PROG_FULL_THRESH_NEGATE_VAL of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4094;
   attribute C_PROG_FULL_TYPE : integer;
-  attribute C_PROG_FULL_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_AXIS : integer;
-  attribute C_PROG_FULL_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_RACH : integer;
-  attribute C_PROG_FULL_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_RDCH : integer;
-  attribute C_PROG_FULL_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_WACH : integer;
-  attribute C_PROG_FULL_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_WDCH : integer;
-  attribute C_PROG_FULL_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_PROG_FULL_TYPE_WRCH : integer;
-  attribute C_PROG_FULL_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_PROG_FULL_TYPE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_RACH_TYPE : integer;
-  attribute C_RACH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_RACH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_RDCH_TYPE : integer;
-  attribute C_RDCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_RDCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_RD_DATA_COUNT_WIDTH : integer;
-  attribute C_RD_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 13;
+  attribute C_RD_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 13;
   attribute C_RD_DEPTH : integer;
-  attribute C_RD_DEPTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4096;
+  attribute C_RD_DEPTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4096;
   attribute C_RD_FREQ : integer;
-  attribute C_RD_FREQ of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_RD_FREQ of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_RD_PNTR_WIDTH : integer;
-  attribute C_RD_PNTR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 12;
+  attribute C_RD_PNTR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 12;
   attribute C_REG_SLICE_MODE_AXIS : integer;
-  attribute C_REG_SLICE_MODE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_REG_SLICE_MODE_RACH : integer;
-  attribute C_REG_SLICE_MODE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_REG_SLICE_MODE_RDCH : integer;
-  attribute C_REG_SLICE_MODE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_REG_SLICE_MODE_WACH : integer;
-  attribute C_REG_SLICE_MODE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_REG_SLICE_MODE_WDCH : integer;
-  attribute C_REG_SLICE_MODE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_REG_SLICE_MODE_WRCH : integer;
-  attribute C_REG_SLICE_MODE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_REG_SLICE_MODE_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_SELECT_XPM : integer;
-  attribute C_SELECT_XPM of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_SELECT_XPM of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_SYNCHRONIZER_STAGE : integer;
-  attribute C_SYNCHRONIZER_STAGE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 2;
+  attribute C_SYNCHRONIZER_STAGE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 2;
   attribute C_UNDERFLOW_LOW : integer;
-  attribute C_UNDERFLOW_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_UNDERFLOW_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_COMMON_OVERFLOW : integer;
-  attribute C_USE_COMMON_OVERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_COMMON_OVERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_COMMON_UNDERFLOW : integer;
-  attribute C_USE_COMMON_UNDERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_COMMON_UNDERFLOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_DEFAULT_SETTINGS : integer;
-  attribute C_USE_DEFAULT_SETTINGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_DEFAULT_SETTINGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_DOUT_RST : integer;
-  attribute C_USE_DOUT_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_USE_DOUT_RST of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_USE_ECC : integer;
-  attribute C_USE_ECC of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_AXIS : integer;
-  attribute C_USE_ECC_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_RACH : integer;
-  attribute C_USE_ECC_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_RDCH : integer;
-  attribute C_USE_ECC_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_WACH : integer;
-  attribute C_USE_ECC_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_WDCH : integer;
-  attribute C_USE_ECC_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_ECC_WRCH : integer;
-  attribute C_USE_ECC_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_ECC_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_EMBEDDED_REG : integer;
-  attribute C_USE_EMBEDDED_REG of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_USE_EMBEDDED_REG of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_USE_FIFO16_FLAGS : integer;
-  attribute C_USE_FIFO16_FLAGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_FIFO16_FLAGS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_USE_FWFT_DATA_COUNT : integer;
-  attribute C_USE_FWFT_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_USE_FWFT_DATA_COUNT of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_USE_PIPELINE_REG : integer;
-  attribute C_USE_PIPELINE_REG of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_USE_PIPELINE_REG of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_VALID_LOW : integer;
-  attribute C_VALID_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_VALID_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_WACH_TYPE : integer;
-  attribute C_WACH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_WACH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_WDCH_TYPE : integer;
-  attribute C_WDCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_WDCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_WRCH_TYPE : integer;
-  attribute C_WRCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_WRCH_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_WR_ACK_LOW : integer;
-  attribute C_WR_ACK_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 0;
+  attribute C_WR_ACK_LOW of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 0;
   attribute C_WR_DATA_COUNT_WIDTH : integer;
-  attribute C_WR_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 13;
+  attribute C_WR_DATA_COUNT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 13;
   attribute C_WR_DEPTH : integer;
-  attribute C_WR_DEPTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4096;
+  attribute C_WR_DEPTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4096;
   attribute C_WR_DEPTH_AXIS : integer;
-  attribute C_WR_DEPTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1024;
+  attribute C_WR_DEPTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1024;
   attribute C_WR_DEPTH_RACH : integer;
-  attribute C_WR_DEPTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 16;
+  attribute C_WR_DEPTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 16;
   attribute C_WR_DEPTH_RDCH : integer;
-  attribute C_WR_DEPTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1024;
+  attribute C_WR_DEPTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1024;
   attribute C_WR_DEPTH_WACH : integer;
-  attribute C_WR_DEPTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 16;
+  attribute C_WR_DEPTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 16;
   attribute C_WR_DEPTH_WDCH : integer;
-  attribute C_WR_DEPTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1024;
+  attribute C_WR_DEPTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1024;
   attribute C_WR_DEPTH_WRCH : integer;
-  attribute C_WR_DEPTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 16;
+  attribute C_WR_DEPTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 16;
   attribute C_WR_FREQ : integer;
-  attribute C_WR_FREQ of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
+  attribute C_WR_FREQ of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
   attribute C_WR_PNTR_WIDTH : integer;
-  attribute C_WR_PNTR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 12;
+  attribute C_WR_PNTR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 12;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
-  attribute C_WR_PNTR_WIDTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 12;
+  attribute C_WR_PNTR_WIDTH_AXIS of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 12;
   attribute C_WR_PNTR_WIDTH_RACH : integer;
-  attribute C_WR_PNTR_WIDTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_RACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_WR_PNTR_WIDTH_RDCH : integer;
-  attribute C_WR_PNTR_WIDTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 12;
+  attribute C_WR_PNTR_WIDTH_RDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 12;
   attribute C_WR_PNTR_WIDTH_WACH : integer;
-  attribute C_WR_PNTR_WIDTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_WACH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_WR_PNTR_WIDTH_WDCH : integer;
-  attribute C_WR_PNTR_WIDTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 12;
+  attribute C_WR_PNTR_WIDTH_WDCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 12;
   attribute C_WR_PNTR_WIDTH_WRCH : integer;
-  attribute C_WR_PNTR_WIDTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 4;
+  attribute C_WR_PNTR_WIDTH_WRCH of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
-  attribute C_WR_RESPONSE_LATENCY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 : entity is 1;
-end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3;
+  attribute C_WR_RESPONSE_LATENCY of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 : entity is "fifo_generator_v13_1_4";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 is
   signal \<const0>\ : STD_LOGIC;
 begin
   almost_empty <= \<const0>\;
@@ -8184,7 +8228,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst_fifo_gen: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth
+inst_fifo_gen: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth
      port map (
       din(26 downto 0) => din(26 downto 0),
       dout(26 downto 0) => dout(26 downto 0),
@@ -8204,32 +8248,28 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo is
   port (
     dout : out STD_LOGIC_VECTOR ( 26 downto 0 );
     overflow : out STD_LOGIC;
+    empty : out STD_LOGIC;
     m_axis_video_tvalid : out STD_LOGIC;
     underflow : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
     vid_io_in_clk : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    FIFO_WR_DATA : in STD_LOGIC_VECTOR ( 26 downto 0 );
-    aclken : in STD_LOGIC;
-    m_axis_video_tready : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 26 downto 0 );
+    wr_en : in STD_LOGIC;
+    rd_en : in STD_LOGIC;
     vid_io_in_reset : in STD_LOGIC;
-    de_3 : in STD_LOGIC;
-    vtd_locked_reg : in STD_LOGIC;
-    vid_io_in_ce : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo : entity is "v_vid_in_axi4s_v4_0_6_fifo";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo is
   signal FIFO_INST_i_1_n_0 : STD_LOGIC;
-  signal empty_i : STD_LOGIC;
-  signal \^m_axis_video_tvalid\ : STD_LOGIC;
-  signal \rd_en_i__0\ : STD_LOGIC;
-  signal \wr_en_i__0\ : STD_LOGIC;
-  signal wr_rst_busy_i : STD_LOGIC;
   signal NLW_FIFO_INST_almost_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_FIFO_INST_almost_full_UNCONNECTED : STD_LOGIC;
   signal NLW_FIFO_INST_axi_ar_dbiterr_UNCONNECTED : STD_LOGIC;
@@ -8755,8 +8795,7 @@ architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_co
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of FIFO_INST : label is 1;
 begin
-  m_axis_video_tvalid <= \^m_axis_video_tvalid\;
-FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
+FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4
      port map (
       almost_empty => NLW_FIFO_INST_almost_empty_UNCONNECTED,
       almost_full => NLW_FIFO_INST_almost_full_UNCONNECTED,
@@ -8843,9 +8882,9 @@ FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
       clk => '0',
       data_count(12 downto 0) => NLW_FIFO_INST_data_count_UNCONNECTED(12 downto 0),
       dbiterr => NLW_FIFO_INST_dbiterr_UNCONNECTED,
-      din(26 downto 0) => FIFO_WR_DATA(26 downto 0),
+      din(26 downto 0) => din(26 downto 0),
       dout(26 downto 0) => dout(26 downto 0),
-      empty => empty_i,
+      empty => empty,
       full => NLW_FIFO_INST_full_UNCONNECTED,
       injectdbiterr => '0',
       injectsbiterr => '0',
@@ -8917,7 +8956,7 @@ FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
       prog_full_thresh_negate(11 downto 0) => B"000000000000",
       rd_clk => aclk,
       rd_data_count(12 downto 0) => NLW_FIFO_INST_rd_data_count_UNCONNECTED(12 downto 0),
-      rd_en => \rd_en_i__0\,
+      rd_en => rd_en,
       rd_rst => '0',
       rd_rst_busy => NLW_FIFO_INST_rd_rst_busy_UNCONNECTED,
       rst => FIFO_INST_i_1_n_0,
@@ -8982,13 +9021,13 @@ FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
       sleep => '0',
       srst => '0',
       underflow => underflow,
-      valid => \^m_axis_video_tvalid\,
+      valid => m_axis_video_tvalid,
       wr_ack => NLW_FIFO_INST_wr_ack_UNCONNECTED,
       wr_clk => vid_io_in_clk,
       wr_data_count(12 downto 0) => NLW_FIFO_INST_wr_data_count_UNCONNECTED(12 downto 0),
-      wr_en => \wr_en_i__0\,
+      wr_en => wr_en,
       wr_rst => '0',
-      wr_rst_busy => wr_rst_busy_i
+      wr_rst_busy => wr_rst_busy
     );
 FIFO_INST_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -8998,6 +9037,56 @@ FIFO_INST_i_1: unisim.vcomponents.LUT2
       I0 => vid_io_in_reset,
       I1 => aresetn,
       O => FIFO_INST_i_1_n_0
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 26 downto 0 );
+    overflow : out STD_LOGIC;
+    m_axis_video_tvalid : out STD_LOGIC;
+    underflow : out STD_LOGIC;
+    vid_io_in_clk : in STD_LOGIC;
+    aclk : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 26 downto 0 );
+    aclken : in STD_LOGIC;
+    m_axis_video_tready : in STD_LOGIC;
+    vid_io_in_reset : in STD_LOGIC;
+    de_3 : in STD_LOGIC;
+    vtd_locked_reg : in STD_LOGIC;
+    vid_io_in_ce : in STD_LOGIC;
+    aresetn : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler : entity is "v_vid_in_axi4s_v4_0_6_coupler";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler;
+
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler is
+  signal empty_i : STD_LOGIC;
+  signal \^m_axis_video_tvalid\ : STD_LOGIC;
+  signal \rd_en_i__0\ : STD_LOGIC;
+  signal \wr_en_i__0\ : STD_LOGIC;
+  signal wr_rst_busy_i : STD_LOGIC;
+begin
+  m_axis_video_tvalid <= \^m_axis_video_tvalid\;
+FIFO_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo
+     port map (
+      aclk => aclk,
+      aresetn => aresetn,
+      din(26 downto 0) => din(26 downto 0),
+      dout(26 downto 0) => dout(26 downto 0),
+      empty => empty_i,
+      m_axis_video_tvalid => \^m_axis_video_tvalid\,
+      overflow => overflow,
+      rd_en => \rd_en_i__0\,
+      underflow => underflow,
+      vid_io_in_clk => vid_io_in_clk,
+      vid_io_in_reset => vid_io_in_reset,
+      wr_en => \wr_en_i__0\,
+      wr_rst_busy => wr_rst_busy_i
     );
 rd_en_i: unisim.vcomponents.LUT4
     generic map(
@@ -9027,7 +9116,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 is
+entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 is
   port (
     vid_io_in_clk : in STD_LOGIC;
     vid_io_in_ce : in STD_LOGIC;
@@ -9056,42 +9145,52 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 is
     vtd_field_id : out STD_LOGIC;
     overflow : out STD_LOGIC;
     underflow : out STD_LOGIC;
-    axis_enable : in STD_LOGIC
+    axis_enable : in STD_LOGIC;
+    drop_en : in STD_LOGIC;
+    remap_420_en : in STD_LOGIC
   );
   attribute C_ADDR_WIDTH : integer;
-  attribute C_ADDR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 12;
+  attribute C_ADDR_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 12;
+  attribute C_ADDR_WIDTH_PIXEL_REMAP_420 : integer;
+  attribute C_ADDR_WIDTH_PIXEL_REMAP_420 of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 10;
   attribute C_COMPONENTS_PER_PIXEL : integer;
-  attribute C_COMPONENTS_PER_PIXEL of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 3;
+  attribute C_COMPONENTS_PER_PIXEL of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 3;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is "zynq";
   attribute C_HAS_ASYNC_CLK : integer;
-  attribute C_HAS_ASYNC_CLK of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 1;
+  attribute C_HAS_ASYNC_CLK of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 1;
+  attribute C_INCLUDE_PIXEL_DROP : integer;
+  attribute C_INCLUDE_PIXEL_DROP of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 0;
+  attribute C_INCLUDE_PIXEL_REMAP_420 : integer;
+  attribute C_INCLUDE_PIXEL_REMAP_420 of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 0;
   attribute C_M_AXIS_COMPONENT_WIDTH : integer;
-  attribute C_M_AXIS_COMPONENT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 8;
+  attribute C_M_AXIS_COMPONENT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 8;
   attribute C_M_AXIS_TDATA_WIDTH : integer;
-  attribute C_M_AXIS_TDATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 24;
+  attribute C_M_AXIS_TDATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 24;
   attribute C_NATIVE_COMPONENT_WIDTH : integer;
-  attribute C_NATIVE_COMPONENT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 8;
+  attribute C_NATIVE_COMPONENT_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 8;
   attribute C_NATIVE_DATA_WIDTH : integer;
-  attribute C_NATIVE_DATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 24;
+  attribute C_NATIVE_DATA_WIDTH of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 24;
   attribute C_PIXELS_PER_CLOCK : integer;
-  attribute C_PIXELS_PER_CLOCK of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is 1;
+  attribute C_PIXELS_PER_CLOCK of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 : entity is "yes";
-end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5;
+  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 : entity is "v_vid_in_axi4s_v4_0_6";
+end Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6;
 
-architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 is
+architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 is
   signal FORMATTER_INST_n_34 : STD_LOGIC;
   signal de_3 : STD_LOGIC;
   signal idf_data : STD_LOGIC_VECTOR ( 26 downto 0 );
 begin
-COUPLER_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
+COUPLER_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler
      port map (
-      FIFO_WR_DATA(26 downto 0) => idf_data(26 downto 0),
       aclk => aclk,
       aclken => aclken,
       aresetn => aresetn,
       de_3 => de_3,
+      din(26 downto 0) => idf_data(26 downto 0),
       dout(26) => fid,
       dout(25) => m_axis_video_tuser,
       dout(24) => m_axis_video_tlast,
@@ -9105,11 +9204,11 @@ COUPLER_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_co
       vid_io_in_reset => vid_io_in_reset,
       vtd_locked_reg => FORMATTER_INST_n_34
     );
-FORMATTER_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
+FORMATTER_INST: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter
      port map (
-      FIFO_WR_DATA(26 downto 0) => idf_data(26 downto 0),
       axis_enable => axis_enable,
       de_3 => de_3,
+      din(26 downto 0) => idf_data(26 downto 0),
       vid_active_video => vid_active_video,
       vid_data(23 downto 0) => vid_data(23 downto 0),
       vid_field_id => vid_field_id,
@@ -9167,22 +9266,28 @@ entity Arty_Z7_20_v_vid_in_axi4s_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is "Arty_Z7_20_v_vid_in_axi4s_0_0,v_vid_in_axi4s_v4_0_5,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is "Arty_Z7_20_v_vid_in_axi4s_0_0,v_vid_in_axi4s_v4_0_6,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is "v_vid_in_axi4s_v4_0_5,Vivado 2016.4";
+  attribute X_CORE_INFO of Arty_Z7_20_v_vid_in_axi4s_0_0 : entity is "v_vid_in_axi4s_v4_0_6,Vivado 2017.1_sdx";
 end Arty_Z7_20_v_vid_in_axi4s_0_0;
 
 architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0 is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of inst : label is 12;
+  attribute C_ADDR_WIDTH_PIXEL_REMAP_420 : integer;
+  attribute C_ADDR_WIDTH_PIXEL_REMAP_420 of inst : label is 10;
   attribute C_COMPONENTS_PER_PIXEL : integer;
   attribute C_COMPONENTS_PER_PIXEL of inst : label is 3;
   attribute C_FAMILY : string;
   attribute C_FAMILY of inst : label is "zynq";
   attribute C_HAS_ASYNC_CLK : integer;
   attribute C_HAS_ASYNC_CLK of inst : label is 1;
+  attribute C_INCLUDE_PIXEL_DROP : integer;
+  attribute C_INCLUDE_PIXEL_DROP of inst : label is 0;
+  attribute C_INCLUDE_PIXEL_REMAP_420 : integer;
+  attribute C_INCLUDE_PIXEL_REMAP_420 of inst : label is 0;
   attribute C_M_AXIS_COMPONENT_WIDTH : integer;
   attribute C_M_AXIS_COMPONENT_WIDTH of inst : label is 8;
   attribute C_M_AXIS_TDATA_WIDTH : integer;
@@ -9195,12 +9300,13 @@ architecture STRUCTURE of Arty_Z7_20_v_vid_in_axi4s_0_0 is
   attribute C_PIXELS_PER_CLOCK of inst : label is 1;
   attribute DowngradeIPIdentifiedWarnings of inst : label is "yes";
 begin
-inst: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
+inst: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6
      port map (
       aclk => aclk,
       aclken => aclken,
       aresetn => aresetn,
       axis_enable => axis_enable,
+      drop_en => '0',
       fid => fid,
       m_axis_video_tdata(23 downto 0) => m_axis_video_tdata(23 downto 0),
       m_axis_video_tlast => m_axis_video_tlast,
@@ -9208,6 +9314,7 @@ inst: entity work.Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
       m_axis_video_tuser => m_axis_video_tuser,
       m_axis_video_tvalid => m_axis_video_tvalid,
       overflow => overflow,
+      remap_420_en => '0',
       underflow => underflow,
       vid_active_video => vid_active_video,
       vid_data(23 downto 0) => vid_data(23 downto 0),

@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sun Mar 05 18:57:19 2017
--- Host        : WK73 running 64-bit Service Pack 1  (build 7601)
+-- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+-- Date        : Sun Jun 25 04:40:39 2017
+-- Host        : localhost.localdomain running 64-bit unknown
 -- Command     : write_vhdl -force -mode funcsim
---               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.vhdl
+--               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_processing_system7_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -817,7 +817,7 @@ entity Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>";
+  attribute POWER of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
 end Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7;
@@ -2911,6 +2911,8 @@ entity Arty_Z7_20_processing_system7_0_0 is
     SPI0_SS1_O : out STD_LOGIC;
     SPI0_SS2_O : out STD_LOGIC;
     SPI0_SS_T : out STD_LOGIC;
+    UART1_TX : out STD_LOGIC;
+    UART1_RX : in STD_LOGIC;
     USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
     USB0_VBUS_PWRSELECT : out STD_LOGIC;
     USB0_VBUS_PWRFAULT : in STD_LOGIC;
@@ -3033,7 +3035,7 @@ entity Arty_Z7_20_processing_system7_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_processing_system7_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2016.4";
+  attribute X_CORE_INFO of Arty_Z7_20_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2017.1_sdx";
 end Arty_Z7_20_processing_system7_0_0;
 
 architecture STRUCTURE of Arty_Z7_20_processing_system7_0_0 is
@@ -3207,7 +3209,6 @@ architecture STRUCTURE of Arty_Z7_20_processing_system7_0_0 is
   signal NLW_inst_UART0_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_DTRN_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_UART1_RTSN_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_UART1_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_USB1_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_WDT_RST_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_DMA0_DATYPE_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -3403,286 +3404,10 @@ architecture STRUCTURE of Arty_Z7_20_processing_system7_0_0 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "Arty_Z7_20_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
 begin
-pullup_DDR_DM_2inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DM(2)
-    );
-pullup_DDR_DM_3inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DM(3)
-    );
-pullup_DDR_DQ_16inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(16)
-    );
-pullup_DDR_DQ_17inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(17)
-    );
-pullup_DDR_DQ_18inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(18)
-    );
-pullup_DDR_DQ_19inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(19)
-    );
-pullup_DDR_DQ_20inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(20)
-    );
-pullup_DDR_DQ_21inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(21)
-    );
-pullup_DDR_DQ_22inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(22)
-    );
-pullup_DDR_DQ_23inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(23)
-    );
-pullup_DDR_DQ_24inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(24)
-    );
-pullup_DDR_DQ_25inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(25)
-    );
-pullup_DDR_DQ_26inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(26)
-    );
-pullup_DDR_DQ_27inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(27)
-    );
-pullup_DDR_DQ_28inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(28)
-    );
-pullup_DDR_DQ_29inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(29)
-    );
-pullup_DDR_DQ_30inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(30)
-    );
-pullup_DDR_DQ_31inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQ(31)
-    );
-pullup_DDR_DQS_2inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQS(2)
-    );
-pullup_DDR_DQS_3inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQS(3)
-    );
-pullup_DDR_DQS_n_2inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQS_n(2)
-    );
-pullup_DDR_DQS_n_3inst: unisim.vcomponents.PULLUP
-    port map (
-      O => DDR_DQS_n(3)
-    );
-pullup_MIO_0inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(0)
-    );
-pullup_MIO_1inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(1)
-    );
-pullup_MIO_9inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(9)
-    );
-pullup_MIO_10inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(10)
-    );
-pullup_MIO_11inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(11)
-    );
-pullup_MIO_12inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(12)
-    );
-pullup_MIO_13inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(13)
-    );
-pullup_MIO_14inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(14)
-    );
-pullup_MIO_15inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(15)
-    );
-pullup_MIO_16inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(16)
-    );
-pullup_MIO_17inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(17)
-    );
-pullup_MIO_18inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(18)
-    );
-pullup_MIO_19inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(19)
-    );
-pullup_MIO_20inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(20)
-    );
-pullup_MIO_21inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(21)
-    );
-pullup_MIO_22inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(22)
-    );
-pullup_MIO_23inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(23)
-    );
-pullup_MIO_24inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(24)
-    );
-pullup_MIO_25inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(25)
-    );
-pullup_MIO_26inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(26)
-    );
-pullup_MIO_27inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(27)
-    );
-pullup_MIO_28inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(28)
-    );
-pullup_MIO_29inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(29)
-    );
-pullup_MIO_30inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(30)
-    );
-pullup_MIO_31inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(31)
-    );
-pullup_MIO_32inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(32)
-    );
-pullup_MIO_33inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(33)
-    );
-pullup_MIO_34inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(34)
-    );
-pullup_MIO_35inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(35)
-    );
-pullup_MIO_36inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(36)
-    );
-pullup_MIO_37inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(37)
-    );
-pullup_MIO_38inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(38)
-    );
-pullup_MIO_39inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(39)
-    );
-pullup_MIO_40inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(40)
-    );
-pullup_MIO_41inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(41)
-    );
-pullup_MIO_42inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(42)
-    );
-pullup_MIO_43inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(43)
-    );
-pullup_MIO_44inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(44)
-    );
-pullup_MIO_45inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(45)
-    );
-pullup_MIO_46inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(46)
-    );
-pullup_MIO_47inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(47)
-    );
-pullup_MIO_48inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(48)
-    );
-pullup_MIO_49inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(49)
-    );
-pullup_MIO_50inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(50)
-    );
-pullup_MIO_51inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(51)
-    );
-pullup_MIO_52inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(52)
-    );
-pullup_MIO_53inst: unisim.vcomponents.PULLUP
-    port map (
-      O => MIO(53)
-    );
 inst: entity work.Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7
      port map (
       CAN0_PHY_RX => '0',
@@ -4360,8 +4085,8 @@ inst: entity work.Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_proc
       UART1_DTRN => NLW_inst_UART1_DTRN_UNCONNECTED,
       UART1_RIN => '0',
       UART1_RTSN => NLW_inst_UART1_RTSN_UNCONNECTED,
-      UART1_RX => '1',
-      UART1_TX => NLW_inst_UART1_TX_UNCONNECTED,
+      UART1_RX => UART1_RX,
+      UART1_TX => UART1_TX,
       USB0_PORT_INDCTL(1 downto 0) => USB0_PORT_INDCTL(1 downto 0),
       USB0_VBUS_PWRFAULT => USB0_VBUS_PWRFAULT,
       USB0_VBUS_PWRSELECT => USB0_VBUS_PWRSELECT,

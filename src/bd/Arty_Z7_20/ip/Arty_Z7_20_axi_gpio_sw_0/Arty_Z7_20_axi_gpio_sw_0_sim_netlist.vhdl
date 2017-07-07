@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Fri Feb 24 16:00:40 2017
--- Host        : WK73 running 64-bit Service Pack 1  (build 7601)
+-- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+-- Date        : Tue Jun 20 16:36:26 2017
+-- Host        : localhost.localdomain running 64-bit unknown
 -- Command     : write_vhdl -force -mode funcsim
---               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axi_gpio_sw_0/Arty_Z7_20_axi_gpio_sw_0_sim_netlist.vhdl
+--               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axi_gpio_sw_0/Arty_Z7_20_axi_gpio_sw_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_axi_gpio_sw_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -159,33 +159,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       Q => \^ipif_glbl_irpt_enable_reg_reg\,
       R => '0'
     );
-\Dual.READ_REG2_GEN[0].GPIO2_DBus_i[30]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0080008000C00000"
-    )
-        port map (
-      I0 => gpio2_io_t(1),
-      I1 => \bus2ip_addr_i_reg[8]\(1),
-      I2 => \^dual.gpio_data_out_reg[3]\,
-      I3 => \bus2ip_addr_i_reg[8]\(6),
-      I4 => \Dual.gpio2_Data_In_reg[0]\(1),
-      I5 => \bus2ip_addr_i_reg[8]\(0),
-      O => Read_Reg2_In(0)
-    );
-\Dual.READ_REG2_GEN[1].GPIO2_DBus_i[31]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0080008000C00000"
-    )
-        port map (
-      I0 => gpio2_io_t(0),
-      I1 => \bus2ip_addr_i_reg[8]\(1),
-      I2 => \^dual.gpio_data_out_reg[3]\,
-      I3 => \bus2ip_addr_i_reg[8]\(6),
-      I4 => \Dual.gpio2_Data_In_reg[0]\(0),
-      I5 => \bus2ip_addr_i_reg[8]\(0),
-      O => Read_Reg2_In(1)
-    );
-\Dual.READ_REG_GEN[0].GPIO_DBus_i[28]_i_1\: unisim.vcomponents.LUT6
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].GPIO_DBus_i[28]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000A0000000C0000"
     )
@@ -198,7 +172,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I5 => \bus2ip_addr_i_reg[8]\(0),
       O => Read_Reg_In(0)
     );
-\Dual.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1\: unisim.vcomponents.LUT6
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000A0000000C0000"
     )
@@ -211,7 +185,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I5 => \bus2ip_addr_i_reg[8]\(0),
       O => Read_Reg_In(1)
     );
-\Dual.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1\: unisim.vcomponents.LUT6
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000A0000000C0000"
     )
@@ -224,7 +198,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I5 => \bus2ip_addr_i_reg[8]\(0),
       O => Read_Reg_In(2)
     );
-\Dual.READ_REG_GEN[3].GPIO_DBus_i[31]_i_1\: unisim.vcomponents.LUT6
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].GPIO_DBus_i[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000A0000000C0000"
     )
@@ -236,6 +210,32 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I4 => \^dual.gpio_data_out_reg[3]\,
       I5 => \bus2ip_addr_i_reg[8]\(0),
       O => Read_Reg_In(3)
+    );
+\Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].GPIO2_DBus_i[30]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0080008000C00000"
+    )
+        port map (
+      I0 => gpio2_io_t(1),
+      I1 => \bus2ip_addr_i_reg[8]\(1),
+      I2 => \^dual.gpio_data_out_reg[3]\,
+      I3 => \bus2ip_addr_i_reg[8]\(6),
+      I4 => \Dual.gpio2_Data_In_reg[0]\(1),
+      I5 => \bus2ip_addr_i_reg[8]\(0),
+      O => Read_Reg2_In(0)
+    );
+\Dual.ALLIN0_ND_G2.READ_REG2_GEN[1].GPIO2_DBus_i[31]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0080008000C00000"
+    )
+        port map (
+      I0 => gpio2_io_t(0),
+      I1 => \bus2ip_addr_i_reg[8]\(1),
+      I2 => \^dual.gpio_data_out_reg[3]\,
+      I3 => \bus2ip_addr_i_reg[8]\(6),
+      I4 => \Dual.gpio2_Data_In_reg[0]\(0),
+      I5 => \bus2ip_addr_i_reg[8]\(0),
+      O => Read_Reg2_In(1)
     );
 \Dual.gpio2_Data_Out[0]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1716,6 +1716,65 @@ begin
   Q(3 downto 0) <= \^q\(3 downto 0);
   gpio2_io_o(1 downto 0) <= \^gpio2_io_o\(1 downto 0);
   gpio2_io_t(1 downto 0) <= \^gpio2_io_t\(1 downto 0);
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].GPIO_DBus_i_reg[28]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg_In(0),
+      Q => GPIO_DBus_i(3),
+      R => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].GPIO_DBus_i_reg[29]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg_In(1),
+      Q => GPIO_DBus_i(2),
+      R => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].GPIO_DBus_i_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg_In(2),
+      Q => GPIO_DBus_i(1),
+      R => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].GPIO_DBus_i_reg[31]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg_In(3),
+      Q => GPIO_DBus_i(0),
+      R => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].GPIO2_DBus_i_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg2_In(0),
+      Q => GPIO2_DBus_i(1),
+      R => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G2.READ_REG2_GEN[1].GPIO2_DBus_i[31]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EFFF"
+    )
+        port map (
+      I0 => gpio_xferAck_Reg,
+      I1 => \^gpio_xferack_i\,
+      I2 => bus2ip_rnw,
+      I3 => bus2ip_cs(0),
+      O => Read_Reg_Rst
+    );
+\Dual.ALLIN0_ND_G2.READ_REG2_GEN[1].GPIO2_DBus_i_reg[31]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => Read_Reg2_In(1),
+      Q => GPIO2_DBus_i(0),
+      R => Read_Reg_Rst
+    );
 \Dual.INPUT_DOUBLE_REGS4\: entity work.Arty_Z7_20_axi_gpio_sw_0_cdc_sync
      port map (
       D(3) => gpio_data_in_xor(0),
@@ -1739,65 +1798,6 @@ begin
       s_axi_aclk => s_axi_aclk,
       scndry_vect_out(1) => gpio2_io_i_d2(0),
       scndry_vect_out(0) => gpio2_io_i_d2(1)
-    );
-\Dual.READ_REG2_GEN[0].GPIO2_DBus_i_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg2_In(0),
-      Q => GPIO2_DBus_i(1),
-      R => Read_Reg_Rst
-    );
-\Dual.READ_REG2_GEN[1].GPIO2_DBus_i[31]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"EFFF"
-    )
-        port map (
-      I0 => gpio_xferAck_Reg,
-      I1 => \^gpio_xferack_i\,
-      I2 => bus2ip_rnw,
-      I3 => bus2ip_cs(0),
-      O => Read_Reg_Rst
-    );
-\Dual.READ_REG2_GEN[1].GPIO2_DBus_i_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg2_In(1),
-      Q => GPIO2_DBus_i(0),
-      R => Read_Reg_Rst
-    );
-\Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg_In(0),
-      Q => GPIO_DBus_i(3),
-      R => Read_Reg_Rst
-    );
-\Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg_In(1),
-      Q => GPIO_DBus_i(2),
-      R => Read_Reg_Rst
-    );
-\Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg_In(2),
-      Q => GPIO_DBus_i(1),
-      R => Read_Reg_Rst
-    );
-\Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => Read_Reg_In(3),
-      Q => GPIO_DBus_i(0),
-      R => Read_Reg_Rst
     );
 \Dual.gen_interrupt_dual.GPIO2_intr_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -3388,7 +3388,7 @@ entity Arty_Z7_20_axi_gpio_sw_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Arty_Z7_20_axi_gpio_sw_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Arty_Z7_20_axi_gpio_sw_0 : entity is "axi_gpio,Vivado 2016.4";
+  attribute x_core_info of Arty_Z7_20_axi_gpio_sw_0 : entity is "axi_gpio,Vivado 2017.1_sdx";
 end Arty_Z7_20_axi_gpio_sw_0;
 
 architecture STRUCTURE of Arty_Z7_20_axi_gpio_sw_0 is

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:v_vid_in_axi4s:4.0
-// IP Revision: 5
+// IP Revision: 6
 
 `timescale 1ns/1ps
 
@@ -137,7 +137,7 @@ output wire overflow;
 output wire underflow;
 input wire axis_enable;
 
-  v_vid_in_axi4s_v4_0_5 #(
+  v_vid_in_axi4s_v4_0_6 #(
     .C_FAMILY("zynq"),
     .C_PIXELS_PER_CLOCK(1),
     .C_COMPONENTS_PER_PIXEL(3),
@@ -146,7 +146,10 @@ input wire axis_enable;
     .C_NATIVE_DATA_WIDTH(24),
     .C_M_AXIS_TDATA_WIDTH(24),
     .C_HAS_ASYNC_CLK(1),
-    .C_ADDR_WIDTH(12)
+    .C_ADDR_WIDTH(12),
+    .C_INCLUDE_PIXEL_DROP(0),
+    .C_INCLUDE_PIXEL_REMAP_420(0),
+    .C_ADDR_WIDTH_PIXEL_REMAP_420(10)
   ) inst (
     .vid_io_in_clk(vid_io_in_clk),
     .vid_io_in_ce(vid_io_in_ce),
@@ -175,6 +178,8 @@ input wire axis_enable;
     .vtd_field_id(vtd_field_id),
     .overflow(overflow),
     .underflow(underflow),
-    .axis_enable(axis_enable)
+    .axis_enable(axis_enable),
+    .drop_en(1'B0),
+    .remap_420_en(1'B0)
   );
 endmodule

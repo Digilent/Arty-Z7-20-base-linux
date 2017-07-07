@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 06 11:44:20 2017" VIVADOVERSION="2016.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul  7 16:06:02 2017" VIVADOVERSION="2017.1_sdx">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:arty-z7-20:part0:1.0" DEVICE="7z020" NAME="Arty_Z7_20" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_cke" SIGIS="undef"/>
-    <PORT DIR="IO" NAME="DDR_ck_n" SIGIS="undef"/>
-    <PORT DIR="IO" NAME="DDR_ck_p" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="IO" NAME="DDR_ck_n" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="IO" NAME="DDR_ck_p" SIGIS="clk"/>
     <PORT DIR="IO" NAME="DDR_cs_n" SIGIS="undef"/>
-    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="undef"/>
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst"/>
     <PORT DIR="IO" NAME="DDR_odt" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_ras_n" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_we_n" SIGIS="undef"/>
@@ -35,8 +35,8 @@
     <PORT DIR="I" LEFT="5" NAME="RGBLED_tri_i" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="5" NAME="RGBLED_tri_o" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="5" NAME="RGBLED_tri_t" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="TMDS_clk_p" SIGIS="undef"/>
-    <PORT DIR="O" NAME="TMDS_clk_n" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_clk_n" SIGIS="clk"/>
     <PORT DIR="O" LEFT="2" NAME="TMDS_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="2" NAME="TMDS_data_n" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="Vaux0_v_n" SIGIS="undef"/>
@@ -90,8 +90,8 @@
     <PORT DIR="O" LEFT="15" NAME="shield_dp26_dp41_tri_o" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="15" NAME="shield_dp26_dp41_tri_t" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="1" NAME="sws_2bits_tri_i" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="TMDS_In_clk_p" SIGIS="undef"/>
-    <PORT DIR="I" NAME="TMDS_In_clk_n" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_In_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="TMDS_In_clk_n" SIGIS="clk"/>
     <PORT DIR="I" LEFT="2" NAME="TMDS_In_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="2" NAME="TMDS_In_data_n" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" NAME="DDC_In_scl_i" SIGIS="undef"/>
@@ -101,15 +101,64 @@
     <PORT DIR="O" NAME="DDC_In_sda_o" SIGIS="undef"/>
     <PORT DIR="O" NAME="DDC_In_sda_t" SIGIS="undef"/>
     <PORT DIR="O" LEFT="0" NAME="hdmi_in_hpd_tri_o" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin1_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin7_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin2_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin8_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin3_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin9_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin10_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin4_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin3_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin4_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin1_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin2_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin10_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin8_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin9_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin4_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin9_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="ja_pin10_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin7_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin1_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin2_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin7_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin3_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ja_pin8_o" SIGIS="undef"/>
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="jb_pin1_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin7_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin2_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin8_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin3_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin9_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin10_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin4_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin3_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin4_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin1_i" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin2_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin10_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin8_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin9_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin4_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin9_o" SIGIS="undef"/>
+    <PORT DIR="I" NAME="jb_pin10_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin7_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin1_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin2_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin7_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin3_t" SIGIS="undef"/>
+    <PORT DIR="O" NAME="jb_pin8_o" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
     <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR">
+      <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
       <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
       <PARAMETER NAME="MEMORY_TYPE" VALUE="COMPONENTS"/>
       <PARAMETER NAME="MEMORY_PART"/>
@@ -142,6 +191,7 @@
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="processing_system7_0_FIXED_IO" NAME="FIXED_IO" TYPE="INITIATOR">
+      <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
       <PORTMAPS>
         <PORTMAP LOGICAL="MIO" PHYSICAL="FIXED_IO_mio"/>
         <PORTMAP LOGICAL="DDR_VRN" PHYSICAL="FIXED_IO_ddr_vrn"/>
@@ -323,9 +373,643 @@
         <PORTMAP LOGICAL="TRI_O" PHYSICAL="hdmi_in_hpd_tri_o"/>
       </PORTMAPS>
     </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="PmodGPIO_0_Pmod_out" NAME="ja" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="PIN1_O" PHYSICAL="ja_pin1_o"/>
+        <PORTMAP LOGICAL="PIN7_I" PHYSICAL="ja_pin7_i"/>
+        <PORTMAP LOGICAL="PIN2_O" PHYSICAL="ja_pin2_o"/>
+        <PORTMAP LOGICAL="PIN8_I" PHYSICAL="ja_pin8_i"/>
+        <PORTMAP LOGICAL="PIN3_O" PHYSICAL="ja_pin3_o"/>
+        <PORTMAP LOGICAL="PIN9_I" PHYSICAL="ja_pin9_i"/>
+        <PORTMAP LOGICAL="PIN10_O" PHYSICAL="ja_pin10_o"/>
+        <PORTMAP LOGICAL="PIN4_O" PHYSICAL="ja_pin4_o"/>
+        <PORTMAP LOGICAL="PIN3_I" PHYSICAL="ja_pin3_i"/>
+        <PORTMAP LOGICAL="PIN4_I" PHYSICAL="ja_pin4_i"/>
+        <PORTMAP LOGICAL="PIN1_I" PHYSICAL="ja_pin1_i"/>
+        <PORTMAP LOGICAL="PIN2_I" PHYSICAL="ja_pin2_i"/>
+        <PORTMAP LOGICAL="PIN10_T" PHYSICAL="ja_pin10_t"/>
+        <PORTMAP LOGICAL="PIN8_T" PHYSICAL="ja_pin8_t"/>
+        <PORTMAP LOGICAL="PIN9_T" PHYSICAL="ja_pin9_t"/>
+        <PORTMAP LOGICAL="PIN4_T" PHYSICAL="ja_pin4_t"/>
+        <PORTMAP LOGICAL="PIN9_O" PHYSICAL="ja_pin9_o"/>
+        <PORTMAP LOGICAL="PIN10_I" PHYSICAL="ja_pin10_i"/>
+        <PORTMAP LOGICAL="PIN7_T" PHYSICAL="ja_pin7_t"/>
+        <PORTMAP LOGICAL="PIN1_T" PHYSICAL="ja_pin1_t"/>
+        <PORTMAP LOGICAL="PIN2_T" PHYSICAL="ja_pin2_t"/>
+        <PORTMAP LOGICAL="PIN7_O" PHYSICAL="ja_pin7_o"/>
+        <PORTMAP LOGICAL="PIN3_T" PHYSICAL="ja_pin3_t"/>
+        <PORTMAP LOGICAL="PIN8_O" PHYSICAL="ja_pin8_o"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="PmodGYRO_0_Pmod_out" NAME="jb" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="PIN1_O" PHYSICAL="jb_pin1_o"/>
+        <PORTMAP LOGICAL="PIN7_I" PHYSICAL="jb_pin7_i"/>
+        <PORTMAP LOGICAL="PIN2_O" PHYSICAL="jb_pin2_o"/>
+        <PORTMAP LOGICAL="PIN8_I" PHYSICAL="jb_pin8_i"/>
+        <PORTMAP LOGICAL="PIN3_O" PHYSICAL="jb_pin3_o"/>
+        <PORTMAP LOGICAL="PIN9_I" PHYSICAL="jb_pin9_i"/>
+        <PORTMAP LOGICAL="PIN10_O" PHYSICAL="jb_pin10_o"/>
+        <PORTMAP LOGICAL="PIN4_O" PHYSICAL="jb_pin4_o"/>
+        <PORTMAP LOGICAL="PIN3_I" PHYSICAL="jb_pin3_i"/>
+        <PORTMAP LOGICAL="PIN4_I" PHYSICAL="jb_pin4_i"/>
+        <PORTMAP LOGICAL="PIN1_I" PHYSICAL="jb_pin1_i"/>
+        <PORTMAP LOGICAL="PIN2_I" PHYSICAL="jb_pin2_i"/>
+        <PORTMAP LOGICAL="PIN10_T" PHYSICAL="jb_pin10_t"/>
+        <PORTMAP LOGICAL="PIN8_T" PHYSICAL="jb_pin8_t"/>
+        <PORTMAP LOGICAL="PIN9_T" PHYSICAL="jb_pin9_t"/>
+        <PORTMAP LOGICAL="PIN4_T" PHYSICAL="jb_pin4_t"/>
+        <PORTMAP LOGICAL="PIN9_O" PHYSICAL="jb_pin9_o"/>
+        <PORTMAP LOGICAL="PIN10_I" PHYSICAL="jb_pin10_i"/>
+        <PORTMAP LOGICAL="PIN7_T" PHYSICAL="jb_pin7_t"/>
+        <PORTMAP LOGICAL="PIN1_T" PHYSICAL="jb_pin1_t"/>
+        <PORTMAP LOGICAL="PIN2_T" PHYSICAL="jb_pin2_t"/>
+        <PORTMAP LOGICAL="PIN7_O" PHYSICAL="jb_pin7_o"/>
+        <PORTMAP LOGICAL="PIN3_T" PHYSICAL="jb_pin3_t"/>
+        <PORTMAP LOGICAL="PIN8_O" PHYSICAL="jb_pin8_o"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE FULLNAME="/PmodGPIO_0" HWVERSION="1.0" INSTANCE="PmodGPIO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PmodGPIO" VLNV="digilentinc.com:IP:PmodGPIO:1.0">
+      <DOCUMENTS/>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="AXI_LITE_GPIO" NAME="Reg0" RANGE="0x1000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Arty_Z7_20_PmodGPIO_0_1"/>
+        <PARAMETER NAME="PMOD" VALUE="ja"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_BASEADDR" VALUE="0x40000000"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_HIGHADDR" VALUE="0x40000FFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_arready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_arvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_awready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_awvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_bready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_bvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="AXI_LITE_GPIO_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_rready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_rvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="AXI_LITE_GPIO_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_wready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="AXI_LITE_GPIO_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_wvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Pmod_out_pin10_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin1_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin2_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin3_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin4_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin7_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin8_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin9_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_t" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="PmodGPIO_0_Pmod_out" NAME="Pmod_out" TYPE="INITIATOR" VLNV="digilentinc.com:interface:pmod:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="PIN1_O" PHYSICAL="Pmod_out_pin1_o"/>
+            <PORTMAP LOGICAL="PIN7_I" PHYSICAL="Pmod_out_pin7_i"/>
+            <PORTMAP LOGICAL="PIN2_O" PHYSICAL="Pmod_out_pin2_o"/>
+            <PORTMAP LOGICAL="PIN8_I" PHYSICAL="Pmod_out_pin8_i"/>
+            <PORTMAP LOGICAL="PIN3_O" PHYSICAL="Pmod_out_pin3_o"/>
+            <PORTMAP LOGICAL="PIN9_I" PHYSICAL="Pmod_out_pin9_i"/>
+            <PORTMAP LOGICAL="PIN10_O" PHYSICAL="Pmod_out_pin10_o"/>
+            <PORTMAP LOGICAL="PIN4_O" PHYSICAL="Pmod_out_pin4_o"/>
+            <PORTMAP LOGICAL="PIN3_I" PHYSICAL="Pmod_out_pin3_i"/>
+            <PORTMAP LOGICAL="PIN4_I" PHYSICAL="Pmod_out_pin4_i"/>
+            <PORTMAP LOGICAL="PIN1_I" PHYSICAL="Pmod_out_pin1_i"/>
+            <PORTMAP LOGICAL="PIN2_I" PHYSICAL="Pmod_out_pin2_i"/>
+            <PORTMAP LOGICAL="PIN10_T" PHYSICAL="Pmod_out_pin10_t"/>
+            <PORTMAP LOGICAL="PIN8_T" PHYSICAL="Pmod_out_pin8_t"/>
+            <PORTMAP LOGICAL="PIN9_T" PHYSICAL="Pmod_out_pin9_t"/>
+            <PORTMAP LOGICAL="PIN4_T" PHYSICAL="Pmod_out_pin4_t"/>
+            <PORTMAP LOGICAL="PIN9_O" PHYSICAL="Pmod_out_pin9_o"/>
+            <PORTMAP LOGICAL="PIN10_I" PHYSICAL="Pmod_out_pin10_i"/>
+            <PORTMAP LOGICAL="PIN7_T" PHYSICAL="Pmod_out_pin7_t"/>
+            <PORTMAP LOGICAL="PIN1_T" PHYSICAL="Pmod_out_pin1_t"/>
+            <PORTMAP LOGICAL="PIN2_T" PHYSICAL="Pmod_out_pin2_t"/>
+            <PORTMAP LOGICAL="PIN7_O" PHYSICAL="Pmod_out_pin7_o"/>
+            <PORTMAP LOGICAL="PIN3_T" PHYSICAL="Pmod_out_pin3_t"/>
+            <PORTMAP LOGICAL="PIN8_O" PHYSICAL="Pmod_out_pin8_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M11_AXI" DATAWIDTH="32" NAME="AXI_LITE_GPIO" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="AXI_LITE_GPIO_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="AXI_LITE_GPIO_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="AXI_LITE_GPIO_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AXI_LITE_GPIO_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AXI_LITE_GPIO_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AXI_LITE_GPIO_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="AXI_LITE_GPIO_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="AXI_LITE_GPIO_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="AXI_LITE_GPIO_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="AXI_LITE_GPIO_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="AXI_LITE_GPIO_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="AXI_LITE_GPIO_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="AXI_LITE_GPIO_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="AXI_LITE_GPIO_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="AXI_LITE_GPIO_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="AXI_LITE_GPIO_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="AXI_LITE_GPIO_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/PmodGYRO_0" HWVERSION="1.0" INSTANCE="PmodGYRO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PmodGYRO" VLNV="digilentinc.com:IP:PmodGYRO:1.0">
+      <DOCUMENTS/>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="AXI_LITE_GPIO" NAME="Reg0" RANGE="0x1000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="AXI_LITE_SPI" NAME="Reg0" RANGE="0x10000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Arty_Z7_20_PmodGYRO_0_0"/>
+        <PARAMETER NAME="PMOD" VALUE="jb"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_BASEADDR" VALUE="0x40001000"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_HIGHADDR" VALUE="0x40001FFF"/>
+        <PARAMETER NAME="AXI_LITE_SPI_BASEADDR" VALUE="0x40010000"/>
+        <PARAMETER NAME="AXI_LITE_SPI_HIGHADDR" VALUE="0x4001FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_arready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_arvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_awready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_awvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_bready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_bvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="AXI_LITE_GPIO_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_rready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_rvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="AXI_LITE_GPIO_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_wready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="AXI_LITE_GPIO_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_wvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="AXI_LITE_SPI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_SPI_arready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_SPI_arvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="AXI_LITE_SPI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_SPI_awready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_SPI_awvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_SPI_bready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_SPI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_SPI_bvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="AXI_LITE_SPI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_SPI_rready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_SPI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_SPI_rvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="AXI_LITE_SPI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_SPI_wready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="AXI_LITE_SPI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_SPI_wvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Pmod_out_pin10_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin1_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin2_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin3_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin4_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin7_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin8_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin9_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_t" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ext_spi_clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="PmodGYRO_0_Pmod_out" NAME="Pmod_out" TYPE="INITIATOR" VLNV="digilentinc.com:interface:pmod:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="PIN1_O" PHYSICAL="Pmod_out_pin1_o"/>
+            <PORTMAP LOGICAL="PIN7_I" PHYSICAL="Pmod_out_pin7_i"/>
+            <PORTMAP LOGICAL="PIN2_O" PHYSICAL="Pmod_out_pin2_o"/>
+            <PORTMAP LOGICAL="PIN8_I" PHYSICAL="Pmod_out_pin8_i"/>
+            <PORTMAP LOGICAL="PIN3_O" PHYSICAL="Pmod_out_pin3_o"/>
+            <PORTMAP LOGICAL="PIN9_I" PHYSICAL="Pmod_out_pin9_i"/>
+            <PORTMAP LOGICAL="PIN10_O" PHYSICAL="Pmod_out_pin10_o"/>
+            <PORTMAP LOGICAL="PIN4_O" PHYSICAL="Pmod_out_pin4_o"/>
+            <PORTMAP LOGICAL="PIN3_I" PHYSICAL="Pmod_out_pin3_i"/>
+            <PORTMAP LOGICAL="PIN4_I" PHYSICAL="Pmod_out_pin4_i"/>
+            <PORTMAP LOGICAL="PIN1_I" PHYSICAL="Pmod_out_pin1_i"/>
+            <PORTMAP LOGICAL="PIN2_I" PHYSICAL="Pmod_out_pin2_i"/>
+            <PORTMAP LOGICAL="PIN10_T" PHYSICAL="Pmod_out_pin10_t"/>
+            <PORTMAP LOGICAL="PIN8_T" PHYSICAL="Pmod_out_pin8_t"/>
+            <PORTMAP LOGICAL="PIN9_T" PHYSICAL="Pmod_out_pin9_t"/>
+            <PORTMAP LOGICAL="PIN4_T" PHYSICAL="Pmod_out_pin4_t"/>
+            <PORTMAP LOGICAL="PIN9_O" PHYSICAL="Pmod_out_pin9_o"/>
+            <PORTMAP LOGICAL="PIN10_I" PHYSICAL="Pmod_out_pin10_i"/>
+            <PORTMAP LOGICAL="PIN7_T" PHYSICAL="Pmod_out_pin7_t"/>
+            <PORTMAP LOGICAL="PIN1_T" PHYSICAL="Pmod_out_pin1_t"/>
+            <PORTMAP LOGICAL="PIN2_T" PHYSICAL="Pmod_out_pin2_t"/>
+            <PORTMAP LOGICAL="PIN7_O" PHYSICAL="Pmod_out_pin7_o"/>
+            <PORTMAP LOGICAL="PIN3_T" PHYSICAL="Pmod_out_pin3_t"/>
+            <PORTMAP LOGICAL="PIN8_O" PHYSICAL="Pmod_out_pin8_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M12_AXI" DATAWIDTH="32" NAME="AXI_LITE_SPI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="7"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="AXI_LITE_SPI_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="AXI_LITE_SPI_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="AXI_LITE_SPI_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AXI_LITE_SPI_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AXI_LITE_SPI_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AXI_LITE_SPI_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="AXI_LITE_SPI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="AXI_LITE_SPI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="AXI_LITE_SPI_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="AXI_LITE_SPI_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="AXI_LITE_SPI_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="AXI_LITE_SPI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="AXI_LITE_SPI_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="AXI_LITE_SPI_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="AXI_LITE_SPI_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="AXI_LITE_SPI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="AXI_LITE_SPI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M13_AXI" DATAWIDTH="32" NAME="AXI_LITE_GPIO" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="AXI_LITE_GPIO_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="AXI_LITE_GPIO_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="AXI_LITE_GPIO_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AXI_LITE_GPIO_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AXI_LITE_GPIO_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AXI_LITE_GPIO_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="AXI_LITE_GPIO_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="AXI_LITE_GPIO_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="AXI_LITE_GPIO_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="AXI_LITE_GPIO_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="AXI_LITE_GPIO_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="AXI_LITE_GPIO_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="AXI_LITE_GPIO_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="AXI_LITE_GPIO_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="AXI_LITE_GPIO_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="AXI_LITE_GPIO_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="AXI_LITE_GPIO_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE FULLNAME="/axi_dynclk_0" HWVERSION="1.0" INSTANCE="axi_dynclk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dynclk" VLNV="digilentinc.com:ip:axi_dynclk:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
@@ -349,8 +1033,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PXL_CLK_O" SIGIS="clk" SIGNAME="axi_dynclk_0_PXL_CLK_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="vid_io_out_clk"/>
             <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
+            <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="vid_io_out_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PXL_CLK_5X_O" SIGIS="clk" SIGNAME="axi_dynclk_0_PXL_CLK_5X_O">
@@ -2633,8 +3317,8 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK0"/>
@@ -3017,22 +3701,22 @@
             <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_142M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_142M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_142M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -3391,6 +4075,26 @@
             <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axi_vdma_0_M_AXI_S2MM" DATAWIDTH="64" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S01_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S01_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S01_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S01_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S01_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S01_AXI_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S01_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S01_AXI_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="S01_AXI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="S01_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="S01_AXI_bvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="S01_AXI_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="S01_AXI_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="S01_AXI_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S01_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="S01_AXI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axi_mem_intercon_M00_AXI" DATAWIDTH="64" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
@@ -3433,31 +4137,11 @@
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_vdma_0_M_AXI_S2MM" DATAWIDTH="64" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S01_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S01_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S01_AXI_awcache"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S01_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S01_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S01_AXI_awready"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S01_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S01_AXI_awvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="S01_AXI_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="S01_AXI_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="S01_AXI_bvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="S01_AXI_wdata"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="S01_AXI_wlast"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="S01_AXI_wready"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S01_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="S01_AXI_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/axi_vdma_0" HWVERSION="6.2" INSTANCE="axi_vdma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_vdma" VLNV="xilinx.com:ip:axi_vdma:6.2">
+    <MODULE FULLNAME="/axi_vdma_0" HWVERSION="6.3" INSTANCE="axi_vdma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_vdma" VLNV="xilinx.com:ip:axi_vdma:6.3">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_vdma;v=v6_2;d=pg020_axi_vdma.pdf"/>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_vdma;v=v6_3;d=pg020_axi_vdma.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI_LITE" NAME="Reg" RANGE="256" USAGE="register">
@@ -5051,28 +5735,29 @@
         <PARAMETER NAME="c_dynamic_resolution" VALUE="1"/>
         <PARAMETER NAME="c_s2mm_max_burst_length" VALUE="32"/>
         <PARAMETER NAME="c_include_s2mm" VALUE="1"/>
-        <PARAMETER NAME="c_enable_debug_all" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_0" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_1" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_2" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_3" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_4" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_5" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_6" VALUE="1"/>
-        <PARAMETER NAME="c_enable_debug_info_7" VALUE="1"/>
-        <PARAMETER NAME="c_enable_debug_info_8" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_9" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_10" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_11" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_12" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_13" VALUE="0"/>
-        <PARAMETER NAME="c_enable_debug_info_14" VALUE="1"/>
-        <PARAMETER NAME="c_enable_debug_info_15" VALUE="1"/>
+        <PARAMETER NAME="c_enable_all" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_rst_out" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_buf_empty" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_param_updt" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_fsync_out" VALUE="0"/>
+        <PARAMETER NAME="c_enable_tstvec" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_frmstr_reg" VALUE="0"/>
+        <PARAMETER NAME="c_enable_mm2s_delay_counter" VALUE="1"/>
+        <PARAMETER NAME="c_enable_mm2s_frm_counter" VALUE="1"/>
+        <PARAMETER NAME="c_enable_s2mm_rst_out" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_buf_full" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_param_updt" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_fsync_out" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_sts_reg" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_frmstr_reg" VALUE="0"/>
+        <PARAMETER NAME="c_enable_s2mm_delay_counter" VALUE="1"/>
+        <PARAMETER NAME="c_enable_s2mm_frm_counter" VALUE="1"/>
         <PARAMETER NAME="c_include_mm2s_dre" VALUE="0"/>
         <PARAMETER NAME="c_flush_on_fsync" VALUE="1"/>
         <PARAMETER NAME="c_s2mm_genlock_repeat_en" VALUE="1"/>
         <PARAMETER NAME="c_mm2s_genlock_repeat_en" VALUE="0"/>
         <PARAMETER NAME="c_addr_width" VALUE="32"/>
+        <PARAMETER NAME="c_single_interface" VALUE="0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x43000000"/>
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4300FFFF"/>
@@ -5477,7 +6162,7 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="0"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="32"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK1"/>
@@ -5916,7 +6601,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.3" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.3">
+    <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.4" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.4">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_3;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
@@ -6054,7 +6739,7 @@
         <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
         <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
         <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="8.000"/>
-        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="8.0"/>
+        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="8.000"/>
         <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
@@ -6171,29 +6856,29 @@
         <PARAMETER NAME="C_INTERFACE_SELECTION" VALUE="0"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="11"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_POWER_REG" VALUE="FFFF"/>
-        <PARAMETER NAME="C_CLKOUT0_1" VALUE="1104"/>
+        <PARAMETER NAME="C_POWER_REG" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT0_1" VALUE="0000"/>
         <PARAMETER NAME="C_CLKOUT0_2" VALUE="0000"/>
-        <PARAMETER NAME="C_CLKOUT1_1" VALUE="1083"/>
-        <PARAMETER NAME="C_CLKOUT1_2" VALUE="0080"/>
-        <PARAMETER NAME="C_CLKOUT2_1" VALUE="1041"/>
-        <PARAMETER NAME="C_CLKOUT2_2" VALUE="00c0"/>
-        <PARAMETER NAME="C_CLKOUT3_1" VALUE="1041"/>
-        <PARAMETER NAME="C_CLKOUT3_2" VALUE="00c0"/>
-        <PARAMETER NAME="C_CLKOUT4_1" VALUE="1041"/>
-        <PARAMETER NAME="C_CLKOUT4_2" VALUE="00c0"/>
-        <PARAMETER NAME="C_CLKOUT5_1" VALUE="1041"/>
-        <PARAMETER NAME="C_CLKOUT5_2" VALUE="00c0"/>
-        <PARAMETER NAME="C_CLKOUT6_1" VALUE="1041"/>
-        <PARAMETER NAME="C_CLKOUT6_2" VALUE="00c0"/>
+        <PARAMETER NAME="C_CLKOUT1_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT1_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT2_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT2_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT3_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT3_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT4_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT4_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT5_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT5_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT6_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT6_2" VALUE="0000"/>
         <PARAMETER NAME="C_CLKFBOUT_1" VALUE="0000"/>
         <PARAMETER NAME="C_CLKFBOUT_2" VALUE="0000"/>
-        <PARAMETER NAME="C_DIVCLK" VALUE="1041"/>
-        <PARAMETER NAME="C_LOCK_1" VALUE="03e8"/>
-        <PARAMETER NAME="C_LOCK_2" VALUE="5801"/>
-        <PARAMETER NAME="C_LOCK_3" VALUE="5be9"/>
-        <PARAMETER NAME="C_FILTER_1" VALUE="0800"/>
-        <PARAMETER NAME="C_FILTER_2" VALUE="1990"/>
+        <PARAMETER NAME="C_DIVCLK" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_1" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_2" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_3" VALUE="0000"/>
+        <PARAMETER NAME="C_FILTER_1" VALUE="0000"/>
+        <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
         <PARAMETER NAME="C_DIVIDE1_AUTO" VALUE="1"/>
         <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="0.625"/>
         <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="1.25"/>
@@ -6379,7 +7064,7 @@
         <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="8"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="8.0"/>
+        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="8.000"/>
         <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="MMCM_CLKOUT4_CASCADE" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLOCK_HOLD" VALUE="false"/>
@@ -6512,7 +7197,7 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.7" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/sam_work/git/digilent/Arty-Z7-20-base/repo/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="/home/digilent/sam_work/git/digilent/Arty-Z7-20-base/repo/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
@@ -6529,8 +7214,8 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="TMDS_Clk_p" SIGIS="undef"/>
-        <PORT DIR="I" NAME="TMDS_Clk_n" SIGIS="undef"/>
+        <PORT DIR="I" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT DIR="I" NAME="TMDS_Clk_n" SIGIS="clk"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="200000000" DIR="I" NAME="RefClk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
@@ -6565,9 +7250,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="vid_io_in_clk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="v_tc_1" PORT="clk"/>
+            <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="vid_io_in_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="aPixelClkLckd" SIGIS="undef" SIGNAME="dvi2rgb_0_aPixelClkLckd">
@@ -6797,9 +7482,6 @@
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=processing_system7;v=v5_3;d=pg082-processing-system7.pdf"/>
       </DOCUMENTS>
-      <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_HP0" NAME="HP0_DDR_LOWOCM" RANGE="536870912" USAGE="memory"/>
-      </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_EN_EMIO_PJTAG" VALUE="0"/>
         <PARAMETER NAME="C_EN_EMIO_ENET0" VALUE="0"/>
@@ -7086,7 +7768,7 @@
         <PARAMETER NAME="PCW_EN_EMIO_SPI0" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_EMIO_SPI1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_UART0" VALUE="0"/>
-        <PARAMETER NAME="PCW_EN_EMIO_UART1" VALUE="0"/>
+        <PARAMETER NAME="PCW_EN_EMIO_UART1" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_EMIO_MODEM_UART0" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_MODEM_UART1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_TTC0" VALUE="0"/>
@@ -7191,7 +7873,7 @@
         <PARAMETER NAME="PCW_EN_SPI0" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_SPI1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_UART0" VALUE="1"/>
-        <PARAMETER NAME="PCW_EN_UART1" VALUE="0"/>
+        <PARAMETER NAME="PCW_EN_UART1" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_MODEM_UART0" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_MODEM_UART1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_TTC0" VALUE="0"/>
@@ -7351,8 +8033,8 @@
         <PARAMETER NAME="PCW_UART0_UART0_IO" VALUE="MIO 14 .. 15"/>
         <PARAMETER NAME="PCW_UART0_GRP_FULL_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_UART0_GRP_FULL_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_UART1_PERIPHERAL_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_UART1_UART1_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_UART1_PERIPHERAL_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_UART1_UART1_IO" VALUE="EMIO"/>
         <PARAMETER NAME="PCW_UART1_GRP_FULL_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_UART1_GRP_FULL_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_SPI0_PERIPHERAL_ENABLE" VALUE="1"/>
@@ -7773,6 +8455,8 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="SPI0_SS_T" SIGIS="undef"/>
+        <PORT DIR="O" NAME="UART1_TX" SIGIS="undef"/>
+        <PORT DIR="I" NAME="UART1_RX" SIGIS="undef"/>
         <PORT DIR="O" LEFT="1" NAME="USB0_PORT_INDCTL" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="USB0_VBUS_PWRSELECT" SIGIS="undef"/>
         <PORT DIR="I" NAME="USB0_VBUS_PWRFAULT" SIGIS="undef"/>
@@ -8181,6 +8865,10 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="REF_CLK_I"/>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_hdmi" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_shield_1" PORT="s_axi_aclk"/>
@@ -8188,12 +8876,10 @@
             <CONNECTION INSTANCE="axi_gpio_sw" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
-            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M02_ACLK"/>
@@ -8203,28 +8889,32 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M07_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M08_ACLK"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M09_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M10_ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_ACLK"/>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_ACLK"/>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="ext_spi_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="118181816" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_subset_converter_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
+            <CONNECTION INSTANCE="v_rgb2ycrcb_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_aclk"/>
-            <CONNECTION INSTANCE="axis_subset_converter_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ACLK"/>
-            <CONNECTION INSTANCE="rst_processing_system7_0_142M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="m_axi_s2mm_aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_aclk"/>
-            <CONNECTION INSTANCE="axis_subset_converter_1" PORT="aclk"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ACLK"/>
+            <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="ACLK"/>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ACLK"/>
-            <CONNECTION INSTANCE="v_rgb2ycrcb_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="76923080" DIR="O" NAME="FCLK_CLK2" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK2">
@@ -8250,10 +8940,10 @@
         <PORT DIR="IO" LEFT="53" NAME="MIO" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="IO" NAME="DDR_CAS_n" SIGIS="undef"/>
         <PORT DIR="IO" NAME="DDR_CKE" SIGIS="undef"/>
-        <PORT DIR="IO" NAME="DDR_Clk_n" SIGIS="undef"/>
-        <PORT DIR="IO" NAME="DDR_Clk" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_Clk_n" SIGIS="clk"/>
+        <PORT DIR="IO" NAME="DDR_Clk" SIGIS="clk"/>
         <PORT DIR="IO" NAME="DDR_CS_n" SIGIS="undef"/>
-        <PORT DIR="IO" NAME="DDR_DRSTB" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_DRSTB" SIGIS="rst"/>
         <PORT DIR="IO" NAME="DDR_ODT" SIGIS="undef"/>
         <PORT DIR="IO" NAME="DDR_RAS_n" SIGIS="undef"/>
         <PORT DIR="IO" NAME="DDR_WEB" SIGIS="undef"/>
@@ -8278,6 +8968,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR" VLNV="xilinx.com:interface:ddrx:1.0">
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
           <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
           <PARAMETER NAME="MEMORY_TYPE" VALUE="COMPONENTS"/>
           <PARAMETER NAME="MEMORY_PART"/>
@@ -8310,6 +9001,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="processing_system7_0_FIXED_IO" NAME="FIXED_IO" TYPE="INITIATOR" VLNV="xilinx.com:display_processing_system7:fixedio:1.0">
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="MIO" PHYSICAL="MIO"/>
             <PORTMAP LOGICAL="DDR_VRN" PHYSICAL="DDR_VRN"/>
@@ -8317,6 +9009,12 @@
             <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="PS_SRSTB"/>
             <PORTMAP LOGICAL="PS_CLK" PHYSICAL="PS_CLK"/>
             <PORTMAP LOGICAL="PS_PORB" PHYSICAL="PS_PORB"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="UART_1" TYPE="INITIATOR" VLNV="xilinx.com:interface:uart:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TxD" PHYSICAL="UART1_TX"/>
+            <PORTMAP LOGICAL="RxD" PHYSICAL="UART1_RX"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="processing_system7_0_IIC_0" NAME="IIC_0" TYPE="INITIATOR" VLNV="xilinx.com:interface:iic:1.0">
@@ -8520,6 +9218,9 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="Reg0" BASENAME="AXI_LITE_GPIO_BASEADDR" BASEVALUE="0x40000000" HIGHNAME="AXI_LITE_GPIO_HIGHADDR" HIGHVALUE="0x40000FFF" INSTANCE="PmodGPIO_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI_LITE_GPIO"/>
+        <MEMRANGE ADDRESSBLOCK="Reg0" BASENAME="AXI_LITE_GPIO_BASEADDR" BASEVALUE="0x40001000" HIGHNAME="AXI_LITE_GPIO_HIGHADDR" HIGHVALUE="0x40001FFF" INSTANCE="PmodGYRO_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI_LITE_GPIO"/>
+        <MEMRANGE ADDRESSBLOCK="Reg0" BASENAME="AXI_LITE_SPI_BASEADDR" BASEVALUE="0x40010000" HIGHNAME="AXI_LITE_SPI_HIGHADDR" HIGHVALUE="0x4001FFFF" INSTANCE="PmodGYRO_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="AXI_LITE_SPI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_gpio_sw" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41210000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4121FFFF" INSTANCE="axi_gpio_shield_1" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41220000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4122FFFF" INSTANCE="axi_gpio_led" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
@@ -8533,6 +9234,8 @@
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x43C30000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x43C3FFFF" INSTANCE="v_tc_1" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_GP0" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="ctrl"/>
       </MEMORYMAP>
       <PERIPHERALS>
+        <PERIPHERAL INSTANCE="PmodGPIO_0"/>
+        <PERIPHERAL INSTANCE="PmodGYRO_0"/>
         <PERIPHERAL INSTANCE="axi_gpio_sw"/>
         <PERIPHERAL INSTANCE="axi_gpio_shield_1"/>
         <PERIPHERAL INSTANCE="axi_gpio_led"/>
@@ -8552,7 +9255,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
-        <PARAMETER NAME="NUM_MI" VALUE="11"/>
+        <PARAMETER NAME="NUM_MI" VALUE="14"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
@@ -8995,6 +9698,16 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M10_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -9529,12 +10242,12 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_arready">
+        <PORT DIR="I" LEFT="0" NAME="M04_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_arvalid">
+        <PORT DIR="O" LEFT="0" NAME="M04_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
@@ -9544,17 +10257,17 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_awready">
+        <PORT DIR="I" LEFT="0" NAME="M04_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_awvalid">
+        <PORT DIR="O" LEFT="0" NAME="M04_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_bready">
+        <PORT DIR="O" LEFT="0" NAME="M04_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -9564,7 +10277,7 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_bvalid">
+        <PORT DIR="I" LEFT="0" NAME="M04_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
@@ -9574,7 +10287,7 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_rready">
+        <PORT DIR="O" LEFT="0" NAME="M04_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -9584,7 +10297,7 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_rvalid">
+        <PORT DIR="I" LEFT="0" NAME="M04_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
@@ -9594,7 +10307,7 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_wready">
+        <PORT DIR="I" LEFT="0" NAME="M04_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -9604,7 +10317,7 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_wvalid">
+        <PORT DIR="O" LEFT="0" NAME="M04_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M04_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
@@ -9964,12 +10677,12 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_arready">
+        <PORT DIR="I" LEFT="0" NAME="M09_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_arvalid">
+        <PORT DIR="O" LEFT="0" NAME="M09_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
@@ -9979,17 +10692,17 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_awready">
+        <PORT DIR="I" LEFT="0" NAME="M09_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_awvalid">
+        <PORT DIR="O" LEFT="0" NAME="M09_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_bready">
+        <PORT DIR="O" LEFT="0" NAME="M09_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -9999,7 +10712,7 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_bvalid">
+        <PORT DIR="I" LEFT="0" NAME="M09_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
@@ -10009,7 +10722,7 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_rready">
+        <PORT DIR="O" LEFT="0" NAME="M09_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -10019,7 +10732,7 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_rvalid">
+        <PORT DIR="I" LEFT="0" NAME="M09_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
@@ -10029,7 +10742,7 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_wready">
+        <PORT DIR="I" LEFT="0" NAME="M09_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -10039,7 +10752,7 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_wvalid">
+        <PORT DIR="O" LEFT="0" NAME="M09_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M09_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
@@ -10049,12 +10762,12 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M10_AXI_arready" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_arready">
+        <PORT DIR="I" LEFT="0" NAME="M10_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M10_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_arvalid">
+        <PORT DIR="O" LEFT="0" NAME="M10_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
@@ -10064,17 +10777,17 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M10_AXI_awready" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_awready">
+        <PORT DIR="I" LEFT="0" NAME="M10_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M10_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_awvalid">
+        <PORT DIR="O" LEFT="0" NAME="M10_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M10_AXI_bready" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_bready">
+        <PORT DIR="O" LEFT="0" NAME="M10_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -10084,7 +10797,7 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M10_AXI_bvalid" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_bvalid">
+        <PORT DIR="I" LEFT="0" NAME="M10_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
@@ -10094,7 +10807,7 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M10_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_rready">
+        <PORT DIR="O" LEFT="0" NAME="M10_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -10104,7 +10817,7 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M10_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_rvalid">
+        <PORT DIR="I" LEFT="0" NAME="M10_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
@@ -10114,7 +10827,7 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M10_AXI_wready" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_wready">
+        <PORT DIR="I" LEFT="0" NAME="M10_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -10124,9 +10837,288 @@
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M10_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_wvalid">
+        <PORT DIR="O" LEFT="0" NAME="M10_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_video_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M11_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_AXI_arready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M11_AXI_arvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M11_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_AXI_awready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M11_AXI_awvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M11_AXI_bready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M11_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_AXI_bvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M11_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M11_AXI_rready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M11_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_AXI_rvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M11_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M11_AXI_wready" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M11_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M11_AXI_wvalid" SIGIS="undef" SIGNAME="PmodGPIO_0_AXI_LITE_GPIO_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="AXI_LITE_GPIO_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M12_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M12_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M12_AXI_awvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_AXI_awready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M12_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M12_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M12_AXI_wvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_AXI_wready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M12_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_AXI_bvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M12_AXI_bready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M12_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M12_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M12_AXI_arvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_AXI_arready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M12_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M12_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M12_AXI_rvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M12_AXI_rready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_SPI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_SPI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_ARESETN" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M13_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M13_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M13_AXI_awvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_AXI_awready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M13_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M13_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M13_AXI_wvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_AXI_wready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M13_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_AXI_bvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M13_AXI_bready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M13_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M13_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M13_AXI_arvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_AXI_arready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M13_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M13_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M13_AXI_rvalid" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M13_AXI_rready" SIGIS="undef" SIGNAME="PmodGYRO_0_AXI_LITE_GPIO_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="AXI_LITE_GPIO_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -10405,11 +11397,78 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M10_AXI_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M11_AXI" DATAWIDTH="32" NAME="M11_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M11_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M11_AXI_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M11_AXI_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M11_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M11_AXI_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M11_AXI_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M11_AXI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M11_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M11_AXI_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M11_AXI_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M11_AXI_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M11_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M11_AXI_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M11_AXI_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M11_AXI_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M11_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M11_AXI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M12_AXI" DATAWIDTH="32" NAME="M12_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M12_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M12_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M12_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M12_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M12_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M12_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M12_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M12_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M12_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M12_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M12_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M12_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M12_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M12_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M12_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M12_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M12_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M12_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M12_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M13_AXI" DATAWIDTH="32" NAME="M13_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M13_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M13_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M13_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M13_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M13_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M13_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M13_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M13_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M13_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M13_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M13_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M13_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M13_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M13_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M13_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M13_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M13_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M13_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M13_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.3" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.3">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/sam_work/git/digilent/Arty-Z7-20-base/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="/home/digilent/sam_work/git/digilent/Arty-Z7-20-base/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>
@@ -10421,8 +11480,8 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" NAME="TMDS_Clk_p" SIGIS="undef"/>
-        <PORT DIR="O" NAME="TMDS_Clk_n" SIGIS="undef"/>
+        <PORT DIR="O" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT DIR="O" NAME="TMDS_Clk_n" SIGIS="clk"/>
         <PORT DIR="O" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="aRst_n" SIGIS="rst" SIGNAME="axi_dynclk_0_LOCKED_O">
@@ -10524,17 +11583,19 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="aRst_n"/>
+            <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_hdmi" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_shield_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_shield_2" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_sw" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="aRst_n"/>
-            <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="PmodGPIO_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M02_ARESETN"/>
@@ -10544,9 +11605,12 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M07_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M08_ARESETN"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M09_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M10_ARESETN"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M11_ARESETN"/>
+            <CONNECTION INSTANCE="PmodGYRO_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M12_ARESETN"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M13_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -10595,8 +11659,8 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_142M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
           </CONNECTIONS>
         </PORT>
@@ -10620,6 +11684,9 @@
         <PARAMETER NAME="C_VTG_MASTER_SLAVE" VALUE="1"/>
         <PARAMETER NAME="C_HYSTERESIS_LEVEL" VALUE="12"/>
         <PARAMETER NAME="C_SYNC_LOCK_THRESHOLD" VALUE="4"/>
+        <PARAMETER NAME="C_INCLUDE_PIXEL_REPEAT" VALUE="0"/>
+        <PARAMETER NAME="C_INCLUDE_PIXEL_REMAP_420" VALUE="0"/>
+        <PARAMETER NAME="C_ADDR_WIDTH_PIXEL_REMAP_420" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="Arty_Z7_20_v_axi4s_vid_out_0_0"/>
         <PARAMETER NAME="C_S_AXIS_VIDEO_FORMAT" VALUE="2"/>
         <PARAMETER NAME="C_S_AXIS_VIDEO_DATA_WIDTH" VALUE="8"/>
@@ -11659,8 +12726,8 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="Arty_Z7_20_processing_system7_0_0_FCLK_CLK0"/>
@@ -11711,6 +12778,9 @@
         <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
         <PARAMETER NAME="C_HAS_ASYNC_CLK" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_INCLUDE_PIXEL_DROP" VALUE="0"/>
+        <PARAMETER NAME="C_INCLUDE_PIXEL_REMAP_420" VALUE="0"/>
+        <PARAMETER NAME="C_ADDR_WIDTH_PIXEL_REMAP_420" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="Arty_Z7_20_v_vid_in_axi4s_0_0"/>
         <PARAMETER NAME="C_M_AXIS_VIDEO_FORMAT" VALUE="2"/>
         <PARAMETER NAME="C_M_AXIS_VIDEO_DATA_WIDTH" VALUE="8"/>
@@ -12492,8 +13562,8 @@
     <MODULE FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="1"/>
         <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
         <PARAMETER NAME="Component_Name" VALUE="Arty_Z7_20_xlconstant_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Feb 24 15:59:40 2017
-// Host        : WK73 running 64-bit Service Pack 1  (build 7601)
+// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+// Date        : Tue Jun 20 16:31:13 2017
+// Host        : localhost.localdomain running 64-bit unknown
 // Command     : write_verilog -force -mode funcsim
-//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axi_gpio_hdmi_0/Arty_Z7_20_axi_gpio_hdmi_0_sim_netlist.v
+//               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axi_gpio_hdmi_0/Arty_Z7_20_axi_gpio_hdmi_0_sim_netlist.v
 // Design      : Arty_Z7_20_axi_gpio_hdmi_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_axi_gpio_hdmi_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_axi_gpio_hdmi_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2017.1_sdx" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_axi_gpio_hdmi_0
    (s_axi_aclk,
@@ -164,8 +164,8 @@ module Arty_Z7_20_axi_gpio_hdmi_0_GPIO_Core
   wire GPIO_intr;
   wire GPIO_xferAck_i;
   wire \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ;
   wire [0:0]Q;
   wire \bus2ip_addr_i_reg[2] ;
   wire [0:0]bus2ip_cs;
@@ -184,6 +184,29 @@ module Arty_Z7_20_axi_gpio_hdmi_0_GPIO_Core
   wire rst;
   wire s_axi_aclk;
 
+  LUT6 #(
+    .INIT(64'h0000E20000000000)) 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1 
+       (.I0(gpio_Data_In),
+        .I1(Q),
+        .I2(gpio_io_t),
+        .I3(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ),
+        .I4(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I5(bus2ip_rnw),
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2 
+       (.I0(GPIO_xferAck_i),
+        .I1(gpio_xferAck_Reg),
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ));
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ),
+        .Q(ip2bus_data),
+        .R(1'b0));
   FDRE \Not_Dual.GEN_INTERRUPT.GPIO_intr_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -202,29 +225,6 @@ module Arty_Z7_20_axi_gpio_hdmi_0_GPIO_Core
         .gpio_io_i(gpio_io_i),
         .s_axi_aclk(s_axi_aclk),
         .scndry_vect_out(gpio_io_i_d2));
-  LUT6 #(
-    .INIT(64'h0000E20000000000)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1 
-       (.I0(gpio_Data_In),
-        .I1(Q),
-        .I2(gpio_io_t),
-        .I3(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ),
-        .I4(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
-        .I5(bus2ip_rnw),
-        .O(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2 
-       (.I0(GPIO_xferAck_i),
-        .I1(gpio_xferAck_Reg),
-        .O(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ));
-  FDRE \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ),
-        .Q(ip2bus_data),
-        .R(1'b0));
   FDRE \Not_Dual.gpio_Data_In_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -2370,8 +2370,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

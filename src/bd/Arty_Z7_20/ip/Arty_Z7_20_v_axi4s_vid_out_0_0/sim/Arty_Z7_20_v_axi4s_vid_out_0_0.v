@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:v_axi4s_vid_out:4.0
-// IP Revision: 5
+// IP Revision: 6
 
 `timescale 1ns/1ps
 
@@ -141,7 +141,7 @@ output wire overflow;
 output wire underflow;
 output wire [31 : 0] status;
 
-  v_axi4s_vid_out_v4_0_5 #(
+  v_axi4s_vid_out_v4_0_6 #(
     .C_FAMILY("zynq"),
     .C_PIXELS_PER_CLOCK(1),
     .C_COMPONENTS_PER_PIXEL(3),
@@ -153,7 +153,10 @@ output wire [31 : 0] status;
     .C_ADDR_WIDTH(12),
     .C_VTG_MASTER_SLAVE(1),
     .C_HYSTERESIS_LEVEL(12),
-    .C_SYNC_LOCK_THRESHOLD(4)
+    .C_SYNC_LOCK_THRESHOLD(4),
+    .C_INCLUDE_PIXEL_REPEAT(0),
+    .C_INCLUDE_PIXEL_REMAP_420(0),
+    .C_ADDR_WIDTH_PIXEL_REMAP_420(10)
   ) inst (
     .aclk(aclk),
     .aclken(aclken),
@@ -184,6 +187,8 @@ output wire [31 : 0] status;
     .locked(locked),
     .overflow(overflow),
     .underflow(underflow),
-    .status(status)
+    .status(status),
+    .repeat_en(1'B0),
+    .remap_420_en(1'B0)
   );
 endmodule

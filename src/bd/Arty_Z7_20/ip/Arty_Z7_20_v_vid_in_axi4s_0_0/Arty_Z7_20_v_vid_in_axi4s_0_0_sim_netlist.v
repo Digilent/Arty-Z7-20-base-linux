@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sat Mar 04 18:56:32 2017
-// Host        : WK73 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_v_vid_in_axi4s_0_0 -prefix
-//               Arty_Z7_20_v_vid_in_axi4s_0_0_ Arty_Z7_20_v_vid_in_axi4s_0_0_sim_netlist.v
+// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+// Date        : Tue Jun 20 16:35:33 2017
+// Host        : localhost.localdomain running 64-bit unknown
+// Command     : write_verilog -force -mode funcsim
+//               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_v_vid_in_axi4s_0_0/Arty_Z7_20_v_vid_in_axi4s_0_0_sim_netlist.v
 // Design      : Arty_Z7_20_v_vid_in_axi4s_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_v_vid_in_axi4s_0_0,v_vid_in_axi4s_v4_0_5,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "v_vid_in_axi4s_v4_0_5,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_v_vid_in_axi4s_0_0,v_vid_in_axi4s_v4_0_6,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "v_vid_in_axi4s_v4_0_6,Vivado 2017.1_sdx" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_v_vid_in_axi4s_0_0
    (vid_io_in_clk,
@@ -102,20 +102,24 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0
   wire vtd_vsync;
 
   (* C_ADDR_WIDTH = "12" *) 
+  (* C_ADDR_WIDTH_PIXEL_REMAP_420 = "10" *) 
   (* C_COMPONENTS_PER_PIXEL = "3" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_HAS_ASYNC_CLK = "1" *) 
+  (* C_INCLUDE_PIXEL_DROP = "0" *) 
+  (* C_INCLUDE_PIXEL_REMAP_420 = "0" *) 
   (* C_M_AXIS_COMPONENT_WIDTH = "8" *) 
   (* C_M_AXIS_TDATA_WIDTH = "24" *) 
   (* C_NATIVE_COMPONENT_WIDTH = "8" *) 
   (* C_NATIVE_DATA_WIDTH = "24" *) 
   (* C_PIXELS_PER_CLOCK = "1" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5 inst
+  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6 inst
        (.aclk(aclk),
         .aclken(aclken),
         .aresetn(aresetn),
         .axis_enable(axis_enable),
+        .drop_en(1'b0),
         .fid(fid),
         .m_axis_video_tdata(m_axis_video_tdata),
         .m_axis_video_tlast(m_axis_video_tlast),
@@ -123,6 +127,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0
         .m_axis_video_tuser(m_axis_video_tuser),
         .m_axis_video_tvalid(m_axis_video_tvalid),
         .overflow(overflow),
+        .remap_420_en(1'b0),
         .underflow(underflow),
         .vid_active_video(vid_active_video),
         .vid_data(vid_data),
@@ -142,11 +147,12 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0
         .vtd_vsync(vtd_vsync));
 endmodule
 
-(* C_ADDR_WIDTH = "12" *) (* C_COMPONENTS_PER_PIXEL = "3" *) (* C_FAMILY = "zynq" *) 
-(* C_HAS_ASYNC_CLK = "1" *) (* C_M_AXIS_COMPONENT_WIDTH = "8" *) (* C_M_AXIS_TDATA_WIDTH = "24" *) 
+(* C_ADDR_WIDTH = "12" *) (* C_ADDR_WIDTH_PIXEL_REMAP_420 = "10" *) (* C_COMPONENTS_PER_PIXEL = "3" *) 
+(* C_FAMILY = "zynq" *) (* C_HAS_ASYNC_CLK = "1" *) (* C_INCLUDE_PIXEL_DROP = "0" *) 
+(* C_INCLUDE_PIXEL_REMAP_420 = "0" *) (* C_M_AXIS_COMPONENT_WIDTH = "8" *) (* C_M_AXIS_TDATA_WIDTH = "24" *) 
 (* C_NATIVE_COMPONENT_WIDTH = "8" *) (* C_NATIVE_DATA_WIDTH = "24" *) (* C_PIXELS_PER_CLOCK = "1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "v_vid_in_axi4s_v4_0_6" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6
    (vid_io_in_clk,
     vid_io_in_ce,
     vid_io_in_reset,
@@ -174,7 +180,9 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
     vtd_field_id,
     overflow,
     underflow,
-    axis_enable);
+    axis_enable,
+    drop_en,
+    remap_420_en);
   input vid_io_in_clk;
   input vid_io_in_ce;
   input vid_io_in_reset;
@@ -203,6 +211,8 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
   output overflow;
   output underflow;
   input axis_enable;
+  input drop_en;
+  input remap_420_en;
 
   wire FORMATTER_INST_n_34;
   wire aclk;
@@ -236,12 +246,12 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
   wire vtd_vblank;
   wire vtd_vsync;
 
-  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler COUPLER_INST
-       (.FIFO_WR_DATA(idf_data),
-        .aclk(aclk),
+  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler COUPLER_INST
+       (.aclk(aclk),
         .aclken(aclken),
         .aresetn(aresetn),
         .de_3(de_3),
+        .din(idf_data),
         .dout({fid,m_axis_video_tuser,m_axis_video_tlast,m_axis_video_tdata}),
         .m_axis_video_tready(m_axis_video_tready),
         .m_axis_video_tvalid(m_axis_video_tvalid),
@@ -251,10 +261,10 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
         .vid_io_in_clk(vid_io_in_clk),
         .vid_io_in_reset(vid_io_in_reset),
         .vtd_locked_reg(FORMATTER_INST_n_34));
-  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter FORMATTER_INST
-       (.FIFO_WR_DATA(idf_data),
-        .axis_enable(axis_enable),
+  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter FORMATTER_INST
+       (.axis_enable(axis_enable),
         .de_3(de_3),
+        .din(idf_data),
         .vid_active_video(vid_active_video),
         .vid_data(vid_data),
         .vid_field_id(vid_field_id),
@@ -274,14 +284,15 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5
         .vtd_vsync(vtd_vsync));
 endmodule
 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
+(* ORIG_REF_NAME = "v_vid_in_axi4s_v4_0_6_coupler" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_coupler
    (dout,
     overflow,
     m_axis_video_tvalid,
     underflow,
     vid_io_in_clk,
     aclk,
-    FIFO_WR_DATA,
+    din,
     aclken,
     m_axis_video_tready,
     vid_io_in_reset,
@@ -295,7 +306,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
   output underflow;
   input vid_io_in_clk;
   input aclk;
-  input [26:0]FIFO_WR_DATA;
+  input [26:0]din;
   input aclken;
   input m_axis_video_tready;
   input vid_io_in_reset;
@@ -304,12 +315,11 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
   input vid_io_in_ce;
   input aresetn;
 
-  wire FIFO_INST_i_1_n_0;
-  wire [26:0]FIFO_WR_DATA;
   wire aclk;
   wire aclken;
   wire aresetn;
   wire de_3;
+  wire [26:0]din;
   wire [26:0]dout;
   wire empty_i;
   wire m_axis_video_tready;
@@ -323,6 +333,83 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
   wire vtd_locked_reg;
   wire wr_en_i__0;
   wire wr_rst_busy_i;
+
+  Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo FIFO_INST
+       (.aclk(aclk),
+        .aresetn(aresetn),
+        .din(din),
+        .dout(dout),
+        .empty(empty_i),
+        .m_axis_video_tvalid(m_axis_video_tvalid),
+        .overflow(overflow),
+        .rd_en(rd_en_i__0),
+        .underflow(underflow),
+        .vid_io_in_clk(vid_io_in_clk),
+        .vid_io_in_reset(vid_io_in_reset),
+        .wr_en(wr_en_i__0),
+        .wr_rst_busy(wr_rst_busy_i));
+  LUT4 #(
+    .INIT(16'h2000)) 
+    rd_en_i
+       (.I0(aclken),
+        .I1(empty_i),
+        .I2(m_axis_video_tvalid),
+        .I3(m_axis_video_tready),
+        .O(rd_en_i__0));
+  LUT5 #(
+    .INIT(32'h10000000)) 
+    wr_en_i
+       (.I0(wr_rst_busy_i),
+        .I1(vid_io_in_reset),
+        .I2(de_3),
+        .I3(vtd_locked_reg),
+        .I4(vid_io_in_ce),
+        .O(wr_en_i__0));
+endmodule
+
+(* ORIG_REF_NAME = "v_vid_in_axi4s_v4_0_6_fifo" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_fifo
+   (dout,
+    overflow,
+    empty,
+    m_axis_video_tvalid,
+    underflow,
+    wr_rst_busy,
+    vid_io_in_clk,
+    aclk,
+    din,
+    wr_en,
+    rd_en,
+    vid_io_in_reset,
+    aresetn);
+  output [26:0]dout;
+  output overflow;
+  output empty;
+  output m_axis_video_tvalid;
+  output underflow;
+  output wr_rst_busy;
+  input vid_io_in_clk;
+  input aclk;
+  input [26:0]din;
+  input wr_en;
+  input rd_en;
+  input vid_io_in_reset;
+  input aresetn;
+
+  wire FIFO_INST_i_1_n_0;
+  wire aclk;
+  wire aresetn;
+  wire [26:0]din;
+  wire [26:0]dout;
+  wire empty;
+  wire m_axis_video_tvalid;
+  wire overflow;
+  wire rd_en;
+  wire underflow;
+  wire vid_io_in_clk;
+  wire vid_io_in_reset;
+  wire wr_en;
+  wire wr_rst_busy;
   wire NLW_FIFO_INST_almost_empty_UNCONNECTED;
   wire NLW_FIFO_INST_almost_full_UNCONNECTED;
   wire NLW_FIFO_INST_axi_ar_dbiterr_UNCONNECTED;
@@ -646,7 +733,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
   (* C_WR_PNTR_WIDTH_WDCH = "12" *) 
   (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
   (* C_WR_RESPONSE_LATENCY = "1" *) 
-  Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3 FIFO_INST
+  Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4 FIFO_INST
        (.almost_empty(NLW_FIFO_INST_almost_empty_UNCONNECTED),
         .almost_full(NLW_FIFO_INST_almost_full_UNCONNECTED),
         .axi_ar_data_count(NLW_FIFO_INST_axi_ar_data_count_UNCONNECTED[4:0]),
@@ -732,9 +819,9 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
         .clk(1'b0),
         .data_count(NLW_FIFO_INST_data_count_UNCONNECTED[12:0]),
         .dbiterr(NLW_FIFO_INST_dbiterr_UNCONNECTED),
-        .din(FIFO_WR_DATA),
+        .din(din),
         .dout(dout),
-        .empty(empty_i),
+        .empty(empty),
         .full(NLW_FIFO_INST_full_UNCONNECTED),
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
@@ -806,7 +893,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
         .prog_full_thresh_negate({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .rd_clk(aclk),
         .rd_data_count(NLW_FIFO_INST_rd_data_count_UNCONNECTED[12:0]),
-        .rd_en(rd_en_i__0),
+        .rd_en(rd_en),
         .rd_rst(1'b0),
         .rd_rst_busy(NLW_FIFO_INST_rd_rst_busy_UNCONNECTED),
         .rst(FIFO_INST_i_1_n_0),
@@ -875,42 +962,26 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_coupler
         .wr_ack(NLW_FIFO_INST_wr_ack_UNCONNECTED),
         .wr_clk(vid_io_in_clk),
         .wr_data_count(NLW_FIFO_INST_wr_data_count_UNCONNECTED[12:0]),
-        .wr_en(wr_en_i__0),
+        .wr_en(wr_en),
         .wr_rst(1'b0),
-        .wr_rst_busy(wr_rst_busy_i));
+        .wr_rst_busy(wr_rst_busy));
   LUT2 #(
     .INIT(4'hB)) 
     FIFO_INST_i_1
        (.I0(vid_io_in_reset),
         .I1(aresetn),
         .O(FIFO_INST_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h2000)) 
-    rd_en_i
-       (.I0(aclken),
-        .I1(empty_i),
-        .I2(m_axis_video_tvalid),
-        .I3(m_axis_video_tready),
-        .O(rd_en_i__0));
-  LUT5 #(
-    .INIT(32'h10000000)) 
-    wr_en_i
-       (.I0(wr_rst_busy_i),
-        .I1(vid_io_in_reset),
-        .I2(de_3),
-        .I3(vtd_locked_reg),
-        .I4(vid_io_in_ce),
-        .O(wr_en_i__0));
 endmodule
 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
-   (vtd_vblank,
-    vtd_vsync,
-    vtd_active_video,
+(* ORIG_REF_NAME = "v_vid_in_axi4s_v4_0_6_formatter" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_6_formatter
+   (vtd_active_video,
+    vtd_vblank,
     vtd_hblank,
+    vtd_vsync,
     vtd_hsync,
     vtd_field_id,
-    FIFO_WR_DATA,
+    din,
     de_3,
     vtd_locked_reg_0,
     vid_io_in_reset,
@@ -922,15 +993,15 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
     vid_vsync,
     vid_hsync,
     vid_field_id,
-    vid_data,
-    axis_enable);
-  output vtd_vblank;
-  output vtd_vsync;
+    axis_enable,
+    vid_data);
   output vtd_active_video;
+  output vtd_vblank;
   output vtd_hblank;
+  output vtd_vsync;
   output vtd_hsync;
   output vtd_field_id;
-  output [26:0]FIFO_WR_DATA;
+  output [26:0]din;
   output de_3;
   output vtd_locked_reg_0;
   input vid_io_in_reset;
@@ -942,15 +1013,15 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
   input vid_vsync;
   input vid_hsync;
   input vid_field_id;
-  input [23:0]vid_data;
   input axis_enable;
+  input [23:0]vid_data;
 
-  wire [26:0]FIFO_WR_DATA;
   wire axis_enable;
   wire [23:0]data_1;
   wire [23:0]data_2;
   wire de_2;
   wire de_3;
+  wire [26:0]din;
   wire eol_i_1_n_0;
   wire field_id_2;
   wire sof;
@@ -1368,7 +1439,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[0]),
-        .Q(FIFO_WR_DATA[0]),
+        .Q(din[0]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1376,7 +1447,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[10]),
-        .Q(FIFO_WR_DATA[10]),
+        .Q(din[10]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1384,7 +1455,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[11]),
-        .Q(FIFO_WR_DATA[11]),
+        .Q(din[11]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1392,7 +1463,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[12]),
-        .Q(FIFO_WR_DATA[12]),
+        .Q(din[12]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1400,7 +1471,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[13]),
-        .Q(FIFO_WR_DATA[13]),
+        .Q(din[13]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1408,7 +1479,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[14]),
-        .Q(FIFO_WR_DATA[14]),
+        .Q(din[14]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1416,7 +1487,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[15]),
-        .Q(FIFO_WR_DATA[15]),
+        .Q(din[15]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1424,7 +1495,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[16]),
-        .Q(FIFO_WR_DATA[16]),
+        .Q(din[16]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1432,7 +1503,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[17]),
-        .Q(FIFO_WR_DATA[17]),
+        .Q(din[17]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1440,7 +1511,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[18]),
-        .Q(FIFO_WR_DATA[18]),
+        .Q(din[18]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1448,7 +1519,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[19]),
-        .Q(FIFO_WR_DATA[19]),
+        .Q(din[19]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1456,7 +1527,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[1]),
-        .Q(FIFO_WR_DATA[1]),
+        .Q(din[1]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1464,7 +1535,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[20]),
-        .Q(FIFO_WR_DATA[20]),
+        .Q(din[20]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1472,7 +1543,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[21]),
-        .Q(FIFO_WR_DATA[21]),
+        .Q(din[21]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1480,7 +1551,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[22]),
-        .Q(FIFO_WR_DATA[22]),
+        .Q(din[22]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1488,7 +1559,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[23]),
-        .Q(FIFO_WR_DATA[23]),
+        .Q(din[23]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1496,7 +1567,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[2]),
-        .Q(FIFO_WR_DATA[2]),
+        .Q(din[2]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1504,7 +1575,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[3]),
-        .Q(FIFO_WR_DATA[3]),
+        .Q(din[3]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1512,7 +1583,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[4]),
-        .Q(FIFO_WR_DATA[4]),
+        .Q(din[4]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1520,7 +1591,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[5]),
-        .Q(FIFO_WR_DATA[5]),
+        .Q(din[5]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1528,7 +1599,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[6]),
-        .Q(FIFO_WR_DATA[6]),
+        .Q(din[6]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1536,7 +1607,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[7]),
-        .Q(FIFO_WR_DATA[7]),
+        .Q(din[7]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1544,7 +1615,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[8]),
-        .Q(FIFO_WR_DATA[8]),
+        .Q(din[8]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1552,7 +1623,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(data_2[9]),
-        .Q(FIFO_WR_DATA[9]),
+        .Q(din[9]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1589,7 +1660,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(eol_i_1_n_0),
-        .Q(FIFO_WR_DATA[24]),
+        .Q(din[24]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1613,7 +1684,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(field_id_2),
-        .Q(FIFO_WR_DATA[26]),
+        .Q(din[26]),
         .R(vid_io_in_reset));
   FDRE #(
     .INIT(1'b0)) 
@@ -1635,7 +1706,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
        (.C(vid_io_in_clk),
         .CE(vid_io_in_ce),
         .D(sof),
-        .Q(FIFO_WR_DATA[25]),
+        .Q(din[25]),
         .R(vid_io_in_reset));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
@@ -1703,7 +1774,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
     .INIT(64'h00000000BAAA0000)) 
     vtd_locked_i_1
        (.I0(vtd_locked_reg_0),
-        .I1(FIFO_WR_DATA[25]),
+        .I1(din[25]),
         .I2(vid_io_in_ce),
         .I3(sof),
         .I4(axis_enable),
@@ -1717,6 +1788,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_v_vid_in_axi4s_v4_0_5_formatter
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr
    (dout,
     wr_clk,
@@ -1785,6 +1857,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_generic_cstr
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width
    (dout,
     wr_clk,
@@ -1925,6 +1998,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_width__parameterized1
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper
    (dout,
     wr_clk,
@@ -1968,7 +2042,6 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper
   wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
     .DOA_REG(1),
@@ -2225,7 +2298,6 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper__parameterized0
   wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
     .DOA_REG(1),
@@ -2482,7 +2554,6 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper__parameterized1
   wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
     .DOA_REG(1),
@@ -2695,6 +2766,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_prim_wrapper__parameterized1
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top
    (dout,
     wr_clk,
@@ -2741,7 +2813,8 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_top
         .wr_clk(wr_clk));
 endmodule
 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6
    (dout,
     wr_clk,
     rd_clk,
@@ -2774,7 +2847,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5
   wire tmp_ram_regout_en;
   wire wr_clk;
 
-  Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth inst_blk_mem_gen
+  Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth inst_blk_mem_gen
        (.Q(Q),
         .din(din),
         .dout(dout),
@@ -2787,7 +2860,8 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5
         .wr_clk(wr_clk));
 endmodule
 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6_synth
    (dout,
     wr_clk,
     rd_clk,
@@ -2833,6 +2907,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5_synth
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs
    (WR_PNTR_RD,
     RD_PNTR_WR,
@@ -2884,18 +2959,18 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs
         .Q(wr_pntr_gc),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .rd_clk(rd_clk));
-  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .Q(rd_pntr_gc),
         .wr_clk(wr_clk));
-  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D(p_3_out),
         .\gnxpm_cdc.wr_pntr_bin_reg[10] ({p_0_out,gray2bin}),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .out(p_5_out),
         .rd_clk(rd_clk));
-  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .\gnxpm_cdc.rd_pntr_bin_reg[10] ({\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_1 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_2 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_3 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_5 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_6 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_7 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_8 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_9 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_10 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_11 }),
@@ -3287,6 +3362,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_clk_x_pntrs
         .Q(wr_pntr_gc[9]));
 endmodule
 
+(* ORIG_REF_NAME = "compare" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_compare
    (comp1,
     Q,
@@ -3654,6 +3730,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_compare_5
         .O(v1_reg[5]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo
    (wr_rst_busy,
     dout,
@@ -3768,6 +3845,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_ramfifo
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_top
    (wr_rst_busy,
     dout,
@@ -3889,8 +3967,8 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "12" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "12" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "12" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "12" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4
    (backup,
     backup_marker,
     clk,
@@ -4919,7 +4997,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
   assign wr_data_count[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth inst_fifo_gen
+  Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth inst_fifo_gen
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -4934,7 +5012,8 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
+module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_4_synth
    (wr_rst_busy,
     dout,
     empty,
@@ -4988,6 +5067,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_fifo_generator_v13_1_3_synth
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_memory
    (dout,
     wr_clk,
@@ -5021,7 +5101,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_memory
   wire tmp_ram_regout_en;
   wire wr_clk;
 
-  Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_5 \gbm.gbmg.gbmgb.ngecc.bmg 
+  Arty_Z7_20_v_vid_in_axi4s_0_0_blk_mem_gen_v8_3_6 \gbm.gbmg.gbmgb.ngecc.bmg 
        (.Q(Q),
         .din(din),
         .dout(dout),
@@ -5034,6 +5114,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_memory
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr
    (D,
     Q,
@@ -5442,6 +5523,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_bin_cntr
         .O(I4[9]));
 endmodule
 
+(* ORIG_REF_NAME = "rd_fwft" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
    (out,
     empty,
@@ -5468,7 +5550,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
 
   (* DONT_TOUCH *) wire aempty_fwft_fb_i;
   (* DONT_TOUCH *) wire aempty_fwft_i;
-  wire aempty_fwft_i0__0;
+  wire aempty_fwft_i0;
   (* DONT_TOUCH *) wire [1:0]curr_fwft_state;
   (* DONT_TOUCH *) wire empty_fwft_fb_i;
   (* DONT_TOUCH *) wire empty_fwft_fb_o_i;
@@ -5495,8 +5577,8 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
        (.I0(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2] [0]),
         .I1(ram_empty_fb_i_reg),
         .I2(rd_en),
-        .I3(curr_fwft_state[0]),
-        .I4(curr_fwft_state[1]),
+        .I3(curr_fwft_state[1]),
+        .I4(curr_fwft_state[0]),
         .O(tmp_ram_rd_en));
   LUT4 #(
     .INIT(16'hFFB0)) 
@@ -5507,13 +5589,22 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
         .I3(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2] [0]),
         .O(tmp_ram_regout_en));
   LUT4 #(
-    .INIT(16'h00BF)) 
+    .INIT(16'h4555)) 
     RAM_RD_EN_FWFT
+       (.I0(ram_empty_fb_i_reg),
+        .I1(rd_en),
+        .I2(curr_fwft_state[1]),
+        .I3(curr_fwft_state[0]),
+        .O(p_7_out));
+  LUT5 #(
+    .INIT(32'hFFCB8000)) 
+    aempty_fwft_fb_i_i_1
        (.I0(rd_en),
         .I1(curr_fwft_state[0]),
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_fb_i_reg),
-        .O(p_7_out));
+        .I4(aempty_fwft_fb_i),
+        .O(aempty_fwft_i0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   (* equivalent_register_removal = "no" *) 
@@ -5522,18 +5613,9 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
     aempty_fwft_fb_i_reg
        (.C(rd_clk),
         .CE(1'b1),
-        .D(aempty_fwft_i0__0),
+        .D(aempty_fwft_i0),
         .PRE(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2] [1]),
         .Q(aempty_fwft_fb_i));
-  LUT5 #(
-    .INIT(32'hEEFD8000)) 
-    aempty_fwft_i0
-       (.I0(curr_fwft_state[0]),
-        .I1(ram_empty_fb_i_reg),
-        .I2(rd_en),
-        .I3(curr_fwft_state[1]),
-        .I4(aempty_fwft_fb_i),
-        .O(aempty_fwft_i0__0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   (* equivalent_register_removal = "no" *) 
@@ -5542,7 +5624,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
     aempty_fwft_i_reg
        (.C(rd_clk),
         .CE(1'b1),
-        .D(aempty_fwft_i0__0),
+        .D(aempty_fwft_i0),
         .PRE(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2] [1]),
         .Q(aempty_fwft_i));
   LUT4 #(
@@ -5650,6 +5732,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_fwft
         .O(p_1_out));
 endmodule
 
+(* ORIG_REF_NAME = "rd_handshaking_flags" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags
    (underflow,
     p_1_out,
@@ -5672,6 +5755,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_handshaking_flags
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic
    (empty,
     valid,
@@ -5748,6 +5832,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_logic
         .rd_clk(rd_clk));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as
    (out,
     rd_clk,
@@ -5800,13 +5885,13 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as
         .PRE(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2] ),
         .Q(ram_empty_fb_i));
   LUT6 #(
-    .INIT(64'hAAAAEFFFAAAAAAAA)) 
+    .INIT(64'hBABBBBBBAAAAAAAA)) 
     ram_empty_i0
        (.I0(comp0),
-        .I1(rd_en),
-        .I2(\gpregsm1.curr_fwft_state_reg[1] [0]),
+        .I1(ram_empty_fb_i),
+        .I2(rd_en),
         .I3(\gpregsm1.curr_fwft_state_reg[1] [1]),
-        .I4(ram_empty_fb_i),
+        .I4(\gpregsm1.curr_fwft_state_reg[1] [0]),
         .I5(comp1),
         .O(ram_empty_i0_n_0));
   (* DONT_TOUCH *) 
@@ -5822,6 +5907,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_rd_status_flags_as
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo
    (out,
     \gc0.count_reg[0] ,
@@ -6044,6 +6130,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_reset_blk_ramfifo
         .Q(wr_rst_reg[2]));
 endmodule
 
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
@@ -6339,7 +6426,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1
+module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_6
    (D,
     Q,
     wr_clk,
@@ -6490,7 +6577,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2
+module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_7
    (out,
     \gnxpm_cdc.wr_pntr_bin_reg[10] ,
     D,
@@ -6756,7 +6843,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3
+module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized0_8
    (out,
     \gnxpm_cdc.rd_pntr_bin_reg[10] ,
     D,
@@ -7021,6 +7108,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_synchronizer_ff__parameterized3
         .O(\gnxpm_cdc.rd_pntr_bin_reg[10] [9]));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr
    (D,
     Q,
@@ -7528,6 +7616,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_bin_cntr
         .O(bin2gray[9]));
 endmodule
 
+(* ORIG_REF_NAME = "wr_handshaking_flags" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags
    (overflow,
     wr_clk,
@@ -7564,6 +7653,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_handshaking_flags
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic
    (overflow,
     \gic0.gc0.count_d1_reg[11] ,
@@ -7626,6 +7716,7 @@ module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_logic
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module Arty_Z7_20_v_vid_in_axi4s_0_0_wr_status_flags_as
    (out,
     \gic0.gc0.count_d1_reg[11] ,
@@ -7757,8 +7848,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

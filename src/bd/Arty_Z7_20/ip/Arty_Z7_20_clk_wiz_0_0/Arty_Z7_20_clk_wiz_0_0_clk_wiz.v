@@ -120,6 +120,7 @@ wire clk_in2_Arty_Z7_20_clk_wiz_0_0;
   PLLE2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
     .COMPENSATION         ("ZHOLD"),
+    .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
     .CLKFBOUT_MULT        (8),
     .CLKFBOUT_PHASE       (0.000),
@@ -129,7 +130,7 @@ wire clk_in2_Arty_Z7_20_clk_wiz_0_0;
     .CLKOUT1_DIVIDE       (5),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
-    .CLKIN1_PERIOD        (8.0))
+    .CLKIN1_PERIOD        (8.000))
   plle2_adv_inst
     // Output clocks
    (

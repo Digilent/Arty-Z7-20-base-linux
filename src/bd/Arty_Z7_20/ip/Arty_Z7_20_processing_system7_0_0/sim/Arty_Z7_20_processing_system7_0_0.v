@@ -50,7 +50,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:ip:processing_system7_bfm:2.0
+// IP VLNV: xilinx.com:ip:processing_system7_vip:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
@@ -85,6 +85,8 @@ SPI0_SS_O,
 SPI0_SS1_O, 
 SPI0_SS2_O, 
 SPI0_SS_T, 
+UART1_TX, 
+UART1_RX, 
 USB0_PORT_INDCTL, 
 USB0_VBUS_PWRSELECT, 
 USB0_VBUS_PWRFAULT, 
@@ -229,6 +231,8 @@ output SPI0_SS_O;
 output SPI0_SS1_O;
 output SPI0_SS2_O;
 output SPI0_SS_T;
+output UART1_TX;
+input UART1_RX;
 output [1 : 0] USB0_PORT_INDCTL;
 output USB0_VBUS_PWRSELECT;
 input USB0_VBUS_PWRFAULT;
@@ -344,7 +348,7 @@ input PS_SRSTB;
 input PS_CLK;
 input PS_PORB;
 
-  processing_system7_bfm_v2_0_5_processing_system7_bfm #(
+  processing_system7_vip_v1_0_0 #(
     .C_USE_M_AXI_GP0(1),
     .C_USE_M_AXI_GP1(0),
     .C_USE_S_AXI_ACP(0),

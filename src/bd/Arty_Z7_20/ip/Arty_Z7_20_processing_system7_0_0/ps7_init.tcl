@@ -32,7 +32,7 @@ proc ps7_clock_init_data_3_0 {} {
     mask_write 0XF8000140 0x03F03F71 0x00100801
     mask_write 0XF800014C 0x00003F31 0x00000501
     mask_write 0XF8000150 0x00003F33 0x00001401
-    mask_write 0XF8000154 0x00003F33 0x00000A01
+    mask_write 0XF8000154 0x00003F33 0x00000A03
     mask_write 0XF8000158 0x00003F33 0x00000601
     mask_write 0XF8000168 0x00003F31 0x00000501
     mask_write 0XF8000170 0x03F03F30 0x00200500
@@ -40,7 +40,7 @@ proc ps7_clock_init_data_3_0 {} {
     mask_write 0XF8000190 0x03F03F30 0x00100D00
     mask_write 0XF80001A0 0x03F03F30 0x00400500
     mask_write 0XF80001C4 0x00000001 0x00000001
-    mask_write 0XF800012C 0x01FFCCCD 0x01DC444D
+    mask_write 0XF800012C 0x01FFCCCD 0x01FC444D
     mwr -force 0XF8000004 0x0000767B
 }
 proc ps7_ddr_init_data_3_0 {} {
@@ -208,6 +208,10 @@ proc ps7_peripherals_init_data_3_0 {} {
     mask_write 0XF8000B50 0x00000180 0x00000180
     mask_write 0XF8000B54 0x00000180 0x00000000
     mwr -force 0XF8000004 0x0000767B
+    mask_write 0XE0001034 0x000000FF 0x00000006
+    mask_write 0XE0001018 0x0000FFFF 0x0000007C
+    mask_write 0XE0001000 0x000001FF 0x00000017
+    mask_write 0XE0001004 0x000003FF 0x00000020
     mask_write 0XE0000034 0x000000FF 0x00000006
     mask_write 0XE0000018 0x0000FFFF 0x0000007C
     mask_write 0XE0000000 0x000001FF 0x00000017
@@ -276,7 +280,7 @@ proc ps7_clock_init_data_2_0 {} {
     mask_write 0XF8000140 0x03F03F71 0x00100801
     mask_write 0XF800014C 0x00003F31 0x00000501
     mask_write 0XF8000150 0x00003F33 0x00001401
-    mask_write 0XF8000154 0x00003F33 0x00000A01
+    mask_write 0XF8000154 0x00003F33 0x00000A03
     mask_write 0XF8000158 0x00003F33 0x00000601
     mask_write 0XF8000168 0x00003F31 0x00000501
     mask_write 0XF8000170 0x03F03F30 0x00200500
@@ -284,7 +288,7 @@ proc ps7_clock_init_data_2_0 {} {
     mask_write 0XF8000190 0x03F03F30 0x00100D00
     mask_write 0XF80001A0 0x03F03F30 0x00400500
     mask_write 0XF80001C4 0x00000001 0x00000001
-    mask_write 0XF800012C 0x01FFCCCD 0x01DC444D
+    mask_write 0XF800012C 0x01FFCCCD 0x01FC444D
     mwr -force 0XF8000004 0x0000767B
 }
 proc ps7_ddr_init_data_2_0 {} {
@@ -453,6 +457,10 @@ proc ps7_peripherals_init_data_2_0 {} {
     mask_write 0XF8000B50 0x00000180 0x00000180
     mask_write 0XF8000B54 0x00000180 0x00000000
     mwr -force 0XF8000004 0x0000767B
+    mask_write 0XE0001034 0x000000FF 0x00000006
+    mask_write 0XE0001018 0x0000FFFF 0x0000007C
+    mask_write 0XE0001000 0x000001FF 0x00000017
+    mask_write 0XE0001004 0x00000FFF 0x00000020
     mask_write 0XE0000034 0x000000FF 0x00000006
     mask_write 0XE0000018 0x0000FFFF 0x0000007C
     mask_write 0XE0000000 0x000001FF 0x00000017
@@ -521,7 +529,7 @@ proc ps7_clock_init_data_1_0 {} {
     mask_write 0XF8000140 0x03F03F71 0x00100801
     mask_write 0XF800014C 0x00003F31 0x00000501
     mask_write 0XF8000150 0x00003F33 0x00001401
-    mask_write 0XF8000154 0x00003F33 0x00000A01
+    mask_write 0XF8000154 0x00003F33 0x00000A03
     mask_write 0XF8000158 0x00003F33 0x00000601
     mask_write 0XF8000168 0x00003F31 0x00000501
     mask_write 0XF8000170 0x03F03F30 0x00200500
@@ -529,7 +537,7 @@ proc ps7_clock_init_data_1_0 {} {
     mask_write 0XF8000190 0x03F03F30 0x00100D00
     mask_write 0XF80001A0 0x03F03F30 0x00400500
     mask_write 0XF80001C4 0x00000001 0x00000001
-    mask_write 0XF800012C 0x01FFCCCD 0x01DC444D
+    mask_write 0XF800012C 0x01FFCCCD 0x01FC444D
     mwr -force 0XF8000004 0x0000767B
 }
 proc ps7_ddr_init_data_1_0 {} {
@@ -696,6 +704,10 @@ proc ps7_peripherals_init_data_1_0 {} {
     mask_write 0XF8000B50 0x00000180 0x00000180
     mask_write 0XF8000B54 0x00000180 0x00000000
     mwr -force 0XF8000004 0x0000767B
+    mask_write 0XE0001034 0x000000FF 0x00000006
+    mask_write 0XE0001018 0x0000FFFF 0x0000007C
+    mask_write 0XE0001000 0x000001FF 0x00000017
+    mask_write 0XE0001004 0x00000FFF 0x00000020
     mask_write 0XE0000034 0x000000FF 0x00000006
     mask_write 0XE0000018 0x0000FFFF 0x0000007C
     mask_write 0XE0000000 0x000001FF 0x00000017
@@ -773,7 +785,10 @@ proc ps_version { } {
 }
 
 proc ps7_post_config {} {
-    variable PCW_SILICON_VER_1_0
+    set saved_mode [configparams force-mem-accesses]                  
+    configparams force-mem-accesses 1 
+    
+	variable PCW_SILICON_VER_1_0
     variable PCW_SILICON_VER_2_0
     variable PCW_SILICON_VER_3_0
     set sil_ver [ps_version]
@@ -785,6 +800,7 @@ proc ps7_post_config {} {
     } else {
         ps7_post_config_3_0   
     }
+	configparams force-mem-accesses $saved_mode                                       
 }
 
 proc ps7_debug {} {

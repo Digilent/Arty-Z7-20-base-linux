@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sat Mar 04 18:57:49 2017
--- Host        : WK73 running 64-bit Service Pack 1  (build 7601)
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_xbar_1 -prefix
---               Arty_Z7_20_xbar_1_ Arty_Z7_20_xbar_1_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+-- Date        : Tue Jun 20 16:37:13 2017
+-- Host        : localhost.localdomain running 64-bit unknown
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_xbar_1/Arty_Z7_20_xbar_1_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,14 +14,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter is
   port (
     aa_mi_arvalid : out STD_LOGIC;
     \s_axi_arready[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_single_thread.active_target_hot_reg[0]\ : out STD_LOGIC;
-    \gen_single_thread.active_target_enc_reg[0]\ : out STD_LOGIC;
     \gen_master_slots[0].r_issuing_cnt_reg[0]\ : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[1].r_issuing_cnt_reg[8]\ : out STD_LOGIC;
     \gen_arbiter.m_target_hot_i_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -29,25 +27,29 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter is
     \gen_axi.s_axi_rlast_i_reg\ : out STD_LOGIC;
     \m_axi_arqos[3]\ : out STD_LOGIC_VECTOR ( 56 downto 0 );
     m_axi_arvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_single_thread.active_target_hot_reg[0]\ : out STD_LOGIC;
+    \gen_single_thread.active_target_enc_reg[0]\ : out STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[0].r_issuing_cnt_reg[3]\ : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    st_aa_arvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \valid_qual_i1__0\ : in STD_LOGIC;
-    mi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
     aresetn_d : in STD_LOGIC;
-    D : in STD_LOGIC_VECTOR ( 56 downto 0 );
-    active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
-    active_target_enc : in STD_LOGIC;
+    mi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \valid_qual_i1__0\ : in STD_LOGIC;
+    st_aa_arvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    D : in STD_LOGIC_VECTOR ( 56 downto 0 );
     \gen_master_slots[0].r_issuing_cnt_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_valid_i_reg : in STD_LOGIC;
-    p_11_in : in STD_LOGIC
+    p_11_in : in STD_LOGIC;
+    active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
+    active_target_enc : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter : entity is "axi_crossbar_v2_1_13_addr_arbiter";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter is
   signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aa_mi_artarget_hot : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^aa_mi_arvalid\ : STD_LOGIC;
@@ -74,17 +76,17 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter is
   signal qual_reg : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s_axi_arready[0]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_arbiter.any_grant_i_2__0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[1]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[1]_i_3\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_target_hot_i[0]_i_1__0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_target_hot_i[1]_i_1__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \gen_arbiter.any_grant_i_2__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[1]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \gen_arbiter.last_rr_hot[1]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \gen_arbiter.m_target_hot_i[0]_i_1__0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \gen_arbiter.m_target_hot_i[1]_i_1__0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \gen_arbiter.s_ready_i[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \gen_master_slots[0].r_issuing_cnt[3]_i_3\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \gen_master_slots[1].r_issuing_cnt[8]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \gen_single_thread.active_target_enc[0]_i_1__0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \gen_single_thread.active_target_hot[0]_i_1__0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \gen_single_thread.active_target_enc[0]_i_1__0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \gen_single_thread.active_target_hot[0]_i_1__0\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_axi_arvalid[0]_INST_0\ : label is "soft_lutpair4";
 begin
   Q(0) <= \^q\(0);
@@ -734,7 +736,10 @@ begin
       O => \gen_arbiter.m_valid_i_i_1__0_n_0\
     );
 \gen_arbiter.m_valid_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.m_valid_i_i_1__0_n_0\,
@@ -771,7 +776,10 @@ begin
       O => \gen_arbiter.s_ready_i[0]_i_1_n_0\
     );
 \gen_arbiter.s_ready_i_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.s_ready_i[0]_i_1_n_0\,
@@ -873,7 +881,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter_0 is
   port (
     aa_wm_awgrant_enc : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -890,19 +898,17 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 is
     \gen_arbiter.qual_reg_reg[1]_0\ : out STD_LOGIC;
     m_axi_awvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     \storage_data1_reg[0]_0\ : out STD_LOGIC;
-    m_valid_i_reg : out STD_LOGIC;
+    \gen_rep[0].fifoaddr_reg[0]\ : out STD_LOGIC;
     \m_ready_d_reg[1]_0\ : out STD_LOGIC;
     \m_axi_awqos[3]\ : out STD_LOGIC_VECTOR ( 57 downto 0 );
     aclk : in STD_LOGIC;
     \m_ready_d_reg[0]\ : in STD_LOGIC;
-    st_aa_awvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
-    valid_qual_i111_in : in STD_LOGIC;
-    \gen_arbiter.m_valid_i_reg_0\ : in STD_LOGIC;
-    aa_sa_awready : in STD_LOGIC;
-    aresetn_d : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    out0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_ready_d : in STD_LOGIC_VECTOR ( 1 downto 0 );
     mi_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
+    aresetn_d : in STD_LOGIC;
+    valid_qual_i111_in : in STD_LOGIC;
+    st_aa_awvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_ready_d_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -915,13 +921,15 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 is
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awlock : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \gen_arbiter.m_valid_i_reg_0\ : in STD_LOGIC;
+    aa_sa_awready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 : entity is "axi_crossbar_v2_1_12_addr_arbiter";
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter_0 : entity is "axi_crossbar_v2_1_13_addr_arbiter";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter_0;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter_0 is
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^aa_sa_awvalid\ : STD_LOGIC;
@@ -945,8 +953,8 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 
   signal \^sel_4\ : STD_LOGIC;
   signal \^ss_aa_awready\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_arbiter.grant_hot[1]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_grant_enc_i[0]_i_5\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \gen_arbiter.grant_hot[1]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \gen_arbiter.m_grant_enc_i[0]_i_5\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \gen_arbiter.m_mesg_i[10]_i_1\ : label is "soft_lutpair38";
   attribute SOFT_HLUTNM of \gen_arbiter.m_mesg_i[11]_i_1\ : label is "soft_lutpair37";
   attribute SOFT_HLUTNM of \gen_arbiter.m_mesg_i[12]_i_1\ : label is "soft_lutpair37";
@@ -1005,20 +1013,20 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0 
   attribute SOFT_HLUTNM of \gen_arbiter.m_mesg_i[8]_i_1\ : label is "soft_lutpair39";
   attribute SOFT_HLUTNM of \gen_arbiter.m_mesg_i[9]_i_1\ : label is "soft_lutpair38";
   attribute SOFT_HLUTNM of \gen_arbiter.m_target_hot_i[1]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_valid_i_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \gen_arbiter.s_ready_i[1]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \gen_axi.write_cs[0]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[1]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_2\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_3\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_5\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_3\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \gen_arbiter.m_valid_i_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \gen_arbiter.s_ready_i[1]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \gen_axi.write_cs[0]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[2]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_2\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_3\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gen_master_slots[0].w_issuing_cnt[3]_i_5\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_ready_d[1]_i_3\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of m_valid_i_i_1 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \m_valid_i_i_1__1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \storage_data1[0]_i_3\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \storage_data1[0]_i_4\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_valid_i_i_1__1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \storage_data1[0]_i_3\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \storage_data1[0]_i_4\ : label is "soft_lutpair11";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
   SR(0) <= \^sr\(0);
@@ -2183,7 +2191,10 @@ begin
       O => \gen_arbiter.m_valid_i_i_1_n_0\
     );
 \gen_arbiter.m_valid_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.m_valid_i_i_1_n_0\,
@@ -2210,7 +2221,10 @@ begin
       O => \gen_arbiter.s_ready_i[1]_i_1_n_0\
     );
 \gen_arbiter.s_ready_i_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.s_ready_i[1]_i_1_n_0\,
@@ -2343,14 +2357,14 @@ m_valid_i_i_1: unisim.vcomponents.LUT3
       I0 => \^aa_sa_awvalid\,
       I1 => \^q\(0),
       I2 => m_ready_d(0),
-      O => m_valid_i_reg
+      O => \gen_rep[0].fifoaddr_reg[0]\
     );
 \storage_data1[0]_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
         port map (
-      I0 => \out\(0),
+      I0 => out0(1),
       I1 => m_ready_d(0),
       I2 => \^q\(0),
       I3 => \^aa_sa_awvalid\,
@@ -2361,7 +2375,7 @@ m_valid_i_i_1: unisim.vcomponents.LUT3
       INIT => X"2000"
     )
         port map (
-      I0 => \out\(1),
+      I0 => out0(0),
       I1 => m_ready_d(0),
       I2 => \^q\(0),
       I3 => \^aa_sa_awvalid\,
@@ -2372,7 +2386,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_decerr_slave is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_decerr_slave is
   port (
     mi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
     p_10_in : out STD_LOGIC;
@@ -2383,20 +2397,22 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_decerr_slave is
     mi_arready : out STD_LOGIC_VECTOR ( 0 to 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     aclk : in STD_LOGIC;
+    mi_rready_1 : in STD_LOGIC;
+    aa_mi_arvalid : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_arbiter.m_mesg_i_reg[40]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \gen_axi.s_axi_awready_i_reg_0\ : in STD_LOGIC;
     mi_bready_1 : in STD_LOGIC;
     \write_cs0__0\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    mi_rready_1 : in STD_LOGIC;
-    aa_mi_arvalid : in STD_LOGIC;
-    \gen_arbiter.m_target_hot_i_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_arbiter.m_mesg_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_axi.read_cs_reg[0]_0\ : in STD_LOGIC;
-    \gen_arbiter.m_mesg_i_reg[40]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     aresetn_d : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_decerr_slave;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_decerr_slave : entity is "axi_crossbar_v2_1_13_decerr_slave";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_decerr_slave;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_decerr_slave is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_decerr_slave is
   signal \gen_axi.read_cnt[4]_i_2_n_0\ : STD_LOGIC;
   signal \gen_axi.read_cnt[5]_i_2_n_0\ : STD_LOGIC;
   signal \gen_axi.read_cnt[7]_i_1_n_0\ : STD_LOGIC;
@@ -2555,7 +2571,7 @@ begin
       I1 => mi_rready_1,
       I2 => \^p_11_in\,
       I3 => aa_mi_arvalid,
-      I4 => \gen_arbiter.m_target_hot_i_reg[1]\(0),
+      I4 => Q(0),
       I5 => \^mi_arready\(0),
       O => \gen_axi.read_cnt[7]_i_1_n_0\
     );
@@ -2657,12 +2673,15 @@ begin
       I1 => mi_rready_1,
       I2 => \^p_11_in\,
       I3 => aa_mi_arvalid,
-      I4 => \gen_arbiter.m_target_hot_i_reg[1]\(0),
+      I4 => Q(0),
       I5 => \^mi_arready\(0),
       O => \gen_axi.read_cs[0]_i_1_n_0\
     );
 \gen_axi.read_cs_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_axi.read_cs[0]_i_1_n_0\,
@@ -2698,13 +2717,16 @@ begin
     )
         port map (
       I0 => \^mi_arready\(0),
-      I1 => \gen_arbiter.m_target_hot_i_reg[1]\(0),
+      I1 => Q(0),
       I2 => aa_mi_arvalid,
       I3 => \^p_11_in\,
       O => s_axi_rid_i
     );
 \gen_axi.s_axi_arready_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_axi.s_axi_arready_i_i_1_n_0\,
@@ -2724,7 +2746,10 @@ begin
       O => \gen_axi.s_axi_awready_i_i_1_n_0\
     );
 \gen_axi.s_axi_awready_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_axi.s_axi_awready_i_i_1_n_0\,
@@ -2736,7 +2761,7 @@ begin
       INIT => X"FFFE0002"
     )
         port map (
-      I0 => Q(0),
+      I0 => \gen_arbiter.m_mesg_i_reg[0]\(0),
       I1 => write_cs(1),
       I2 => write_cs(0),
       I3 => \gen_axi.s_axi_awready_i_reg_0\,
@@ -2764,7 +2789,10 @@ begin
       O => \gen_axi.s_axi_bvalid_i_i_1_n_0\
     );
 \gen_axi.s_axi_bvalid_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_axi.s_axi_bvalid_i_i_1_n_0\,
@@ -2829,7 +2857,10 @@ begin
       O => \gen_axi.s_axi_wready_i_i_1_n_0\
     );
 \gen_axi.s_axi_wready_i_reg\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_axi.s_axi_wready_i_i_1_n_0\,
@@ -2879,7 +2910,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor is
   port (
     active_target_enc : out STD_LOGIC;
     active_target_hot : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2901,9 +2932,11 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor is
     p_28_out : in STD_LOGIC;
     \gen_arbiter.s_ready_i_reg[0]_1\ : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor : entity is "axi_crossbar_v2_1_13_si_transactor";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor is
   signal accept_cnt : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^active_target_enc\ : STD_LOGIC;
   signal \^active_target_hot\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2980,7 +3013,10 @@ begin
       O => \gen_single_thread.accept_cnt[1]_i_3_n_0\
     );
 \gen_single_thread.accept_cnt_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_single_thread.accept_cnt[0]_i_1_n_0\,
@@ -2988,7 +3024,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.accept_cnt_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_single_thread.accept_cnt[1]_i_1_n_0\,
@@ -2996,7 +3035,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.active_target_enc_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.s_ready_i_reg[0]\,
@@ -3004,7 +3046,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.active_target_hot_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_arbiter.s_ready_i_reg[0]_0\,
@@ -3047,7 +3092,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\ is
+entity \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor__parameterized0\ is
   port (
     active_target_enc : out STD_LOGIC;
     active_target_hot : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3062,10 +3107,10 @@ entity \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\ is
     s_axi_awready : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\ : entity is "axi_crossbar_v2_1_12_si_transactor";
-end \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor__parameterized0\ : entity is "axi_crossbar_v2_1_13_si_transactor";
+end \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor__parameterized0\ is
   signal accept_cnt : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^active_target_enc\ : STD_LOGIC;
   signal \gen_single_thread.accept_cnt[0]_i_1__0_n_0\ : STD_LOGIC;
@@ -3113,7 +3158,10 @@ begin
       O => \gen_single_thread.accept_cnt[1]_i_1__0_n_0\
     );
 \gen_single_thread.accept_cnt_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_single_thread.accept_cnt[0]_i_1__0_n_0\,
@@ -3121,7 +3169,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.accept_cnt_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \gen_single_thread.accept_cnt[1]_i_1__0_n_0\,
@@ -3129,7 +3180,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.active_target_enc_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => s_ready_i_reg,
@@ -3137,7 +3191,10 @@ begin
       R => SR(0)
     );
 \gen_single_thread.active_target_hot_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => s_ready_i_reg_0,
@@ -3149,28 +3206,30 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter is
   port (
-    \gen_single_thread.active_target_hot_reg[0]\ : out STD_LOGIC;
-    m_ready_d : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \gen_single_thread.active_target_enc_reg[0]\ : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_ready_d : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \gen_arbiter.qual_reg_reg[1]\ : out STD_LOGIC;
     \gen_rep[0].fifoaddr_reg[0]\ : out STD_LOGIC;
-    sel_4 : in STD_LOGIC;
+    \gen_single_thread.active_target_hot_reg[0]\ : out STD_LOGIC;
+    \gen_single_thread.active_target_enc_reg[0]\ : out STD_LOGIC;
     ss_wr_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
     ss_aa_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
-    active_target_enc : in STD_LOGIC;
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     valid_qual_i111_in : in STD_LOGIC;
     st_aa_awvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
+    sel_4 : in STD_LOGIC;
+    active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
+    active_target_enc : in STD_LOGIC;
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter : entity is "axi_crossbar_v2_1_13_splitter";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter is
   signal \^m_ready_d\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_1_n_0\ : STD_LOGIC;
@@ -3252,7 +3311,10 @@ begin
       O => \m_ready_d[1]_i_1_n_0\
     );
 \m_ready_d_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \m_ready_d[0]_i_1_n_0\,
@@ -3260,7 +3322,10 @@ begin
       R => '0'
     );
 \m_ready_d_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \m_ready_d[1]_i_1_n_0\,
@@ -3283,7 +3348,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2 is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter_2 is
   port (
     aa_sa_awready : out STD_LOGIC;
     \gen_arbiter.any_grant_reg\ : out STD_LOGIC;
@@ -3298,10 +3363,10 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2 is
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2 : entity is "axi_crossbar_v2_1_12_splitter";
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter_2 : entity is "axi_crossbar_v2_1_13_splitter";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter_2;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2 is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter_2 is
   signal \^aa_sa_awready\ : STD_LOGIC;
   signal \^m_ready_d\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
@@ -3372,7 +3437,10 @@ begin
       O => \m_ready_d[1]_i_4_n_0\
     );
 \m_ready_d_reg[0]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \m_ready_d[0]_i_1_n_0\,
@@ -3380,7 +3448,10 @@ begin
       R => '0'
     );
 \m_ready_d_reg[1]\: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \m_ready_d[1]_i_1_n_0\,
@@ -3392,17 +3463,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl is
+entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl is
   port (
     push : out STD_LOGIC;
-    \storage_data1_reg[0]\ : out STD_LOGIC;
     s_ready_i_reg : out STD_LOGIC;
+    \storage_data1_reg[0]\ : out STD_LOGIC;
     fifoaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aclk : in STD_LOGIC;
     out0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \FSM_onehot_state_reg[0]\ : in STD_LOGIC;
-    \m_aready__1\ : in STD_LOGIC;
-    m_select_enc : in STD_LOGIC;
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     \storage_data1_reg[0]_0\ : in STD_LOGIC;
@@ -3411,11 +3479,16 @@ entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl is
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_ready_i_reg_0 : in STD_LOGIC
+    s_ready_i_reg_0 : in STD_LOGIC;
+    \FSM_onehot_state_reg[0]\ : in STD_LOGIC;
+    \m_aready__1\ : in STD_LOGIC;
+    m_select_enc : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl : entity is "axi_data_fifo_v2_1_11_ndeep_srl";
+end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl is
   signal \gen_primitive_shifter.gen_srls[0].srl_inst_i_2_n_0\ : STD_LOGIC;
   signal \gen_primitive_shifter.gen_srls[0].srl_inst_i_5_n_0\ : STD_LOGIC;
   signal \gen_primitive_shifter.gen_srls[0].srl_inst_i_6_n_0\ : STD_LOGIC;
@@ -3423,10 +3496,9 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl is
   signal \^s_ready_i_reg\ : STD_LOGIC;
   signal \storage_data1[0]_i_2__0_n_0\ : STD_LOGIC;
   signal storage_data2 : STD_LOGIC;
+  signal \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\ : STD_LOGIC;
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "PRIMITIVE";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "SRLC32E";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "inst/\gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls ";
   attribute srl_name : string;
@@ -3439,20 +3511,19 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl is
 begin
   push <= \^push\;
   s_ready_i_reg <= \^s_ready_i_reg\;
-\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRL16E
+\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRLC32E
     generic map(
-      INIT => X"0000",
+      INIT => X"00000000",
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => fifoaddr(0),
-      A1 => fifoaddr(1),
-      A2 => '0',
-      A3 => '0',
+      A(4 downto 2) => B"000",
+      A(1 downto 0) => fifoaddr(1 downto 0),
       CE => \^push\,
       CLK => aclk,
       D => \gen_primitive_shifter.gen_srls[0].srl_inst_i_2_n_0\,
-      Q => storage_data2
+      Q => storage_data2,
+      Q31 => \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\
     );
 \gen_primitive_shifter.gen_srls[0].srl_inst_i_1__0\: unisim.vcomponents.LUT6
     generic map(
@@ -3537,49 +3608,47 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl_3 is
+entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl_3 is
   port (
     \storage_data1_reg[0]\ : out STD_LOGIC;
     aa_wm_awgrant_enc : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aclk : in STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    load_s1 : in STD_LOGIC;
-    \storage_data1_reg[0]_0\ : in STD_LOGIC;
     m_valid_i_reg : in STD_LOGIC;
     p_10_in : in STD_LOGIC;
-    sa_wm_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
+    out0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    sa_wm_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    load_s1 : in STD_LOGIC;
+    \storage_data1_reg[0]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl_3 : entity is "axi_data_fifo_v2_1_10_ndeep_srl";
-end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl_3;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl_3 : entity is "axi_data_fifo_v2_1_11_ndeep_srl";
+end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl_3;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl_3 is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl_3 is
   signal push : STD_LOGIC;
   signal storage_data2 : STD_LOGIC;
+  signal \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\ : STD_LOGIC;
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "PRIMITIVE";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "SRLC32E";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "inst/\gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls ";
   attribute srl_name : string;
   attribute srl_name of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "inst/\gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst ";
 begin
-\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRL16E
+\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRLC32E
     generic map(
-      INIT => X"0000",
+      INIT => X"00000000",
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => A(0),
-      A1 => A(1),
-      A2 => '0',
-      A3 => '0',
+      A(4 downto 2) => B"000",
+      A(1 downto 0) => A(1 downto 0),
       CE => push,
       CLK => aclk,
       D => aa_wm_awgrant_enc,
-      Q => storage_data2
+      Q => storage_data2,
+      Q31 => \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\
     );
 \gen_primitive_shifter.gen_srls[0].srl_inst_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -3588,9 +3657,9 @@ begin
         port map (
       I0 => m_valid_i_reg,
       I1 => p_10_in,
-      I2 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(0),
+      I2 => out0(1),
       I3 => sa_wm_awvalid(0),
-      I4 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(1),
+      I4 => out0(0),
       O => push
     );
 \storage_data1[0]_i_1__1\: unisim.vcomponents.LUT5
@@ -3599,7 +3668,7 @@ begin
     )
         port map (
       I0 => storage_data2,
-      I1 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(1),
+      I1 => out0(0),
       I2 => aa_wm_awgrant_enc,
       I3 => load_s1,
       I4 => \storage_data1_reg[0]_0\,
@@ -3610,59 +3679,57 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl__parameterized8\ is
+entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl__parameterized0\ is
   port (
     push : out STD_LOGIC;
     \storage_data1_reg[0]\ : out STD_LOGIC;
     aa_wm_awgrant_enc : in STD_LOGIC;
     A : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ : in STD_LOGIC;
-    \storage_data1_reg[0]_0\ : in STD_LOGIC;
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ : in STD_LOGIC;
-    m_select_enc_1 : in STD_LOGIC;
     m_valid_i_reg : in STD_LOGIC;
+    out0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
     m_avalid_0 : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_select_enc : in STD_LOGIC
+    m_select_enc_1 : in STD_LOGIC;
+    m_select_enc : in STD_LOGIC;
+    \FSM_onehot_state_reg[0]\ : in STD_LOGIC;
+    \m_aready__1\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[1]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl__parameterized8\ : entity is "axi_data_fifo_v2_1_10_ndeep_srl";
-end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl__parameterized8\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl__parameterized0\ : entity is "axi_data_fifo_v2_1_11_ndeep_srl";
+end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl__parameterized8\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl__parameterized0\ is
   signal \gen_primitive_shifter.gen_srls[0].srl_inst_i_2__0_n_0\ : STD_LOGIC;
   signal \gen_primitive_shifter.gen_srls[0].srl_inst_i_3__0_n_0\ : STD_LOGIC;
   signal \^push\ : STD_LOGIC;
   signal \storage_data1[0]_i_2__1_n_0\ : STD_LOGIC;
   signal storage_data2 : STD_LOGIC;
+  signal \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\ : STD_LOGIC;
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "PRIMITIVE";
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "SRLC32E";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "inst/\gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls ";
   attribute srl_name : string;
   attribute srl_name of \gen_primitive_shifter.gen_srls[0].srl_inst\ : label is "inst/\gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst ";
 begin
   push <= \^push\;
-\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRL16E
+\gen_primitive_shifter.gen_srls[0].srl_inst\: unisim.vcomponents.SRLC32E
     generic map(
-      INIT => X"0000",
+      INIT => X"00000000",
       IS_CLK_INVERTED => '0'
     )
         port map (
-      A0 => A(0),
-      A1 => A(1),
-      A2 => A(2),
-      A3 => '0',
+      A(4 downto 3) => B"00",
+      A(2 downto 0) => A(2 downto 0),
       CE => \^push\,
       CLK => aclk,
       D => aa_wm_awgrant_enc,
-      Q => storage_data2
+      Q => storage_data2,
+      Q31 => \NLW_gen_primitive_shifter.gen_srls[0].srl_inst_Q31_UNCONNECTED\
     );
 \gen_primitive_shifter.gen_srls[0].srl_inst_i_1__1\: unisim.vcomponents.LUT6
     generic map(
@@ -3672,9 +3739,9 @@ begin
       I0 => \gen_primitive_shifter.gen_srls[0].srl_inst_i_2__0_n_0\,
       I1 => m_valid_i_reg,
       I2 => \gen_primitive_shifter.gen_srls[0].srl_inst_i_3__0_n_0\,
-      I3 => \out\(0),
+      I3 => out0(1),
       I4 => \gen_arbiter.m_valid_i_reg\,
-      I5 => \out\(1),
+      I5 => out0(0),
       O => \^push\
     );
 \gen_primitive_shifter.gen_srls[0].srl_inst_i_2__0\: unisim.vcomponents.LUT2
@@ -3702,10 +3769,10 @@ begin
     )
         port map (
       I0 => \storage_data1[0]_i_2__1_n_0\,
-      I1 => \out\(1),
-      I2 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\,
-      I3 => \storage_data1_reg[0]_0\,
-      I4 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\,
+      I1 => out0(0),
+      I2 => \FSM_onehot_state_reg[0]\,
+      I3 => \m_aready__1\,
+      I4 => \FSM_onehot_state_reg[1]\,
       I5 => m_select_enc_1,
       O => \storage_data1_reg[0]\
     );
@@ -3715,7 +3782,7 @@ begin
     )
         port map (
       I0 => storage_data2,
-      I1 => \out\(1),
+      I1 => out0(0),
       I2 => aa_wm_awgrant_enc,
       O => \storage_data1[0]_i_2__1_n_0\
     );
@@ -3724,34 +3791,34 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1\ is
+entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1\ is
   port (
     mi_bready_1 : out STD_LOGIC;
-    \gen_master_slots[1].w_issuing_cnt_reg[8]\ : out STD_LOGIC;
     \s_axi_bvalid[1]\ : out STD_LOGIC;
     valid_qual_i111_in : out STD_LOGIC;
+    \gen_master_slots[1].w_issuing_cnt_reg[8]\ : out STD_LOGIC;
     \aresetn_d_reg[1]\ : in STD_LOGIC;
     aclk : in STD_LOGIC;
     p_1_in : in STD_LOGIC;
-    p_20_in : in STD_LOGIC;
-    s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
     active_target_enc : in STD_LOGIC;
-    \gen_axi.s_axi_awready_i_reg\ : in STD_LOGIC;
-    w_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_17_in : in STD_LOGIC;
     \aresetn_d_reg[1]_0\ : in STD_LOGIC;
     p_61_out : in STD_LOGIC;
     p_58_out : in STD_LOGIC;
     active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[0].w_issuing_cnt_reg[2]\ : in STD_LOGIC;
+    w_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sel_4 : in STD_LOGIC;
-    \gen_single_thread.active_target_hot_reg[0]\ : in STD_LOGIC
+    \gen_single_thread.active_target_hot_reg[0]\ : in STD_LOGIC;
+    p_20_in : in STD_LOGIC;
+    \gen_axi.s_axi_awready_i_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_11_axic_register_slice";
-end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
+end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1\ is
   signal \gen_arbiter.m_grant_enc_i[0]_i_6_n_0\ : STD_LOGIC;
   signal \m_payload_i[2]_i_1__0_n_0\ : STD_LOGIC;
   signal \m_valid_i_i_1__0_n_0\ : STD_LOGIC;
@@ -3832,7 +3899,10 @@ begin
       O => \m_valid_i_i_1__0_n_0\
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \m_valid_i_i_1__0_n_0\,
@@ -3866,7 +3936,10 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       O => \s_ready_i_i_1__1_n_0\
     );
 s_ready_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \s_ready_i_i_1__1_n_0\,
@@ -3878,7 +3951,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1_4\ is
+entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1_4\ is
   port (
     s_ready_i_reg_0 : out STD_LOGIC;
     m_valid_i_reg_0 : out STD_LOGIC;
@@ -3898,10 +3971,10 @@ entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parame
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1_4\ : entity is "axi_register_slice_v2_1_11_axic_register_slice";
-end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1_4\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1_4\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
+end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1_4\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1_4\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1_4\ is
   signal \aresetn_d[1]_i_1_n_0\ : STD_LOGIC;
   signal \^m_axi_bready\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \m_payload_i[0]_i_1_n_0\ : STD_LOGIC;
@@ -4047,7 +4120,10 @@ m_valid_i_i_2: unisim.vcomponents.LUT5
       O => m_valid_i_i_2_n_0
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => m_valid_i_i_2_n_0,
@@ -4094,7 +4170,10 @@ s_ready_i_i_2: unisim.vcomponents.LUT6
       O => s_ready_i_i_2_n_0
     );
 s_ready_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => s_ready_i_i_2_n_0,
@@ -4106,41 +4185,41 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2\ is
+entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ is
   port (
     m_valid_i_reg_0 : out STD_LOGIC;
     \skid_buffer_reg[64]_0\ : out STD_LOGIC;
-    \gen_master_slots[1].r_issuing_cnt_reg[8]\ : out STD_LOGIC;
-    \gen_master_slots[1].r_issuing_cnt_reg[8]_0\ : out STD_LOGIC;
     \gen_arbiter.qual_reg_reg[0]\ : out STD_LOGIC;
     \valid_qual_i1__0\ : out STD_LOGIC;
     \gen_arbiter.qual_reg_reg[0]_0\ : out STD_LOGIC;
+    \gen_master_slots[1].r_issuing_cnt_reg[8]\ : out STD_LOGIC;
     s_axi_rlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \gen_master_slots[1].r_issuing_cnt_reg[8]_0\ : out STD_LOGIC;
     \aresetn_d_reg[1]\ : in STD_LOGIC;
     aclk : in STD_LOGIC;
     p_1_in : in STD_LOGIC;
     active_target_enc_0 : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
-    r_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
     p_11_in : in STD_LOGIC;
     st_aa_arvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[0].r_issuing_cnt_reg[2]\ : in STD_LOGIC;
+    r_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \s_axi_araddr[29]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_valid_i_reg_1 : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     p_13_in : in STD_LOGIC;
+    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
     p_1_in_1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_11_axic_register_slice";
-end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
+end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ is
   signal \^gen_arbiter.qual_reg_reg[0]_0\ : STD_LOGIC;
-  signal \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\ : STD_LOGIC;
+  signal \^gen_master_slots[1].r_issuing_cnt_reg[8]\ : STD_LOGIC;
   signal \m_payload_i[64]_i_1_n_0\ : STD_LOGIC;
   signal \m_payload_i[65]_i_1_n_0\ : STD_LOGIC;
   signal \m_payload_i[66]_i_1_n_0\ : STD_LOGIC;
@@ -4165,7 +4244,7 @@ architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_reg
   attribute SOFT_HLUTNM of \skid_buffer[66]_i_1\ : label is "soft_lutpair156";
 begin
   \gen_arbiter.qual_reg_reg[0]_0\ <= \^gen_arbiter.qual_reg_reg[0]_0\;
-  \gen_master_slots[1].r_issuing_cnt_reg[8]_0\ <= \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\;
+  \gen_master_slots[1].r_issuing_cnt_reg[8]\ <= \^gen_master_slots[1].r_issuing_cnt_reg[8]\;
   m_valid_i_reg_0 <= \^m_valid_i_reg_0\;
   \skid_buffer_reg[64]_0\ <= \^skid_buffer_reg[64]_0\;
   \valid_qual_i1__0\ <= \^valid_qual_i1__0\;
@@ -4198,7 +4277,7 @@ begin
     )
         port map (
       I0 => \^m_valid_i_reg_0\,
-      I1 => \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\,
+      I1 => \^gen_master_slots[1].r_issuing_cnt_reg[8]\,
       I2 => s_axi_rready(0),
       I3 => active_target_enc_0,
       O => \^gen_arbiter.qual_reg_reg[0]_0\
@@ -4210,11 +4289,11 @@ begin
         port map (
       I0 => active_target_enc_0,
       I1 => s_axi_rready(0),
-      I2 => \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\,
+      I2 => \^gen_master_slots[1].r_issuing_cnt_reg[8]\,
       I3 => \^m_valid_i_reg_0\,
       I4 => \gen_arbiter.m_valid_i_reg\,
       I5 => r_issuing_cnt(1),
-      O => \gen_master_slots[1].r_issuing_cnt_reg[8]\
+      O => \gen_master_slots[1].r_issuing_cnt_reg[8]_0\
     );
 \m_payload_i[64]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -4251,7 +4330,7 @@ begin
       I1 => \^skid_buffer_reg[64]_0\,
       I2 => \skid_buffer_reg_n_0_[66]\,
       I3 => p_1_in_1,
-      I4 => \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\,
+      I4 => \^gen_master_slots[1].r_issuing_cnt_reg[8]\,
       O => \m_payload_i[66]_i_1_n_0\
     );
 \m_payload_i_reg[64]\: unisim.vcomponents.FDRE
@@ -4275,7 +4354,7 @@ begin
       C => aclk,
       CE => '1',
       D => \m_payload_i[66]_i_1_n_0\,
-      Q => \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\,
+      Q => \^gen_master_slots[1].r_issuing_cnt_reg[8]\,
       R => '0'
     );
 \m_valid_i_i_1__3\: unisim.vcomponents.LUT5
@@ -4291,7 +4370,10 @@ begin
       O => m_valid_i0
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => m_valid_i0,
@@ -4303,7 +4385,7 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       INIT => X"B8"
     )
         port map (
-      I0 => \^gen_master_slots[1].r_issuing_cnt_reg[8]_0\,
+      I0 => \^gen_master_slots[1].r_issuing_cnt_reg[8]\,
       I1 => active_target_enc_0,
       I2 => Q(2),
       O => s_axi_rlast(0)
@@ -4341,7 +4423,10 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       O => \s_ready_i_i_1__3_n_0\
     );
 s_ready_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \s_ready_i_i_1__3_n_0\,
@@ -4405,7 +4490,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2_5\ is
+entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2_5\ is
   port (
     m_valid_i_reg_0 : out STD_LOGIC;
     \m_axi_rready[0]\ : out STD_LOGIC;
@@ -4430,10 +4515,10 @@ entity \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parame
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2_5\ : entity is "axi_register_slice_v2_1_11_axic_register_slice";
-end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2_5\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2_5\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
+end \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2_5\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2_5\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2_5\ is
   signal \^q\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \gen_master_slots[0].r_issuing_cnt[3]_i_5_n_0\ : STD_LOGIC;
   signal \^m_axi_rready[0]\ : STD_LOGIC;
@@ -5936,7 +6021,10 @@ begin
       O => m_valid_i0
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => m_valid_i0,
@@ -6532,7 +6620,10 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       O => \s_ready_i_i_1__2_n_0\
     );
 s_ready_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => '1',
       D => \s_ready_i_i_1__2_n_0\,
@@ -7080,16 +7171,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo is
+entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo is
   port (
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    in1 : out STD_LOGIC;
     \storage_data1_reg[0]_0\ : out STD_LOGIC;
     s_ready_i_reg_0 : out STD_LOGIC;
     m_select_enc : out STD_LOGIC;
     s_ready_i_reg_1 : out STD_LOGIC;
     \gen_rep[0].fifoaddr_reg[0]_0\ : out STD_LOGIC;
     aclk : in STD_LOGIC;
-    aresetn_d_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -7102,14 +7193,16 @@ entity Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo is
     p_10_in : in STD_LOGIC;
     \m_ready_d_reg[1]\ : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo : entity is "axi_data_fifo_v2_1_11_axic_reg_srl_fifo";
+end Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo is
-  signal \FSM_onehot_state[0]_i_1_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_state[1]_i_1_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo is
+  signal \/FSM_onehot_state[0]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[1]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[3]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_state[3]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[3]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[3]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[3]_i_5_n_0\ : STD_LOGIC;
@@ -7118,11 +7211,11 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_f
   attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[2]\ : signal is "yes";
   signal \FSM_onehot_state_reg_n_0_[3]\ : STD_LOGIC;
   attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[3]\ : signal is "yes";
-  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal fifoaddr : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \gen_rep[0].fifoaddr[0]_i_1_n_0\ : STD_LOGIC;
   signal \gen_rep[0].fifoaddr[1]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_srls[0].gen_rep[0].srl_nx1_n_1\ : STD_LOGIC;
+  signal \gen_srls[0].gen_rep[0].srl_nx1_n_2\ : STD_LOGIC;
+  signal \^in1\ : STD_LOGIC;
   signal \m_aready__1\ : STD_LOGIC;
   signal \^m_select_enc\ : STD_LOGIC;
   signal m_valid_i : STD_LOGIC;
@@ -7146,12 +7239,12 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_f
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[0]\ : label is "1";
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[1]\ : label is "1";
 begin
-  SR(0) <= \^sr\(0);
+  in1 <= \^in1\;
   m_select_enc <= \^m_select_enc\;
   s_ready_i_reg_0 <= \^s_ready_i_reg_0\;
   s_ready_i_reg_1 <= \^s_ready_i_reg_1\;
   \storage_data1_reg[0]_0\ <= \^storage_data1_reg[0]_0\;
-\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT5
+\/FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"51000000"
     )
@@ -7161,9 +7254,9 @@ begin
       I2 => m_ready_d(0),
       I3 => \m_aready__1\,
       I4 => p_0_in8_in,
-      O => \FSM_onehot_state[0]_i_1_n_0\
+      O => \/FSM_onehot_state[0]_i_1_n_0\
     );
-\FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
+\/FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"4444444444444744"
     )
@@ -7174,9 +7267,9 @@ begin
       I3 => \FSM_onehot_state[3]_i_5_n_0\,
       I4 => \FSM_onehot_state[2]_i_3_n_0\,
       I5 => p_0_in8_in,
-      O => \FSM_onehot_state[1]_i_1_n_0\
+      O => \/FSM_onehot_state[1]_i_1_n_0\
     );
-\FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
+\/FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"88888888BBBBB8BB"
     )
@@ -7187,7 +7280,19 @@ begin
       I3 => \FSM_onehot_state[3]_i_5_n_0\,
       I4 => \FSM_onehot_state[2]_i_3_n_0\,
       I5 => p_0_in8_in,
-      O => \FSM_onehot_state[2]_i_1_n_0\
+      O => \/FSM_onehot_state[2]_i_1_n_0\
+    );
+\/FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"000008AA"
+    )
+        port map (
+      I0 => p_0_in8_in,
+      I1 => s_axi_awvalid(0),
+      I2 => m_ready_d(0),
+      I3 => \m_aready__1\,
+      I4 => p_9_in,
+      O => \/FSM_onehot_state[3]_i_2_n_0\
     );
 \FSM_onehot_state[2]_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -7214,18 +7319,6 @@ begin
       I4 => \m_aready__1\,
       I5 => \FSM_onehot_state_reg_n_0_[3]\,
       O => m_valid_i
-    );
-\FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"000008AA"
-    )
-        port map (
-      I0 => p_0_in8_in,
-      I1 => s_axi_awvalid(0),
-      I2 => m_ready_d(0),
-      I3 => \m_aready__1\,
-      I4 => p_9_in,
-      O => \FSM_onehot_state[3]_i_2_n_0\
     );
 \FSM_onehot_state[3]_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -7278,9 +7371,9 @@ begin
         port map (
       C => aclk,
       CE => m_valid_i,
-      D => \FSM_onehot_state[0]_i_1_n_0\,
+      D => \/FSM_onehot_state[0]_i_1_n_0\,
       Q => p_9_in,
-      S => \^sr\(0)
+      S => \^in1\
     );
 \FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -7289,9 +7382,9 @@ begin
         port map (
       C => aclk,
       CE => m_valid_i,
-      D => \FSM_onehot_state[1]_i_1_n_0\,
+      D => \/FSM_onehot_state[1]_i_1_n_0\,
       Q => p_0_in8_in,
-      R => \^sr\(0)
+      R => \^in1\
     );
 \FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -7300,9 +7393,9 @@ begin
         port map (
       C => aclk,
       CE => m_valid_i,
-      D => \FSM_onehot_state[2]_i_1_n_0\,
+      D => \/FSM_onehot_state[2]_i_1_n_0\,
       Q => \FSM_onehot_state_reg_n_0_[2]\,
-      R => \^sr\(0)
+      R => \^in1\
     );
 \FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -7311,16 +7404,16 @@ begin
         port map (
       C => aclk,
       CE => m_valid_i,
-      D => \FSM_onehot_state[3]_i_2_n_0\,
+      D => \/FSM_onehot_state[3]_i_2_n_0\,
       Q => \FSM_onehot_state_reg_n_0_[3]\,
-      R => \^sr\(0)
+      R => \^in1\
     );
 areset_d1_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => '1',
-      D => aresetn_d_reg(0),
-      Q => \^sr\(0),
+      D => SR(0),
+      Q => \^in1\,
       R => '0'
     );
 \gen_rep[0].fifoaddr[0]_i_1\: unisim.vcomponents.LUT6
@@ -7354,7 +7447,7 @@ areset_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \gen_rep[0].fifoaddr[0]_i_1_n_0\,
       Q => fifoaddr(0),
-      S => aresetn_d_reg(0)
+      S => SR(0)
     );
 \gen_rep[0].fifoaddr_reg[1]\: unisim.vcomponents.FDSE
      port map (
@@ -7362,9 +7455,9 @@ areset_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \gen_rep[0].fifoaddr[1]_i_1_n_0\,
       Q => fifoaddr(1),
-      S => aresetn_d_reg(0)
+      S => SR(0)
     );
-\gen_srls[0].gen_rep[0].srl_nx1\: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl
+\gen_srls[0].gen_rep[0].srl_nx1\: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl
      port map (
       \FSM_onehot_state_reg[0]\ => \FSM_onehot_state[3]_i_4_n_0\,
       aclk => aclk,
@@ -7383,7 +7476,7 @@ areset_d1_reg: unisim.vcomponents.FDRE
       s_axi_wvalid(0) => s_axi_wvalid(0),
       s_ready_i_reg => \^s_ready_i_reg_1\,
       s_ready_i_reg_0 => \^s_ready_i_reg_0\,
-      \storage_data1_reg[0]\ => \gen_srls[0].gen_rep[0].srl_nx1_n_1\,
+      \storage_data1_reg[0]\ => \gen_srls[0].gen_rep[0].srl_nx1_n_2\,
       \storage_data1_reg[0]_0\ => \storage_data1_reg[0]_1\
     );
 m_valid_i_i_1: unisim.vcomponents.LUT6
@@ -7426,12 +7519,15 @@ m_valid_i_i_2: unisim.vcomponents.LUT6
       O => \gen_rep[0].fifoaddr_reg[0]_0\
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
       CE => m_valid_i,
       D => m_valid_i_i_1_n_0,
       Q => \^storage_data1_reg[0]_0\,
-      R => \^sr\(0)
+      R => \^in1\
     );
 s_ready_i_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -7439,7 +7535,7 @@ s_ready_i_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \FSM_onehot_state[2]_i_3_n_0\,
-      I1 => \^sr\(0),
+      I1 => \^in1\,
       I2 => push,
       I3 => fifoaddr(1),
       I4 => fifoaddr(0),
@@ -7452,13 +7548,13 @@ s_ready_i_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => s_ready_i_i_1_n_0,
       Q => \^s_ready_i_reg_0\,
-      R => aresetn_d_reg(0)
+      R => SR(0)
     );
 \storage_data1_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => '1',
-      D => \gen_srls[0].gen_rep[0].srl_nx1_n_1\,
+      D => \gen_srls[0].gen_rep[0].srl_nx1_n_2\,
       Q => \^m_select_enc\,
       R => '0'
     );
@@ -7467,54 +7563,66 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized0\ is
+entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized0\ is
   port (
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \storage_data1_reg[0]_0\ : out STD_LOGIC;
-    m_valid_i_reg_0 : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_ready_i_reg : out STD_LOGIC;
     m_axi_wvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    out0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_wlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     aa_wm_awgrant_enc : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
-    in1 : in STD_LOGIC;
-    m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    aa_sa_awvalid : in STD_LOGIC;
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ : in STD_LOGIC;
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ : in STD_LOGIC;
+    areset_d1 : in STD_LOGIC;
     m_select_enc : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_avalid : in STD_LOGIC;
-    m_valid_i_reg_1 : in STD_LOGIC;
+    m_valid_i_reg_0 : in STD_LOGIC;
+    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \FSM_onehot_state_reg[0]_0\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[1]_0\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    aa_sa_awvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized0\ : entity is "axi_data_fifo_v2_1_10_axic_reg_srl_fifo";
-end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized0\ : entity is "axi_data_fifo_v2_1_11_axic_reg_srl_fifo";
+end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized0\ is
-  signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized0\ is
+  signal \/FSM_onehot_state[0]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[1]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[3]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
+  attribute RTL_KEEP : string;
+  attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[2]\ : signal is "yes";
+  signal \FSM_onehot_state_reg_n_0_[3]\ : STD_LOGIC;
+  attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[3]\ : signal is "yes";
   signal fifoaddr : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \gen_rep[0].fifoaddr[0]_i_1_n_0\ : STD_LOGIC;
   signal \gen_rep[0].fifoaddr[1]_i_1_n_0\ : STD_LOGIC;
   signal \gen_rep[0].fifoaddr[2]_i_1_n_0\ : STD_LOGIC;
   signal \gen_srls[0].gen_rep[0].srl_nx1_n_1\ : STD_LOGIC;
+  signal \m_aready__1\ : STD_LOGIC;
   signal m_avalid_0 : STD_LOGIC;
   signal m_select_enc_1 : STD_LOGIC;
+  signal \m_valid_i__0\ : STD_LOGIC;
+  signal m_valid_i_i_3_n_0 : STD_LOGIC;
   signal m_valid_i_n_0 : STD_LOGIC;
-  signal \^m_valid_i_reg_0\ : STD_LOGIC;
+  signal \^out0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  attribute RTL_KEEP of out0 : signal is "yes";
   signal push : STD_LOGIC;
-  signal \^storage_data1_reg[0]_0\ : STD_LOGIC;
+  attribute KEEP : string;
+  attribute KEEP of \FSM_onehot_state_reg[0]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[1]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[2]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[3]\ : label is "yes";
   attribute syn_keep : string;
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[0]\ : label is "1";
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[1]\ : label is "1";
@@ -7595,57 +7703,125 @@ architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_
   attribute SOFT_HLUTNM of \m_axi_wstrb[7]_INST_0\ : label is "soft_lutpair48";
   attribute SOFT_HLUTNM of \s_axi_wready[1]_INST_0_i_1\ : label is "soft_lutpair48";
 begin
-  E(0) <= \^e\(0);
-  m_valid_i_reg_0 <= \^m_valid_i_reg_0\;
-  \storage_data1_reg[0]_0\ <= \^storage_data1_reg[0]_0\;
-\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT6
+  out0(1 downto 0) <= \^out0\(1 downto 0);
+\/FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"4555000000000000"
     )
         port map (
-      I0 => \out\(0),
+      I0 => \^out0\(1),
       I1 => m_ready_d(0),
       I2 => Q(0),
       I3 => aa_sa_awvalid,
-      I4 => \^storage_data1_reg[0]_0\,
-      I5 => \out\(1),
-      O => D(0)
+      I4 => \m_aready__1\,
+      I5 => \^out0\(0),
+      O => \/FSM_onehot_state[0]_i_1_n_0\
+    );
+\/FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0A0A0A0A4A0A0A0A"
+    )
+        port map (
+      I0 => \^out0\(1),
+      I1 => \m_aready__1\,
+      I2 => \gen_arbiter.m_valid_i_reg\,
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
+      I4 => m_valid_i_i_3_n_0,
+      I5 => \^out0\(0),
+      O => \/FSM_onehot_state[1]_i_1_n_0\
+    );
+\/FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A0A0A0A0B5F5F5F5"
+    )
+        port map (
+      I0 => \^out0\(1),
+      I1 => \m_aready__1\,
+      I2 => \gen_arbiter.m_valid_i_reg\,
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
+      I4 => m_valid_i_i_3_n_0,
+      I5 => \^out0\(0),
+      O => \/FSM_onehot_state[2]_i_1_n_0\
+    );
+\/FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000002000AAAA"
+    )
+        port map (
+      I0 => \^out0\(0),
+      I1 => m_ready_d(0),
+      I2 => Q(0),
+      I3 => aa_sa_awvalid,
+      I4 => \m_aready__1\,
+      I5 => \^out0\(1),
+      O => \/FSM_onehot_state[3]_i_2_n_0\
     );
 \FSM_onehot_state[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"E3E2E322E322E322"
     )
         port map (
-      I0 => \out\(0),
+      I0 => \^out0\(1),
       I1 => \gen_arbiter.m_valid_i_reg\,
-      I2 => \^storage_data1_reg[0]_0\,
-      I3 => \out\(1),
-      I4 => \out\(2),
-      I5 => \^m_valid_i_reg_0\,
-      O => \^e\(0)
+      I2 => \m_aready__1\,
+      I3 => \^out0\(0),
+      I4 => \FSM_onehot_state_reg_n_0_[3]\,
+      I5 => m_valid_i_i_3_n_0,
+      O => \m_valid_i__0\
     );
-\FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT6
+\FSM_onehot_state_reg[0]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => X"000000002000AAAA"
+      INIT => '1'
     )
         port map (
-      I0 => \out\(1),
-      I1 => m_ready_d(0),
-      I2 => Q(0),
-      I3 => aa_sa_awvalid,
-      I4 => \^storage_data1_reg[0]_0\,
-      I5 => \out\(0),
-      O => D(1)
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[0]_i_1_n_0\,
+      Q => \^out0\(1),
+      S => areset_d1
+    );
+\FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[1]_i_1_n_0\,
+      Q => \^out0\(0),
+      R => areset_d1
+    );
+\FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[2]_i_1_n_0\,
+      Q => \FSM_onehot_state_reg_n_0_[2]\,
+      R => areset_d1
+    );
+\FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[3]_i_2_n_0\,
+      Q => \FSM_onehot_state_reg_n_0_[3]\,
+      R => areset_d1
     );
 \gen_rep[0].fifoaddr[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"5AFBA504"
     )
         port map (
-      I0 => \^storage_data1_reg[0]_0\,
-      I1 => \out\(1),
+      I0 => \m_aready__1\,
+      I1 => \^out0\(0),
       I2 => \gen_arbiter.m_valid_i_reg\,
-      I3 => \out\(2),
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
       I4 => fifoaddr(0),
       O => \gen_rep[0].fifoaddr[0]_i_1_n_0\
     );
@@ -7655,10 +7831,10 @@ begin
     )
         port map (
       I0 => fifoaddr(0),
-      I1 => \out\(2),
+      I1 => \FSM_onehot_state_reg_n_0_[3]\,
       I2 => \gen_arbiter.m_valid_i_reg\,
-      I3 => \out\(1),
-      I4 => \^storage_data1_reg[0]_0\,
+      I3 => \^out0\(0),
+      I4 => \m_aready__1\,
       I5 => fifoaddr(1),
       O => \gen_rep[0].fifoaddr[1]_i_1_n_0\
     );
@@ -7669,8 +7845,8 @@ begin
         port map (
       I0 => fifoaddr(1),
       I1 => fifoaddr(0),
-      I2 => \^storage_data1_reg[0]_0\,
-      I3 => \out\(2),
+      I2 => \m_aready__1\,
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
       I4 => push,
       I5 => fifoaddr(2),
       O => \gen_rep[0].fifoaddr[2]_i_1_n_0\
@@ -7699,24 +7875,25 @@ begin
       Q => fifoaddr(2),
       S => SR(0)
     );
-\gen_srls[0].gen_rep[0].srl_nx1\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl__parameterized8\
+\gen_srls[0].gen_rep[0].srl_nx1\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl__parameterized0\
      port map (
       A(2 downto 0) => fifoaddr(2 downto 0),
+      \FSM_onehot_state_reg[0]\ => \FSM_onehot_state_reg[0]_0\,
+      \FSM_onehot_state_reg[1]\ => \FSM_onehot_state_reg[1]_0\,
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
       \gen_arbiter.m_valid_i_reg\ => \gen_arbiter.m_valid_i_reg\,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\,
+      \m_aready__1\ => \m_aready__1\,
       m_avalid_0 => m_avalid_0,
       m_axi_wready(0) => m_axi_wready(0),
       m_select_enc => m_select_enc,
       m_select_enc_1 => m_select_enc_1,
-      m_valid_i_reg => m_valid_i_reg_1,
-      \out\(1 downto 0) => \out\(2 downto 1),
+      m_valid_i_reg => m_valid_i_reg_0,
+      out0(1) => \^out0\(0),
+      out0(0) => \FSM_onehot_state_reg_n_0_[3]\,
       push => push,
       s_axi_wlast(0) => s_axi_wlast(0),
-      \storage_data1_reg[0]\ => \gen_srls[0].gen_rep[0].srl_nx1_n_1\,
-      \storage_data1_reg[0]_0\ => \^storage_data1_reg[0]_0\
+      \storage_data1_reg[0]\ => \gen_srls[0].gen_rep[0].srl_nx1_n_1\
     );
 \m_axi_wdata[0]_INST_0\: unisim.vcomponents.LUT2
     generic map(
@@ -8392,12 +8569,12 @@ m_valid_i: unisim.vcomponents.LUT6
       INIT => X"E3E2232223222322"
     )
         port map (
-      I0 => \out\(0),
+      I0 => \^out0\(1),
       I1 => \gen_arbiter.m_valid_i_reg\,
-      I2 => \^storage_data1_reg[0]_0\,
-      I3 => \out\(1),
-      I4 => \out\(2),
-      I5 => \^m_valid_i_reg_0\,
+      I2 => \m_aready__1\,
+      I3 => \^out0\(0),
+      I4 => \FSM_onehot_state_reg_n_0_[3]\,
+      I5 => m_valid_i_i_3_n_0,
       O => m_valid_i_n_0
     );
 \m_valid_i_i_2__1\: unisim.vcomponents.LUT6
@@ -8407,11 +8584,11 @@ m_valid_i: unisim.vcomponents.LUT6
         port map (
       I0 => m_select_enc_1,
       I1 => m_select_enc,
-      I2 => m_valid_i_reg_1,
+      I2 => m_valid_i_reg_0,
       I3 => s_axi_wlast(0),
       I4 => m_axi_wready(0),
       I5 => m_avalid_0,
-      O => \^storage_data1_reg[0]_0\
+      O => \m_aready__1\
     );
 m_valid_i_i_3: unisim.vcomponents.LUT3
     generic map(
@@ -8421,15 +8598,18 @@ m_valid_i_i_3: unisim.vcomponents.LUT3
       I0 => fifoaddr(1),
       I1 => fifoaddr(0),
       I2 => fifoaddr(2),
-      O => \^m_valid_i_reg_0\
+      O => m_valid_i_i_3_n_0
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
-      CE => \^e\(0),
+      CE => \m_valid_i__0\,
       D => m_valid_i_n_0,
       Q => m_avalid_0,
-      R => in1
+      R => areset_d1
     );
 \s_axi_wready[1]_INST_0_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -8455,71 +8635,85 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized1\ is
+entity \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized1\ is
   port (
-    m_valid_i_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_axi.s_axi_wready_i_reg\ : out STD_LOGIC;
     \storage_data1_reg[0]_0\ : out STD_LOGIC;
     \gen_axi.s_axi_wready_i_reg_0\ : out STD_LOGIC;
     s_axi_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_ready_i_reg : out STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     aa_wm_awgrant_enc : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    areset_d1 : in STD_LOGIC;
+    p_10_in : in STD_LOGIC;
     sa_wm_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \storage_data1_reg[0]_1\ : in STD_LOGIC;
-    in1 : in STD_LOGIC;
-    p_10_in : in STD_LOGIC;
-    \storage_data1_reg[0]_2\ : in STD_LOGIC;
     m_select_enc_0 : in STD_LOGIC;
     m_avalid_1 : in STD_LOGIC;
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \storage_data1_reg[0]_2\ : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     aa_sa_awvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized1\ : entity is "axi_data_fifo_v2_1_10_axic_reg_srl_fifo";
-end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized1\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized1\ : entity is "axi_data_fifo_v2_1_11_axic_reg_srl_fifo";
+end \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized1\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized1\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized1\ is
+  signal \/FSM_onehot_state[0]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[1]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
+  signal \/FSM_onehot_state[3]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
+  attribute RTL_KEEP : string;
+  attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[2]\ : signal is "yes";
+  signal \FSM_onehot_state_reg_n_0_[3]\ : STD_LOGIC;
+  attribute RTL_KEEP of \FSM_onehot_state_reg_n_0_[3]\ : signal is "yes";
   signal fifoaddr : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^gen_axi.s_axi_wready_i_reg\ : STD_LOGIC;
   signal \^gen_axi.s_axi_wready_i_reg_0\ : STD_LOGIC;
-  signal \gen_rep[0].fifoaddr[0]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_rep[0].fifoaddr[1]_i_1_n_0\ : STD_LOGIC;
+  signal \gen_rep[0].fifoaddr[0]_i_1__0_n_0\ : STD_LOGIC;
+  signal \gen_rep[0].fifoaddr[1]_i_1__0_n_0\ : STD_LOGIC;
   signal \gen_srls[0].gen_rep[0].srl_nx1_n_0\ : STD_LOGIC;
   signal load_s1 : STD_LOGIC;
+  signal \m_valid_i__0\ : STD_LOGIC;
   signal \m_valid_i_i_3__0_n_0\ : STD_LOGIC;
   signal m_valid_i_n_0 : STD_LOGIC;
-  signal \^m_valid_i_reg_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_0_in3_out : STD_LOGIC;
+  signal p_0_in6_in : STD_LOGIC;
+  attribute RTL_KEEP of p_0_in6_in : signal is "yes";
+  signal p_7_in : STD_LOGIC;
+  attribute RTL_KEEP of p_7_in : signal is "yes";
   signal \^storage_data1_reg[0]_0\ : STD_LOGIC;
+  attribute KEEP : string;
+  attribute KEEP of \FSM_onehot_state_reg[0]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[1]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[2]\ : label is "yes";
+  attribute KEEP of \FSM_onehot_state_reg[3]\ : label is "yes";
   attribute syn_keep : string;
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[0]\ : label is "1";
   attribute syn_keep of \gen_rep[0].fifoaddr_reg[1]\ : label is "1";
 begin
   \gen_axi.s_axi_wready_i_reg\ <= \^gen_axi.s_axi_wready_i_reg\;
   \gen_axi.s_axi_wready_i_reg_0\ <= \^gen_axi.s_axi_wready_i_reg_0\;
-  m_valid_i_reg_0(0) <= \^m_valid_i_reg_0\(0);
   \storage_data1_reg[0]_0\ <= \^storage_data1_reg[0]_0\;
-\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT6
+\/FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"1011111100000000"
     )
         port map (
-      I0 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
-      I1 => \storage_data1_reg[0]_1\,
+      I0 => p_7_in,
+      I1 => \storage_data1_reg[0]_2\,
       I2 => m_ready_d(0),
       I3 => Q(0),
       I4 => aa_sa_awvalid,
-      I5 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      O => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(0)
+      I5 => p_0_in6_in,
+      O => \/FSM_onehot_state[0]_i_1_n_0\
     );
-\FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
+\/FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0800080008FF0800"
     )
@@ -8527,12 +8721,12 @@ begin
       I0 => aa_sa_awvalid,
       I1 => Q(0),
       I2 => m_ready_d(0),
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
+      I3 => p_7_in,
       I4 => p_0_in3_out,
-      I5 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      O => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(1)
+      I5 => p_0_in6_in,
+      O => \/FSM_onehot_state[1]_i_1_n_0\
     );
-\FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
+\/FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BF00BF00BF00BFFF"
     )
@@ -8540,10 +8734,23 @@ begin
       I0 => m_ready_d(0),
       I1 => Q(0),
       I2 => aa_sa_awvalid,
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
+      I3 => p_7_in,
       I4 => p_0_in3_out,
-      I5 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      O => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(2)
+      I5 => p_0_in6_in,
+      O => \/FSM_onehot_state[2]_i_1_n_0\
+    );
+\/FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000008A888888"
+    )
+        port map (
+      I0 => p_0_in6_in,
+      I1 => \storage_data1_reg[0]_2\,
+      I2 => m_ready_d(0),
+      I3 => Q(0),
+      I4 => aa_sa_awvalid,
+      I5 => p_7_in,
+      O => \/FSM_onehot_state[3]_i_2_n_0\
     );
 \FSM_onehot_state[2]_i_2__0\: unisim.vcomponents.LUT5
     generic map(
@@ -8551,7 +8758,7 @@ begin
     )
         port map (
       I0 => \m_valid_i_i_3__0_n_0\,
-      I1 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
+      I1 => \FSM_onehot_state_reg_n_0_[3]\,
       I2 => sa_wm_awvalid(0),
       I3 => p_10_in,
       I4 => \^gen_axi.s_axi_wready_i_reg_0\,
@@ -8562,26 +8769,57 @@ begin
       INIT => X"CB8BCB88CB88CB88"
     )
         port map (
-      I0 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
+      I0 => p_7_in,
       I1 => sa_wm_awvalid(0),
-      I2 => \storage_data1_reg[0]_1\,
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      I4 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
+      I2 => \storage_data1_reg[0]_2\,
+      I3 => p_0_in6_in,
+      I4 => \FSM_onehot_state_reg_n_0_[3]\,
       I5 => \m_valid_i_i_3__0_n_0\,
-      O => \^m_valid_i_reg_0\(0)
+      O => \m_valid_i__0\
     );
-\FSM_onehot_state[3]_i_2\: unisim.vcomponents.LUT6
+\FSM_onehot_state_reg[0]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => X"000000008A888888"
+      INIT => '1'
     )
         port map (
-      I0 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      I1 => \storage_data1_reg[0]_1\,
-      I2 => m_ready_d(0),
-      I3 => Q(0),
-      I4 => aa_sa_awvalid,
-      I5 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
-      O => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3)
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[0]_i_1_n_0\,
+      Q => p_7_in,
+      S => areset_d1
+    );
+\FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[1]_i_1_n_0\,
+      Q => p_0_in6_in,
+      R => areset_d1
+    );
+\FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[2]_i_1_n_0\,
+      Q => \FSM_onehot_state_reg_n_0_[2]\,
+      R => areset_d1
+    );
+\FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => \m_valid_i__0\,
+      D => \/FSM_onehot_state[3]_i_2_n_0\,
+      Q => \FSM_onehot_state_reg_n_0_[3]\,
+      R => areset_d1
     );
 \gen_axi.write_cs[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -8607,36 +8845,36 @@ begin
       I3 => p_10_in,
       O => s_ready_i_reg
     );
-\gen_rep[0].fifoaddr[0]_i_1\: unisim.vcomponents.LUT5
+\gen_rep[0].fifoaddr[0]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"5A7FA580"
     )
         port map (
-      I0 => \storage_data1_reg[0]_1\,
-      I1 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
+      I0 => \storage_data1_reg[0]_2\,
+      I1 => p_0_in6_in,
       I2 => sa_wm_awvalid(0),
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
       I4 => fifoaddr(0),
-      O => \gen_rep[0].fifoaddr[0]_i_1_n_0\
+      O => \gen_rep[0].fifoaddr[0]_i_1__0_n_0\
     );
-\gen_rep[0].fifoaddr[1]_i_1\: unisim.vcomponents.LUT6
+\gen_rep[0].fifoaddr[1]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"5F7FFBFBA0800404"
     )
         port map (
       I0 => fifoaddr(0),
-      I1 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
+      I1 => \FSM_onehot_state_reg_n_0_[3]\,
       I2 => sa_wm_awvalid(0),
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      I4 => \storage_data1_reg[0]_1\,
+      I3 => p_0_in6_in,
+      I4 => \storage_data1_reg[0]_2\,
       I5 => fifoaddr(1),
-      O => \gen_rep[0].fifoaddr[1]_i_1_n_0\
+      O => \gen_rep[0].fifoaddr[1]_i_1__0_n_0\
     );
 \gen_rep[0].fifoaddr_reg[0]\: unisim.vcomponents.FDSE
      port map (
       C => aclk,
       CE => '1',
-      D => \gen_rep[0].fifoaddr[0]_i_1_n_0\,
+      D => \gen_rep[0].fifoaddr[0]_i_1__0_n_0\,
       Q => fifoaddr(0),
       S => SR(0)
     );
@@ -8644,18 +8882,19 @@ begin
      port map (
       C => aclk,
       CE => '1',
-      D => \gen_rep[0].fifoaddr[1]_i_1_n_0\,
+      D => \gen_rep[0].fifoaddr[1]_i_1__0_n_0\,
       Q => fifoaddr(1),
       S => SR(0)
     );
-\gen_srls[0].gen_rep[0].srl_nx1\: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_ndeep_srl_3
+\gen_srls[0].gen_rep[0].srl_nx1\: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_ndeep_srl_3
      port map (
       A(1 downto 0) => fifoaddr(1 downto 0),
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(1 downto 0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2 downto 1),
       load_s1 => load_s1,
       m_valid_i_reg => \^gen_axi.s_axi_wready_i_reg_0\,
+      out0(1) => p_0_in6_in,
+      out0(0) => \FSM_onehot_state_reg_n_0_[3]\,
       p_10_in => p_10_in,
       sa_wm_awvalid(0) => sa_wm_awvalid(0),
       \storage_data1_reg[0]\ => \gen_srls[0].gen_rep[0].srl_nx1_n_0\,
@@ -8666,11 +8905,11 @@ m_valid_i: unisim.vcomponents.LUT6
       INIT => X"CB8BC888C888C888"
     )
         port map (
-      I0 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
+      I0 => p_7_in,
       I1 => sa_wm_awvalid(0),
-      I2 => \storage_data1_reg[0]_1\,
-      I3 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
-      I4 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
+      I2 => \storage_data1_reg[0]_2\,
+      I3 => p_0_in6_in,
+      I4 => \FSM_onehot_state_reg_n_0_[3]\,
       I5 => \m_valid_i_i_3__0_n_0\,
       O => m_valid_i_n_0
     );
@@ -8684,19 +8923,22 @@ m_valid_i: unisim.vcomponents.LUT6
       O => \m_valid_i_i_3__0_n_0\
     );
 m_valid_i_reg: unisim.vcomponents.FDRE
-     port map (
+    generic map(
+      INIT => '0'
+    )
+        port map (
       C => aclk,
-      CE => \^m_valid_i_reg_0\(0),
+      CE => \m_valid_i__0\,
       D => m_valid_i_n_0,
       Q => \^gen_axi.s_axi_wready_i_reg\,
-      R => in1
+      R => areset_d1
     );
 \s_axi_wready[1]_INST_0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EAAAAAAA00000000"
     )
         port map (
-      I0 => \storage_data1_reg[0]_2\,
+      I0 => \storage_data1_reg[0]_1\,
       I1 => \^gen_axi.s_axi_wready_i_reg\,
       I2 => m_select_enc_0,
       I3 => \^storage_data1_reg[0]_0\,
@@ -8709,12 +8951,12 @@ m_valid_i_reg: unisim.vcomponents.FDRE
       INIT => X"FCCCA000ECCCA000"
     )
         port map (
-      I0 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2),
-      I1 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0),
+      I0 => \FSM_onehot_state_reg_n_0_[3]\,
+      I1 => p_7_in,
       I2 => \^gen_axi.s_axi_wready_i_reg_0\,
       I3 => p_10_in,
       I4 => sa_wm_awvalid(0),
-      I5 => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1),
+      I5 => p_0_in6_in,
       O => load_s1
     );
 \storage_data1_reg[0]\: unisim.vcomponents.FDRE
@@ -8730,7 +8972,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice is
+entity Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice is
   port (
     p_58_out : out STD_LOGIC;
     m_valid_i_reg : out STD_LOGIC;
@@ -8767,15 +9009,17 @@ entity Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice : entity is "axi_register_slice_v2_1_12_axi_register_slice";
+end Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice is
   signal \^m_valid_i_reg\ : STD_LOGIC;
   signal \^p_1_in\ : STD_LOGIC;
 begin
   m_valid_i_reg <= \^m_valid_i_reg\;
   p_1_in <= \^p_1_in\;
-b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1_4\
+b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1_4\
      port map (
       aclk => aclk,
       active_target_enc_1 => active_target_enc_1,
@@ -8794,7 +9038,7 @@ b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_
       s_ready_i_reg_1 => s_ready_i_reg,
       s_ready_i_reg_2 => p_61_out
     );
-r_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2_5\
+r_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2_5\
      port map (
       D(2 downto 0) => D(2 downto 0),
       E(0) => E(0),
@@ -8823,58 +9067,58 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice_1 is
+entity Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice_1 is
   port (
     mi_bready_1 : out STD_LOGIC;
     p_28_out : out STD_LOGIC;
     mi_rready_1 : out STD_LOGIC;
-    \gen_master_slots[1].w_issuing_cnt_reg[8]\ : out STD_LOGIC;
-    \gen_master_slots[1].r_issuing_cnt_reg[8]\ : out STD_LOGIC;
-    p_30_out : out STD_LOGIC;
     \s_axi_bvalid[1]\ : out STD_LOGIC;
     valid_qual_i111_in : out STD_LOGIC;
     \gen_arbiter.qual_reg_reg[0]\ : out STD_LOGIC;
     \valid_qual_i1__0\ : out STD_LOGIC;
     \gen_arbiter.qual_reg_reg[0]_0\ : out STD_LOGIC;
+    p_30_out : out STD_LOGIC;
     s_axi_rlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \gen_master_slots[1].w_issuing_cnt_reg[8]\ : out STD_LOGIC;
+    \gen_master_slots[1].r_issuing_cnt_reg[8]\ : out STD_LOGIC;
     \aresetn_d_reg[1]\ : in STD_LOGIC;
     aclk : in STD_LOGIC;
     p_1_in : in STD_LOGIC;
-    p_20_in : in STD_LOGIC;
-    s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
     active_target_enc : in STD_LOGIC;
-    \gen_axi.s_axi_awready_i_reg\ : in STD_LOGIC;
-    w_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    active_target_enc_0 : in STD_LOGIC;
-    s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
-    r_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_17_in : in STD_LOGIC;
     \aresetn_d_reg[1]_0\ : in STD_LOGIC;
+    active_target_enc_0 : in STD_LOGIC;
+    s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_11_in : in STD_LOGIC;
     p_61_out : in STD_LOGIC;
     p_58_out : in STD_LOGIC;
     active_target_hot : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[0].w_issuing_cnt_reg[2]\ : in STD_LOGIC;
+    w_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sel_4 : in STD_LOGIC;
     \gen_single_thread.active_target_hot_reg[0]\ : in STD_LOGIC;
     st_aa_arvalid_qual : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_master_slots[0].r_issuing_cnt_reg[2]\ : in STD_LOGIC;
+    r_issuing_cnt : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \s_axi_araddr[29]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_valid_i_reg : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     p_13_in : in STD_LOGIC;
+    p_20_in : in STD_LOGIC;
+    \gen_axi.s_axi_awready_i_reg\ : in STD_LOGIC;
+    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
     p_1_in_1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice_1 : entity is "axi_register_slice_v2_1_11_axi_register_slice";
-end Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice_1;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice_1 : entity is "axi_register_slice_v2_1_12_axi_register_slice";
+end Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice_1;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice_1 is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice_1 is
 begin
-b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized1\
+b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized1\
      port map (
       aclk => aclk,
       active_target_enc => active_target_enc,
@@ -8897,7 +9141,7 @@ b_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_
       valid_qual_i111_in => valid_qual_i111_in,
       w_issuing_cnt(1 downto 0) => w_issuing_cnt(1 downto 0)
     );
-r_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_slice__parameterized2\
+r_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\
      port map (
       Q(2 downto 0) => Q(2 downto 0),
       aclk => aclk,
@@ -8907,8 +9151,8 @@ r_pipe: entity work.\Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axic_register_
       \gen_arbiter.qual_reg_reg[0]\ => \gen_arbiter.qual_reg_reg[0]\,
       \gen_arbiter.qual_reg_reg[0]_0\ => \gen_arbiter.qual_reg_reg[0]_0\,
       \gen_master_slots[0].r_issuing_cnt_reg[2]\ => \gen_master_slots[0].r_issuing_cnt_reg[2]\,
-      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => \gen_master_slots[1].r_issuing_cnt_reg[8]\,
-      \gen_master_slots[1].r_issuing_cnt_reg[8]_0\ => p_30_out,
+      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => p_30_out,
+      \gen_master_slots[1].r_issuing_cnt_reg[8]_0\ => \gen_master_slots[1].r_issuing_cnt_reg[8]\,
       m_valid_i_reg_0 => p_28_out,
       m_valid_i_reg_1 => m_valid_i_reg,
       p_11_in => p_11_in,
@@ -8930,54 +9174,50 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux is
   port (
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \storage_data1_reg[0]\ : out STD_LOGIC;
-    m_valid_i_reg : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_ready_i_reg : out STD_LOGIC;
     m_axi_wvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    out0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_wlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     aa_wm_awgrant_enc : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
-    in1 : in STD_LOGIC;
-    m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    aa_sa_awvalid : in STD_LOGIC;
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ : in STD_LOGIC;
-    \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ : in STD_LOGIC;
+    areset_d1 : in STD_LOGIC;
     m_select_enc : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_avalid : in STD_LOGIC;
-    m_valid_i_reg_0 : in STD_LOGIC;
+    m_valid_i_reg : in STD_LOGIC;
+    \gen_arbiter.m_valid_i_reg\ : in STD_LOGIC;
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \FSM_onehot_state_reg[0]\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[1]\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    aa_sa_awvalid : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux : entity is "axi_crossbar_v2_1_13_wdata_mux";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux is
 begin
-\gen_wmux.wmux_aw_fifo\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized0\
+\gen_wmux.wmux_aw_fifo\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized0\
      port map (
-      D(1 downto 0) => D(1 downto 0),
-      E(0) => E(0),
+      \FSM_onehot_state_reg[0]_0\ => \FSM_onehot_state_reg[0]\,
+      \FSM_onehot_state_reg[1]_0\ => \FSM_onehot_state_reg[1]\,
       Q(0) => Q(0),
       SR(0) => SR(0),
       aa_sa_awvalid => aa_sa_awvalid,
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
+      areset_d1 => areset_d1,
       \gen_arbiter.m_valid_i_reg\ => \gen_arbiter.m_valid_i_reg\,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\,
-      in1 => in1,
       m_avalid => m_avalid,
       m_axi_wdata(63 downto 0) => m_axi_wdata(63 downto 0),
       m_axi_wlast(0) => m_axi_wlast(0),
@@ -8987,68 +9227,60 @@ begin
       m_ready_d(0) => m_ready_d(0),
       m_select_enc => m_select_enc,
       m_valid_i_reg_0 => m_valid_i_reg,
-      m_valid_i_reg_1 => m_valid_i_reg_0,
-      \out\(2 downto 0) => \out\(2 downto 0),
+      out0(1 downto 0) => out0(1 downto 0),
       s_axi_wdata(63 downto 0) => s_axi_wdata(63 downto 0),
       s_axi_wlast(0) => s_axi_wlast(0),
       s_axi_wstrb(7 downto 0) => s_axi_wstrb(7 downto 0),
       s_axi_wvalid(0) => s_axi_wvalid(0),
-      s_ready_i_reg => s_ready_i_reg,
-      \storage_data1_reg[0]_0\ => \storage_data1_reg[0]\
+      s_ready_i_reg => s_ready_i_reg
     );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux__parameterized0\ is
+entity \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux__parameterized0\ is
   port (
-    m_valid_i_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_avalid : out STD_LOGIC;
     m_select_enc : out STD_LOGIC;
     \write_cs0__0\ : out STD_LOGIC;
     s_axi_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_ready_i_reg : out STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     aa_wm_awgrant_enc : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    areset_d1 : in STD_LOGIC;
+    p_10_in : in STD_LOGIC;
     sa_wm_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \storage_data1_reg[0]\ : in STD_LOGIC;
-    in1 : in STD_LOGIC;
-    p_10_in : in STD_LOGIC;
-    \storage_data1_reg[0]_0\ : in STD_LOGIC;
     m_select_enc_0 : in STD_LOGIC;
     m_avalid_1 : in STD_LOGIC;
     s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \storage_data1_reg[0]_0\ : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_ready_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     aa_sa_awvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux__parameterized0\ : entity is "axi_crossbar_v2_1_12_wdata_mux";
-end \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux__parameterized0\ : entity is "axi_crossbar_v2_1_13_wdata_mux";
+end \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux__parameterized0\ is
+architecture STRUCTURE of \Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux__parameterized0\ is
 begin
-\gen_wmux.wmux_aw_fifo\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo__parameterized1\
+\gen_wmux.wmux_aw_fifo\: entity work.\Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo__parameterized1\
      port map (
       Q(0) => Q(0),
       SR(0) => SR(0),
       aa_sa_awvalid => aa_sa_awvalid,
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
+      areset_d1 => areset_d1,
       \gen_axi.s_axi_wready_i_reg\ => m_avalid,
       \gen_axi.s_axi_wready_i_reg_0\ => \write_cs0__0\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3 downto 0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3 downto 0),
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2 downto 0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2 downto 0),
-      in1 => in1,
       m_avalid_1 => m_avalid_1,
       m_ready_d(0) => m_ready_d(0),
       m_select_enc_0 => m_select_enc_0,
-      m_valid_i_reg_0(0) => m_valid_i_reg(0),
       p_10_in => p_10_in,
       s_axi_wlast(0) => s_axi_wlast(0),
       s_axi_wready(0) => s_axi_wready(0),
@@ -9064,9 +9296,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_router is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_router is
   port (
-    SS : out STD_LOGIC_VECTOR ( 0 to 0 );
+    areset_d1 : out STD_LOGIC;
     m_avalid : out STD_LOGIC;
     ss_wr_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_select_enc : out STD_LOGIC;
@@ -9086,16 +9318,18 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_router is
     p_10_in : in STD_LOGIC;
     \m_ready_d_reg[1]\ : in STD_LOGIC
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_router;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_router : entity is "axi_crossbar_v2_1_13_wdata_router";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_router;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_router is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_router is
 begin
-wrouter_aw_fifo: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_10_axic_reg_srl_fifo
+wrouter_aw_fifo: entity work.Arty_Z7_20_xbar_1_axi_data_fifo_v2_1_11_axic_reg_srl_fifo
      port map (
-      SR(0) => SS(0),
+      SR(0) => SR(0),
       aclk => aclk,
-      aresetn_d_reg(0) => SR(0),
       \gen_rep[0].fifoaddr_reg[0]_0\ => \gen_rep[0].fifoaddr_reg[0]\,
+      in1 => areset_d1,
       m_avalid_1 => m_avalid_1,
       m_ready_d(0) => m_ready_d(0),
       \m_ready_d_reg[1]\ => \m_ready_d_reg[1]\,
@@ -9117,24 +9351,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_crossbar is
   port (
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_valid_i_reg : out STD_LOGIC;
-    \m_aready__1\ : out STD_LOGIC;
-    m_valid_i_reg_0 : out STD_LOGIC;
-    m_axi_bready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \m_axi_rready[0]\ : out STD_LOGIC;
-    m_valid_i_reg_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    areset_d1 : out STD_LOGIC;
-    \s_axi_arready[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 57 downto 0 );
+    M_AXI_RREADY : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 57 downto 0 );
     \m_axi_arqos[3]\ : out STD_LOGIC_VECTOR ( 56 downto 0 );
+    \s_axi_arready[0]\ : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
     \s_axi_bvalid[1]\ : out STD_LOGIC;
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_bready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9146,25 +9372,22 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
     m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_wlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_arvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    aclk : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    aresetn : in STD_LOGIC;
-    m_axi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_rvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \s_axi_arqos[3]\ : in STD_LOGIC_VECTOR ( 24 downto 0 );
+    m_axi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
+    aclk : in STD_LOGIC;
+    D : in STD_LOGIC_VECTOR ( 56 downto 0 );
+    s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_wlast : in STD_LOGIC_VECTOR ( 0 to 0 );
+    aresetn : in STD_LOGIC;
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9179,9 +9402,11 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_crossbar : entity is "axi_crossbar_v2_1_13_crossbar";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_crossbar;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_crossbar is
   signal \^q\ : STD_LOGIC_VECTOR ( 57 downto 0 );
   signal aa_mi_artarget_hot : STD_LOGIC_VECTOR ( 1 to 1 );
   signal aa_mi_arvalid : STD_LOGIC;
@@ -9193,28 +9418,28 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
   signal active_target_enc_3 : STD_LOGIC;
   signal active_target_hot : STD_LOGIC_VECTOR ( 0 to 0 );
   signal active_target_hot_2 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal addr_arbiter_ar_n_10 : STD_LOGIC;
-  signal addr_arbiter_ar_n_3 : STD_LOGIC;
+  signal addr_arbiter_ar_n_2 : STD_LOGIC;
   signal addr_arbiter_ar_n_4 : STD_LOGIC;
-  signal addr_arbiter_ar_n_5 : STD_LOGIC;
   signal addr_arbiter_ar_n_6 : STD_LOGIC;
+  signal addr_arbiter_ar_n_67 : STD_LOGIC;
+  signal addr_arbiter_ar_n_68 : STD_LOGIC;
+  signal addr_arbiter_ar_n_7 : STD_LOGIC;
   signal addr_arbiter_ar_n_8 : STD_LOGIC;
-  signal addr_arbiter_ar_n_9 : STD_LOGIC;
   signal addr_arbiter_aw_n_11 : STD_LOGIC;
   signal addr_arbiter_aw_n_12 : STD_LOGIC;
   signal addr_arbiter_aw_n_13 : STD_LOGIC;
   signal addr_arbiter_aw_n_14 : STD_LOGIC;
   signal addr_arbiter_aw_n_15 : STD_LOGIC;
   signal addr_arbiter_aw_n_17 : STD_LOGIC;
+  signal addr_arbiter_aw_n_18 : STD_LOGIC;
   signal addr_arbiter_aw_n_19 : STD_LOGIC;
   signal addr_arbiter_aw_n_4 : STD_LOGIC;
   signal addr_arbiter_aw_n_8 : STD_LOGIC;
   signal addr_arbiter_aw_n_9 : STD_LOGIC;
-  signal \^areset_d1\ : STD_LOGIC;
   signal aresetn_d : STD_LOGIC;
   signal \gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/sel_4\ : STD_LOGIC;
   signal \gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/sel_4_0\ : STD_LOGIC;
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_5\ : STD_LOGIC;
+  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_0\ : STD_LOGIC;
   signal \gen_master_slots[0].r_issuing_cnt[0]_i_1_n_0\ : STD_LOGIC;
   signal \gen_master_slots[0].reg_slice_mi_n_1\ : STD_LOGIC;
   signal \gen_master_slots[0].reg_slice_mi_n_6\ : STD_LOGIC;
@@ -9225,17 +9450,19 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
   signal \gen_master_slots[0].reg_slice_mi_n_79\ : STD_LOGIC;
   signal \gen_master_slots[0].reg_slice_mi_n_80\ : STD_LOGIC;
   signal \gen_master_slots[0].w_issuing_cnt[0]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_5\ : STD_LOGIC;
-  signal \gen_master_slots[1].reg_slice_mi_n_10\ : STD_LOGIC;
-  signal \gen_master_slots[1].reg_slice_mi_n_3\ : STD_LOGIC;
-  signal \gen_master_slots[1].reg_slice_mi_n_4\ : STD_LOGIC;
-  signal \gen_master_slots[1].reg_slice_mi_n_8\ : STD_LOGIC;
-  signal \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_0\ : STD_LOGIC;
+  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_4\ : STD_LOGIC;
+  signal \gen_master_slots[1].reg_slice_mi_n_12\ : STD_LOGIC;
+  signal \gen_master_slots[1].reg_slice_mi_n_13\ : STD_LOGIC;
+  signal \gen_master_slots[1].reg_slice_mi_n_5\ : STD_LOGIC;
+  signal \gen_master_slots[1].reg_slice_mi_n_7\ : STD_LOGIC;
   signal \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_3\ : STD_LOGIC;
+  signal \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_4\ : STD_LOGIC;
   signal \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_5\ : STD_LOGIC;
   signal \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_6\ : STD_LOGIC;
   signal \gen_slave_slots[1].gen_si_write.wdata_router_w_n_4\ : STD_LOGIC;
   signal \gen_slave_slots[1].gen_si_write.wdata_router_w_n_5\ : STD_LOGIC;
+  signal \gen_wmux.wmux_aw_fifo/p_0_in6_in\ : STD_LOGIC;
+  signal \gen_wmux.wmux_aw_fifo/p_7_in\ : STD_LOGIC;
   signal m_avalid : STD_LOGIC;
   signal m_avalid_5 : STD_LOGIC;
   signal \^m_axi_arqos[3]\ : STD_LOGIC_VECTOR ( 56 downto 0 );
@@ -9243,7 +9470,6 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
   signal m_ready_d_6 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal m_select_enc : STD_LOGIC;
   signal m_select_enc_4 : STD_LOGIC;
-  signal \^m_valid_i_reg\ : STD_LOGIC;
   signal mi_arready : STD_LOGIC_VECTOR ( 1 to 1 );
   signal mi_awready : STD_LOGIC_VECTOR ( 1 to 1 );
   signal mi_bready_1 : STD_LOGIC;
@@ -9278,19 +9504,17 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar is
   signal \valid_qual_i1__0\ : STD_LOGIC;
   signal w_issuing_cnt : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \write_cs0__0\ : STD_LOGIC;
+  signal \wrouter_aw_fifo/areset_d1\ : STD_LOGIC;
 begin
   Q(57 downto 0) <= \^q\(57 downto 0);
-  areset_d1 <= \^areset_d1\;
   \m_axi_arqos[3]\(56 downto 0) <= \^m_axi_arqos[3]\(56 downto 0);
-  m_valid_i_reg <= \^m_valid_i_reg\;
   \s_axi_arready[0]\ <= \^s_axi_arready[0]\;
   s_axi_awready(0) <= \^s_axi_awready\(0);
   \s_axi_bvalid[1]\ <= \^s_axi_bvalid[1]\;
-addr_arbiter_ar: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter
+addr_arbiter_ar: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter
      port map (
-      D(56 downto 32) => \s_axi_arqos[3]\(24 downto 0),
-      D(31 downto 0) => s_axi_araddr(31 downto 0),
-      E(0) => addr_arbiter_ar_n_8,
+      D(56 downto 0) => D(56 downto 0),
+      E(0) => addr_arbiter_ar_n_6,
       Q(0) => aa_mi_artarget_hot(1),
       SR(0) => reset,
       aa_mi_arvalid => aa_mi_arvalid,
@@ -9299,14 +9523,14 @@ addr_arbiter_ar: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter
       active_target_hot(0) => active_target_hot(0),
       aresetn_d => aresetn_d,
       \gen_arbiter.m_target_hot_i_reg[0]_0\(0) => \gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/sel_4\,
-      \gen_arbiter.qual_reg_reg[0]_0\ => addr_arbiter_ar_n_9,
-      \gen_axi.s_axi_rlast_i_reg\ => addr_arbiter_ar_n_10,
-      \gen_master_slots[0].r_issuing_cnt_reg[0]\ => addr_arbiter_ar_n_5,
-      \gen_master_slots[0].r_issuing_cnt_reg[3]\ => \gen_master_slots[1].reg_slice_mi_n_8\,
+      \gen_arbiter.qual_reg_reg[0]_0\ => addr_arbiter_ar_n_7,
+      \gen_axi.s_axi_rlast_i_reg\ => addr_arbiter_ar_n_8,
+      \gen_master_slots[0].r_issuing_cnt_reg[0]\ => addr_arbiter_ar_n_2,
+      \gen_master_slots[0].r_issuing_cnt_reg[3]\ => \gen_master_slots[1].reg_slice_mi_n_5\,
       \gen_master_slots[0].r_issuing_cnt_reg[3]_0\(3 downto 0) => r_issuing_cnt(3 downto 0),
-      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => addr_arbiter_ar_n_6,
-      \gen_single_thread.active_target_enc_reg[0]\ => addr_arbiter_ar_n_4,
-      \gen_single_thread.active_target_hot_reg[0]\ => addr_arbiter_ar_n_3,
+      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => addr_arbiter_ar_n_4,
+      \gen_single_thread.active_target_enc_reg[0]\ => addr_arbiter_ar_n_68,
+      \gen_single_thread.active_target_hot_reg[0]\ => addr_arbiter_ar_n_67,
       \m_axi_arqos[3]\(56 downto 0) => \^m_axi_arqos[3]\(56 downto 0),
       m_axi_arready(0) => m_axi_arready(0),
       m_axi_arvalid(0) => m_axi_arvalid(0),
@@ -9318,7 +9542,7 @@ addr_arbiter_ar: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter
       st_aa_arvalid_qual(0) => st_aa_arvalid_qual(0),
       \valid_qual_i1__0\ => \valid_qual_i1__0\
     );
-addr_arbiter_aw: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter_0
+addr_arbiter_aw: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_addr_arbiter_0
      port map (
       D(2) => addr_arbiter_aw_n_12,
       D(1) => addr_arbiter_aw_n_13,
@@ -9335,18 +9559,19 @@ addr_arbiter_aw: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_addr_arbiter
       \gen_arbiter.qual_reg_reg[1]_0\ => addr_arbiter_aw_n_15,
       \gen_master_slots[0].w_issuing_cnt_reg[3]\(3 downto 0) => w_issuing_cnt(3 downto 0),
       \gen_master_slots[1].w_issuing_cnt_reg[8]\ => addr_arbiter_aw_n_8,
+      \gen_rep[0].fifoaddr_reg[0]\ => addr_arbiter_aw_n_18,
       \gen_single_thread.active_target_hot_reg[0]\ => \gen_master_slots[0].reg_slice_mi_n_75\,
       \m_axi_awqos[3]\(57 downto 0) => \^q\(57 downto 0),
       m_axi_awready(0) => m_axi_awready(0),
       m_axi_awvalid(0) => m_axi_awvalid(0),
       m_ready_d(1 downto 0) => m_ready_d_6(1 downto 0),
       m_ready_d_0(0) => m_ready_d(0),
-      \m_ready_d_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_5\,
+      \m_ready_d_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_3\,
       \m_ready_d_reg[1]\ => addr_arbiter_aw_n_9,
       \m_ready_d_reg[1]_0\ => addr_arbiter_aw_n_19,
-      m_valid_i_reg => \^m_valid_i_reg\,
       mi_awready(0) => mi_awready(1),
-      \out\(1 downto 0) => \out\(1 downto 0),
+      out0(1) => \gen_wmux.wmux_aw_fifo/p_7_in\,
+      out0(0) => \gen_wmux.wmux_aw_fifo/p_0_in6_in\,
       s_axi_awaddr(31 downto 0) => s_axi_awaddr(31 downto 0),
       s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
       s_axi_awcache(3 downto 0) => s_axi_awcache(3 downto 0),
@@ -9375,16 +9600,16 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       Q => aresetn_d,
       R => '0'
     );
-\gen_decerr_slave.decerr_slave_inst\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_decerr_slave
+\gen_decerr_slave.decerr_slave_inst\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_decerr_slave
      port map (
-      Q(0) => \^q\(0),
+      Q(0) => aa_mi_artarget_hot(1),
       SR(0) => reset,
       aa_mi_arvalid => aa_mi_arvalid,
       aclk => aclk,
       aresetn_d => aresetn_d,
+      \gen_arbiter.m_mesg_i_reg[0]\(0) => \^q\(0),
       \gen_arbiter.m_mesg_i_reg[40]\(7 downto 0) => \^m_axi_arqos[3]\(39 downto 32),
-      \gen_arbiter.m_target_hot_i_reg[1]\(0) => aa_mi_artarget_hot(1),
-      \gen_axi.read_cs_reg[0]_0\ => addr_arbiter_ar_n_10,
+      \gen_axi.read_cs_reg[0]_0\ => addr_arbiter_ar_n_8,
       \gen_axi.s_axi_awready_i_reg_0\ => addr_arbiter_aw_n_8,
       mi_arready(0) => mi_arready(1),
       mi_awready(0) => mi_awready(1),
@@ -9397,19 +9622,17 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       p_20_in => p_20_in,
       \write_cs0__0\ => \write_cs0__0\
     );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux
+\gen_master_slots[0].gen_mi_write.wdata_mux_w\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux
      port map (
-      D(1 downto 0) => D(1 downto 0),
-      E(0) => E(0),
+      \FSM_onehot_state_reg[0]\ => addr_arbiter_aw_n_4,
+      \FSM_onehot_state_reg[1]\ => addr_arbiter_aw_n_17,
       Q(0) => aa_mi_awtarget_hot(0),
       SR(0) => reset,
       aa_sa_awvalid => aa_sa_awvalid,
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
-      \gen_arbiter.m_valid_i_reg\ => \^m_valid_i_reg\,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ => addr_arbiter_aw_n_4,
-      \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ => addr_arbiter_aw_n_17,
-      in1 => \^areset_d1\,
+      areset_d1 => \wrouter_aw_fifo/areset_d1\,
+      \gen_arbiter.m_valid_i_reg\ => addr_arbiter_aw_n_18,
       m_avalid => m_avalid_5,
       m_axi_wdata(63 downto 0) => m_axi_wdata(63 downto 0),
       m_axi_wlast(0) => m_axi_wlast(0),
@@ -9418,15 +9641,14 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       m_axi_wvalid(0) => m_axi_wvalid(0),
       m_ready_d(0) => m_ready_d_6(0),
       m_select_enc => m_select_enc_4,
-      m_valid_i_reg => m_valid_i_reg_0,
-      m_valid_i_reg_0 => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_4\,
-      \out\(2 downto 0) => \out\(2 downto 0),
+      m_valid_i_reg => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_4\,
+      out0(1) => \gen_wmux.wmux_aw_fifo/p_7_in\,
+      out0(0) => \gen_wmux.wmux_aw_fifo/p_0_in6_in\,
       s_axi_wdata(63 downto 0) => s_axi_wdata(63 downto 0),
       s_axi_wlast(0) => s_axi_wlast(0),
       s_axi_wstrb(7 downto 0) => s_axi_wstrb(7 downto 0),
       s_axi_wvalid(0) => s_axi_wvalid(0),
-      s_ready_i_reg => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_5\,
-      \storage_data1_reg[0]\ => \m_aready__1\
+      s_ready_i_reg => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_0\
     );
 \gen_master_slots[0].r_issuing_cnt[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -9439,7 +9661,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
 \gen_master_slots[0].r_issuing_cnt_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => addr_arbiter_ar_n_8,
+      CE => addr_arbiter_ar_n_6,
       D => \gen_master_slots[0].r_issuing_cnt[0]_i_1_n_0\,
       Q => r_issuing_cnt(0),
       R => reset
@@ -9447,7 +9669,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
 \gen_master_slots[0].r_issuing_cnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => addr_arbiter_ar_n_8,
+      CE => addr_arbiter_ar_n_6,
       D => \gen_master_slots[0].reg_slice_mi_n_79\,
       Q => r_issuing_cnt(1),
       R => reset
@@ -9455,7 +9677,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
 \gen_master_slots[0].r_issuing_cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => addr_arbiter_ar_n_8,
+      CE => addr_arbiter_ar_n_6,
       D => \gen_master_slots[0].reg_slice_mi_n_78\,
       Q => r_issuing_cnt(2),
       R => reset
@@ -9463,12 +9685,12 @@ aresetn_d_reg: unisim.vcomponents.FDRE
 \gen_master_slots[0].r_issuing_cnt_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => addr_arbiter_ar_n_8,
+      CE => addr_arbiter_ar_n_6,
       D => \gen_master_slots[0].reg_slice_mi_n_77\,
       Q => r_issuing_cnt(3),
       R => reset
     );
-\gen_master_slots[0].reg_slice_mi\: entity work.Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice
+\gen_master_slots[0].reg_slice_mi\: entity work.Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice
      port map (
       D(2) => \gen_master_slots[0].reg_slice_mi_n_77\,
       D(1) => \gen_master_slots[0].reg_slice_mi_n_78\,
@@ -9482,7 +9704,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       active_target_hot(0) => active_target_hot_2(0),
       active_target_hot_0(0) => active_target_hot(0),
       aresetn => aresetn,
-      \gen_arbiter.m_valid_i_reg\ => addr_arbiter_ar_n_5,
+      \gen_arbiter.m_valid_i_reg\ => addr_arbiter_ar_n_2,
       \gen_arbiter.qual_reg_reg[0]\ => \gen_master_slots[0].reg_slice_mi_n_76\,
       \gen_master_slots[0].r_issuing_cnt_reg[0]\ => \gen_master_slots[0].reg_slice_mi_n_80\,
       \gen_master_slots[0].r_issuing_cnt_reg[3]\(3 downto 0) => r_issuing_cnt(3 downto 0),
@@ -9493,7 +9715,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       m_axi_bvalid(0) => m_axi_bvalid(0),
       m_axi_rdata(63 downto 0) => m_axi_rdata(63 downto 0),
       m_axi_rlast(0) => m_axi_rlast(0),
-      \m_axi_rready[0]\ => \m_axi_rready[0]\,
+      \m_axi_rready[0]\ => M_AXI_RREADY(0),
       m_axi_rresp(1 downto 0) => m_axi_rresp(1 downto 0),
       m_axi_rvalid(0) => m_axi_rvalid(0),
       m_valid_i_reg => \gen_master_slots[0].reg_slice_mi_n_1\,
@@ -9548,41 +9770,38 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       Q => w_issuing_cnt(3),
       R => reset
     );
-\gen_master_slots[1].gen_mi_write.wdata_mux_w\: entity work.\Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_mux__parameterized0\
+\gen_master_slots[1].gen_mi_write.wdata_mux_w\: entity work.\Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_mux__parameterized0\
      port map (
       Q(0) => aa_mi_awtarget_hot(1),
       SR(0) => reset,
       aa_sa_awvalid => aa_sa_awvalid,
       aa_wm_awgrant_enc => aa_wm_awgrant_enc,
       aclk => aclk,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3 downto 0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3 downto 0),
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2 downto 0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2 downto 0),
-      in1 => \^areset_d1\,
+      areset_d1 => \wrouter_aw_fifo/areset_d1\,
       m_avalid => m_avalid,
       m_avalid_1 => m_avalid_5,
       m_ready_d(0) => m_ready_d_6(0),
       m_select_enc => m_select_enc,
       m_select_enc_0 => m_select_enc_4,
-      m_valid_i_reg(0) => m_valid_i_reg_1(0),
       p_10_in => p_10_in,
       s_axi_wlast(0) => s_axi_wlast(0),
       s_axi_wready(0) => s_axi_wready(0),
       s_axi_wvalid(0) => s_axi_wvalid(0),
-      s_ready_i_reg => \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_5\,
+      s_ready_i_reg => \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_4\,
       sa_wm_awvalid(0) => sa_wm_awvalid(1),
-      \storage_data1_reg[0]\ => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_5\,
-      \storage_data1_reg[0]_0\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_5\,
+      \storage_data1_reg[0]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_0\,
+      \storage_data1_reg[0]_0\ => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_5\,
       \write_cs0__0\ => \write_cs0__0\
     );
 \gen_master_slots[1].r_issuing_cnt_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => '1',
-      D => \gen_master_slots[1].reg_slice_mi_n_4\,
+      D => \gen_master_slots[1].reg_slice_mi_n_13\,
       Q => r_issuing_cnt(8),
       R => reset
     );
-\gen_master_slots[1].reg_slice_mi\: entity work.Arty_Z7_20_xbar_1_axi_register_slice_v2_1_11_axi_register_slice_1
+\gen_master_slots[1].reg_slice_mi\: entity work.Arty_Z7_20_xbar_1_axi_register_slice_v2_1_12_axi_register_slice_1
      port map (
       Q(2) => p_54_out,
       Q(1 downto 0) => st_mr_rmesg(1 downto 0),
@@ -9592,14 +9811,14 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       active_target_hot(0) => active_target_hot_2(0),
       \aresetn_d_reg[1]\ => \gen_master_slots[0].reg_slice_mi_n_1\,
       \aresetn_d_reg[1]_0\ => \gen_master_slots[0].reg_slice_mi_n_6\,
-      \gen_arbiter.m_valid_i_reg\ => addr_arbiter_ar_n_6,
-      \gen_arbiter.qual_reg_reg[0]\ => \gen_master_slots[1].reg_slice_mi_n_8\,
-      \gen_arbiter.qual_reg_reg[0]_0\ => \gen_master_slots[1].reg_slice_mi_n_10\,
+      \gen_arbiter.m_valid_i_reg\ => addr_arbiter_ar_n_4,
+      \gen_arbiter.qual_reg_reg[0]\ => \gen_master_slots[1].reg_slice_mi_n_5\,
+      \gen_arbiter.qual_reg_reg[0]_0\ => \gen_master_slots[1].reg_slice_mi_n_7\,
       \gen_axi.s_axi_awready_i_reg\ => addr_arbiter_aw_n_8,
-      \gen_master_slots[0].r_issuing_cnt_reg[2]\ => addr_arbiter_ar_n_9,
+      \gen_master_slots[0].r_issuing_cnt_reg[2]\ => addr_arbiter_ar_n_7,
       \gen_master_slots[0].w_issuing_cnt_reg[2]\ => addr_arbiter_aw_n_15,
-      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => \gen_master_slots[1].reg_slice_mi_n_4\,
-      \gen_master_slots[1].w_issuing_cnt_reg[8]\ => \gen_master_slots[1].reg_slice_mi_n_3\,
+      \gen_master_slots[1].r_issuing_cnt_reg[8]\ => \gen_master_slots[1].reg_slice_mi_n_13\,
+      \gen_master_slots[1].w_issuing_cnt_reg[8]\ => \gen_master_slots[1].reg_slice_mi_n_12\,
       \gen_single_thread.active_target_hot_reg[0]\ => \gen_master_slots[0].reg_slice_mi_n_75\,
       m_valid_i_reg => \gen_master_slots[0].reg_slice_mi_n_80\,
       mi_bready_1 => mi_bready_1,
@@ -9634,11 +9853,11 @@ aresetn_d_reg: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => '1',
-      D => \gen_master_slots[1].reg_slice_mi_n_3\,
+      D => \gen_master_slots[1].reg_slice_mi_n_12\,
       Q => w_issuing_cnt(8),
       R => reset
     );
-\gen_slave_slots[0].gen_si_read.si_transactor_ar\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor
+\gen_slave_slots[0].gen_si_read.si_transactor_ar\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor
      port map (
       E(0) => \r_pipe/p_1_in_1\,
       Q(0) => p_54_out,
@@ -9646,11 +9865,11 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       aclk => aclk,
       active_target_enc => active_target_enc,
       active_target_hot(0) => active_target_hot(0),
-      \gen_arbiter.s_ready_i_reg[0]\ => addr_arbiter_ar_n_4,
-      \gen_arbiter.s_ready_i_reg[0]_0\ => addr_arbiter_ar_n_3,
+      \gen_arbiter.s_ready_i_reg[0]\ => addr_arbiter_ar_n_68,
+      \gen_arbiter.s_ready_i_reg[0]_0\ => addr_arbiter_ar_n_67,
       \gen_arbiter.s_ready_i_reg[0]_1\ => \^s_axi_arready[0]\,
       \m_payload_i_reg[66]\ => \gen_master_slots[0].reg_slice_mi_n_76\,
-      m_valid_i_reg => \gen_master_slots[1].reg_slice_mi_n_10\,
+      m_valid_i_reg => \gen_master_slots[1].reg_slice_mi_n_7\,
       p_1_in => \r_pipe/p_1_in\,
       p_28_out => p_28_out,
       p_30_out => p_30_out,
@@ -9660,7 +9879,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       s_axi_rvalid(0) => s_axi_rvalid(0),
       st_aa_arvalid_qual(0) => st_aa_arvalid_qual(0)
     );
-\gen_slave_slots[1].gen_si_write.si_transactor_aw\: entity work.\Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_si_transactor__parameterized0\
+\gen_slave_slots[1].gen_si_write.si_transactor_aw\: entity work.\Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_si_transactor__parameterized0\
      port map (
       SR(0) => reset,
       aclk => aclk,
@@ -9669,21 +9888,21 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       \m_payload_i_reg[2]\ => \^s_axi_bvalid[1]\,
       s_axi_awready(0) => \^s_axi_awready\(0),
       s_axi_bready(0) => s_axi_bready(0),
-      s_ready_i_reg => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_3\,
-      s_ready_i_reg_0 => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_0\,
+      s_ready_i_reg => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_6\,
+      s_ready_i_reg_0 => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_5\,
       sel_4 => \gen_addr_decoder.addr_decoder_inst/gen_target[0].gen_region[0].gen_comparator_static.gen_addr_range.addr_decode_comparator/sel_4_0\,
       st_aa_awvalid_qual(0) => st_aa_awvalid_qual(1)
     );
-\gen_slave_slots[1].gen_si_write.splitter_aw_si\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter
+\gen_slave_slots[1].gen_si_write.splitter_aw_si\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter
      port map (
       aclk => aclk,
       active_target_enc => active_target_enc_3,
       active_target_hot(0) => active_target_hot_2(0),
       aresetn_d => aresetn_d,
-      \gen_arbiter.qual_reg_reg[1]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_5\,
-      \gen_rep[0].fifoaddr_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_6\,
-      \gen_single_thread.active_target_enc_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_3\,
-      \gen_single_thread.active_target_hot_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_0\,
+      \gen_arbiter.qual_reg_reg[1]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_3\,
+      \gen_rep[0].fifoaddr_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_4\,
+      \gen_single_thread.active_target_enc_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_6\,
+      \gen_single_thread.active_target_hot_reg[0]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_5\,
       m_ready_d(1 downto 0) => m_ready_d(1 downto 0),
       s_axi_awready(0) => \^s_axi_awready\(0),
       s_axi_awvalid(0) => s_axi_awvalid(0),
@@ -9693,19 +9912,19 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       st_aa_awvalid_qual(0) => st_aa_awvalid_qual(1),
       valid_qual_i111_in => valid_qual_i111_in
     );
-\gen_slave_slots[1].gen_si_write.wdata_router_w\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_wdata_router
+\gen_slave_slots[1].gen_si_write.wdata_router_w\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_wdata_router
      port map (
       SR(0) => reset,
-      SS(0) => \^areset_d1\,
       aclk => aclk,
+      areset_d1 => \wrouter_aw_fifo/areset_d1\,
       \gen_rep[0].fifoaddr_reg[0]\ => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_5\,
       m_avalid => m_avalid_5,
       m_avalid_1 => m_avalid,
       m_ready_d(0) => m_ready_d(1),
-      \m_ready_d_reg[1]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_6\,
+      \m_ready_d_reg[1]\ => \gen_slave_slots[1].gen_si_write.splitter_aw_si_n_4\,
       m_select_enc => m_select_enc_4,
       m_select_enc_0 => m_select_enc,
-      m_valid_i_reg => \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_5\,
+      m_valid_i_reg => \gen_master_slots[1].gen_mi_write.wdata_mux_w_n_4\,
       p_10_in => p_10_in,
       s_axi_awaddr(2 downto 0) => s_axi_awaddr(31 downto 29),
       s_axi_awvalid(0) => s_axi_awvalid(0),
@@ -9713,9 +9932,9 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       s_axi_wvalid(0) => s_axi_wvalid(0),
       s_ready_i_reg => \gen_slave_slots[1].gen_si_write.wdata_router_w_n_4\,
       ss_wr_awready(0) => ss_wr_awready(1),
-      \storage_data1_reg[0]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_5\
+      \storage_data1_reg[0]\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w_n_0\
     );
-splitter_aw_mi: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_splitter_2
+splitter_aw_mi: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_splitter_2
      port map (
       Q(1 downto 0) => aa_mi_awtarget_hot(1 downto 0),
       aa_sa_awready => aa_sa_awready,
@@ -9734,7 +9953,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar is
+entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -9828,138 +10047,109 @@ entity Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar is
     m_axi_rready : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 64;
+  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_ID_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 0;
+  attribute C_AXI_PROTOCOL of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 0;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 0;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_CONNECTIVITY_MODE : integer;
-  attribute C_CONNECTIVITY_MODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_CONNECTIVITY_MODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_DEBUG : integer;
-  attribute C_DEBUG of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_DEBUG of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "zynq";
   attribute C_M_AXI_ADDR_WIDTH : integer;
-  attribute C_M_AXI_ADDR_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 29;
+  attribute C_M_AXI_ADDR_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 29;
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : integer;
-  attribute C_M_AXI_READ_CONNECTIVITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_M_AXI_READ_CONNECTIVITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_M_AXI_READ_ISSUING : integer;
-  attribute C_M_AXI_READ_ISSUING of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 8;
+  attribute C_M_AXI_READ_ISSUING of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 8;
   attribute C_M_AXI_SECURE : integer;
-  attribute C_M_AXI_SECURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 0;
+  attribute C_M_AXI_SECURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 0;
   attribute C_M_AXI_WRITE_CONNECTIVITY : integer;
-  attribute C_M_AXI_WRITE_CONNECTIVITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 2;
+  attribute C_M_AXI_WRITE_CONNECTIVITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 2;
   attribute C_M_AXI_WRITE_ISSUING : integer;
-  attribute C_M_AXI_WRITE_ISSUING of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 8;
+  attribute C_M_AXI_WRITE_ISSUING of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 8;
   attribute C_NUM_ADDR_RANGES : integer;
-  attribute C_NUM_ADDR_RANGES of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_NUM_ADDR_RANGES of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_NUM_MASTER_SLOTS : integer;
-  attribute C_NUM_MASTER_SLOTS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute C_NUM_MASTER_SLOTS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute C_NUM_SLAVE_SLOTS : integer;
-  attribute C_NUM_SLAVE_SLOTS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 2;
+  attribute C_NUM_SLAVE_SLOTS of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 2;
   attribute C_R_REGISTER : integer;
-  attribute C_R_REGISTER of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 0;
+  attribute C_R_REGISTER of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 0;
   attribute C_S_AXI_ARB_PRIORITY : string;
-  attribute C_S_AXI_ARB_PRIORITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_S_AXI_ARB_PRIORITY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute C_S_AXI_BASE_ID : string;
-  attribute C_S_AXI_BASE_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000000";
+  attribute C_S_AXI_BASE_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000000";
   attribute C_S_AXI_READ_ACCEPTANCE : string;
-  attribute C_S_AXI_READ_ACCEPTANCE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000001000000000000000000000000000000010";
+  attribute C_S_AXI_READ_ACCEPTANCE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000001000000000000000000000000000000010";
   attribute C_S_AXI_SINGLE_THREAD : string;
-  attribute C_S_AXI_SINGLE_THREAD of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_S_AXI_SINGLE_THREAD of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute C_S_AXI_THREAD_ID_WIDTH : string;
-  attribute C_S_AXI_THREAD_ID_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_S_AXI_THREAD_ID_WIDTH of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute C_S_AXI_WRITE_ACCEPTANCE : string;
-  attribute C_S_AXI_WRITE_ACCEPTANCE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "64'b0000000000000000000000000000001000000000000000000000000000000010";
+  attribute C_S_AXI_WRITE_ACCEPTANCE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "64'b0000000000000000000000000000001000000000000000000000000000000010";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "axi_crossbar_v2_1_13_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
-  attribute P_ADDR_DECODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute P_ADDR_DECODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute P_AXI3 of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 0;
+  attribute P_AXI4 of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 2;
+  attribute P_AXILITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "3'b010";
+  attribute P_AXILITE_SIZE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "3'b010";
   attribute P_FAMILY : string;
-  attribute P_FAMILY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "zynq";
+  attribute P_FAMILY of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "zynq";
   attribute P_INCR : string;
-  attribute P_INCR of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "2'b01";
+  attribute P_INCR of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "2'b01";
   attribute P_LEN : integer;
-  attribute P_LEN of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 8;
+  attribute P_LEN of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 8;
   attribute P_LOCK : integer;
-  attribute P_LOCK of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute P_LOCK of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute P_M_AXI_ERR_MODE : string;
-  attribute P_M_AXI_ERR_MODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "32'b00000000000000000000000000000000";
+  attribute P_M_AXI_ERR_MODE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "32'b00000000000000000000000000000000";
   attribute P_M_AXI_SUPPORTS_READ : string;
-  attribute P_M_AXI_SUPPORTS_READ of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "1'b1";
+  attribute P_M_AXI_SUPPORTS_READ of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "1'b1";
   attribute P_M_AXI_SUPPORTS_WRITE : string;
-  attribute P_M_AXI_SUPPORTS_WRITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "1'b1";
+  attribute P_M_AXI_SUPPORTS_WRITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "1'b1";
   attribute P_ONES : string;
-  attribute P_ONES of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
+  attribute P_ONES of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
   attribute P_RANGE_CHECK : integer;
-  attribute P_RANGE_CHECK of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is 1;
+  attribute P_RANGE_CHECK of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is 1;
   attribute P_S_AXI_BASE_ID : string;
-  attribute P_S_AXI_BASE_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_S_AXI_BASE_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000";
   attribute P_S_AXI_HIGH_ID : string;
-  attribute P_S_AXI_HIGH_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_S_AXI_HIGH_ID of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000";
   attribute P_S_AXI_SUPPORTS_READ : string;
-  attribute P_S_AXI_SUPPORTS_READ of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "2'b01";
+  attribute P_S_AXI_SUPPORTS_READ of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "2'b01";
   attribute P_S_AXI_SUPPORTS_WRITE : string;
-  attribute P_S_AXI_SUPPORTS_WRITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar : entity is "2'b10";
-end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar;
+  attribute P_S_AXI_SUPPORTS_WRITE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar : entity is "2'b10";
+end Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar;
 
-architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar is
+architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar is
   signal \<const0>\ : STD_LOGIC;
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[1]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
-  attribute RTL_KEEP : string;
-  attribute RTL_KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\ : signal is "yes";
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\ : signal is "yes";
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\ : STD_LOGIC;
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\ : signal is "yes";
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\ : signal is "yes";
-  signal \gen_master_slots[0].gen_mi_write.wdata_mux_w/m_aready__1\ : STD_LOGIC;
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\ : signal is "yes";
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\ : signal is "yes";
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\ : STD_LOGIC;
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\ : signal is "yes";
-  signal \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\ : STD_LOGIC;
-  attribute RTL_KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\ : signal is "yes";
-  signal \gen_samd.crossbar_samd_n_1\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_131\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_132\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_192\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_193\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_194\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_195\ : STD_LOGIC;
-  signal \gen_samd.crossbar_samd_n_3\ : STD_LOGIC;
-  signal \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\ : STD_LOGIC;
   signal \^s_axi_arready\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s_axi_awready\ : STD_LOGIC_VECTOR ( 1 to 1 );
   signal \^s_axi_bresp\ : STD_LOGIC_VECTOR ( 3 downto 2 );
@@ -9969,15 +10159,6 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar is
   signal \^s_axi_rresp\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^s_axi_rvalid\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s_axi_wready\ : STD_LOGIC_VECTOR ( 1 to 1 );
-  attribute KEEP : string;
-  attribute KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]\ : label is "yes";
-  attribute KEEP of \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\ : label is "yes";
 begin
   m_axi_arid(0) <= \<const0>\;
   m_axi_arregion(3) <= \<const0>\;
@@ -10087,125 +10268,17 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0A0A0A0A4A0A0A0A"
-    )
-        port map (
-      I0 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      I1 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/m_aready__1\,
-      I2 => \gen_samd.crossbar_samd_n_1\,
-      I3 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      I4 => \gen_samd.crossbar_samd_n_3\,
-      I5 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      O => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[1]_i_1_n_0\
-    );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0A0A0A0B5F5F5F5"
-    )
-        port map (
-      I0 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      I1 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/m_aready__1\,
-      I2 => \gen_samd.crossbar_samd_n_1\,
-      I3 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      I4 => \gen_samd.crossbar_samd_n_3\,
-      I5 => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      O => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[2]_i_1_n_0\
-    );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_132\,
-      Q => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      S => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[1]_i_1_n_0\,
-      Q => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state[2]_i_1_n_0\,
-      Q => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_131\,
-      Q => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[0]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_195\,
-      Q => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      S => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_194\,
-      Q => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_193\,
-      Q => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[2]\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      D => \gen_samd.crossbar_samd_n_192\,
-      Q => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      R => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\
-    );
-\gen_samd.crossbar_samd\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_crossbar
+\gen_samd.crossbar_samd\: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_crossbar
      port map (
-      D(1) => \gen_samd.crossbar_samd_n_131\,
-      D(0) => \gen_samd.crossbar_samd_n_132\,
-      E(0) => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
+      D(56 downto 53) => s_axi_arqos(3 downto 0),
+      D(52 downto 49) => s_axi_arcache(3 downto 0),
+      D(48 downto 47) => s_axi_arburst(1 downto 0),
+      D(46 downto 44) => s_axi_arprot(2 downto 0),
+      D(43) => s_axi_arlock(0),
+      D(42 downto 40) => s_axi_arsize(2 downto 0),
+      D(39 downto 32) => s_axi_arlen(7 downto 0),
+      D(31 downto 0) => s_axi_araddr(31 downto 0),
+      M_AXI_RREADY(0) => m_axi_rready(0),
       Q(57 downto 54) => m_axi_awqos(3 downto 0),
       Q(53 downto 50) => m_axi_awcache(3 downto 0),
       Q(49 downto 48) => m_axi_awburst(1 downto 0),
@@ -10216,16 +10289,7 @@ GND: unisim.vcomponents.GND
       Q(32 downto 1) => m_axi_awaddr(31 downto 0),
       Q(0) => m_axi_awid(0),
       aclk => aclk,
-      areset_d1 => \gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1\,
       aresetn => aresetn,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(3) => \gen_samd.crossbar_samd_n_192\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(2) => \gen_samd.crossbar_samd_n_193\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(1) => \gen_samd.crossbar_samd_n_194\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]\(0) => \gen_samd.crossbar_samd_n_195\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(2) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(1) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[3]_0\(0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      \m_aready__1\ => \gen_master_slots[0].gen_mi_write.wdata_mux_w/m_aready__1\,
       \m_axi_arqos[3]\(56 downto 53) => m_axi_arqos(3 downto 0),
       \m_axi_arqos[3]\(52 downto 49) => m_axi_arcache(3 downto 0),
       \m_axi_arqos[3]\(48 downto 47) => m_axi_arburst(1 downto 0),
@@ -10244,7 +10308,6 @@ GND: unisim.vcomponents.GND
       m_axi_bvalid(0) => m_axi_bvalid(0),
       m_axi_rdata(63 downto 0) => m_axi_rdata(63 downto 0),
       m_axi_rlast(0) => m_axi_rlast(0),
-      \m_axi_rready[0]\ => m_axi_rready(0),
       m_axi_rresp(1 downto 0) => m_axi_rresp(1 downto 0),
       m_axi_rvalid(0) => m_axi_rvalid(0),
       m_axi_wdata(63 downto 0) => m_axi_wdata(63 downto 0),
@@ -10252,20 +10315,6 @@ GND: unisim.vcomponents.GND
       m_axi_wready(0) => m_axi_wready(0),
       m_axi_wstrb(7 downto 0) => m_axi_wstrb(7 downto 0),
       m_axi_wvalid(0) => m_axi_wvalid(0),
-      m_valid_i_reg => \gen_samd.crossbar_samd_n_1\,
-      m_valid_i_reg_0 => \gen_samd.crossbar_samd_n_3\,
-      m_valid_i_reg_1(0) => \gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/m_valid_i\,
-      \out\(2) => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg_n_0_[3]\,
-      \out\(1) => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_0_in6_in\,
-      \out\(0) => \gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/p_7_in\,
-      s_axi_araddr(31 downto 0) => s_axi_araddr(31 downto 0),
-      \s_axi_arqos[3]\(24 downto 21) => s_axi_arqos(3 downto 0),
-      \s_axi_arqos[3]\(20 downto 17) => s_axi_arcache(3 downto 0),
-      \s_axi_arqos[3]\(16 downto 15) => s_axi_arburst(1 downto 0),
-      \s_axi_arqos[3]\(14 downto 12) => s_axi_arprot(2 downto 0),
-      \s_axi_arqos[3]\(11) => s_axi_arlock(0),
-      \s_axi_arqos[3]\(10 downto 8) => s_axi_arsize(2 downto 0),
-      \s_axi_arqos[3]\(7 downto 0) => s_axi_arlen(7 downto 0),
       \s_axi_arready[0]\ => \^s_axi_arready\(0),
       s_axi_arvalid(0) => s_axi_arvalid(0),
       s_axi_awaddr(31 downto 0) => s_axi_awaddr(63 downto 32),
@@ -10381,11 +10430,11 @@ entity Arty_Z7_20_xbar_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_xbar_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_xbar_1 : entity is "Arty_Z7_20_xbar_1,axi_crossbar_v2_1_12_axi_crossbar,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_xbar_1 : entity is "Arty_Z7_20_xbar_1,axi_crossbar_v2_1_13_axi_crossbar,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_xbar_1 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_xbar_1 : entity is "axi_crossbar_v2_1_12_axi_crossbar,Vivado 2016.4";
+  attribute X_CORE_INFO of Arty_Z7_20_xbar_1 : entity is "axi_crossbar_v2_1_13_axi_crossbar,Vivado 2017.1_sdx";
 end Arty_Z7_20_xbar_1;
 
 architecture STRUCTURE of Arty_Z7_20_xbar_1 is
@@ -10493,7 +10542,7 @@ architecture STRUCTURE of Arty_Z7_20_xbar_1 is
   attribute P_S_AXI_SUPPORTS_WRITE : string;
   attribute P_S_AXI_SUPPORTS_WRITE of inst : label is "2'b10";
 begin
-inst: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_12_axi_crossbar
+inst: entity work.Arty_Z7_20_xbar_1_axi_crossbar_v2_1_13_axi_crossbar
      port map (
       aclk => aclk,
       aresetn => aresetn,

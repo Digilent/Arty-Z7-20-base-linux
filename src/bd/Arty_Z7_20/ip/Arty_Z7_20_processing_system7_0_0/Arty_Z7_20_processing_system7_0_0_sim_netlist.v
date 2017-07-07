@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Mar 05 18:57:19 2017
-// Host        : WK73 running 64-bit Service Pack 1  (build 7601)
+// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+// Date        : Sun Jun 25 04:40:39 2017
+// Host        : localhost.localdomain running 64-bit unknown
 // Command     : write_verilog -force -mode funcsim
-//               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.v
+//               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.v
 // Design      : Arty_Z7_20_processing_system7_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2017.1_sdx" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_processing_system7_0_0
    (GPIO_I,
@@ -44,6 +44,8 @@ module Arty_Z7_20_processing_system7_0_0
     SPI0_SS1_O,
     SPI0_SS2_O,
     SPI0_SS_T,
+    UART1_TX,
+    UART1_RX,
     USB0_PORT_INDCTL,
     USB0_VBUS_PWRSELECT,
     USB0_VBUS_PWRFAULT,
@@ -187,6 +189,8 @@ module Arty_Z7_20_processing_system7_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS1_O" *) output SPI0_SS1_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS2_O" *) output SPI0_SS2_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_T" *) output SPI0_SS_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 TxD" *) output UART1_TX;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 RxD" *) input UART1_RX;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL" *) output [1:0]USB0_PORT_INDCTL;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT" *) output USB0_VBUS_PWRSELECT;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT" *) input USB0_VBUS_PWRFAULT;
@@ -442,6 +446,8 @@ module Arty_Z7_20_processing_system7_0_0
   wire S_AXI_HP0_WRISSUECAP1_EN;
   wire [7:0]S_AXI_HP0_WSTRB;
   wire S_AXI_HP0_WVALID;
+  wire UART1_RX;
+  wire UART1_TX;
   wire [1:0]USB0_PORT_INDCTL;
   wire USB0_VBUS_PWRFAULT;
   wire USB0_VBUS_PWRSELECT;
@@ -615,7 +621,6 @@ module Arty_Z7_20_processing_system7_0_0
   wire NLW_inst_UART0_TX_UNCONNECTED;
   wire NLW_inst_UART1_DTRN_UNCONNECTED;
   wire NLW_inst_UART1_RTSN_UNCONNECTED;
-  wire NLW_inst_UART1_TX_UNCONNECTED;
   wire NLW_inst_USB1_VBUS_PWRSELECT_UNCONNECTED;
   wire NLW_inst_WDT_RST_OUT_UNCONNECTED;
   wire [1:0]NLW_inst_DMA0_DATYPE_UNCONNECTED;
@@ -698,144 +703,6 @@ module Arty_Z7_20_processing_system7_0_0
   wire [7:0]NLW_inst_S_AXI_HP3_WCOUNT_UNCONNECTED;
   wire [1:0]NLW_inst_TRACE_DATA_UNCONNECTED;
   wire [1:0]NLW_inst_USB1_PORT_INDCTL_UNCONNECTED;
-PULLUP pullup_DDR_DM_2
-       (.O(DDR_DM[2]));
-PULLUP pullup_DDR_DM_3
-       (.O(DDR_DM[3]));
-PULLUP pullup_DDR_DQ_16
-       (.O(DDR_DQ[16]));
-PULLUP pullup_DDR_DQ_17
-       (.O(DDR_DQ[17]));
-PULLUP pullup_DDR_DQ_18
-       (.O(DDR_DQ[18]));
-PULLUP pullup_DDR_DQ_19
-       (.O(DDR_DQ[19]));
-PULLUP pullup_DDR_DQ_20
-       (.O(DDR_DQ[20]));
-PULLUP pullup_DDR_DQ_21
-       (.O(DDR_DQ[21]));
-PULLUP pullup_DDR_DQ_22
-       (.O(DDR_DQ[22]));
-PULLUP pullup_DDR_DQ_23
-       (.O(DDR_DQ[23]));
-PULLUP pullup_DDR_DQ_24
-       (.O(DDR_DQ[24]));
-PULLUP pullup_DDR_DQ_25
-       (.O(DDR_DQ[25]));
-PULLUP pullup_DDR_DQ_26
-       (.O(DDR_DQ[26]));
-PULLUP pullup_DDR_DQ_27
-       (.O(DDR_DQ[27]));
-PULLUP pullup_DDR_DQ_28
-       (.O(DDR_DQ[28]));
-PULLUP pullup_DDR_DQ_29
-       (.O(DDR_DQ[29]));
-PULLUP pullup_DDR_DQ_30
-       (.O(DDR_DQ[30]));
-PULLUP pullup_DDR_DQ_31
-       (.O(DDR_DQ[31]));
-PULLUP pullup_DDR_DQS_2
-       (.O(DDR_DQS[2]));
-PULLUP pullup_DDR_DQS_3
-       (.O(DDR_DQS[3]));
-PULLUP pullup_DDR_DQS_n_2
-       (.O(DDR_DQS_n[2]));
-PULLUP pullup_DDR_DQS_n_3
-       (.O(DDR_DQS_n[3]));
-PULLUP pullup_MIO_0
-       (.O(MIO[0]));
-PULLUP pullup_MIO_1
-       (.O(MIO[1]));
-PULLUP pullup_MIO_9
-       (.O(MIO[9]));
-PULLUP pullup_MIO_10
-       (.O(MIO[10]));
-PULLUP pullup_MIO_11
-       (.O(MIO[11]));
-PULLUP pullup_MIO_12
-       (.O(MIO[12]));
-PULLUP pullup_MIO_13
-       (.O(MIO[13]));
-PULLUP pullup_MIO_14
-       (.O(MIO[14]));
-PULLUP pullup_MIO_15
-       (.O(MIO[15]));
-PULLUP pullup_MIO_16
-       (.O(MIO[16]));
-PULLUP pullup_MIO_17
-       (.O(MIO[17]));
-PULLUP pullup_MIO_18
-       (.O(MIO[18]));
-PULLUP pullup_MIO_19
-       (.O(MIO[19]));
-PULLUP pullup_MIO_20
-       (.O(MIO[20]));
-PULLUP pullup_MIO_21
-       (.O(MIO[21]));
-PULLUP pullup_MIO_22
-       (.O(MIO[22]));
-PULLUP pullup_MIO_23
-       (.O(MIO[23]));
-PULLUP pullup_MIO_24
-       (.O(MIO[24]));
-PULLUP pullup_MIO_25
-       (.O(MIO[25]));
-PULLUP pullup_MIO_26
-       (.O(MIO[26]));
-PULLUP pullup_MIO_27
-       (.O(MIO[27]));
-PULLUP pullup_MIO_28
-       (.O(MIO[28]));
-PULLUP pullup_MIO_29
-       (.O(MIO[29]));
-PULLUP pullup_MIO_30
-       (.O(MIO[30]));
-PULLUP pullup_MIO_31
-       (.O(MIO[31]));
-PULLUP pullup_MIO_32
-       (.O(MIO[32]));
-PULLUP pullup_MIO_33
-       (.O(MIO[33]));
-PULLUP pullup_MIO_34
-       (.O(MIO[34]));
-PULLUP pullup_MIO_35
-       (.O(MIO[35]));
-PULLUP pullup_MIO_36
-       (.O(MIO[36]));
-PULLUP pullup_MIO_37
-       (.O(MIO[37]));
-PULLUP pullup_MIO_38
-       (.O(MIO[38]));
-PULLUP pullup_MIO_39
-       (.O(MIO[39]));
-PULLUP pullup_MIO_40
-       (.O(MIO[40]));
-PULLUP pullup_MIO_41
-       (.O(MIO[41]));
-PULLUP pullup_MIO_42
-       (.O(MIO[42]));
-PULLUP pullup_MIO_43
-       (.O(MIO[43]));
-PULLUP pullup_MIO_44
-       (.O(MIO[44]));
-PULLUP pullup_MIO_45
-       (.O(MIO[45]));
-PULLUP pullup_MIO_46
-       (.O(MIO[46]));
-PULLUP pullup_MIO_47
-       (.O(MIO[47]));
-PULLUP pullup_MIO_48
-       (.O(MIO[48]));
-PULLUP pullup_MIO_49
-       (.O(MIO[49]));
-PULLUP pullup_MIO_50
-       (.O(MIO[50]));
-PULLUP pullup_MIO_51
-       (.O(MIO[51]));
-PULLUP pullup_MIO_52
-       (.O(MIO[52]));
-PULLUP pullup_MIO_53
-       (.O(MIO[53]));
 
   (* C_DM_WIDTH = "4" *) 
   (* C_DQS_WIDTH = "4" *) 
@@ -893,7 +760,7 @@ PULLUP pullup_MIO_53
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "Arty_Z7_20_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -1571,8 +1438,8 @@ PULLUP pullup_MIO_53
         .UART1_DTRN(NLW_inst_UART1_DTRN_UNCONNECTED),
         .UART1_RIN(1'b0),
         .UART1_RTSN(NLW_inst_UART1_RTSN_UNCONNECTED),
-        .UART1_RX(1'b1),
-        .UART1_TX(NLW_inst_UART1_TX_UNCONNECTED),
+        .UART1_RX(UART1_RX),
+        .UART1_TX(UART1_TX),
         .USB0_PORT_INDCTL(USB0_PORT_INDCTL),
         .USB0_VBUS_PWRFAULT(USB0_VBUS_PWRFAULT),
         .USB0_VBUS_PWRSELECT(USB0_VBUS_PWRSELECT),
@@ -1602,7 +1469,7 @@ endmodule
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "1" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
 (* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "Arty_Z7_20_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
-(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,
@@ -5217,8 +5084,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

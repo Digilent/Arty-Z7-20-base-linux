@@ -1,8 +1,8 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Feb 24 16:03:30 2017
-// Host        : WK73 running 64-bit Service Pack 1  (build 7601)
+// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
+// Date        : Tue Jun 20 16:31:13 2017
+// Host        : localhost.localdomain running 64-bit unknown
 // Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_proc_sys_reset_0_0 -prefix
 //               Arty_Z7_20_proc_sys_reset_0_0_ Arty_Z7_20_rst_processing_system7_0_100M_0_sim_netlist.v
 // Design      : Arty_Z7_20_rst_processing_system7_0_100M_0
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_rst_processing_system7_0_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_rst_processing_system7_0_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.1_sdx" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_proc_sys_reset_0_0
    (slowest_sync_clk,
@@ -101,8 +101,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync
   wire slowest_sync_clk;
 
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
@@ -117,8 +117,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync
        (.I0(aux_reset_in),
         .O(asr_d1));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
@@ -128,8 +128,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync
         .Q(s_level_out_d2),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
@@ -139,8 +139,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync
         .Q(s_level_out_d3),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
@@ -190,8 +190,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync_0
   wire slowest_sync_clk;
 
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
@@ -207,8 +207,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync_0
         .I1(ext_reset_in),
         .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
@@ -218,8 +218,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync_0
         .Q(s_level_out_d2),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
@@ -229,8 +229,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync_0
         .Q(s_level_out_d3),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
@@ -347,8 +347,8 @@ module Arty_Z7_20_proc_sys_reset_0_0_lpf
         .D(p_3_out[1]),
         .Q(p_3_out[0]),
         .R(1'b0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "SRL16" *) 
+  (* box_type = "PRIMITIVE" *) 
   (* srl_name = "U0/\EXT_LPF/POR_SRL_I " *) 
   SRL16E #(
     .INIT(16'hFFFF)) 
@@ -908,8 +908,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin
