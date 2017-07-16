@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
-// Date        : Tue Jun 20 16:36:03 2017
+// Date        : Sat Jul 15 23:45:36 2017
 // Host        : localhost.localdomain running 64-bit unknown
 // Command     : write_verilog -force -mode funcsim
-//               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axis_subset_converter_0_0/Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.v
+//               /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axis_subset_converter_0_0/Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.v
 // Design      : Arty_Z7_20_axis_subset_converter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33,8 +33,8 @@ module Arty_Z7_20_axis_subset_converter_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTIF RST" *) input aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input s_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]s_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *) input [3:0]s_axis_tkeep;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [23:0]s_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *) input [2:0]s_axis_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *) input s_axis_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TUSER" *) input [0:0]s_axis_tuser;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
@@ -52,8 +52,8 @@ module Arty_Z7_20_axis_subset_converter_0_0
   wire m_axis_tready;
   wire [0:0]m_axis_tuser;
   wire m_axis_tvalid;
-  wire [31:0]s_axis_tdata;
-  wire [3:0]s_axis_tkeep;
+  wire [23:0]s_axis_tdata;
+  wire [2:0]s_axis_tkeep;
   wire s_axis_tlast;
   wire s_axis_tready;
   wire [0:0]s_axis_tuser;
@@ -72,7 +72,7 @@ module Arty_Z7_20_axis_subset_converter_0_0
   (* C_M_AXIS_TID_WIDTH = "1" *) 
   (* C_M_AXIS_TUSER_WIDTH = "1" *) 
   (* C_S_AXIS_SIGNAL_SET = "32'b00000000000000000000000010011011" *) 
-  (* C_S_AXIS_TDATA_WIDTH = "32" *) 
+  (* C_S_AXIS_TDATA_WIDTH = "24" *) 
   (* C_S_AXIS_TDEST_WIDTH = "1" *) 
   (* C_S_AXIS_TID_WIDTH = "1" *) 
   (* C_S_AXIS_TUSER_WIDTH = "1" *) 
@@ -114,7 +114,7 @@ module Arty_Z7_20_axis_subset_converter_0_0
         .s_axis_tkeep(s_axis_tkeep),
         .s_axis_tlast(s_axis_tlast),
         .s_axis_tready(s_axis_tready),
-        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_tstrb({1'b1,1'b1,1'b1}),
         .s_axis_tuser(s_axis_tuser),
         .s_axis_tvalid(s_axis_tvalid),
         .sparse_tkeep_removed(NLW_inst_sparse_tkeep_removed_UNCONNECTED),
@@ -123,7 +123,7 @@ endmodule
 
 (* C_DEFAULT_TLAST = "0" *) (* C_FAMILY = "zynq" *) (* C_M_AXIS_SIGNAL_SET = "32'b00000000000000000000000010011011" *) 
 (* C_M_AXIS_TDATA_WIDTH = "24" *) (* C_M_AXIS_TDEST_WIDTH = "1" *) (* C_M_AXIS_TID_WIDTH = "1" *) 
-(* C_M_AXIS_TUSER_WIDTH = "1" *) (* C_S_AXIS_SIGNAL_SET = "32'b00000000000000000000000010011011" *) (* C_S_AXIS_TDATA_WIDTH = "32" *) 
+(* C_M_AXIS_TUSER_WIDTH = "1" *) (* C_S_AXIS_SIGNAL_SET = "32'b00000000000000000000000010011011" *) (* C_S_AXIS_TDATA_WIDTH = "24" *) 
 (* C_S_AXIS_TDEST_WIDTH = "1" *) (* C_S_AXIS_TID_WIDTH = "1" *) (* C_S_AXIS_TUSER_WIDTH = "1" *) 
 (* G_INDX_SS_TDATA = "1" *) (* G_INDX_SS_TDEST = "6" *) (* G_INDX_SS_TID = "5" *) 
 (* G_INDX_SS_TKEEP = "3" *) (* G_INDX_SS_TLAST = "4" *) (* G_INDX_SS_TREADY = "0" *) 
@@ -161,9 +161,9 @@ module Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter
   input aclken;
   input s_axis_tvalid;
   output s_axis_tready;
-  input [31:0]s_axis_tdata;
-  input [3:0]s_axis_tstrb;
-  input [3:0]s_axis_tkeep;
+  input [23:0]s_axis_tdata;
+  input [2:0]s_axis_tstrb;
+  input [2:0]s_axis_tkeep;
   input s_axis_tlast;
   input [0:0]s_axis_tid;
   input [0:0]s_axis_tdest;
@@ -182,8 +182,8 @@ module Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter
 
   wire \<const0> ;
   wire m_axis_tready;
-  wire [31:0]s_axis_tdata;
-  wire [3:0]s_axis_tkeep;
+  wire [23:0]s_axis_tdata;
+  wire [2:0]s_axis_tkeep;
   wire s_axis_tlast;
   wire [0:0]s_axis_tuser;
   wire s_axis_tvalid;
@@ -193,7 +193,7 @@ module Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter
   assign m_axis_tdata[7:0] = s_axis_tdata[15:8];
   assign m_axis_tdest[0] = \<const0> ;
   assign m_axis_tid[0] = \<const0> ;
-  assign m_axis_tkeep[2:0] = s_axis_tkeep[2:0];
+  assign m_axis_tkeep[2:0] = s_axis_tkeep;
   assign m_axis_tlast = s_axis_tlast;
   assign m_axis_tstrb[2] = \<const0> ;
   assign m_axis_tstrb[1] = \<const0> ;

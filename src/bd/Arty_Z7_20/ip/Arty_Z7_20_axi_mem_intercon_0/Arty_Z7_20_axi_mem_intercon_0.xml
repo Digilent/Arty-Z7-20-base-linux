@@ -748,7 +748,7 @@
     <spirit:parameter>
       <spirit:name>S01_HAS_REGSLICE</spirit:name>
       <spirit:displayName>Enable Register Slice on interface S01_AXI</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_HAS_REGSLICE" spirit:choiceRef="choice_pairs_b6c9535e" spirit:order="1635413">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_HAS_REGSLICE" spirit:choiceRef="choice_pairs_b6c9535e" spirit:order="1635413">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>S02_HAS_REGSLICE</spirit:name>
@@ -828,7 +828,7 @@
     <spirit:parameter>
       <spirit:name>S01_HAS_DATA_FIFO</spirit:name>
       <spirit:displayName>Enable Data FIFO on interface S01_AXI</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_HAS_DATA_FIFO" spirit:choiceRef="choice_pairs_76d086ea" spirit:order="1635429">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_HAS_DATA_FIFO" spirit:choiceRef="choice_pairs_76d086ea" spirit:order="1635429">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>S02_HAS_DATA_FIFO</spirit:name>
@@ -1634,6 +1634,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUM_SI" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.S00_HAS_DATA_FIFO" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.S00_HAS_REGSLICE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.S01_HAS_DATA_FIFO" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.S01_HAS_REGSLICE" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

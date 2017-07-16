@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
 -- Date        : Fri Jul 14 17:09:52 2017
 -- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim
---               /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_auto_pc_1/Arty_Z7_20_auto_pc_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_auto_pc_1 -prefix
+--               Arty_Z7_20_auto_pc_1_ Arty_Z7_20_auto_pc_1_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_auto_pc_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_incr_cmd is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \state_reg[0]_rep\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_12_b2s_incr_cmd";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_incr_cmd;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_incr_cmd is
@@ -1659,8 +1657,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm is
     sel_first_reg_2 : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_rd_cmd_fsm is
@@ -2087,8 +2083,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_simple_fifo is
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_12_b2s_simple_fifo";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_simple_fifo;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_simple_fifo is
@@ -4552,8 +4546,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm is
     sel_first : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wr_cmd_fsm is
@@ -5010,8 +5002,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wrap_cmd is
     \state_reg[0]_rep\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_12_b2s_wrap_cmd";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wrap_cmd;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_wrap_cmd is
@@ -7063,8 +7053,6 @@ entity Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axic_register_slice is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_valid_i_reg_1 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axic_register_slice : entity is "axi_register_slice_v2_1_12_axic_register_slice";
 end Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axic_register_slice;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axic_register_slice is
@@ -13192,8 +13180,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_b_channel is
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_b_channel : entity is "axi_protocol_converter_v2_1_12_b2s_b_channel";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_b_channel;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_b_channel is
@@ -13548,8 +13534,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_cmd_translator is
     \state_reg[0]_rep_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_12_b2s_cmd_translator";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_cmd_translator;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_cmd_translator is
@@ -13900,8 +13884,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_r_channel is
     areset_d1 : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_r_channel : entity is "axi_protocol_converter_v2_1_12_b2s_r_channel";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_r_channel;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_r_channel is
@@ -14146,8 +14128,6 @@ entity Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axi_register_slice is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_valid_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axi_register_slice : entity is "axi_register_slice_v2_1_12_axi_register_slice";
 end Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axi_register_slice;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_register_slice_v2_1_12_axi_register_slice is
@@ -14290,8 +14270,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_ar_channel is
     \m_payload_i_reg[3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_12_b2s_ar_channel";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_ar_channel;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_ar_channel is
@@ -14561,8 +14539,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_aw_channel is
     axaddr_incr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_12_b2s_aw_channel";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_aw_channel;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s_aw_channel is
@@ -14852,8 +14828,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s is
     s_axi_arvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s : entity is "axi_protocol_converter_v2_1_12_b2s";
 end Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_b2s is
@@ -15366,8 +15340,6 @@ entity Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_axi_protocol_converte
   attribute C_TRANSLATION_MODE of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_12_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of Arty_Z7_20_auto_pc_1_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Tue Jun 20 16:36:03 2017
+-- Date        : Sat Jul 15 23:45:36 2017
 -- Host        : localhost.localdomain running 64-bit unknown
 -- Command     : write_vhdl -force -mode funcsim
---               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axis_subset_converter_0_0/Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.vhdl
+--               /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_axis_subset_converter_0_0/Arty_Z7_20_axis_subset_converter_0_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_axis_subset_converter_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,9 +21,9 @@ entity Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter
     aclken : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tstrb : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axis_tlast : in STD_LOGIC;
     s_axis_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -57,7 +57,7 @@ entity Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter
   attribute C_S_AXIS_SIGNAL_SET : string;
   attribute C_S_AXIS_SIGNAL_SET of Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0 : entity is "32'b00000000000000000000000010011011";
   attribute C_S_AXIS_TDATA_WIDTH : integer;
-  attribute C_S_AXIS_TDATA_WIDTH of Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0 : entity is 32;
+  attribute C_S_AXIS_TDATA_WIDTH of Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0 : entity is 24;
   attribute C_S_AXIS_TDEST_WIDTH : integer;
   attribute C_S_AXIS_TDEST_WIDTH of Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0 : entity is 1;
   attribute C_S_AXIS_TID_WIDTH : integer;
@@ -109,8 +109,8 @@ end Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_
 architecture STRUCTURE of Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subset_converter_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axis_tready\ : STD_LOGIC;
-  signal \^s_axis_tdata\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \^s_axis_tkeep\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^s_axis_tdata\ : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal \^s_axis_tkeep\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^s_axis_tlast\ : STD_LOGIC;
   signal \^s_axis_tuser\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^s_axis_tvalid\ : STD_LOGIC;
@@ -151,8 +151,8 @@ entity Arty_Z7_20_axis_subset_converter_0_0 is
     aresetn : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axis_tlast : in STD_LOGIC;
     s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tvalid : out STD_LOGIC;
@@ -195,7 +195,7 @@ architecture STRUCTURE of Arty_Z7_20_axis_subset_converter_0_0 is
   attribute C_S_AXIS_SIGNAL_SET : string;
   attribute C_S_AXIS_SIGNAL_SET of inst : label is "32'b00000000000000000000000010011011";
   attribute C_S_AXIS_TDATA_WIDTH : integer;
-  attribute C_S_AXIS_TDATA_WIDTH of inst : label is 32;
+  attribute C_S_AXIS_TDATA_WIDTH of inst : label is 24;
   attribute C_S_AXIS_TDEST_WIDTH : integer;
   attribute C_S_AXIS_TDEST_WIDTH of inst : label is 1;
   attribute C_S_AXIS_TID_WIDTH : integer;
@@ -255,13 +255,13 @@ inst: entity work.Arty_Z7_20_axis_subset_converter_0_0_top_Arty_Z7_20_axis_subse
       m_axis_tstrb(2 downto 0) => NLW_inst_m_axis_tstrb_UNCONNECTED(2 downto 0),
       m_axis_tuser(0) => m_axis_tuser(0),
       m_axis_tvalid => m_axis_tvalid,
-      s_axis_tdata(31 downto 0) => s_axis_tdata(31 downto 0),
+      s_axis_tdata(23 downto 0) => s_axis_tdata(23 downto 0),
       s_axis_tdest(0) => '0',
       s_axis_tid(0) => '0',
-      s_axis_tkeep(3 downto 0) => s_axis_tkeep(3 downto 0),
+      s_axis_tkeep(2 downto 0) => s_axis_tkeep(2 downto 0),
       s_axis_tlast => s_axis_tlast,
       s_axis_tready => s_axis_tready,
-      s_axis_tstrb(3 downto 0) => B"1111",
+      s_axis_tstrb(2 downto 0) => B"111",
       s_axis_tuser(0) => s_axis_tuser(0),
       s_axis_tvalid => s_axis_tvalid,
       sparse_tkeep_removed => NLW_inst_sparse_tkeep_removed_UNCONNECTED,

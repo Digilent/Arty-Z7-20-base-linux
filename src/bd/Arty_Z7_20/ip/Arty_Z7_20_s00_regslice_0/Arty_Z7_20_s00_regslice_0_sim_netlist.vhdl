@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
 -- Date        : Fri Jul 14 17:10:19 2017
 -- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim
---               /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s00_regslice_0/Arty_Z7_20_s00_regslice_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_s00_regslice_0 -prefix
+--               Arty_Z7_20_s00_regslice_0_ Arty_Z7_20_s00_regslice_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_s00_regslice_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2905,8 +2905,6 @@ entity Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice i
   attribute G_AXI_WUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 73;
   attribute G_AXI_WUSER_WIDTH : integer;
   attribute G_AXI_WUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is "axi_register_slice_v2_1_12_axi_register_slice";
 end Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice;
 
 architecture STRUCTURE of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice is
