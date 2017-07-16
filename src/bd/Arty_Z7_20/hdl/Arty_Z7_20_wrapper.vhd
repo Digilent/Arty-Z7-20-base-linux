@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
---Date        : Sat Jul 15 23:59:10 2017
+--Date        : Sun Jul 16 09:07:18 2017
 --Host        : localhost.localdomain running 64-bit unknown
 --Command     : generate_target Arty_Z7_20_wrapper.bd
 --Design      : Arty_Z7_20_wrapper

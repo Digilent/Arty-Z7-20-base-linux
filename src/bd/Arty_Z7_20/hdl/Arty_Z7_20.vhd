@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
---Date        : Sat Jul 15 23:59:10 2017
+--Date        : Sun Jul 16 09:07:18 2017
 --Host        : localhost.localdomain running 64-bit unknown
 --Command     : generate_target Arty_Z7_20.bd
 --Design      : Arty_Z7_20
@@ -3512,21 +3512,21 @@ entity Arty_Z7_20_processing_system7_0_axi_periph_0 is
     M03_ACLK : in STD_LOGIC;
     M03_ARESETN : in STD_LOGIC;
     M03_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M03_AXI_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M03_AXI_arvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_arready : in STD_LOGIC;
+    M03_AXI_arvalid : out STD_LOGIC;
     M03_AXI_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M03_AXI_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M03_AXI_awvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M03_AXI_bready : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_awready : in STD_LOGIC;
+    M03_AXI_awvalid : out STD_LOGIC;
+    M03_AXI_bready : out STD_LOGIC;
     M03_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M03_AXI_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_bvalid : in STD_LOGIC;
     M03_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    M03_AXI_rready : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_rready : out STD_LOGIC;
     M03_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M03_AXI_rvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_rvalid : in STD_LOGIC;
     M03_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M03_AXI_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    M03_AXI_wvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_wready : in STD_LOGIC;
+    M03_AXI_wvalid : out STD_LOGIC;
     M04_ACLK : in STD_LOGIC;
     M04_ARESETN : in STD_LOGIC;
     M04_AXI_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3892,20 +3892,20 @@ architecture STRUCTURE of Arty_Z7_20_processing_system7_0_axi_periph_0 is
   signal m02_couplers_to_processing_system7_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m02_couplers_to_processing_system7_0_axi_periph_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal m03_couplers_to_processing_system7_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m03_couplers_to_processing_system7_0_axi_periph_ARREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal m03_couplers_to_processing_system7_0_axi_periph_ARREADY : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_ARVALID : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m03_couplers_to_processing_system7_0_axi_periph_AWREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal m03_couplers_to_processing_system7_0_axi_periph_AWREADY : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_AWVALID : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_BREADY : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal m03_couplers_to_processing_system7_0_axi_periph_BVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal m03_couplers_to_processing_system7_0_axi_periph_BVALID : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m03_couplers_to_processing_system7_0_axi_periph_RREADY : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal m03_couplers_to_processing_system7_0_axi_periph_RVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal m03_couplers_to_processing_system7_0_axi_periph_RVALID : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal m03_couplers_to_processing_system7_0_axi_periph_WREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal m03_couplers_to_processing_system7_0_axi_periph_WREADY : STD_LOGIC;
   signal m03_couplers_to_processing_system7_0_axi_periph_WVALID : STD_LOGIC;
   signal m04_couplers_to_processing_system7_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal m04_couplers_to_processing_system7_0_axi_periph_ARREADY : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4423,13 +4423,13 @@ begin
   M03_ACLK_1 <= M03_ACLK;
   M03_ARESETN_1 <= M03_ARESETN;
   M03_AXI_araddr(31 downto 0) <= m03_couplers_to_processing_system7_0_axi_periph_ARADDR(31 downto 0);
-  M03_AXI_arvalid(0) <= m03_couplers_to_processing_system7_0_axi_periph_ARVALID;
+  M03_AXI_arvalid <= m03_couplers_to_processing_system7_0_axi_periph_ARVALID;
   M03_AXI_awaddr(31 downto 0) <= m03_couplers_to_processing_system7_0_axi_periph_AWADDR(31 downto 0);
-  M03_AXI_awvalid(0) <= m03_couplers_to_processing_system7_0_axi_periph_AWVALID;
-  M03_AXI_bready(0) <= m03_couplers_to_processing_system7_0_axi_periph_BREADY;
-  M03_AXI_rready(0) <= m03_couplers_to_processing_system7_0_axi_periph_RREADY;
+  M03_AXI_awvalid <= m03_couplers_to_processing_system7_0_axi_periph_AWVALID;
+  M03_AXI_bready <= m03_couplers_to_processing_system7_0_axi_periph_BREADY;
+  M03_AXI_rready <= m03_couplers_to_processing_system7_0_axi_periph_RREADY;
   M03_AXI_wdata(31 downto 0) <= m03_couplers_to_processing_system7_0_axi_periph_WDATA(31 downto 0);
-  M03_AXI_wvalid(0) <= m03_couplers_to_processing_system7_0_axi_periph_WVALID;
+  M03_AXI_wvalid <= m03_couplers_to_processing_system7_0_axi_periph_WVALID;
   M04_ACLK_1 <= M04_ACLK;
   M04_ARESETN_1 <= M04_ARESETN;
   M04_AXI_araddr(31 downto 0) <= m04_couplers_to_processing_system7_0_axi_periph_ARADDR(31 downto 0);
@@ -4582,14 +4582,14 @@ begin
   m02_couplers_to_processing_system7_0_axi_periph_RRESP(1 downto 0) <= M02_AXI_rresp(1 downto 0);
   m02_couplers_to_processing_system7_0_axi_periph_RVALID(0) <= M02_AXI_rvalid(0);
   m02_couplers_to_processing_system7_0_axi_periph_WREADY(0) <= M02_AXI_wready(0);
-  m03_couplers_to_processing_system7_0_axi_periph_ARREADY(0) <= M03_AXI_arready(0);
-  m03_couplers_to_processing_system7_0_axi_periph_AWREADY(0) <= M03_AXI_awready(0);
+  m03_couplers_to_processing_system7_0_axi_periph_ARREADY <= M03_AXI_arready;
+  m03_couplers_to_processing_system7_0_axi_periph_AWREADY <= M03_AXI_awready;
   m03_couplers_to_processing_system7_0_axi_periph_BRESP(1 downto 0) <= M03_AXI_bresp(1 downto 0);
-  m03_couplers_to_processing_system7_0_axi_periph_BVALID(0) <= M03_AXI_bvalid(0);
+  m03_couplers_to_processing_system7_0_axi_periph_BVALID <= M03_AXI_bvalid;
   m03_couplers_to_processing_system7_0_axi_periph_RDATA(31 downto 0) <= M03_AXI_rdata(31 downto 0);
   m03_couplers_to_processing_system7_0_axi_periph_RRESP(1 downto 0) <= M03_AXI_rresp(1 downto 0);
-  m03_couplers_to_processing_system7_0_axi_periph_RVALID(0) <= M03_AXI_rvalid(0);
-  m03_couplers_to_processing_system7_0_axi_periph_WREADY(0) <= M03_AXI_wready(0);
+  m03_couplers_to_processing_system7_0_axi_periph_RVALID <= M03_AXI_rvalid;
+  m03_couplers_to_processing_system7_0_axi_periph_WREADY <= M03_AXI_wready;
   m04_couplers_to_processing_system7_0_axi_periph_ARREADY(0) <= M04_AXI_arready(0);
   m04_couplers_to_processing_system7_0_axi_periph_AWREADY(0) <= M04_AXI_awready(0);
   m04_couplers_to_processing_system7_0_axi_periph_BRESP(1 downto 0) <= M04_AXI_bresp(1 downto 0);
@@ -4827,20 +4827,20 @@ m03_couplers: entity work.m03_couplers_imp_1ES7RJ3
       M_ACLK => M03_ACLK_1,
       M_ARESETN => M03_ARESETN_1,
       M_AXI_araddr(31 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_ARADDR(31 downto 0),
-      M_AXI_arready => m03_couplers_to_processing_system7_0_axi_periph_ARREADY(0),
+      M_AXI_arready => m03_couplers_to_processing_system7_0_axi_periph_ARREADY,
       M_AXI_arvalid => m03_couplers_to_processing_system7_0_axi_periph_ARVALID,
       M_AXI_awaddr(31 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_AWADDR(31 downto 0),
-      M_AXI_awready => m03_couplers_to_processing_system7_0_axi_periph_AWREADY(0),
+      M_AXI_awready => m03_couplers_to_processing_system7_0_axi_periph_AWREADY,
       M_AXI_awvalid => m03_couplers_to_processing_system7_0_axi_periph_AWVALID,
       M_AXI_bready => m03_couplers_to_processing_system7_0_axi_periph_BREADY,
       M_AXI_bresp(1 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_BRESP(1 downto 0),
-      M_AXI_bvalid => m03_couplers_to_processing_system7_0_axi_periph_BVALID(0),
+      M_AXI_bvalid => m03_couplers_to_processing_system7_0_axi_periph_BVALID,
       M_AXI_rdata(31 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_RDATA(31 downto 0),
       M_AXI_rready => m03_couplers_to_processing_system7_0_axi_periph_RREADY,
       M_AXI_rresp(1 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_RRESP(1 downto 0),
-      M_AXI_rvalid => m03_couplers_to_processing_system7_0_axi_periph_RVALID(0),
+      M_AXI_rvalid => m03_couplers_to_processing_system7_0_axi_periph_RVALID,
       M_AXI_wdata(31 downto 0) => m03_couplers_to_processing_system7_0_axi_periph_WDATA(31 downto 0),
-      M_AXI_wready => m03_couplers_to_processing_system7_0_axi_periph_WREADY(0),
+      M_AXI_wready => m03_couplers_to_processing_system7_0_axi_periph_WREADY,
       M_AXI_wvalid => m03_couplers_to_processing_system7_0_axi_periph_WVALID,
       S_ACLK => processing_system7_0_axi_periph_ACLK_net,
       S_ARESETN => processing_system7_0_axi_periph_ARESETN_net,
@@ -5788,7 +5788,7 @@ entity Arty_Z7_20 is
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of Arty_Z7_20 : entity is "Arty_Z7_20,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Arty_Z7_20,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=56,numReposBlks=36,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of Arty_Z7_20 : entity is "Arty_Z7_20,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Arty_Z7_20,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=57,numReposBlks=37,numNonXlnxBlks=3,numHierBlks=20,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Arty_Z7_20 : entity is "Arty_Z7_20.hwdef";
 end Arty_Z7_20;
@@ -6584,6 +6584,22 @@ architecture STRUCTURE of Arty_Z7_20 is
     mm2s_introut : out STD_LOGIC
   );
   end component Arty_Z7_20_axi_vdma_0_1;
+  component Arty_Z7_20_axis_subset_converter_1_0 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tready : out STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    s_axis_tlast : in STD_LOGIC;
+    s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component Arty_Z7_20_axis_subset_converter_1_0;
   signal S01_AXI_1_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal S01_AXI_1_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal S01_AXI_1_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -6707,6 +6723,11 @@ architecture STRUCTURE of Arty_Z7_20 is
   signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
   signal axis_subset_converter_0_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
+  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
@@ -6870,20 +6891,20 @@ architecture STRUCTURE of Arty_Z7_20 is
   signal processing_system7_0_axi_periph_M02_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal processing_system7_0_axi_periph_M03_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_axi_periph_M03_AXI_ARREADY : STD_LOGIC;
-  signal processing_system7_0_axi_periph_M03_AXI_ARVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal processing_system7_0_axi_periph_M03_AXI_ARVALID : STD_LOGIC;
   signal processing_system7_0_axi_periph_M03_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_axi_periph_M03_AXI_AWREADY : STD_LOGIC;
-  signal processing_system7_0_axi_periph_M03_AXI_AWVALID : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal processing_system7_0_axi_periph_M03_AXI_BREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal processing_system7_0_axi_periph_M03_AXI_AWVALID : STD_LOGIC;
+  signal processing_system7_0_axi_periph_M03_AXI_BREADY : STD_LOGIC;
   signal processing_system7_0_axi_periph_M03_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal processing_system7_0_axi_periph_M03_AXI_BVALID : STD_LOGIC;
   signal processing_system7_0_axi_periph_M03_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal processing_system7_0_axi_periph_M03_AXI_RREADY : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal processing_system7_0_axi_periph_M03_AXI_RREADY : STD_LOGIC;
   signal processing_system7_0_axi_periph_M03_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal processing_system7_0_axi_periph_M03_AXI_RVALID : STD_LOGIC;
   signal processing_system7_0_axi_periph_M03_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_axi_periph_M03_AXI_WREADY : STD_LOGIC;
-  signal processing_system7_0_axi_periph_M03_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal processing_system7_0_axi_periph_M03_AXI_WVALID : STD_LOGIC;
   signal processing_system7_0_axi_periph_M04_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_axi_periph_M04_AXI_ARREADY : STD_LOGIC;
   signal processing_system7_0_axi_periph_M04_AXI_ARVALID : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7496,20 +7517,20 @@ axi_vdma_0: component Arty_Z7_20_axi_vdma_0_1
       s_axi_lite_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_lite_araddr(8 downto 0) => processing_system7_0_axi_periph_M03_AXI_ARADDR(8 downto 0),
       s_axi_lite_arready => processing_system7_0_axi_periph_M03_AXI_ARREADY,
-      s_axi_lite_arvalid => processing_system7_0_axi_periph_M03_AXI_ARVALID(0),
+      s_axi_lite_arvalid => processing_system7_0_axi_periph_M03_AXI_ARVALID,
       s_axi_lite_awaddr(8 downto 0) => processing_system7_0_axi_periph_M03_AXI_AWADDR(8 downto 0),
       s_axi_lite_awready => processing_system7_0_axi_periph_M03_AXI_AWREADY,
-      s_axi_lite_awvalid => processing_system7_0_axi_periph_M03_AXI_AWVALID(0),
-      s_axi_lite_bready => processing_system7_0_axi_periph_M03_AXI_BREADY(0),
+      s_axi_lite_awvalid => processing_system7_0_axi_periph_M03_AXI_AWVALID,
+      s_axi_lite_bready => processing_system7_0_axi_periph_M03_AXI_BREADY,
       s_axi_lite_bresp(1 downto 0) => processing_system7_0_axi_periph_M03_AXI_BRESP(1 downto 0),
       s_axi_lite_bvalid => processing_system7_0_axi_periph_M03_AXI_BVALID,
       s_axi_lite_rdata(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_RDATA(31 downto 0),
-      s_axi_lite_rready => processing_system7_0_axi_periph_M03_AXI_RREADY(0),
+      s_axi_lite_rready => processing_system7_0_axi_periph_M03_AXI_RREADY,
       s_axi_lite_rresp(1 downto 0) => processing_system7_0_axi_periph_M03_AXI_RRESP(1 downto 0),
       s_axi_lite_rvalid => processing_system7_0_axi_periph_M03_AXI_RVALID,
       s_axi_lite_wdata(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_WDATA(31 downto 0),
       s_axi_lite_wready => processing_system7_0_axi_periph_M03_AXI_WREADY,
-      s_axi_lite_wvalid => processing_system7_0_axi_periph_M03_AXI_WVALID(0)
+      s_axi_lite_wvalid => processing_system7_0_axi_periph_M03_AXI_WVALID
     );
 axi_vdma_1: component Arty_Z7_20_axi_vdma_1_0
      port map (
@@ -7551,12 +7572,12 @@ axi_vdma_1: component Arty_Z7_20_axi_vdma_1_0
       s_axi_lite_wready => processing_system7_0_axi_periph_M11_AXI_WREADY,
       s_axi_lite_wvalid => processing_system7_0_axi_periph_M11_AXI_WVALID,
       s_axis_s2mm_aclk => processing_system7_0_FCLK_CLK1,
-      s_axis_s2mm_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_s2mm_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
       s_axis_s2mm_tkeep(2 downto 0) => B"111",
-      s_axis_s2mm_tlast => v_vid_in_axi4s_0_video_out_TLAST,
-      s_axis_s2mm_tready => v_vid_in_axi4s_0_video_out_TREADY,
-      s_axis_s2mm_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
-      s_axis_s2mm_tvalid => v_vid_in_axi4s_0_video_out_TVALID
+      s_axis_s2mm_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      s_axis_s2mm_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      s_axis_s2mm_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      s_axis_s2mm_tvalid => axis_subset_converter_1_M_AXIS_TVALID
     );
 axis_subset_converter_0: component Arty_Z7_20_axis_subset_converter_0_0
      port map (
@@ -7574,6 +7595,21 @@ axis_subset_converter_0: component Arty_Z7_20_axis_subset_converter_0_0
       s_axis_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
       s_axis_tuser(0) => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
       s_axis_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID
+    );
+axis_subset_converter_1: component Arty_Z7_20_axis_subset_converter_1_0
+     port map (
+      aclk => processing_system7_0_FCLK_CLK1,
+      aresetn => xlconstant_0_dout(0),
+      m_axis_tdata(23 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(23 downto 0),
+      m_axis_tlast => axis_subset_converter_1_M_AXIS_TLAST,
+      m_axis_tready => axis_subset_converter_1_M_AXIS_TREADY,
+      m_axis_tuser(0) => axis_subset_converter_1_M_AXIS_TUSER(0),
+      m_axis_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
+      s_axis_tdata(23 downto 0) => v_vid_in_axi4s_0_video_out_TDATA(23 downto 0),
+      s_axis_tlast => v_vid_in_axi4s_0_video_out_TLAST,
+      s_axis_tready => v_vid_in_axi4s_0_video_out_TREADY,
+      s_axis_tuser(0) => v_vid_in_axi4s_0_video_out_TUSER,
+      s_axis_tvalid => v_vid_in_axi4s_0_video_out_TVALID
     );
 clk_wiz_0: component Arty_Z7_20_clk_wiz_0_0
      port map (
@@ -7872,21 +7908,21 @@ processing_system7_0_axi_periph: entity work.Arty_Z7_20_processing_system7_0_axi
       M03_ACLK => processing_system7_0_FCLK_CLK0,
       M03_ARESETN => rst_processing_system7_0_100M_peripheral_aresetn(0),
       M03_AXI_araddr(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_ARADDR(31 downto 0),
-      M03_AXI_arready(0) => processing_system7_0_axi_periph_M03_AXI_ARREADY,
-      M03_AXI_arvalid(0) => processing_system7_0_axi_periph_M03_AXI_ARVALID(0),
+      M03_AXI_arready => processing_system7_0_axi_periph_M03_AXI_ARREADY,
+      M03_AXI_arvalid => processing_system7_0_axi_periph_M03_AXI_ARVALID,
       M03_AXI_awaddr(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_AWADDR(31 downto 0),
-      M03_AXI_awready(0) => processing_system7_0_axi_periph_M03_AXI_AWREADY,
-      M03_AXI_awvalid(0) => processing_system7_0_axi_periph_M03_AXI_AWVALID(0),
-      M03_AXI_bready(0) => processing_system7_0_axi_periph_M03_AXI_BREADY(0),
+      M03_AXI_awready => processing_system7_0_axi_periph_M03_AXI_AWREADY,
+      M03_AXI_awvalid => processing_system7_0_axi_periph_M03_AXI_AWVALID,
+      M03_AXI_bready => processing_system7_0_axi_periph_M03_AXI_BREADY,
       M03_AXI_bresp(1 downto 0) => processing_system7_0_axi_periph_M03_AXI_BRESP(1 downto 0),
-      M03_AXI_bvalid(0) => processing_system7_0_axi_periph_M03_AXI_BVALID,
+      M03_AXI_bvalid => processing_system7_0_axi_periph_M03_AXI_BVALID,
       M03_AXI_rdata(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_RDATA(31 downto 0),
-      M03_AXI_rready(0) => processing_system7_0_axi_periph_M03_AXI_RREADY(0),
+      M03_AXI_rready => processing_system7_0_axi_periph_M03_AXI_RREADY,
       M03_AXI_rresp(1 downto 0) => processing_system7_0_axi_periph_M03_AXI_RRESP(1 downto 0),
-      M03_AXI_rvalid(0) => processing_system7_0_axi_periph_M03_AXI_RVALID,
+      M03_AXI_rvalid => processing_system7_0_axi_periph_M03_AXI_RVALID,
       M03_AXI_wdata(31 downto 0) => processing_system7_0_axi_periph_M03_AXI_WDATA(31 downto 0),
-      M03_AXI_wready(0) => processing_system7_0_axi_periph_M03_AXI_WREADY,
-      M03_AXI_wvalid(0) => processing_system7_0_axi_periph_M03_AXI_WVALID(0),
+      M03_AXI_wready => processing_system7_0_axi_periph_M03_AXI_WREADY,
+      M03_AXI_wvalid => processing_system7_0_axi_periph_M03_AXI_WVALID,
       M04_ACLK => processing_system7_0_FCLK_CLK0,
       M04_ARESETN => rst_processing_system7_0_100M_peripheral_aresetn(0),
       M04_AXI_araddr(31 downto 0) => processing_system7_0_axi_periph_M04_AXI_ARADDR(31 downto 0),
