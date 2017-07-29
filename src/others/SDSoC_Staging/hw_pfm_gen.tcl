@@ -4,7 +4,7 @@
 
 set pfm [sdsoc::create_pfm Arty_Z7_20.hpfm]
 sdsoc::pfm_name $pfm "digilentinc.com" "xd" "Arty_Z7_20" "1.0"
-sdsoc::pfm_description $pfm "Arty Z7-20 Development board with support for HDMI input and HDMI output in all OS's"
+sdsoc::pfm_description $pfm "Arty Z7-20 Development board with support for HDMI input and HDMI output"
 sdsoc::pfm_clock $pfm FCLK_CLK0 processing_system7_0 0 true rst_processing_system7_0_100M
 sdsoc::pfm_clock $pfm FCLK_CLK1 processing_system7_0 1 false rst_processing_system7_0_142M
 sdsoc::pfm_clock $pfm FCLK_CLK2 processing_system7_0 2 false proc_sys_reset_2
@@ -17,6 +17,8 @@ sdsoc::pfm_axi_port $pfm S_AXI_HP3 processing_system7_0 S_AXI_HP
 for {set i 8} {$i < 16} {incr i} {
 sdsoc::pfm_irq $pfm In$i xlconcat_0
 }
-sdsoc::pfm_iodev $pfm S_AXI axi_gpio_sw uio
-sdsoc::pfm_iodev $pfm S_AXI axi_gpio_led uio
+sdsoc::pfm_iodev $pfm S_AXI_LITE axi_vdma_1 uio
+sdsoc::pfm_iodev $pfm ctrl v_tc_1 uio
+sdsoc::pfm_iodev $pfm S_AXI axi_gpio_video uio
 sdsoc::generate_hw_pfm $pfm
+
