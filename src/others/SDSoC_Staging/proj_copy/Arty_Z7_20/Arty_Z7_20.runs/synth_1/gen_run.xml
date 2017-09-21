@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1501311141">
+  <File Type="RDS-UTIL" Name="Arty_Z7_20_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Arty_Z7_20_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Arty_Z7_20_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Arty_Z7_20_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Arty_Z7_20_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Arty_Z7_20_wrapper_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="Arty_Z7_20_wrapper.vds"/>
+  <File Type="PA-TCL" Name="Arty_Z7_20_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/Arty_Z7_20/Arty_Z7_20.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../bd/Arty_Z7_20/Arty_Z7_20.bd"/>
+        <Attr Name="ImportTime" Val="1500348405"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Arty_Z7_20_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../bd/Arty_Z7_20/hdl/Arty_Z7_20_wrapper.vhd"/>
+        <Attr Name="ImportTime" Val="1500348405"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Arty_Z7_20_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/ARTY_Z7.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../constraints/ARTY_Z7.xdc"/>
+        <Attr Name="ImportTime" Val="1500079597"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design">
+      <Option Id="FsmExtraction">0</Option>
+      <Option Id="FlattenHierarchy">1</Option>
+      <Option Id="Directive">0</Option>
+    </Step>
+  </Strategy>
+</GenRun>

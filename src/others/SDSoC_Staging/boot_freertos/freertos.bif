@@ -1,7 +1,0 @@
-//arch = zynq; split = false; format = BIN
-the_ROM_image:
-{
-  [bootloader]<boot/fsbl.elf>
-  <bitstream>
-  <elf>
-}

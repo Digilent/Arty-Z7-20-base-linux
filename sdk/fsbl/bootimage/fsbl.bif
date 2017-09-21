@@ -1,6 +1,0 @@
-//arch = zynq; split = false; format = BIN
-the_ROM_image:
-{
-	[bootloader]C:\sam_work\git\digilent\Arty-Z7-20-base\sdk\fsbl\Debug\fsbl.elf
-	C:\sam_work\git\digilent\Arty-Z7-20-base\sdk\Arty_Z7_20_wrapper_hw_platform_0\Arty_Z7_20_wrapper.bit
-}

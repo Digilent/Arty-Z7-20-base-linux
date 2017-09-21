@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Fri Jul 28 23:52:22 2017
+# Process ID: 108254
+# Current directory: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/proj/Arty_Z7_20.runs/synth_1
+# Command line: vivado -log Arty_Z7_20_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Arty_Z7_20_wrapper.tcl
+# Log file: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/proj/Arty_Z7_20.runs/synth_1/Arty_Z7_20_wrapper.vds
+# Journal file: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/proj/Arty_Z7_20.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Arty_Z7_20_wrapper.tcl -notrace

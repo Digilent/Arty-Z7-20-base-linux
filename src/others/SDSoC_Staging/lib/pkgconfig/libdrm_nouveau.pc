@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: libdrm_nouveau
+Description: Userspace interface to nouveau kernel DRM services
+Version: 2.4.70
+Libs: -L${libdir} -ldrm_nouveau
+Cflags: -I${includedir} -I${includedir}/libdrm -I${includedir}/libdrm/nouveau
+Requires.private: libdrm

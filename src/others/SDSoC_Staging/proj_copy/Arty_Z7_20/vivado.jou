@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Sat Jul 29 00:54:20 2017
+# Process ID: 112161
+# Current directory: /home/digilent/sam_work
+# Command line: vivado
+# Log file: /home/digilent/sam_work/vivado.log
+# Journal file: /home/digilent/sam_work/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/proj/Arty_Z7_20.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
+launch_sdk -workspace /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/sdk -hwspec /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/hw_handoff/Arty_Z7_20_wrapper.hdf
+archive_project /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/Arty_Z7_20.xpr.zip -force

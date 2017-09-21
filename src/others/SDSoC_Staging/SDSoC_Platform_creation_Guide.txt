@@ -1,41 +1,47 @@
 Instructions for Creating an SDSoC Platform using these files:
 ===================================================================
-********************************************************************************
-***WARNINGS                                                                  ***
-********************************************************************************
-***This will only work on SamB's computer for now due to platform_builder.xml***
-***To fix this you need to edit the file and change all abosolute paths      ***
-********************************************************************************
-***Currently Linux support is not working because the files were built in    ***
-***Petalinux 2016.4 instead of petalinux 2016.3                              ***
-********************************************************************************
-
-1) Open SDx Terminal 2016.4 (in Windows)
-2) cd into a directory with a very short filepath (e.g. "C:/work/temp/")
-3) execute sdspfm -gui
-4) In the GUI, open the platform_builder.xml project.
-
 * FYI, here is where all files come from:
-	boot_*/*.bif -- handwritten
-	lscript.ld -- Generated from a simple helloworld project in sdk with heap and stack increased
-	boot/fsbl.elf -- Included in the sdk folder of this project.
-	lib_bsp and include_bsp -- from displaydemo_bsp in sdk folder
+	*/*.bif -- handwritten
+	*/lscript.ld -- Generated from a simple helloworld project in sdk with heap and stack increased
+	boot_*/fsbl.elf -- Included in the sdk folder of this project.
+	include_bsp -- from displaydemo_bsp in sdk folder (currently not used)
+	lib -- /usr/lib of the petalinux rootfs. Hope to link directly to petalinux build dir at some point
+	include_linux -- /usr/include of the petalinux rootfs. Hope to link directly to petalinux build dir at some point
 
-5) Click Generate
-6) copy the vivado-boards folder included here to output\Arty_Z7_20\hw\vivado\Arty_Z7_20.ipdefs\
-7) Open output\Arty_Z7_20\hw\vivado\Arty_Z7_20.xpr in a text editor and change the line below so that it matches:
+* When I try to link to the .xpr in the proj folder, it throws an error saying that it can't find the .bd. I'm guessing this is because
+  the .bd is remotely located in the ../src/bd folder and it can't find it. For now, I am just manually archiving the project and
+  extracting it to SDSoC_Staging/proj_copy/ so that I can point the tool there instead.
+
+* The make file was made using the "sdspfm -gui" command to input all information except the linux libs. The state
+  of the GUI tool was then saved as an XML (config.xml) with relative paths and also exported as a makefile. I had to correct the XML and 
+  makefile in a text editor when it pointed to ../../proj, but since I am no longer linking to that folder it is not an issue
+  (see issue above). I had to modify the makefile to add -force and -prebuilt. If I need to make a change in the GUI, I should load config.xml,
+  make the changes, export the makefile again, then make the same manual changes to it. Note there is still no method for providing a lib path.
+
+
+1) Open a terminal and source /opt/Xilinx/SDx/2017.1/settings64.sh
+2) Open project in vivado, archive project, extract to src/others/SDSoC_Staging/proj_copy/
+3) cd into src/others/
+4) execute make
+
+5) copy the vivado-boards folder included here to output\Arty_Z7_20\hw\vivado\Arty_Z7_20.ipdefs\
+6) Open output\Arty_Z7_20\hw\vivado\Arty_Z7_20.xpr in a text editor and change the line below so that it matches:
 
     <Option Name="BoardPartRepoPaths" Val="$PPRDIR/Arty_Z7_20.ipdefs/vivado-boards/new/board_files"/>
 	
-8) Save and close the .xpr file
-9) If the Vivado IPI project was not changed since the last build you can skip this step. Otherwise you will 
+7) Save and close the .xpr file
+8) If the Vivado IPI project was not changed since the last build you can skip this step. Otherwise you will 
    need to take the platform, build a simple project in SDSoC with it, and copy the files as indicated on page
-   23 of ug1146 to the prebuilt_platform folder.
-10) Copy the prebuilt_platform folder to the output\Arty_Z7_20\sw\ folder.
-11) Open output\Arty_Z7_20\sw\Arty_Z7_20.spfm and add the following line before every instance of </sdx:configuration>:
+   23 of ug1146 to the prebuilt folder.
+9) Copy the lib folder to the output\Arty_Z7_20\sw\linux\ folder.
+10) Open output\Arty_Z7_20\sw\Arty_Z7_20.spfm and replace the following line: 
 
-<sdx:prebuilt sdx:data="prebuilt_platform"/>
+<sdx:os sdx:name="linux" sdx:displayName="Linux OS" sdx:includePaths="linux/inc/include_linux" />
 
-12) Save and close the file.    
+    with:
 
-13) The platform is now ready!
+<sdx:os sdx:name="linux" sdx:displayName="Linux OS" sdx:includePaths="linux/inc/include_linux" sdx:libraryPaths="linux/lib" />
+
+11) Save and close the file.    
+
+12) The platform is now ready!

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.1_sdx (64-bit)
+# SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+# IP Build 1908669 on Thu Jun 22 19:20:41 MDT 2017
+# Start of session at: Sat Jul 29 03:20:35 2017
+# Process ID: 120848
+# Current directory: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/others/.Xil
+# Command line: vivado -mode batch -notrace -source archive_project.tcl /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/others/SDSoC_Staging/proj_copy/Arty_Z7_20/Arty_Z7_20.xpr
+# Log file: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/others/.Xil/vivado.log
+# Journal file: /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/others/.Xil/vivado.jou
+#-----------------------------------------------------------
+open_project /home/digilent/sam_work/git/sbobrowicz/Arty-Z7-20-base/src/others/SDSoC_Staging/proj_copy/Arty_Z7_20/Arty_Z7_20.xpr
+source archive_project.tcl -notrace

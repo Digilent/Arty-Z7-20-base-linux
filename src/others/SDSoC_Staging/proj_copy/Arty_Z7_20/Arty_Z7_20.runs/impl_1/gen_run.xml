@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1501311141">
+  <File Type="PLACE-CLK" Name="Arty_Z7_20_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="Arty_Z7_20_wrapper.hwdef"/>
+  <File Type="OPT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_opted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PLACE-UTIL" Name="Arty_Z7_20_wrapper_utilization_placed.rpt"/>
+  <File Type="PWROPT-DRC" Name="Arty_Z7_20_wrapper_drc_pwropted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Arty_Z7_20_wrapper_utilization_placed.pb"/>
+  <File Type="PWROPT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-IO" Name="Arty_Z7_20_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Arty_Z7_20_wrapper_control_sets_placed.rpt"/>
+  <File Type="ROUTE-STATUS" Name="Arty_Z7_20_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Arty_Z7_20_wrapper_route_status.pb"/>
+  <File Type="BITSTR-BMM" Name="Arty_Z7_20_wrapper_bd.bmm"/>
+  <File Type="PWROPT-DCP" Name="Arty_Z7_20_wrapper_pwropt.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="Arty_Z7_20_wrapper.sysdef"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Arty_Z7_20_wrapper_timing_summary_routed.rpt"/>
+  <File Type="BG-BGN" Name="Arty_Z7_20_wrapper.bgn"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PLACE-DCP" Name="Arty_Z7_20_wrapper_placed.dcp"/>
+  <File Type="BITSTR-MMI" Name="Arty_Z7_20_wrapper.mmi"/>
+  <File Type="BG-DRC" Name="Arty_Z7_20_wrapper.drc"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Arty_Z7_20_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-RBT" Name="Arty_Z7_20_wrapper.rbt"/>
+  <File Type="ROUTE-SIMILARITY" Name="Arty_Z7_20_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Arty_Z7_20_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Arty_Z7_20_wrapper_routed.dcp"/>
+  <File Type="BG-BIT" Name="Arty_Z7_20_wrapper.bit"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Arty_Z7_20_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Arty_Z7_20_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Arty_Z7_20_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Arty_Z7_20_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Arty_Z7_20_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-SUM" Name="Arty_Z7_20_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Arty_Z7_20_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="PHYSOPT-DCP" Name="Arty_Z7_20_wrapper_physopt.dcp"/>
+  <File Type="ROUTE-PWR-RPX" Name="Arty_Z7_20_wrapper_power_routed.rpx"/>
+  <File Type="PHYSOPT-DRC" Name="Arty_Z7_20_wrapper_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Arty_Z7_20_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR" Name="Arty_Z7_20_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Arty_Z7_20_wrapper.tcl"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Arty_Z7_20_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-SIMILARITY" Name="Arty_Z7_20_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Arty_Z7_20_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Arty_Z7_20_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Arty_Z7_20_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Arty_Z7_20_wrapper_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_init.rpt"/>
+  <File Type="PLACE-TIMING" Name="Arty_Z7_20_wrapper_timing_summary_placed.rpt"/>
+  <File Type="RDI-RDI" Name="Arty_Z7_20_wrapper.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Arty_Z7_20_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Arty_Z7_20_wrapper_postroute_physopt.dcp"/>
+  <File Type="BG-BIN" Name="Arty_Z7_20_wrapper.bin"/>
+  <File Type="ROUTE-TIMING-PB" Name="Arty_Z7_20_wrapper_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Arty_Z7_20_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-MSK" Name="Arty_Z7_20_wrapper.msk"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Arty_Z7_20_wrapper_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="Arty_Z7_20_wrapper.nky"/>
+  <File Type="ROUTE-CLK" Name="Arty_Z7_20_wrapper_clock_utilization_routed.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/Arty_Z7_20/Arty_Z7_20.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../bd/Arty_Z7_20/Arty_Z7_20.bd"/>
+        <Attr Name="ImportTime" Val="1500348405"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/Arty_Z7_20_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../bd/Arty_Z7_20/hdl/Arty_Z7_20_wrapper.vhd"/>
+        <Attr Name="ImportTime" Val="1500348405"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Arty_Z7_20_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/ARTY_Z7.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../constraints/ARTY_Z7.xdc"/>
+        <Attr Name="ImportTime" Val="1500079597"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">4</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">14</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design">
+      <Option Id="Directive">5</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

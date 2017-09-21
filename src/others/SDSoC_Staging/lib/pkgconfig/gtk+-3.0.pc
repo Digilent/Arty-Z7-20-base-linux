@@ -1,0 +1,16 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+targets=x11
+
+gtk_binary_version=3.0.0
+gtk_host=arm-xilinx-linux-gnueabi
+
+Name: GTK+
+Description: GTK+ Graphical UI Library
+Version: 3.20.9
+Requires: gdk-3.0 atk >= 2.15.1 cairo >= 1.14.0 cairo-gobject >= 1.14.0 gdk-pixbuf-2.0 >= 2.30.0 gio-2.0 >= 2.45.8
+Requires.private: atk atk-bridge-2.0   epoxy >= 1.0 pangoft2 gio-unix-2.0 >= 2.45.8
+Libs: -L${libdir} -lgtk-3 
+Cflags: -I${includedir}/gtk-3.0 

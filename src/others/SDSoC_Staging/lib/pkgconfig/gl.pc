@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: gl
+Description: Mesa OpenGL library
+Requires.private:  libdrm >= 2.4.66 x11 xext xdamage xfixes x11-xcb xcb xcb-glx >= 1.8.1 xcb-dri2 >= 1.8 xxf86vm
+Version: 12.0.1
+Libs: -L${libdir} -lGL
+Libs.private: -lm -lpthread -ldl
+Cflags: -I${includedir} 
+glx_tls: yes

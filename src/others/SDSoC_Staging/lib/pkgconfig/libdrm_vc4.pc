@@ -1,0 +1,9 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: libdrm_vc4
+Description: Userspace interface to vc4 kernel DRM services
+Version: 2.4.70
+Requires.private: libdrm
