@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Tue Jun 20 16:34:24 2017
--- Host        : localhost.localdomain running 64-bit unknown
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:06:50 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/digilent/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_dvi2rgb_0_0/Arty_Z7_20_dvi2rgb_0_0_sim_netlist.vhdl
+--               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_dvi2rgb_0_0/Arty_Z7_20_dvi2rgb_0_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_dvi2rgb_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13774,7 +13774,7 @@ entity Arty_Z7_20_dvi2rgb_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Arty_Z7_20_dvi2rgb_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Arty_Z7_20_dvi2rgb_0_0 : entity is "dvi2rgb,Vivado 2017.1_sdx";
+  attribute x_core_info of Arty_Z7_20_dvi2rgb_0_0 : entity is "dvi2rgb,Vivado 2017.2.1";
 end Arty_Z7_20_dvi2rgb_0_0;
 
 architecture STRUCTURE of Arty_Z7_20_dvi2rgb_0_0 is

@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Tue Jun 20 16:31:13 2017
--- Host        : localhost.localdomain running 64-bit unknown
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:05:45 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_proc_sys_reset_0_3 -prefix
 --               Arty_Z7_20_proc_sys_reset_0_3_ Arty_Z7_20_rst_processing_system7_0_100M_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_rst_processing_system7_0_100M_0
@@ -1030,7 +1030,7 @@ entity Arty_Z7_20_proc_sys_reset_0_3 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Arty_Z7_20_proc_sys_reset_0_3 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Arty_Z7_20_proc_sys_reset_0_3 : entity is "proc_sys_reset,Vivado 2017.1_sdx";
+  attribute x_core_info of Arty_Z7_20_proc_sys_reset_0_3 : entity is "proc_sys_reset,Vivado 2017.2.1";
 end Arty_Z7_20_proc_sys_reset_0_3;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_3 is

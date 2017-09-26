@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Fri Jul 14 17:10:19 2017
--- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_s00_regslice_0 -prefix
---               Arty_Z7_20_s00_regslice_0_ Arty_Z7_20_s00_regslice_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:09:16 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s00_regslice_0/Arty_Z7_20_s00_regslice_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_s00_regslice_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ is
+entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized2\ is
   port (
     m_axi_arvalid : out STD_LOGIC;
     p_0_in : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -28,10 +28,10 @@ entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice
     D : in STD_LOGIC_VECTOR ( 61 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
-end \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_13_axic_register_slice";
+end \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized2\;
 
-architecture STRUCTURE of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\ is
+architecture STRUCTURE of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized2\ is
   signal \aresetn_d[1]_i_1_n_0\ : STD_LOGIC;
   signal \^m_axi_arvalid\ : STD_LOGIC;
   signal \m_payload_i[53]_i_1_n_0\ : STD_LOGIC;
@@ -630,7 +630,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized3\ is
+entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized3\ is
   port (
     s_axi_rvalid : out STD_LOGIC;
     m_axi_rready : out STD_LOGIC;
@@ -646,10 +646,10 @@ entity \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice
     m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized3\ : entity is "axi_register_slice_v2_1_12_axic_register_slice";
-end \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized3\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized3\ : entity is "axi_register_slice_v2_1_13_axic_register_slice";
+end \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized3\;
 
-architecture STRUCTURE of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized3\ is
+architecture STRUCTURE of \Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized3\ is
   signal \^m_axi_rready\ : STD_LOGIC;
   signal \m_payload_i[67]_i_1_n_0\ : STD_LOGIC;
   signal m_valid_i_i_1_n_0 : STD_LOGIC;
@@ -2624,7 +2624,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice is
+entity Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -2720,194 +2720,196 @@ entity Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice i
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 64;
+  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_ID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute C_AXI_PROTOCOL of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_SUPPORTS_REGION_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_REGION_SIGNALS of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_SUPPORTS_REGION_SIGNALS of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "zynq";
   attribute C_REG_CONFIG_AR : integer;
-  attribute C_REG_CONFIG_AR of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 7;
+  attribute C_REG_CONFIG_AR of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 7;
   attribute C_REG_CONFIG_AW : integer;
-  attribute C_REG_CONFIG_AW of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute C_REG_CONFIG_AW of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute C_REG_CONFIG_B : integer;
-  attribute C_REG_CONFIG_B of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute C_REG_CONFIG_B of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute C_REG_CONFIG_R : integer;
-  attribute C_REG_CONFIG_R of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute C_REG_CONFIG_R of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute C_REG_CONFIG_W : integer;
-  attribute C_REG_CONFIG_W of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute C_REG_CONFIG_W of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "yes";
   attribute G_AXI_ARADDR_INDEX : integer;
-  attribute G_AXI_ARADDR_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_ARADDR_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_ARADDR_WIDTH : integer;
-  attribute G_AXI_ARADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 32;
+  attribute G_AXI_ARADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
   attribute G_AXI_ARBURST_INDEX : integer;
-  attribute G_AXI_ARBURST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 38;
+  attribute G_AXI_ARBURST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 38;
   attribute G_AXI_ARBURST_WIDTH : integer;
-  attribute G_AXI_ARBURST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 2;
+  attribute G_AXI_ARBURST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
   attribute G_AXI_ARCACHE_INDEX : integer;
-  attribute G_AXI_ARCACHE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 40;
+  attribute G_AXI_ARCACHE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 40;
   attribute G_AXI_ARCACHE_WIDTH : integer;
-  attribute G_AXI_ARCACHE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_ARCACHE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_ARID_INDEX : integer;
-  attribute G_AXI_ARID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 53;
+  attribute G_AXI_ARID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 53;
   attribute G_AXI_ARID_WIDTH : integer;
-  attribute G_AXI_ARID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_ARID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_ARLEN_INDEX : integer;
-  attribute G_AXI_ARLEN_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 44;
+  attribute G_AXI_ARLEN_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 44;
   attribute G_AXI_ARLEN_WIDTH : integer;
-  attribute G_AXI_ARLEN_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 8;
+  attribute G_AXI_ARLEN_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
   attribute G_AXI_ARLOCK_INDEX : integer;
-  attribute G_AXI_ARLOCK_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 52;
+  attribute G_AXI_ARLOCK_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 52;
   attribute G_AXI_ARLOCK_WIDTH : integer;
-  attribute G_AXI_ARLOCK_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_ARLOCK_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_ARPAYLOAD_WIDTH : integer;
-  attribute G_AXI_ARPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 62;
+  attribute G_AXI_ARPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
   attribute G_AXI_ARPROT_INDEX : integer;
-  attribute G_AXI_ARPROT_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 32;
+  attribute G_AXI_ARPROT_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
   attribute G_AXI_ARPROT_WIDTH : integer;
-  attribute G_AXI_ARPROT_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_ARPROT_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_ARQOS_INDEX : integer;
-  attribute G_AXI_ARQOS_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 54;
+  attribute G_AXI_ARQOS_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 54;
   attribute G_AXI_ARQOS_WIDTH : integer;
-  attribute G_AXI_ARQOS_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_ARQOS_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_ARREGION_INDEX : integer;
-  attribute G_AXI_ARREGION_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 58;
+  attribute G_AXI_ARREGION_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 58;
   attribute G_AXI_ARREGION_WIDTH : integer;
-  attribute G_AXI_ARREGION_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_ARREGION_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_ARSIZE_INDEX : integer;
-  attribute G_AXI_ARSIZE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 35;
+  attribute G_AXI_ARSIZE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 35;
   attribute G_AXI_ARSIZE_WIDTH : integer;
-  attribute G_AXI_ARSIZE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_ARSIZE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_ARUSER_INDEX : integer;
-  attribute G_AXI_ARUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 62;
+  attribute G_AXI_ARUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
   attribute G_AXI_ARUSER_WIDTH : integer;
-  attribute G_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_AWADDR_INDEX : integer;
-  attribute G_AXI_AWADDR_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_AWADDR_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_AWADDR_WIDTH : integer;
-  attribute G_AXI_AWADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 32;
+  attribute G_AXI_AWADDR_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
   attribute G_AXI_AWBURST_INDEX : integer;
-  attribute G_AXI_AWBURST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 38;
+  attribute G_AXI_AWBURST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 38;
   attribute G_AXI_AWBURST_WIDTH : integer;
-  attribute G_AXI_AWBURST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 2;
+  attribute G_AXI_AWBURST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
   attribute G_AXI_AWCACHE_INDEX : integer;
-  attribute G_AXI_AWCACHE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 40;
+  attribute G_AXI_AWCACHE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 40;
   attribute G_AXI_AWCACHE_WIDTH : integer;
-  attribute G_AXI_AWCACHE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_AWCACHE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_AWID_INDEX : integer;
-  attribute G_AXI_AWID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 53;
+  attribute G_AXI_AWID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 53;
   attribute G_AXI_AWID_WIDTH : integer;
-  attribute G_AXI_AWID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_AWID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_AWLEN_INDEX : integer;
-  attribute G_AXI_AWLEN_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 44;
+  attribute G_AXI_AWLEN_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 44;
   attribute G_AXI_AWLEN_WIDTH : integer;
-  attribute G_AXI_AWLEN_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 8;
+  attribute G_AXI_AWLEN_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
   attribute G_AXI_AWLOCK_INDEX : integer;
-  attribute G_AXI_AWLOCK_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 52;
+  attribute G_AXI_AWLOCK_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 52;
   attribute G_AXI_AWLOCK_WIDTH : integer;
-  attribute G_AXI_AWLOCK_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_AWLOCK_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_AWPAYLOAD_WIDTH : integer;
-  attribute G_AXI_AWPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 62;
+  attribute G_AXI_AWPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
   attribute G_AXI_AWPROT_INDEX : integer;
-  attribute G_AXI_AWPROT_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 32;
+  attribute G_AXI_AWPROT_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
   attribute G_AXI_AWPROT_WIDTH : integer;
-  attribute G_AXI_AWPROT_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_AWPROT_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_AWQOS_INDEX : integer;
-  attribute G_AXI_AWQOS_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 54;
+  attribute G_AXI_AWQOS_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 54;
   attribute G_AXI_AWQOS_WIDTH : integer;
-  attribute G_AXI_AWQOS_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_AWQOS_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_AWREGION_INDEX : integer;
-  attribute G_AXI_AWREGION_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 58;
+  attribute G_AXI_AWREGION_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 58;
   attribute G_AXI_AWREGION_WIDTH : integer;
-  attribute G_AXI_AWREGION_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 4;
+  attribute G_AXI_AWREGION_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
   attribute G_AXI_AWSIZE_INDEX : integer;
-  attribute G_AXI_AWSIZE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 35;
+  attribute G_AXI_AWSIZE_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 35;
   attribute G_AXI_AWSIZE_WIDTH : integer;
-  attribute G_AXI_AWSIZE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_AWSIZE_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_AWUSER_INDEX : integer;
-  attribute G_AXI_AWUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 62;
+  attribute G_AXI_AWUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
   attribute G_AXI_AWUSER_WIDTH : integer;
-  attribute G_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_BID_INDEX : integer;
-  attribute G_AXI_BID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 2;
+  attribute G_AXI_BID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
   attribute G_AXI_BID_WIDTH : integer;
-  attribute G_AXI_BID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_BID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_BPAYLOAD_WIDTH : integer;
-  attribute G_AXI_BPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_BPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_BRESP_INDEX : integer;
-  attribute G_AXI_BRESP_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_BRESP_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_BRESP_WIDTH : integer;
-  attribute G_AXI_BRESP_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 2;
+  attribute G_AXI_BRESP_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
   attribute G_AXI_BUSER_INDEX : integer;
-  attribute G_AXI_BUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 3;
+  attribute G_AXI_BUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
   attribute G_AXI_BUSER_WIDTH : integer;
-  attribute G_AXI_BUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_BUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_RDATA_INDEX : integer;
-  attribute G_AXI_RDATA_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_RDATA_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_RDATA_WIDTH : integer;
-  attribute G_AXI_RDATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 64;
+  attribute G_AXI_RDATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
   attribute G_AXI_RID_INDEX : integer;
-  attribute G_AXI_RID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 67;
+  attribute G_AXI_RID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 67;
   attribute G_AXI_RID_WIDTH : integer;
-  attribute G_AXI_RID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_RID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_RLAST_INDEX : integer;
-  attribute G_AXI_RLAST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 66;
+  attribute G_AXI_RLAST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 66;
   attribute G_AXI_RLAST_WIDTH : integer;
-  attribute G_AXI_RLAST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_RLAST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_RPAYLOAD_WIDTH : integer;
-  attribute G_AXI_RPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 68;
+  attribute G_AXI_RPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 68;
   attribute G_AXI_RRESP_INDEX : integer;
-  attribute G_AXI_RRESP_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 64;
+  attribute G_AXI_RRESP_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
   attribute G_AXI_RRESP_WIDTH : integer;
-  attribute G_AXI_RRESP_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 2;
+  attribute G_AXI_RRESP_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
   attribute G_AXI_RUSER_INDEX : integer;
-  attribute G_AXI_RUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 68;
+  attribute G_AXI_RUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 68;
   attribute G_AXI_RUSER_WIDTH : integer;
-  attribute G_AXI_RUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_RUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_WDATA_INDEX : integer;
-  attribute G_AXI_WDATA_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_WDATA_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_WDATA_WIDTH : integer;
-  attribute G_AXI_WDATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 64;
+  attribute G_AXI_WDATA_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
   attribute G_AXI_WID_INDEX : integer;
-  attribute G_AXI_WID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 73;
+  attribute G_AXI_WID_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
   attribute G_AXI_WID_WIDTH : integer;
-  attribute G_AXI_WID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
+  attribute G_AXI_WID_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
   attribute G_AXI_WLAST_INDEX : integer;
-  attribute G_AXI_WLAST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 72;
+  attribute G_AXI_WLAST_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 72;
   attribute G_AXI_WLAST_WIDTH : integer;
-  attribute G_AXI_WLAST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 1;
+  attribute G_AXI_WLAST_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
   attribute G_AXI_WPAYLOAD_WIDTH : integer;
-  attribute G_AXI_WPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 73;
+  attribute G_AXI_WPAYLOAD_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
   attribute G_AXI_WSTRB_INDEX : integer;
-  attribute G_AXI_WSTRB_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 64;
+  attribute G_AXI_WSTRB_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
   attribute G_AXI_WSTRB_WIDTH : integer;
-  attribute G_AXI_WSTRB_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 8;
+  attribute G_AXI_WSTRB_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
   attribute G_AXI_WUSER_INDEX : integer;
-  attribute G_AXI_WUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 73;
+  attribute G_AXI_WUSER_INDEX of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
   attribute G_AXI_WUSER_WIDTH : integer;
-  attribute G_AXI_WUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice : entity is 0;
-end Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice;
+  attribute G_AXI_WUSER_WIDTH of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "axi_register_slice_v2_1_13_axi_register_slice";
+end Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice;
 
-architecture STRUCTURE of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice is
+architecture STRUCTURE of Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
   signal \<const0>\ : STD_LOGIC;
   signal ar_pipe_n_2 : STD_LOGIC;
   signal \^m_axi_awready\ : STD_LOGIC;
@@ -2985,7 +2987,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-ar_pipe: entity work.\Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized2\
+ar_pipe: entity work.\Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized2\
      port map (
       D(61 downto 58) => s_axi_arregion(3 downto 0),
       D(57 downto 54) => s_axi_arqos(3 downto 0),
@@ -3016,7 +3018,7 @@ ar_pipe: entity work.\Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid
     );
-r_pipe: entity work.\Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized3\
+r_pipe: entity work.\Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized3\
      port map (
       Q(67) => s_axi_rid(0),
       Q(66) => s_axi_rlast,
@@ -3079,11 +3081,11 @@ entity Arty_Z7_20_s00_regslice_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_s00_regslice_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_s00_regslice_0 : entity is "Arty_Z7_20_s00_regslice_0,axi_register_slice_v2_1_12_axi_register_slice,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_s00_regslice_0 : entity is "Arty_Z7_20_s00_regslice_0,axi_register_slice_v2_1_13_axi_register_slice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_regslice_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_s00_regslice_0 : entity is "axi_register_slice_v2_1_12_axi_register_slice,Vivado 2017.1_sdx";
+  attribute X_CORE_INFO of Arty_Z7_20_s00_regslice_0 : entity is "axi_register_slice_v2_1_13_axi_register_slice,Vivado 2017.2.1";
 end Arty_Z7_20_s00_regslice_0;
 
 architecture STRUCTURE of Arty_Z7_20_s00_regslice_0 is
@@ -3302,7 +3304,7 @@ architecture STRUCTURE of Arty_Z7_20_s00_regslice_0 is
   attribute G_AXI_WUSER_WIDTH : integer;
   attribute G_AXI_WUSER_WIDTH of inst : label is 0;
 begin
-inst: entity work.Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
+inst: entity work.Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice
      port map (
       aclk => aclk,
       aresetn => aresetn,

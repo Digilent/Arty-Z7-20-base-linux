@@ -1,18 +1,18 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
-// Date        : Tue Jun 20 16:31:13 2017
-// Host        : localhost.localdomain running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_proc_sys_reset_0_0 -prefix
-//               Arty_Z7_20_proc_sys_reset_0_0_ Arty_Z7_20_rst_processing_system7_0_100M_0_sim_netlist.v
-// Design      : Arty_Z7_20_rst_processing_system7_0_100M_0
+// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+// Date        : Mon Sep 25 22:06:20 2017
+// Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_proc_sys_reset_0_0/Arty_Z7_20_proc_sys_reset_0_0_sim_netlist.v
+// Design      : Arty_Z7_20_proc_sys_reset_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_rst_processing_system7_0_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.1_sdx" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_proc_sys_reset_0_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_proc_sys_reset_0_0
    (slowest_sync_clk,
@@ -69,6 +69,7 @@ module Arty_Z7_20_proc_sys_reset_0_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "cdc_sync" *) 
 module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -250,6 +251,7 @@ module Arty_Z7_20_proc_sys_reset_0_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
+(* ORIG_REF_NAME = "lpf" *) 
 module Arty_Z7_20_proc_sys_reset_0_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -398,6 +400,7 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
+(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -498,6 +501,7 @@ module Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "sequence_psr" *) 
 module Arty_Z7_20_proc_sys_reset_0_0_sequence_psr
    (Core,
     bsr,
@@ -738,6 +742,7 @@ module Arty_Z7_20_proc_sys_reset_0_0_sequence_psr
         .R(lpf_int));
 endmodule
 
+(* ORIG_REF_NAME = "upcnt_n" *) 
 module Arty_Z7_20_proc_sys_reset_0_0_upcnt_n
    (Q,
     seq_clr,

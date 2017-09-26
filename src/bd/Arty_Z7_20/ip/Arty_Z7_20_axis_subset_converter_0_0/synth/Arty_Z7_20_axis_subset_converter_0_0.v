@@ -48,12 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_subset_converter:1.1
-// IP Revision: 11
+// IP Revision: 13
 
-(* X_CORE_INFO = "top_Arty_Z7_20_axis_subset_converter_0_0,Vivado 2017.1_sdx" *)
+(* X_CORE_INFO = "top_Arty_Z7_20_axis_subset_converter_0_0,Vivado 2017.2.1" *)
 (* CHECK_LICENSE_TYPE = "Arty_Z7_20_axis_subset_converter_0_0,top_Arty_Z7_20_axis_subset_converter_0_0,{}" *)
-(* CORE_GENERATION_INFO = "Arty_Z7_20_axis_subset_converter_0_0,top_Arty_Z7_20_axis_subset_converter_0_0,{x_ipProduct=Vivado 2017.1_sdx,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_subset_converter,x_ipVersion=1.1,x_ipCoreRevision=11,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXIS_TDATA_WIDTH=24,C_S_AXIS_TID_WIDTH=1,C_S_AXIS_TDEST_WIDTH=1,C_S_AXIS_TUSER_WIDTH=1,C_S_AXIS_SIGNAL_SET=0b00000000000000000000000010011011,C_M_AXIS_TDATA_WIDTH=24,C_M_AXIS_TID_WIDTH=1,C_M_AXIS_TDEST_WIDTH=1,C_M_AXIS_SIGNAL_SET\
-=0b00000000000000000000000010011011,C_M_AXIS_TUSER_WIDTH=1,C_DEFAULT_TLAST=0}" *)
+(* CORE_GENERATION_INFO = "Arty_Z7_20_axis_subset_converter_0_0,top_Arty_Z7_20_axis_subset_converter_0_0,{x_ipProduct=Vivado 2017.2.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_subset_converter,x_ipVersion=1.1,x_ipCoreRevision=13,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_S_AXIS_TDATA_WIDTH=24,C_S_AXIS_TID_WIDTH=1,C_S_AXIS_TDEST_WIDTH=1,C_S_AXIS_TUSER_WIDTH=1,C_S_AXIS_SIGNAL_SET=0b00000000000000000000000010011011,C_M_AXIS_TDATA_WIDTH=24,C_M_AXIS_TID_WIDTH=1,C_M_AXIS_TDEST_WIDTH=1,C_M_AXIS_SIGNAL_SET=0\
+b00000000000000000000000010011011,C_M_AXIS_TUSER_WIDTH=1,C_DEFAULT_TLAST=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Arty_Z7_20_axis_subset_converter_0_0 (
   aclk,

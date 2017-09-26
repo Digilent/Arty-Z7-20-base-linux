@@ -50,10 +50,10 @@
 // IP VLNV: xilinx.com:ip:v_axi4s_vid_out:4.0
 // IP Revision: 6
 
-(* X_CORE_INFO = "v_axi4s_vid_out_v4_0_6,Vivado 2017.1_sdx" *)
+(* X_CORE_INFO = "v_axi4s_vid_out_v4_0_6,Vivado 2017.2.1" *)
 (* CHECK_LICENSE_TYPE = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_6,{}" *)
-(* CORE_GENERATION_INFO = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_6,{x_ipProduct=Vivado 2017.1_sdx,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=6,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=3,C_S_AXIS_COMPONENT_WIDTH=8,C_NATIVE_COMPONENT_WIDTH=8,C_NATIVE_DATA_WIDTH=24,C_S_AXIS_TDATA_WIDTH=24,C_HAS_ASYNC_CLK=1,C_ADDR_WIDTH=12,C_VTG_MASTER_SLAVE=1,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4,C_INCLUDE_PIXEL_\
-REPEAT=0,C_INCLUDE_PIXEL_REMAP_420=0,C_ADDR_WIDTH_PIXEL_REMAP_420=10}" *)
+(* CORE_GENERATION_INFO = "Arty_Z7_20_v_axi4s_vid_out_0_0,v_axi4s_vid_out_v4_0_6,{x_ipProduct=Vivado 2017.2.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=6,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=3,C_S_AXIS_COMPONENT_WIDTH=8,C_NATIVE_COMPONENT_WIDTH=8,C_NATIVE_DATA_WIDTH=24,C_S_AXIS_TDATA_WIDTH=24,C_HAS_ASYNC_CLK=1,C_ADDR_WIDTH=12,C_VTG_MASTER_SLAVE=1,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4,C_INCLUDE_PIXEL_RE\
+PEAT=0,C_INCLUDE_PIXEL_REMAP_420=0,C_ADDR_WIDTH_PIXEL_REMAP_420=10}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Arty_Z7_20_v_axi4s_vid_out_0_0 (
   aclk,

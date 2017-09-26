@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Tue Jun 20 16:31:13 2017
--- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_proc_sys_reset_0_0 -prefix
---               Arty_Z7_20_proc_sys_reset_0_0_ Arty_Z7_20_rst_processing_system7_0_100M_0_sim_netlist.vhdl
--- Design      : Arty_Z7_20_rst_processing_system7_0_100M_0
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:06:20 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_proc_sys_reset_0_0/Arty_Z7_20_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Design      : Arty_Z7_20_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -25,6 +25,8 @@ entity Arty_Z7_20_proc_sys_reset_0_0_cdc_sync is
     p_2_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end Arty_Z7_20_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0_cdc_sync is
@@ -233,6 +235,8 @@ entity Arty_Z7_20_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end Arty_Z7_20_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0_upcnt_n is
@@ -397,6 +401,8 @@ entity Arty_Z7_20_proc_sys_reset_0_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_proc_sys_reset_0_0_lpf : entity is "lpf";
 end Arty_Z7_20_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0_lpf is
@@ -578,6 +584,8 @@ entity Arty_Z7_20_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end Arty_Z7_20_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0_sequence_psr is
@@ -916,6 +924,8 @@ entity Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0_proc_sys_reset is
@@ -1026,11 +1036,11 @@ entity Arty_Z7_20_proc_sys_reset_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_proc_sys_reset_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_proc_sys_reset_0_0 : entity is "Arty_Z7_20_rst_processing_system7_0_100M_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_proc_sys_reset_0_0 : entity is "Arty_Z7_20_proc_sys_reset_0_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Arty_Z7_20_proc_sys_reset_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Arty_Z7_20_proc_sys_reset_0_0 : entity is "proc_sys_reset,Vivado 2017.1_sdx";
+  attribute x_core_info of Arty_Z7_20_proc_sys_reset_0_0 : entity is "proc_sys_reset,Vivado 2017.2.1";
 end Arty_Z7_20_proc_sys_reset_0_0;
 
 architecture STRUCTURE of Arty_Z7_20_proc_sys_reset_0_0 is

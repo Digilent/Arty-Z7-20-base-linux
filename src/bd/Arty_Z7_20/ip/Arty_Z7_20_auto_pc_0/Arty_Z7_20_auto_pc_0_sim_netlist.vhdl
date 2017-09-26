@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Fri Jul 14 17:09:51 2017
--- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_auto_pc_0 -prefix
---               Arty_Z7_20_auto_pc_0_ Arty_Z7_20_auto_pc_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:09:39 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_auto_pc_0/Arty_Z7_20_auto_pc_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_b_downsizer is
+entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_b_downsizer is
   port (
     last_word : out STD_LOGIC;
     s_axi_bvalid : out STD_LOGIC;
@@ -27,9 +27,11 @@ entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_b_downsizer is
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_b_downsizer;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_b_downsizer : entity is "axi_protocol_converter_v2_1_13_b_downsizer";
+end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_b_downsizer;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_b_downsizer is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_b_downsizer is
   signal S_AXI_BRESP_ACC : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal first_mi_word : STD_LOGIC;
   signal \^last_word\ : STD_LOGIC;
@@ -252,7 +254,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_w_axi3_conv is
+entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_w_axi3_conv is
   port (
     m_axi_wlast : out STD_LOGIC;
     wr_cmd_ready : out STD_LOGIC;
@@ -264,9 +266,11 @@ entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_w_axi3_conv is
     s_axi_wvalid : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC
   );
-end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_w_axi3_conv;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_w_axi3_conv : entity is "axi_protocol_converter_v2_1_13_w_axi3_conv";
+end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_w_axi3_conv;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_w_axi3_conv is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_w_axi3_conv is
   signal first_mi_word : STD_LOGIC;
   signal length_counter : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \length_counter_1[1]_i_1_n_0\ : STD_LOGIC;
@@ -587,6 +591,8 @@ entity Arty_Z7_20_auto_pc_0_dmem is
     I55 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpregsm1.curr_fwft_state_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_dmem : entity is "dmem";
 end Arty_Z7_20_auto_pc_0_dmem;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_dmem is
@@ -857,6 +863,8 @@ entity Arty_Z7_20_auto_pc_0_rd_bin_cntr is
     clk : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end Arty_Z7_20_auto_pc_0_rd_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_rd_bin_cntr is
@@ -1514,6 +1522,8 @@ entity Arty_Z7_20_auto_pc_0_rd_fwft is
     \gcc0.gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_rd_fwft : entity is "rd_fwft";
 end Arty_Z7_20_auto_pc_0_rd_fwft;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_rd_fwft is
@@ -2371,6 +2381,8 @@ entity Arty_Z7_20_auto_pc_0_rd_status_flags_ss is
     clk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end Arty_Z7_20_auto_pc_0_rd_status_flags_ss;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_rd_status_flags_ss is
@@ -2530,6 +2542,8 @@ entity Arty_Z7_20_auto_pc_0_synchronizer_ff is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_synchronizer_ff : entity is "synchronizer_ff";
 end Arty_Z7_20_auto_pc_0_synchronizer_ff;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_synchronizer_ff is
@@ -3293,6 +3307,8 @@ entity Arty_Z7_20_auto_pc_0_wr_bin_cntr is
     clk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end Arty_Z7_20_auto_pc_0_wr_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_wr_bin_cntr is
@@ -4054,6 +4070,8 @@ entity Arty_Z7_20_auto_pc_0_wr_status_flags_ss is
     \ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end Arty_Z7_20_auto_pc_0_wr_status_flags_ss;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_wr_status_flags_ss is
@@ -4314,6 +4332,8 @@ entity Arty_Z7_20_auto_pc_0_memory is
     I55 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpregsm1.curr_fwft_state_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_memory : entity is "memory";
 end Arty_Z7_20_auto_pc_0_memory;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_memory is
@@ -4550,6 +4570,8 @@ entity Arty_Z7_20_auto_pc_0_rd_logic is
     ram_full_fb_i_reg_0 : in STD_LOGIC;
     \gcc0.gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_rd_logic : entity is "rd_logic";
 end Arty_Z7_20_auto_pc_0_rd_logic;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_rd_logic is
@@ -4755,6 +4777,8 @@ entity Arty_Z7_20_auto_pc_0_reset_blk_ramfifo is
     clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end Arty_Z7_20_auto_pc_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_reset_blk_ramfifo is
@@ -5514,6 +5538,8 @@ entity Arty_Z7_20_auto_pc_0_wr_logic is
     \gc0.count_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_wr_logic : entity is "wr_logic";
 end Arty_Z7_20_auto_pc_0_wr_logic;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_wr_logic is
@@ -5676,6 +5702,8 @@ entity Arty_Z7_20_auto_pc_0_fifo_generator_ramfifo is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end Arty_Z7_20_auto_pc_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_fifo_generator_ramfifo is
@@ -5951,6 +5979,8 @@ entity Arty_Z7_20_auto_pc_0_fifo_generator_top is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_fifo_generator_top : entity is "fifo_generator_top";
 end Arty_Z7_20_auto_pc_0_fifo_generator_top;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_fifo_generator_top is
@@ -6048,6 +6078,8 @@ entity Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4_synth is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4_synth : entity is "fifo_generator_v13_1_4_synth";
 end Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4_synth;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4_synth is
@@ -6772,6 +6804,8 @@ entity Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4 is
   attribute C_WR_PNTR_WIDTH_WRCH of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4 : entity is "fifo_generator_v13_1_4";
 end Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0_fifo_generator_v13_1_4 is
@@ -9933,7 +9967,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen is
+entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen is
   port (
     \S_AXI_BRESP_ACC_reg[0]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     full : out STD_LOGIC;
@@ -9983,9 +10017,11 @@ entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen is
     areset_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     \areset_d_reg[1]\ : in STD_LOGIC
   );
-end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen : entity is "axi_data_fifo_v2_1_12_fifo_gen";
+end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen is
   signal \USE_B_CHANNEL.cmd_b_depth[4]_i_2_n_0\ : STD_LOGIC;
   signal \USE_B_CHANNEL.cmd_b_depth[5]_i_3_n_0\ : STD_LOGIC;
   signal \^allow_split_cmd__1\ : STD_LOGIC;
@@ -11056,7 +11092,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6 is
+entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen_6 is
   port (
     dout : out STD_LOGIC_VECTOR ( 4 downto 0 );
     full : out STD_LOGIC;
@@ -11092,10 +11128,10 @@ entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6 is
     multiple_id_non_split : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6 : entity is "axi_data_fifo_v2_1_11_fifo_gen";
-end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen_6 : entity is "axi_data_fifo_v2_1_12_fifo_gen";
+end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen_6;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6 is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen_6 is
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \cmd_depth[4]_i_2_n_0\ : STD_LOGIC;
   signal \cmd_depth[5]_i_3_n_0\ : STD_LOGIC;
@@ -12099,7 +12135,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\ is
+entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen__parameterized0\ is
   port (
     din : out STD_LOGIC_VECTOR ( 0 to 0 );
     wr_en : out STD_LOGIC;
@@ -12147,10 +12183,10 @@ entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\ is
     \allow_split_cmd__1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\ : entity is "axi_data_fifo_v2_1_11_fifo_gen";
-end \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen__parameterized0\ : entity is "axi_data_fifo_v2_1_12_fifo_gen";
+end \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\ is
+architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen__parameterized0\ is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \cmd_depth[4]_i_2__0_n_0\ : STD_LOGIC;
   signal \cmd_depth[5]_i_3__0_n_0\ : STD_LOGIC;
@@ -13236,7 +13272,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo is
+entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo is
   port (
     dout : out STD_LOGIC_VECTOR ( 4 downto 0 );
     full : out STD_LOGIC;
@@ -13271,11 +13307,13 @@ entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo is
     cmd_empty_reg : in STD_LOGIC;
     multiple_id_non_split : in STD_LOGIC
   );
-end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo : entity is "axi_data_fifo_v2_1_12_axic_fifo";
+end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo is
 begin
-inst: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen_6
+inst: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen_6
      port map (
       D(4 downto 0) => D(4 downto 0),
       E(0) => E(0),
@@ -13315,7 +13353,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0 is
+entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo_0 is
   port (
     \S_AXI_BRESP_ACC_reg[0]\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     full : out STD_LOGIC;
@@ -13366,12 +13404,12 @@ entity Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0 is
     \areset_d_reg[1]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0 : entity is "axi_data_fifo_v2_1_11_axic_fifo";
-end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo_0 : entity is "axi_data_fifo_v2_1_12_axic_fifo";
+end Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo_0;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0 is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo_0 is
 begin
-inst: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen
+inst: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen
      port map (
       D(4 downto 0) => D(4 downto 0),
       E(0) => E(0),
@@ -13426,7 +13464,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\ is
+entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo__parameterized0\ is
   port (
     din : out STD_LOGIC_VECTOR ( 0 to 0 );
     split_in_progress_reg : out STD_LOGIC;
@@ -13474,12 +13512,12 @@ entity \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\ is
     \allow_split_cmd__1\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\ : entity is "axi_data_fifo_v2_1_11_axic_fifo";
-end \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo__parameterized0\ : entity is "axi_data_fifo_v2_1_12_axic_fifo";
+end \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\ is
+architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo__parameterized0\ is
 begin
-inst: entity work.\Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_fifo_gen__parameterized0\
+inst: entity work.\Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_fifo_gen__parameterized0\
      port map (
       D(4 downto 0) => D(4 downto 0),
       E(0) => E(0),
@@ -13531,7 +13569,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv is
+entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv is
   port (
     dout : out STD_LOGIC_VECTOR ( 4 downto 0 );
     empty : out STD_LOGIC;
@@ -13571,9 +13609,11 @@ entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv is
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv : entity is "axi_protocol_converter_v2_1_13_a_axi3_conv";
+end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \M_AXI_AADDR_I1__0\ : STD_LOGIC;
   signal S_AXI_AADDR_Q : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -14252,7 +14292,7 @@ S_AXI_AREADY_I_reg: unisim.vcomponents.FDRE
       Q => m_axi_awsize(2),
       R => \^ngwrdrst.grst.g7serrst.rst_rd_reg1_reg\
     );
-\USE_BURSTS.cmd_queue\: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo
+\USE_BURSTS.cmd_queue\: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo
      port map (
       D(4) => \USE_BURSTS.cmd_queue_n_13\,
       D(3) => \USE_BURSTS.cmd_queue_n_14\,
@@ -14389,7 +14429,7 @@ S_AXI_AREADY_I_reg: unisim.vcomponents.FDRE
       Q => cmd_b_empty,
       S => \^ngwrdrst.grst.g7serrst.rst_rd_reg1_reg\
     );
-\USE_B_CHANNEL.cmd_b_queue\: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo_0
+\USE_B_CHANNEL.cmd_b_queue\: entity work.Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo_0
      port map (
       D(4) => \USE_B_CHANNEL.cmd_b_queue_n_7\,
       D(3) => \USE_B_CHANNEL.cmd_b_queue_n_8\,
@@ -16820,7 +16860,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__parameterized0\ is
+entity \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv__parameterized0\ is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \m_axi_arid[0]\ : out STD_LOGIC;
@@ -16857,10 +16897,10 @@ entity \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__paramet
     s_axi_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__parameterized0\ : entity is "axi_protocol_converter_v2_1_12_a_axi3_conv";
-end \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__parameterized0\;
+  attribute ORIG_REF_NAME of \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv__parameterized0\ : entity is "axi_protocol_converter_v2_1_13_a_axi3_conv";
+end \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv__parameterized0\;
 
-architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__parameterized0\ is
+architecture STRUCTURE of \Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv__parameterized0\ is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \M_AXI_AADDR_I1__0\ : STD_LOGIC;
   signal \S_AXI_AADDR_Q_reg_n_0_[0]\ : STD_LOGIC;
@@ -17577,7 +17617,7 @@ S_AXI_AREADY_I_reg: unisim.vcomponents.FDRE
       Q => m_axi_arsize(2),
       R => aresetn_0
     );
-\USE_R_CHANNEL.cmd_queue\: entity work.\Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_11_axic_fifo__parameterized0\
+\USE_R_CHANNEL.cmd_queue\: entity work.\Arty_Z7_20_auto_pc_0_axi_data_fifo_v2_1_12_axic_fifo__parameterized0\
      port map (
       D(4) => \USE_R_CHANNEL.cmd_queue_n_3\,
       D(3) => \USE_R_CHANNEL.cmd_queue_n_4\,
@@ -20042,7 +20082,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi3_conv is
+entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi3_conv is
   port (
     m_axi_awvalid : out STD_LOGIC;
     M_AXI_ARID : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -20109,9 +20149,11 @@ entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi3_conv is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi3_conv;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi3_conv : entity is "axi_protocol_converter_v2_1_13_axi3_conv";
+end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi3_conv;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi3_conv is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi3_conv is
   signal \USE_BURSTS.cmd_queue/inst/empty\ : STD_LOGIC;
   signal \USE_WRITE.write_addr_inst_n_23\ : STD_LOGIC;
   signal \USE_WRITE.write_addr_inst_n_6\ : STD_LOGIC;
@@ -20124,7 +20166,7 @@ architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_ax
   signal wr_cmd_ready : STD_LOGIC;
 begin
   s_axi_wready <= \^s_axi_wready\;
-\USE_READ.USE_SPLIT_R.read_addr_inst\: entity work.\Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv__parameterized0\
+\USE_READ.USE_SPLIT_R.read_addr_inst\: entity work.\Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv__parameterized0\
      port map (
       E(0) => s_axi_arready,
       aclk => aclk,
@@ -20160,7 +20202,7 @@ begin
       s_axi_rready => s_axi_rready,
       s_axi_rvalid => s_axi_rvalid
     );
-\USE_WRITE.USE_SPLIT_W.write_resp_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_b_downsizer
+\USE_WRITE.USE_SPLIT_W.write_resp_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_b_downsizer
      port map (
       aclk => aclk,
       aresetn => \USE_WRITE.write_addr_inst_n_6\,
@@ -20174,7 +20216,7 @@ begin
       s_axi_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
       s_axi_bvalid => s_axi_bvalid
     );
-\USE_WRITE.write_addr_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_a_axi3_conv
+\USE_WRITE.write_addr_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_a_axi3_conv
      port map (
       E(0) => s_axi_awready,
       \S_AXI_BRESP_ACC_reg[0]\(4) => wr_cmd_b_split,
@@ -20217,7 +20259,7 @@ begin
       s_axi_wvalid => s_axi_wvalid,
       wr_cmd_ready => wr_cmd_ready
     );
-\USE_WRITE.write_data_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_w_axi3_conv
+\USE_WRITE.write_data_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_w_axi3_conv
      port map (
       aclk => aclk,
       aresetn => \USE_WRITE.write_addr_inst_n_6\,
@@ -20234,7 +20276,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter is
+entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -20330,60 +20372,62 @@ entity Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converte
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 64;
+  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ID_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_READ of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 0;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "zynq";
   attribute C_IGNORE_ID : integer;
-  attribute C_IGNORE_ID of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 0;
+  attribute C_IGNORE_ID of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 0;
   attribute C_M_AXI_PROTOCOL : integer;
-  attribute C_M_AXI_PROTOCOL of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute C_M_AXI_PROTOCOL of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute C_S_AXI_PROTOCOL : integer;
-  attribute C_S_AXI_PROTOCOL of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 0;
+  attribute C_S_AXI_PROTOCOL of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 0;
   attribute C_TRANSLATION_MODE : integer;
-  attribute C_TRANSLATION_MODE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 2;
+  attribute C_TRANSLATION_MODE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_13_axi_protocol_converter";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute P_AXI3 of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 0;
+  attribute P_AXI4 of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 2;
+  attribute P_AXILITE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "3'b011";
+  attribute P_AXILITE_SIZE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "3'b011";
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 2;
+  attribute P_CONVERSION of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 2;
   attribute P_DECERR : string;
-  attribute P_DECERR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "2'b11";
+  attribute P_DECERR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "2'b11";
   attribute P_INCR : string;
-  attribute P_INCR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "2'b01";
+  attribute P_INCR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "2'b01";
   attribute P_PROTECTION : integer;
-  attribute P_PROTECTION of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is 1;
+  attribute P_PROTECTION of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is 1;
   attribute P_SLVERR : string;
-  attribute P_SLVERR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter : entity is "2'b10";
-end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter;
+  attribute P_SLVERR of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter : entity is "2'b10";
+end Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter;
 
-architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter is
+architecture STRUCTURE of Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_arlock\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^m_axi_awlock\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -20429,7 +20473,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_axi4_axi3.axi3_conv_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi3_conv
+\gen_axi4_axi3.axi3_conv_inst\: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi3_conv
      port map (
       M_AXI_ARID(0) => m_axi_arid(0),
       M_AXI_AWID(0) => m_axi_awid(0),
@@ -20586,11 +20630,11 @@ entity Arty_Z7_20_auto_pc_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_auto_pc_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_auto_pc_0 : entity is "Arty_Z7_20_auto_pc_0,axi_protocol_converter_v2_1_12_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_auto_pc_0 : entity is "Arty_Z7_20_auto_pc_0,axi_protocol_converter_v2_1_13_axi_protocol_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_auto_pc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_auto_pc_0 : entity is "axi_protocol_converter_v2_1_12_axi_protocol_converter,Vivado 2017.1_sdx";
+  attribute X_CORE_INFO of Arty_Z7_20_auto_pc_0 : entity is "axi_protocol_converter_v2_1_13_axi_protocol_converter,Vivado 2017.2.1";
 end Arty_Z7_20_auto_pc_0;
 
 architecture STRUCTURE of Arty_Z7_20_auto_pc_0 is
@@ -20653,7 +20697,7 @@ architecture STRUCTURE of Arty_Z7_20_auto_pc_0 is
   attribute P_SLVERR : string;
   attribute P_SLVERR of inst : label is "2'b10";
 begin
-inst: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_12_axi_protocol_converter
+inst: entity work.Arty_Z7_20_auto_pc_0_axi_protocol_converter_v2_1_13_axi_protocol_converter
      port map (
       aclk => aclk,
       aresetn => aresetn,

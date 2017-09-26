@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2017.1
+set scripts_vivado_version 2017.2
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -58,7 +58,7 @@ set run_remote_bd_flow 1
 if { $run_remote_bd_flow == 1 } {
   # Set the reference directory for source file relative paths (by default 
   # the value is script directory path)
-  set origin_dir ./Arty-Z7-20-base/src/bd
+  set origin_dir ./bd
 
   # Use origin directory path location variable, if specified in the tcl shell
   if { [info exists ::origin_dir_loc] } {
@@ -296,6 +296,7 @@ CONFIG.S_TDATA_NUM_BYTES {3} \
 CONFIG.S_TUSER_WIDTH {1} \
 CONFIG.TDATA_REMAP {tdata[23:16],tdata[7:0],tdata[15:8]} \
 CONFIG.TKEEP_REMAP {tkeep[2:0]} \
+CONFIG.TLAST_REMAP {tlast[0]} \
 CONFIG.TUSER_REMAP {tuser[0:0]} \
  ] $axis_subset_converter_0
 
@@ -305,6 +306,8 @@ CONFIG.TUSER_REMAP {tuser[0:0]} \
 CONFIG.M_TDATA_NUM_BYTES {3} \
 CONFIG.S_TDATA_NUM_BYTES {3} \
 CONFIG.TDATA_REMAP {tdata[23:16],tdata[7:0],tdata[15:8]} \
+CONFIG.TLAST_REMAP {tlast[0]} \
+CONFIG.TUSER_REMAP {tuser[0:0]} \
  ] $axis_subset_converter_1
 
   # Create instance: clk_wiz_0, and set properties

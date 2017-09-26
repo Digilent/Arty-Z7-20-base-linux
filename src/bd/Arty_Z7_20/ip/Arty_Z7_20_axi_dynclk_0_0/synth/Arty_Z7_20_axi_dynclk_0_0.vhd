@@ -121,7 +121,7 @@ ARCHITECTURE Arty_Z7_20_axi_dynclk_0_0_arch OF Arty_Z7_20_axi_dynclk_0_0 IS
     );
   END COMPONENT axi_dynclk;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF Arty_Z7_20_axi_dynclk_0_0_arch: ARCHITECTURE IS "axi_dynclk,Vivado 2017.1_sdx";
+  ATTRIBUTE X_CORE_INFO OF Arty_Z7_20_axi_dynclk_0_0_arch: ARCHITECTURE IS "axi_dynclk,Vivado 2017.2.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Arty_Z7_20_axi_dynclk_0_0_arch : ARCHITECTURE IS "Arty_Z7_20_axi_dynclk_0_0,axi_dynclk,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

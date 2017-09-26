@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
-// Date        : Sat Jul 15 23:46:15 2017
-// Host        : localhost.localdomain running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_s01_regslice_0 -prefix
-//               Arty_Z7_20_s01_regslice_0_ Arty_Z7_20_s01_regslice_0_sim_netlist.v
+// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+// Date        : Mon Sep 25 22:09:08 2017
+// Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s01_regslice_0/Arty_Z7_20_s01_regslice_0_sim_netlist.v
 // Design      : Arty_Z7_20_s01_regslice_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s01_regslice_0,axi_register_slice_v2_1_12_axi_register_slice,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_register_slice_v2_1_12_axi_register_slice,Vivado 2017.1_sdx" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s01_regslice_0,axi_register_slice_v2_1_13_axi_register_slice,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_register_slice_v2_1_13_axi_register_slice,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_s01_regslice_0
    (aclk,
@@ -256,7 +256,7 @@ module Arty_Z7_20_s01_regslice_0
   (* G_AXI_WSTRB_WIDTH = "8" *) 
   (* G_AXI_WUSER_INDEX = "73" *) 
   (* G_AXI_WUSER_WIDTH = "0" *) 
-  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice inst
+  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axi_register_slice inst
        (.aclk(aclk),
         .aresetn(aresetn),
         .m_axi_araddr(NLW_inst_m_axi_araddr_UNCONNECTED[31:0]),
@@ -382,7 +382,8 @@ endmodule
 (* G_AXI_WID_INDEX = "73" *) (* G_AXI_WID_WIDTH = "0" *) (* G_AXI_WLAST_INDEX = "72" *) 
 (* G_AXI_WLAST_WIDTH = "1" *) (* G_AXI_WPAYLOAD_WIDTH = "73" *) (* G_AXI_WSTRB_INDEX = "64" *) 
 (* G_AXI_WSTRB_WIDTH = "8" *) (* G_AXI_WUSER_INDEX = "73" *) (* G_AXI_WUSER_WIDTH = "0" *) 
-module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_13_axi_register_slice" *) 
+module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axi_register_slice
    (aclk,
     aresetn,
     s_axi_awid,
@@ -661,7 +662,7 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
   assign s_axi_rvalid = m_axi_rvalid;
   GND GND
        (.G(\<const0> ));
-  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice aw_pipe
+  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice aw_pipe
        (.D({s_axi_awregion,s_axi_awqos,s_axi_awid,s_axi_awlock,s_axi_awlen,s_axi_awcache,s_axi_awburst,s_axi_awsize,s_axi_awprot,s_axi_awaddr}),
         .Q({m_axi_awregion,m_axi_awqos,m_axi_awid,m_axi_awlock,m_axi_awlen,m_axi_awcache,m_axi_awburst,m_axi_awsize,m_axi_awprot,m_axi_awaddr}),
         .aclk(aclk),
@@ -673,7 +674,7 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
         .p_0_in(p_0_in),
         .s_axi_awready(s_axi_awready),
         .s_axi_awvalid(s_axi_awvalid));
-  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized1 b_pipe
+  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1 b_pipe
        (.aclk(aclk),
         .\aresetn_d_reg[0] (aw_pipe_n_2),
         .m_axi_bid(m_axi_bid),
@@ -686,7 +687,7 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
         .s_axi_bready(s_axi_bready),
         .s_axi_bresp(s_axi_bresp),
         .s_axi_bvalid(s_axi_bvalid));
-  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized0 w_pipe
+  Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0 w_pipe
        (.Q({m_axi_wlast,m_axi_wstrb,m_axi_wdata}),
         .aclk(aclk),
         .\aresetn_d_reg[1] (b_pipe_n_1),
@@ -700,7 +701,8 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axi_register_slice
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_13_axic_register_slice" *) 
+module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice
    (m_axi_awvalid,
     p_0_in,
     \aresetn_d_reg[1] ,
@@ -1165,8 +1167,8 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_12_axic_register_slice" *) 
-module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized0
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_13_axic_register_slice" *) 
+module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0
    (m_axi_wvalid,
     s_axi_wready,
     Q,
@@ -2780,8 +2782,8 @@ module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice_
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_12_axic_register_slice" *) 
-module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_12_axic_register_slice__parameterized1
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_13_axic_register_slice" *) 
+module Arty_Z7_20_s01_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1
    (s_axi_bvalid,
     m_valid_i_reg_0,
     m_axi_bready,

@@ -50,7 +50,9 @@
 set_false_path -to [get_pins -leaf -of_objects [get_cells -hier *cdc_tig* -filter {is_sequential}] -filter {NAME=~*/D}]
 
 ## INFO: CDC Crossing in axi_vdma
- set_false_path -from [get_cells -hier *cdc_from* -filter {is_sequential}] -to [get_cells -hier *cdc_to* -filter {is_sequential}]
+## set_false_path -from [get_cells -hier *cdc_from* -filter {is_sequential}] -to [get_cells -hier *cdc_to* -filter {is_sequential}]
+set_false_path -from [get_cells -hier *cdc_from* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK && PRIMITIVE_GROUP!=CLK)}] -to [get_cells -hier *cdc_to* -filter {is_sequential && (PRIMITIVE_GROUP!=CLOCK && PRIMITIVE_GROUP!=CLK) }]
+
 
 ## Following constraints are needed for ASYNC FIFOs in axi_vdma
 

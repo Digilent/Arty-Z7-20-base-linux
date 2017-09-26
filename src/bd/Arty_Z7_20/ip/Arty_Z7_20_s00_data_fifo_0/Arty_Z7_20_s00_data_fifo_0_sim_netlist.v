@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
-// Date        : Fri Jul 14 17:10:43 2017
-// Host        : localhost.localdomain running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_s00_data_fifo_0 -prefix
-//               Arty_Z7_20_s00_data_fifo_0_ Arty_Z7_20_s00_data_fifo_0_sim_netlist.v
+// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+// Date        : Mon Sep 25 22:10:22 2017
+// Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s00_data_fifo_0/Arty_Z7_20_s00_data_fifo_0_sim_netlist.v
 // Design      : Arty_Z7_20_s00_data_fifo_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_11_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_11_axi_data_fifo,Vivado 2017.1_sdx" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_12_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_12_axi_data_fifo,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_s00_data_fifo_0
    (aclk,
@@ -177,7 +177,7 @@ module Arty_Z7_20_s00_data_fifo_0
   (* P_WIDTH_WRCH = "4" *) 
   (* P_WRITE_FIFO_DEPTH_LOG = "1" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo inst
+  Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo inst
        (.aclk(aclk),
         .aresetn(aresetn),
         .m_axi_araddr(m_axi_araddr),
@@ -278,11 +278,11 @@ endmodule
 (* C_AXI_READ_FIFO_TYPE = "bram" *) (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_WRITE_FIFO_DELAY = "0" *) (* C_AXI_WRITE_FIFO_DEPTH = "0" *) (* C_AXI_WRITE_FIFO_TYPE = "lut" *) 
 (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "zynq" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) (* P_WIDTH_RACH = "63" *) 
-(* P_WIDTH_RDCH = "69" *) (* P_WIDTH_WACH = "63" *) (* P_WIDTH_WDCH = "74" *) 
-(* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "1" *) 
-module Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_12_axi_data_fifo" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) 
+(* P_WIDTH_RACH = "63" *) (* P_WIDTH_RDCH = "69" *) (* P_WIDTH_WACH = "63" *) 
+(* P_WIDTH_WDCH = "74" *) (* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "1" *) 
+module Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo
    (aclk,
     aresetn,
     s_axi_awid,
@@ -1105,6 +1105,7 @@ module Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo
         .wr_rst_busy(\NLW_gen_fifo.fifo_gen_inst_wr_rst_busy_UNCONNECTED ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_reg_slice" *) 
 module Arty_Z7_20_s00_data_fifo_0_axi_reg_slice
    (inverted_reset,
     arready_pkt,
@@ -1711,6 +1712,7 @@ module Arty_Z7_20_s00_data_fifo_0_axi_reg_slice
         .s_aresetn(s_aresetn));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr
    (D,
     s_aclk,
@@ -1753,6 +1755,7 @@ module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width
    (D,
     s_aclk,
@@ -1795,6 +1798,7 @@ module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper
    (D,
     s_aclk,
@@ -2046,6 +2050,7 @@ module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper
         .WEBWE({ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top
    (D,
     s_aclk,
@@ -2088,6 +2093,7 @@ module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6
    (D,
     s_aclk,
@@ -2130,6 +2136,7 @@ module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6_synth
    (D,
     s_aclk,
@@ -2428,6 +2435,7 @@ module Arty_Z7_20_s00_data_fifo_0_compare__parameterized0_16
         .O(ram_empty_i_reg));
 endmodule
 
+(* ORIG_REF_NAME = "dmem" *) 
 module Arty_Z7_20_s00_data_fifo_0_dmem
    (dout_i,
     s_aclk,
@@ -3148,6 +3156,7 @@ module Arty_Z7_20_s00_data_fifo_0_dmem
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo
    (out,
     S,
@@ -3473,6 +3482,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo__parameterized0
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Arty_Z7_20_s00_data_fifo_0_fifo_generator_top
    (out,
     S,
@@ -3717,7 +3727,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "5" *) (* C_WR_PNTR_WIDTH_RDCH = "9" *) 
 (* C_WR_PNTR_WIDTH_WACH = "5" *) (* C_WR_PNTR_WIDTH_WDCH = "1" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
 module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4
    (backup,
     backup_marker,
@@ -4704,6 +4714,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4
         .s_axi_rvalid(s_axi_rvalid));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
 module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
    (Q,
     m_axi_arvalid,
@@ -4740,7 +4751,6 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
 
   wire [62:0]DI;
   wire [3:0]DIADI;
-  wire [7:0]L;
   wire [68:0]Q;
   wire [62:0]UNCONN_OUT;
   wire _carry__0_n_0;
@@ -4866,6 +4876,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
   wire s_axi_arvalid;
   wire s_axi_rready;
   wire s_axi_rvalid;
+  wire [7:0]value;
   wire [3:1]NLW__carry__1_CO_UNCONNECTED;
   wire [3:2]NLW__carry__1_O_UNCONNECTED;
   wire [3:0]NLW_arvalid_en0_carry_O_UNCONNECTED;
@@ -5007,7 +5018,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
         .D(p_1_in),
         .DI(\gaxi_full_lite.gread_ch.grach2.axi_rach_n_81 ),
         .E(\gaxi_full_lite.gread_ch.grach2.axi_rach_n_79 ),
-        .Q({\gaxi_full_lite.gread_ch.grach2.axi_rach_n_5 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_6 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_7 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_8 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_9 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_10 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_11 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_12 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_13 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_14 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_15 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_16 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_17 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_18 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_19 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_20 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_21 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_22 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_23 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_24 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_25 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_26 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_27 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_28 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_29 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_30 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_31 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_32 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_33 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_34 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_35 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_36 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_37 ,L,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_46 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_47 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_48 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_49 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_50 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_51 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_52 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_53 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_54 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_55 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_56 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_57 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_58 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_59 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_60 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_61 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_62 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_63 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_64 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_65 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_66 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_67 }),
+        .Q({\gaxi_full_lite.gread_ch.grach2.axi_rach_n_5 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_6 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_7 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_8 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_9 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_10 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_11 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_12 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_13 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_14 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_15 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_16 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_17 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_18 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_19 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_20 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_21 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_22 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_23 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_24 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_25 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_26 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_27 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_28 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_29 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_30 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_31 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_32 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_33 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_34 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_35 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_36 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_37 ,value,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_46 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_47 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_48 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_49 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_50 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_51 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_52 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_53 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_54 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_55 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_56 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_57 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_58 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_59 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_60 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_61 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_62 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_63 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_64 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_65 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_66 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_67 }),
         .S({\gaxi_full_lite.gread_ch.grach2.axi_rach_n_1 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_2 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_3 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_4 }),
         .UNCONN_IN(DI),
         .aempty_fwft_i_reg(\gaxi_full_lite.gread_ch.grach2.axi_rach_n_80 ),
@@ -5030,7 +5041,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
         .s_axi_rready(s_axi_rready));
   Arty_Z7_20_s00_data_fifo_0_axi_reg_slice \gaxi_full_lite.gread_ch.grach2.gaxi_arvld.rach_pkt_reg_slice 
        (.CO(arvalid_en),
-        .D({\gaxi_full_lite.gread_ch.grach2.axi_rach_n_5 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_6 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_7 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_8 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_9 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_10 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_11 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_12 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_13 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_14 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_15 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_16 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_17 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_18 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_19 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_20 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_21 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_22 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_23 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_24 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_25 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_26 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_27 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_28 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_29 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_30 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_31 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_32 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_33 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_34 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_35 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_36 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_37 ,L,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_46 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_47 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_48 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_49 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_50 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_51 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_52 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_53 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_54 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_55 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_56 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_57 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_58 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_59 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_60 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_61 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_62 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_63 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_64 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_65 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_66 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_67 }),
+        .D({\gaxi_full_lite.gread_ch.grach2.axi_rach_n_5 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_6 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_7 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_8 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_9 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_10 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_11 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_12 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_13 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_14 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_15 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_16 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_17 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_18 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_19 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_20 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_21 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_22 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_23 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_24 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_25 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_26 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_27 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_28 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_29 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_30 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_31 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_32 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_33 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_34 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_35 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_36 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_37 ,value,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_46 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_47 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_48 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_49 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_50 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_51 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_52 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_53 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_54 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_55 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_56 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_57 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_58 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_59 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_60 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_61 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_62 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_63 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_64 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_65 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_66 ,\gaxi_full_lite.gread_ch.grach2.axi_rach_n_67 }),
         .UNCONN_OUT(UNCONN_OUT),
         .arready_pkt(arready_pkt),
         .\gfwd_rev_pipeline1.s_ready_i_reg_0 (\gaxi_full_lite.gread_ch.grach2.axi_rach_n_80 ),
@@ -5063,6 +5074,7 @@ module Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module Arty_Z7_20_s00_data_fifo_0_memory
    (S,
     Q,
@@ -6621,6 +6633,7 @@ module Arty_Z7_20_s00_data_fifo_0_memory__parameterized0
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr
    (ram_empty_fb_i_reg,
     ram_empty_fb_i_reg_0,
@@ -7137,6 +7150,7 @@ module Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr__parameterized0
         .O(ram_empty_i_reg_0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_fwft" *) 
 module Arty_Z7_20_s00_data_fifo_0_rd_fwft
    (out,
     \gfwd_rev_pipeline1.s_ready_i_reg ,
@@ -7711,6 +7725,7 @@ module Arty_Z7_20_s00_data_fifo_0_rd_fwft__parameterized0
         .O(s_axi_rvalid));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module Arty_Z7_20_s00_data_fifo_0_rd_logic
    (out,
     \gfwd_rev_pipeline1.s_ready_i_reg ,
@@ -7981,6 +7996,7 @@ module Arty_Z7_20_s00_data_fifo_0_rd_logic__parameterized0
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss
    (out,
     ram_empty_fb_i_reg_0,
@@ -8124,6 +8140,7 @@ module Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss__parameterized0
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo
    (AR,
     s_aclk,
@@ -9126,6 +9143,7 @@ module Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo__parameterized2
         .O(p_0_out_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
 module Arty_Z7_20_s00_data_fifo_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
@@ -9919,6 +9937,7 @@ module Arty_Z7_20_s00_data_fifo_0_synchronizer_ff_9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr
    (ram_full_comb,
     Q,
@@ -10538,6 +10557,7 @@ module Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr__parameterized0
         .O(ram_empty_i_reg_6));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module Arty_Z7_20_s00_data_fifo_0_wr_logic
    (s_axi_arready,
     Q,
@@ -10737,6 +10757,7 @@ module Arty_Z7_20_s00_data_fifo_0_wr_logic__parameterized0
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module Arty_Z7_20_s00_data_fifo_0_wr_status_flags_ss
    (out,
     s_axi_arready,

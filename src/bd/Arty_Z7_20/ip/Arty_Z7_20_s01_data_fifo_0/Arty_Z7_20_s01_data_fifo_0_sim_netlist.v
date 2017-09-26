@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
-// Date        : Sat Jul 15 23:47:16 2017
-// Host        : localhost.localdomain running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_s01_data_fifo_0 -prefix
-//               Arty_Z7_20_s01_data_fifo_0_ Arty_Z7_20_s01_data_fifo_0_sim_netlist.v
+// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+// Date        : Mon Sep 25 22:09:56 2017
+// Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s01_data_fifo_0/Arty_Z7_20_s01_data_fifo_0_sim_netlist.v
 // Design      : Arty_Z7_20_s01_data_fifo_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s01_data_fifo_0,axi_data_fifo_v2_1_11_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_11_axi_data_fifo,Vivado 2017.1_sdx" *) 
+(* CHECK_LICENSE_TYPE = "Arty_Z7_20_s01_data_fifo_0,axi_data_fifo_v2_1_12_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_12_axi_data_fifo,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_s01_data_fifo_0
    (aclk,
@@ -192,7 +192,7 @@ module Arty_Z7_20_s01_data_fifo_0
   (* P_WIDTH_WRCH = "4" *) 
   (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  Arty_Z7_20_s01_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo inst
+  Arty_Z7_20_s01_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo inst
        (.aclk(aclk),
         .aresetn(aresetn),
         .m_axi_araddr(NLW_inst_m_axi_araddr_UNCONNECTED[31:0]),
@@ -293,11 +293,11 @@ endmodule
 (* C_AXI_READ_FIFO_TYPE = "lut" *) (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_WRITE_FIFO_DELAY = "1" *) (* C_AXI_WRITE_FIFO_DEPTH = "512" *) (* C_AXI_WRITE_FIFO_TYPE = "bram" *) 
 (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "zynq" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "1" *) (* P_WIDTH_RACH = "63" *) 
-(* P_WIDTH_RDCH = "69" *) (* P_WIDTH_WACH = "63" *) (* P_WIDTH_WDCH = "74" *) 
-(* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
-module Arty_Z7_20_s01_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_12_axi_data_fifo" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "1" *) 
+(* P_WIDTH_RACH = "63" *) (* P_WIDTH_RDCH = "69" *) (* P_WIDTH_WACH = "63" *) 
+(* P_WIDTH_WDCH = "74" *) (* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
+module Arty_Z7_20_s01_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo
    (aclk,
     aresetn,
     s_axi_awid,
@@ -1121,6 +1121,7 @@ module Arty_Z7_20_s01_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo
         .wr_rst_busy(\NLW_gen_fifo.fifo_gen_inst_wr_rst_busy_UNCONNECTED ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_reg_slice" *) 
 module Arty_Z7_20_s01_data_fifo_0_axi_reg_slice
    (inverted_reset,
     awready_pkt,
@@ -1720,6 +1721,7 @@ module Arty_Z7_20_s01_data_fifo_0_axi_reg_slice
         .s_aresetn(s_aresetn));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_generic_cstr
    (D,
     s_aclk,
@@ -1770,6 +1772,7 @@ module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_generic_cstr
         .s_axi_wdata(s_axi_wdata[56:19]));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_prim_width
    (D,
     s_aclk,
@@ -1847,6 +1850,7 @@ module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_prim_width__parameterized0
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_prim_wrapper
    (D,
     s_aclk,
@@ -2280,6 +2284,7 @@ module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_prim_wrapper__parameterized0
         .WEBWE({ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg,ram_full_fb_i_reg}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_top
    (D,
     s_aclk,
@@ -2322,6 +2327,7 @@ module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_top
         .s_axi_wstrb(s_axi_wstrb));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_v8_3_6
    (D,
     s_aclk,
@@ -2364,6 +2370,7 @@ module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_v8_3_6
         .s_axi_wstrb(s_axi_wstrb));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module Arty_Z7_20_s01_data_fifo_0_blk_mem_gen_v8_3_6_synth
    (D,
     s_aclk,
@@ -2626,6 +2633,7 @@ module Arty_Z7_20_s01_data_fifo_0_compare__parameterized0_16
         .S({\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED [3:1],v1_reg[4]}));
 endmodule
 
+(* ORIG_REF_NAME = "dmem" *) 
 module Arty_Z7_20_s01_data_fifo_0_dmem
    (dout_i,
     s_aclk,
@@ -3346,6 +3354,7 @@ module Arty_Z7_20_s01_data_fifo_0_dmem
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Arty_Z7_20_s01_data_fifo_0_fifo_generator_ramfifo
    (\gpregsm1.user_valid_reg ,
     s_axi_awready,
@@ -3583,6 +3592,7 @@ module Arty_Z7_20_s01_data_fifo_0_fifo_generator_ramfifo__parameterized0
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Arty_Z7_20_s01_data_fifo_0_fifo_generator_top
    (p_4_out__0,
     s_axi_awready,
@@ -3787,7 +3797,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "5" *) (* C_WR_PNTR_WIDTH_RDCH = "1" *) 
 (* C_WR_PNTR_WIDTH_WACH = "5" *) (* C_WR_PNTR_WIDTH_WDCH = "9" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
 module Arty_Z7_20_s01_data_fifo_0_fifo_generator_v13_1_4
    (backup,
     backup_marker,
@@ -4767,6 +4777,7 @@ module Arty_Z7_20_s01_data_fifo_0_fifo_generator_v13_1_4
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
 module Arty_Z7_20_s01_data_fifo_0_fifo_generator_v13_1_4_synth
    (Q,
     m_axi_awvalid,
@@ -5093,6 +5104,7 @@ module Arty_Z7_20_s01_data_fifo_0_fifo_generator_v13_1_4_synth
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module Arty_Z7_20_s01_data_fifo_0_memory
    (\gfwd_rev_pipeline1.storage_data1_reg[62] ,
     E,
@@ -6274,6 +6286,7 @@ module Arty_Z7_20_s01_data_fifo_0_memory__parameterized0
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Arty_Z7_20_s01_data_fifo_0_rd_bin_cntr
    (Q,
     \gpr1.dout_i_reg[1] ,
@@ -6843,6 +6856,7 @@ module Arty_Z7_20_s01_data_fifo_0_rd_bin_cntr__parameterized0
         .O(ram_empty_i_reg_3));
 endmodule
 
+(* ORIG_REF_NAME = "rd_fwft" *) 
 module Arty_Z7_20_s01_data_fifo_0_rd_fwft
    (\gpregsm1.user_valid_reg_0 ,
     E,
@@ -7389,6 +7403,7 @@ module Arty_Z7_20_s01_data_fifo_0_rd_fwft__parameterized0
         .O(m_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module Arty_Z7_20_s01_data_fifo_0_rd_logic
    (out,
     \gpregsm1.user_valid_reg ,
@@ -7588,6 +7603,7 @@ module Arty_Z7_20_s01_data_fifo_0_rd_logic__parameterized0
         .v1_reg_1(\c2/v1_reg ));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module Arty_Z7_20_s01_data_fifo_0_rd_status_flags_ss
    (out,
     ram_empty_fb_i_reg_0,
@@ -7715,6 +7731,7 @@ module Arty_Z7_20_s01_data_fifo_0_rd_status_flags_ss__parameterized0
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Arty_Z7_20_s01_data_fifo_0_reset_blk_ramfifo
    (s_aclk,
     inverted_reset);
@@ -8714,6 +8731,7 @@ module Arty_Z7_20_s01_data_fifo_0_reset_blk_ramfifo__parameterized2
         .O(p_0_out_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
 module Arty_Z7_20_s01_data_fifo_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
@@ -9507,6 +9525,7 @@ module Arty_Z7_20_s01_data_fifo_0_synchronizer_ff_9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Arty_Z7_20_s01_data_fifo_0_wr_bin_cntr
    (ram_empty_i_reg,
     ram_full_comb,
@@ -10012,6 +10031,7 @@ module Arty_Z7_20_s01_data_fifo_0_wr_bin_cntr__parameterized0
         .R(\ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.safety_ckt_wr_rst_i_reg ));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module Arty_Z7_20_s01_data_fifo_0_wr_logic
    (ram_empty_i_reg,
     E,
@@ -10166,6 +10186,7 @@ module Arty_Z7_20_s01_data_fifo_0_wr_logic__parameterized0
         .s_aclk(s_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module Arty_Z7_20_s01_data_fifo_0_wr_status_flags_ss
    (out,
     s_axi_awready,

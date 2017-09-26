@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.1_sdx (lin64) Build 1881615 Tue May 16 18:38:00 MDT 2017
--- Date        : Fri Jul 14 17:10:43 2017
--- Host        : localhost.localdomain running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top Arty_Z7_20_s00_data_fifo_0 -prefix
---               Arty_Z7_20_s00_data_fifo_0_ Arty_Z7_20_s00_data_fifo_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
+-- Date        : Mon Sep 25 22:10:22 2017
+-- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s00_data_fifo_0/Arty_Z7_20_s00_data_fifo_0_sim_netlist.vhdl
 -- Design      : Arty_Z7_20_s00_data_fifo_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,6 +26,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_wrapper is
@@ -589,6 +591,8 @@ entity Arty_Z7_20_s00_data_fifo_0_dmem is
     \gcc0.gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpregsm1.curr_fwft_state_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_dmem : entity is "dmem";
 end Arty_Z7_20_s00_data_fifo_0_dmem;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_dmem is
@@ -1521,6 +1525,8 @@ entity Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr is
     s_aclk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_rd_bin_cntr is
@@ -2182,6 +2188,8 @@ entity Arty_Z7_20_s00_data_fifo_0_rd_fwft is
     ram_empty_fb_i_reg_0 : in STD_LOGIC;
     \gfwd_rev_pipeline1.s_ready_i_reg_1\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_rd_fwft : entity is "rd_fwft";
 end Arty_Z7_20_s00_data_fifo_0_rd_fwft;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_rd_fwft is
@@ -2839,6 +2847,8 @@ entity Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss is
     s_aclk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_rd_status_flags_ss is
@@ -2891,6 +2901,8 @@ entity Arty_Z7_20_s00_data_fifo_0_synchronizer_ff is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_synchronizer_ff : entity is "synchronizer_ff";
 end Arty_Z7_20_s00_data_fifo_0_synchronizer_ff;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_synchronizer_ff is
@@ -3966,6 +3978,8 @@ entity Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr is
     s_aclk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_wr_bin_cntr is
@@ -4714,6 +4728,8 @@ entity Arty_Z7_20_s00_data_fifo_0_wr_status_flags_ss is
     \grstd1.grst_full.grst_f.rst_d2_reg\ : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end Arty_Z7_20_s00_data_fifo_0_wr_status_flags_ss;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_wr_status_flags_ss is
@@ -4819,6 +4835,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_prim_width is
@@ -4869,6 +4887,8 @@ entity Arty_Z7_20_s00_data_fifo_0_memory is
     \gcc0.gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpregsm1.curr_fwft_state_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_memory : entity is "memory";
 end Arty_Z7_20_s00_data_fifo_0_memory;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_memory is
@@ -6117,6 +6137,8 @@ entity Arty_Z7_20_s00_data_fifo_0_rd_logic is
     \gcc0.gc0.count_d1_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gcc0.gc0.count_reg[4]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_rd_logic : entity is "rd_logic";
 end Arty_Z7_20_s00_data_fifo_0_rd_logic;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_rd_logic is
@@ -6273,6 +6295,8 @@ entity Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo is
     s_aclk : in STD_LOGIC;
     inverted_reset : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_reset_blk_ramfifo is
@@ -7618,6 +7642,8 @@ entity Arty_Z7_20_s00_data_fifo_0_wr_logic is
     s_axi_arvalid : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_wr_logic : entity is "wr_logic";
 end Arty_Z7_20_s00_data_fifo_0_wr_logic;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_wr_logic is
@@ -7805,6 +7831,8 @@ entity Arty_Z7_20_s00_data_fifo_0_axi_reg_slice is
     \gfwd_rev_pipeline1.s_ready_i_reg_0\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 62 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_axi_reg_slice : entity is "axi_reg_slice";
 end Arty_Z7_20_s00_data_fifo_0_axi_reg_slice;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_axi_reg_slice is
@@ -8607,6 +8635,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_generic_cstr is
@@ -8656,6 +8686,8 @@ entity Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo is
     \gaxi_full_lite.gread_ch.gaxi_pkt_fifo_rd.gaxi_mm_cc_pkt_rd.rd_fifo_free_space_reg[9]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     UNCONN_IN : in STD_LOGIC_VECTOR ( 62 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_fifo_generator_ramfifo is
@@ -8982,6 +9014,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_top is
@@ -9031,6 +9065,8 @@ entity Arty_Z7_20_s00_data_fifo_0_fifo_generator_top is
     \gaxi_full_lite.gread_ch.gaxi_pkt_fifo_rd.gaxi_mm_cc_pkt_rd.rd_fifo_free_space_reg[9]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     UNCONN_IN : in STD_LOGIC_VECTOR ( 62 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_fifo_generator_top : entity is "fifo_generator_top";
 end Arty_Z7_20_s00_data_fifo_0_fifo_generator_top;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_fifo_generator_top is
@@ -9080,6 +9116,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6_synth is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6_synth is
@@ -9113,6 +9151,8 @@ entity Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6 is
     DIADI : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
 end Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_blk_mem_gen_v8_3_6 is
@@ -10140,10 +10180,11 @@ entity Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth is
     s_axi_arvalid : in STD_LOGIC;
     s_aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth : entity is "fifo_generator_v13_1_4_synth";
 end Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synth is
-  signal L : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \_carry__0_n_0\ : STD_LOGIC;
   signal \_carry__0_n_1\ : STD_LOGIC;
   signal \_carry__0_n_2\ : STD_LOGIC;
@@ -10255,6 +10296,7 @@ architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4_synt
   signal p_1_in : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal rach_empty : STD_LOGIC;
   signal rd_fifo_free_space : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal value : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW__carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW__carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal NLW_arvalid_en0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -10512,7 +10554,7 @@ arvalid_en0_carry: unisim.vcomponents.CARRY4
       Q(32) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_35\,
       Q(31) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_36\,
       Q(30) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_37\,
-      Q(29 downto 22) => L(7 downto 0),
+      Q(29 downto 22) => value(7 downto 0),
       Q(21) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_46\,
       Q(20) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_47\,
       Q(19) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_48\,
@@ -10614,7 +10656,7 @@ arvalid_en0_carry: unisim.vcomponents.CARRY4
       D(32) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_35\,
       D(31) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_36\,
       D(30) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_37\,
-      D(29 downto 22) => L(7 downto 0),
+      D(29 downto 22) => value(7 downto 0),
       D(21) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_46\,
       D(20) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_47\,
       D(19) => \gaxi_full_lite.gread_ch.grach2.axi_rach_n_48\,
@@ -11315,6 +11357,8 @@ entity Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4 is
   attribute C_WR_PNTR_WIDTH_WRCH of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4 : entity is "fifo_generator_v13_1_4";
 end Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_fifo_generator_v13_1_4 is
@@ -11831,7 +11875,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo is
+entity Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -11927,66 +11971,68 @@ entity Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo is
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 64;
+  attribute C_AXI_DATA_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_ID_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 0;
+  attribute C_AXI_PROTOCOL of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 0;
   attribute C_AXI_READ_FIFO_DELAY : integer;
-  attribute C_AXI_READ_FIFO_DELAY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_READ_FIFO_DELAY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_READ_FIFO_DEPTH : integer;
-  attribute C_AXI_READ_FIFO_DEPTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 512;
+  attribute C_AXI_READ_FIFO_DEPTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 512;
   attribute C_AXI_READ_FIFO_TYPE : string;
-  attribute C_AXI_READ_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is "bram";
+  attribute C_AXI_READ_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "bram";
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 0;
   attribute C_AXI_WRITE_FIFO_DELAY : integer;
-  attribute C_AXI_WRITE_FIFO_DELAY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 0;
+  attribute C_AXI_WRITE_FIFO_DELAY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 0;
   attribute C_AXI_WRITE_FIFO_DEPTH : integer;
-  attribute C_AXI_WRITE_FIFO_DEPTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 0;
+  attribute C_AXI_WRITE_FIFO_DEPTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 0;
   attribute C_AXI_WRITE_FIFO_TYPE : string;
-  attribute C_AXI_WRITE_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is "lut";
+  attribute C_AXI_WRITE_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "lut";
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is "zynq";
+  attribute C_FAMILY of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "zynq";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "axi_data_fifo_v2_1_12_axi_data_fifo";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
+  attribute P_AXI3 of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 0;
+  attribute P_AXI4 of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 2;
+  attribute P_AXILITE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 2;
   attribute P_PRIM_FIFO_TYPE : string;
-  attribute P_PRIM_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is "512x72";
+  attribute P_PRIM_FIFO_TYPE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is "512x72";
   attribute P_READ_FIFO_DEPTH_LOG : integer;
-  attribute P_READ_FIFO_DEPTH_LOG of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 9;
+  attribute P_READ_FIFO_DEPTH_LOG of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 9;
   attribute P_WIDTH_RACH : integer;
-  attribute P_WIDTH_RACH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 63;
+  attribute P_WIDTH_RACH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 63;
   attribute P_WIDTH_RDCH : integer;
-  attribute P_WIDTH_RDCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 69;
+  attribute P_WIDTH_RDCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 69;
   attribute P_WIDTH_WACH : integer;
-  attribute P_WIDTH_WACH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 63;
+  attribute P_WIDTH_WACH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 63;
   attribute P_WIDTH_WDCH : integer;
-  attribute P_WIDTH_WDCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 74;
+  attribute P_WIDTH_WDCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 74;
   attribute P_WIDTH_WRCH : integer;
-  attribute P_WIDTH_WRCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 4;
+  attribute P_WIDTH_WRCH of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 4;
   attribute P_WRITE_FIFO_DEPTH_LOG : integer;
-  attribute P_WRITE_FIFO_DEPTH_LOG of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo : entity is 1;
-end Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo;
+  attribute P_WRITE_FIFO_DEPTH_LOG of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo : entity is 1;
+end Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo;
 
-architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo is
+architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_awready\ : STD_LOGIC;
   signal \^m_axi_bid\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -12846,11 +12892,11 @@ entity Arty_Z7_20_s00_data_fifo_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Arty_Z7_20_s00_data_fifo_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_s00_data_fifo_0 : entity is "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_11_axi_data_fifo,{}";
+  attribute CHECK_LICENSE_TYPE of Arty_Z7_20_s00_data_fifo_0 : entity is "Arty_Z7_20_s00_data_fifo_0,axi_data_fifo_v2_1_12_axi_data_fifo,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Arty_Z7_20_s00_data_fifo_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Arty_Z7_20_s00_data_fifo_0 : entity is "axi_data_fifo_v2_1_11_axi_data_fifo,Vivado 2017.1_sdx";
+  attribute X_CORE_INFO of Arty_Z7_20_s00_data_fifo_0 : entity is "axi_data_fifo_v2_1_12_axi_data_fifo,Vivado 2017.2.1";
 end Arty_Z7_20_s00_data_fifo_0;
 
 architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0 is
@@ -12941,7 +12987,7 @@ architecture STRUCTURE of Arty_Z7_20_s00_data_fifo_0 is
   attribute P_WRITE_FIFO_DEPTH_LOG of inst : label is 1;
   attribute downgradeipidentifiedwarnings of inst : label is "yes";
 begin
-inst: entity work.Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_11_axi_data_fifo
+inst: entity work.Arty_Z7_20_s00_data_fifo_0_axi_data_fifo_v2_1_12_axi_data_fifo
      port map (
       aclk => aclk,
       aresetn => aresetn,
