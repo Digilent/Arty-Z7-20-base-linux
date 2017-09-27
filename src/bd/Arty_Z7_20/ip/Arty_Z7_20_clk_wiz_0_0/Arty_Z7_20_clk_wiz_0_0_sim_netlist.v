@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-// Date        : Mon Sep 25 22:06:23 2017
+// Date        : Wed Sep 27 16:06:44 2017
 // Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_clk_wiz_0_0/Arty_Z7_20_clk_wiz_0_0_sim_netlist.v
@@ -16,12 +16,12 @@
 module Arty_Z7_20_clk_wiz_0_0
    (clk_out1,
     clk_out2,
-    reset,
+    resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
-  input reset;
+  input resetn;
   output locked;
   input clk_in1;
 
@@ -29,26 +29,26 @@ module Arty_Z7_20_clk_wiz_0_0
   wire clk_out1;
   wire clk_out2;
   wire locked;
-  wire reset;
+  wire resetn;
 
   Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
         .locked(locked),
-        .reset(reset));
+        .resetn(resetn));
 endmodule
 
 (* ORIG_REF_NAME = "Arty_Z7_20_clk_wiz_0_0_clk_wiz" *) 
 module Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz
    (clk_out1,
     clk_out2,
-    reset,
+    resetn,
     locked,
     clk_in1);
   output clk_out1;
   output clk_out2;
-  input reset;
+  input resetn;
   output locked;
   input clk_in1;
 
@@ -61,7 +61,8 @@ module Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz
   wire clkfbout_Arty_Z7_20_clk_wiz_0_0;
   wire clkfbout_buf_Arty_Z7_20_clk_wiz_0_0;
   wire locked;
-  wire reset;
+  wire reset_high;
+  wire resetn;
   wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
@@ -144,7 +145,12 @@ module Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz
         .DWE(1'b0),
         .LOCKED(locked),
         .PWRDWN(1'b0),
-        .RST(reset));
+        .RST(reset_high));
+  LUT1 #(
+    .INIT(2'h1)) 
+    plle2_adv_inst_i_1
+       (.I0(resetn),
+        .O(reset_high));
 endmodule
 `ifndef GLBL
 `define GLBL

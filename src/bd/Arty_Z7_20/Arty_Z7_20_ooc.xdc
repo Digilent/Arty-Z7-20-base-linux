@@ -11,7 +11,7 @@ create_clock -name TMDS_In_clk_p -period 10 [get_ports TMDS_In_clk_p]
 create_clock -name TMDS_In_clk_n -period 10 [get_ports TMDS_In_clk_n]
 create_clock -name processing_system7_0_FCLK_CLK0 -period 10 [get_pins processing_system7_0/FCLK_CLK0]
 create_clock -name processing_system7_0_FCLK_CLK1 -period 8.462 [get_pins processing_system7_0/FCLK_CLK1]
-create_clock -name processing_system7_0_FCLK_CLK2 -period 13 [get_pins processing_system7_0/FCLK_CLK2]
+create_clock -name processing_system7_0_FCLK_CLK2 -period 13.333 [get_pins processing_system7_0/FCLK_CLK2]
 create_clock -name processing_system7_0_FCLK_CLK3 -period 20 [get_pins processing_system7_0/FCLK_CLK3]
 
 ################################################################################

@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-// Date        : Mon Sep 25 22:06:20 2017
+// Date        : Wed Sep 27 16:06:44 2017
 // Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_proc_sys_reset_0_0/Arty_Z7_20_proc_sys_reset_0_0_stub.v

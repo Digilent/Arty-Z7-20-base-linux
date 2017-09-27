@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-// Date        : Mon Sep 25 22:05:16 2017
+// Date        : Wed Sep 27 16:06:48 2017
 // Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_processing_system7_0_0/Arty_Z7_20_processing_system7_0_0_sim_netlist.v
@@ -15,10 +15,7 @@
 (* CHECK_LICENSE_TYPE = "Arty_Z7_20_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module Arty_Z7_20_processing_system7_0_0
-   (GPIO_I,
-    GPIO_O,
-    GPIO_T,
-    I2C0_SDA_I,
+   (I2C0_SDA_I,
     I2C0_SDA_O,
     I2C0_SDA_T,
     I2C0_SCL_I,
@@ -44,8 +41,6 @@ module Arty_Z7_20_processing_system7_0_0
     SPI0_SS1_O,
     SPI0_SS2_O,
     SPI0_SS_T,
-    UART1_TX,
-    UART1_RX,
     USB0_PORT_INDCTL,
     USB0_VBUS_PWRSELECT,
     USB0_VBUS_PWRFAULT,
@@ -160,9 +155,6 @@ module Arty_Z7_20_processing_system7_0_0
     PS_SRSTB,
     PS_CLK,
     PS_PORB);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_I" *) input [5:0]GPIO_I;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_O" *) output [5:0]GPIO_O;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_T" *) output [5:0]GPIO_T;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_I" *) input I2C0_SDA_I;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_O" *) output I2C0_SDA_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_T" *) output I2C0_SDA_T;
@@ -189,8 +181,6 @@ module Arty_Z7_20_processing_system7_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS1_O" *) output SPI0_SS1_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS2_O" *) output SPI0_SS2_O;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 SPI_0 SS_T" *) output SPI0_SS_T;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 TxD" *) output UART1_TX;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 RxD" *) input UART1_RX;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL" *) output [1:0]USB0_PORT_INDCTL;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT" *) output USB0_VBUS_PWRSELECT;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT" *) input USB0_VBUS_PWRFAULT;
@@ -328,9 +318,6 @@ module Arty_Z7_20_processing_system7_0_0
   wire FCLK_CLK2;
   wire FCLK_CLK3;
   wire FCLK_RESET0_N;
-  wire [5:0]GPIO_I;
-  wire [5:0]GPIO_O;
-  wire [5:0]GPIO_T;
   wire I2C0_SCL_I;
   wire I2C0_SCL_O;
   wire I2C0_SCL_T;
@@ -446,8 +433,6 @@ module Arty_Z7_20_processing_system7_0_0
   wire S_AXI_HP0_WRISSUECAP1_EN;
   wire [7:0]S_AXI_HP0_WSTRB;
   wire S_AXI_HP0_WVALID;
-  wire UART1_RX;
-  wire UART1_TX;
   wire [1:0]USB0_PORT_INDCTL;
   wire USB0_VBUS_PWRFAULT;
   wire USB0_VBUS_PWRSELECT;
@@ -621,6 +606,7 @@ module Arty_Z7_20_processing_system7_0_0
   wire NLW_inst_UART0_TX_UNCONNECTED;
   wire NLW_inst_UART1_DTRN_UNCONNECTED;
   wire NLW_inst_UART1_RTSN_UNCONNECTED;
+  wire NLW_inst_UART1_TX_UNCONNECTED;
   wire NLW_inst_USB1_VBUS_PWRSELECT_UNCONNECTED;
   wire NLW_inst_WDT_RST_OUT_UNCONNECTED;
   wire [1:0]NLW_inst_DMA0_DATYPE_UNCONNECTED;
@@ -632,6 +618,8 @@ module Arty_Z7_20_processing_system7_0_0
   wire [1:0]NLW_inst_EVENT_STANDBYWFE_UNCONNECTED;
   wire [1:0]NLW_inst_EVENT_STANDBYWFI_UNCONNECTED;
   wire [31:0]NLW_inst_FTMT_P2F_DEBUG_UNCONNECTED;
+  wire [63:0]NLW_inst_GPIO_O_UNCONNECTED;
+  wire [63:0]NLW_inst_GPIO_T_UNCONNECTED;
   wire [31:0]NLW_inst_M_AXI_GP1_ARADDR_UNCONNECTED;
   wire [1:0]NLW_inst_M_AXI_GP1_ARBURST_UNCONNECTED;
   wire [3:0]NLW_inst_M_AXI_GP1_ARCACHE_UNCONNECTED;
@@ -707,7 +695,7 @@ module Arty_Z7_20_processing_system7_0_0
   (* C_DM_WIDTH = "4" *) 
   (* C_DQS_WIDTH = "4" *) 
   (* C_DQ_WIDTH = "32" *) 
-  (* C_EMIO_GPIO_WIDTH = "6" *) 
+  (* C_EMIO_GPIO_WIDTH = "64" *) 
   (* C_EN_EMIO_ENET0 = "0" *) 
   (* C_EN_EMIO_ENET1 = "0" *) 
   (* C_EN_EMIO_PJTAG = "0" *) 
@@ -760,7 +748,7 @@ module Arty_Z7_20_processing_system7_0_0
   (* C_USE_S_AXI_HP2 = "0" *) 
   (* C_USE_S_AXI_HP3 = "0" *) 
   (* HW_HANDOFF = "Arty_Z7_20_processing_system7_0_0.hwdef" *) 
-  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) 
+  (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
   Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
@@ -914,9 +902,9 @@ module Arty_Z7_20_processing_system7_0_0
         .FTMT_P2F_TRIG_1(NLW_inst_FTMT_P2F_TRIG_1_UNCONNECTED),
         .FTMT_P2F_TRIG_2(NLW_inst_FTMT_P2F_TRIG_2_UNCONNECTED),
         .FTMT_P2F_TRIG_3(NLW_inst_FTMT_P2F_TRIG_3_UNCONNECTED),
-        .GPIO_I(GPIO_I),
-        .GPIO_O(GPIO_O),
-        .GPIO_T(GPIO_T),
+        .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .GPIO_O(NLW_inst_GPIO_O_UNCONNECTED[63:0]),
+        .GPIO_T(NLW_inst_GPIO_T_UNCONNECTED[63:0]),
         .I2C0_SCL_I(I2C0_SCL_I),
         .I2C0_SCL_O(I2C0_SCL_O),
         .I2C0_SCL_T(I2C0_SCL_T),
@@ -1438,8 +1426,8 @@ module Arty_Z7_20_processing_system7_0_0
         .UART1_DTRN(NLW_inst_UART1_DTRN_UNCONNECTED),
         .UART1_RIN(1'b0),
         .UART1_RTSN(NLW_inst_UART1_RTSN_UNCONNECTED),
-        .UART1_RX(UART1_RX),
-        .UART1_TX(UART1_TX),
+        .UART1_RX(1'b1),
+        .UART1_TX(NLW_inst_UART1_TX_UNCONNECTED),
         .USB0_PORT_INDCTL(USB0_PORT_INDCTL),
         .USB0_VBUS_PWRFAULT(USB0_VBUS_PWRFAULT),
         .USB0_VBUS_PWRSELECT(USB0_VBUS_PWRSELECT),
@@ -1451,7 +1439,7 @@ module Arty_Z7_20_processing_system7_0_0
 endmodule
 
 (* C_DM_WIDTH = "4" *) (* C_DQS_WIDTH = "4" *) (* C_DQ_WIDTH = "32" *) 
-(* C_EMIO_GPIO_WIDTH = "6" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
+(* C_EMIO_GPIO_WIDTH = "64" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
 (* C_EN_EMIO_PJTAG = "0" *) (* C_EN_EMIO_TRACE = "0" *) (* C_FCLK_CLK0_BUF = "TRUE" *) 
 (* C_FCLK_CLK1_BUF = "TRUE" *) (* C_FCLK_CLK2_BUF = "TRUE" *) (* C_FCLK_CLK3_BUF = "TRUE" *) 
 (* C_GP0_EN_MODIFIABLE_TXN = "0" *) (* C_GP1_EN_MODIFIABLE_TXN = "0" *) (* C_INCLUDE_ACP_TRANS_CHECK = "0" *) 
@@ -1469,7 +1457,7 @@ endmodule
 (* C_USE_S_AXI_ACP = "0" *) (* C_USE_S_AXI_GP0 = "0" *) (* C_USE_S_AXI_GP1 = "0" *) 
 (* C_USE_S_AXI_HP0 = "1" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
 (* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "Arty_Z7_20_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
-(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
+(* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={SPI} ioStandard={} bidis={0} ioBank={} clockFreq={166.666672} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={0} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={I2C} ioStandard={} bidis={1} ioBank={} clockFreq={108.333336} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={10} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
 module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,
@@ -2210,9 +2198,9 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   input ENET1_MDIO_I;
   input ENET1_EXT_INTIN;
   input [7:0]ENET1_GMII_RXD;
-  input [5:0]GPIO_I;
-  output [5:0]GPIO_O;
-  output [5:0]GPIO_T;
+  input [63:0]GPIO_I;
+  output [63:0]GPIO_O;
+  output [63:0]GPIO_T;
   input I2C0_SDA_I;
   output I2C0_SDA_O;
   output I2C0_SDA_T;
@@ -2974,9 +2962,9 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   wire FTMT_P2F_TRIG_1;
   wire FTMT_P2F_TRIG_2;
   wire FTMT_P2F_TRIG_3;
-  wire [5:0]GPIO_I;
-  wire [5:0]GPIO_O;
-  wire [5:0]GPIO_T;
+  wire [63:0]GPIO_I;
+  wire [63:0]GPIO_O;
+  wire [63:0]GPIO_T;
   wire I2C0_SCL_I;
   wire I2C0_SCL_O;
   wire I2C0_SCL_T;
@@ -3557,7 +3545,7 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   wire buffered_PS_CLK;
   wire buffered_PS_PORB;
   wire buffered_PS_SRSTB;
-  wire [5:0]gpio_out_t_n;
+  wire [63:0]gpio_out_t_n;
   wire NLW_PS7_i_EMIOENET0GMIITXEN_UNCONNECTED;
   wire NLW_PS7_i_EMIOENET0GMIITXER_UNCONNECTED;
   wire NLW_PS7_i_EMIOENET1GMIITXEN_UNCONNECTED;
@@ -3567,8 +3555,6 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
   wire NLW_PS7_i_EMIOTRACECTL_UNCONNECTED;
   wire [7:0]NLW_PS7_i_EMIOENET0GMIITXD_UNCONNECTED;
   wire [7:0]NLW_PS7_i_EMIOENET1GMIITXD_UNCONNECTED;
-  wire [63:6]NLW_PS7_i_EMIOGPIOO_UNCONNECTED;
-  wire [63:6]NLW_PS7_i_EMIOGPIOTN_UNCONNECTED;
   wire [31:0]NLW_PS7_i_EMIOTRACEDATA_UNCONNECTED;
 
   assign ENET0_GMII_TXD[7] = \<const0> ;
@@ -3666,9 +3652,109 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
         .O(GPIO_T[0]));
   LUT1 #(
     .INIT(2'h1)) 
+    \GPIO_T[10]_INST_0 
+       (.I0(gpio_out_t_n[10]),
+        .O(GPIO_T[10]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[11]_INST_0 
+       (.I0(gpio_out_t_n[11]),
+        .O(GPIO_T[11]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[12]_INST_0 
+       (.I0(gpio_out_t_n[12]),
+        .O(GPIO_T[12]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[13]_INST_0 
+       (.I0(gpio_out_t_n[13]),
+        .O(GPIO_T[13]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[14]_INST_0 
+       (.I0(gpio_out_t_n[14]),
+        .O(GPIO_T[14]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[15]_INST_0 
+       (.I0(gpio_out_t_n[15]),
+        .O(GPIO_T[15]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[16]_INST_0 
+       (.I0(gpio_out_t_n[16]),
+        .O(GPIO_T[16]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[17]_INST_0 
+       (.I0(gpio_out_t_n[17]),
+        .O(GPIO_T[17]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[18]_INST_0 
+       (.I0(gpio_out_t_n[18]),
+        .O(GPIO_T[18]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[19]_INST_0 
+       (.I0(gpio_out_t_n[19]),
+        .O(GPIO_T[19]));
+  LUT1 #(
+    .INIT(2'h1)) 
     \GPIO_T[1]_INST_0 
        (.I0(gpio_out_t_n[1]),
         .O(GPIO_T[1]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[20]_INST_0 
+       (.I0(gpio_out_t_n[20]),
+        .O(GPIO_T[20]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[21]_INST_0 
+       (.I0(gpio_out_t_n[21]),
+        .O(GPIO_T[21]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[22]_INST_0 
+       (.I0(gpio_out_t_n[22]),
+        .O(GPIO_T[22]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[23]_INST_0 
+       (.I0(gpio_out_t_n[23]),
+        .O(GPIO_T[23]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[24]_INST_0 
+       (.I0(gpio_out_t_n[24]),
+        .O(GPIO_T[24]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[25]_INST_0 
+       (.I0(gpio_out_t_n[25]),
+        .O(GPIO_T[25]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[26]_INST_0 
+       (.I0(gpio_out_t_n[26]),
+        .O(GPIO_T[26]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[27]_INST_0 
+       (.I0(gpio_out_t_n[27]),
+        .O(GPIO_T[27]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[28]_INST_0 
+       (.I0(gpio_out_t_n[28]),
+        .O(GPIO_T[28]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[29]_INST_0 
+       (.I0(gpio_out_t_n[29]),
+        .O(GPIO_T[29]));
   LUT1 #(
     .INIT(2'h1)) 
     \GPIO_T[2]_INST_0 
@@ -3676,9 +3762,109 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
         .O(GPIO_T[2]));
   LUT1 #(
     .INIT(2'h1)) 
+    \GPIO_T[30]_INST_0 
+       (.I0(gpio_out_t_n[30]),
+        .O(GPIO_T[30]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[31]_INST_0 
+       (.I0(gpio_out_t_n[31]),
+        .O(GPIO_T[31]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[32]_INST_0 
+       (.I0(gpio_out_t_n[32]),
+        .O(GPIO_T[32]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[33]_INST_0 
+       (.I0(gpio_out_t_n[33]),
+        .O(GPIO_T[33]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[34]_INST_0 
+       (.I0(gpio_out_t_n[34]),
+        .O(GPIO_T[34]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[35]_INST_0 
+       (.I0(gpio_out_t_n[35]),
+        .O(GPIO_T[35]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[36]_INST_0 
+       (.I0(gpio_out_t_n[36]),
+        .O(GPIO_T[36]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[37]_INST_0 
+       (.I0(gpio_out_t_n[37]),
+        .O(GPIO_T[37]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[38]_INST_0 
+       (.I0(gpio_out_t_n[38]),
+        .O(GPIO_T[38]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[39]_INST_0 
+       (.I0(gpio_out_t_n[39]),
+        .O(GPIO_T[39]));
+  LUT1 #(
+    .INIT(2'h1)) 
     \GPIO_T[3]_INST_0 
        (.I0(gpio_out_t_n[3]),
         .O(GPIO_T[3]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[40]_INST_0 
+       (.I0(gpio_out_t_n[40]),
+        .O(GPIO_T[40]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[41]_INST_0 
+       (.I0(gpio_out_t_n[41]),
+        .O(GPIO_T[41]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[42]_INST_0 
+       (.I0(gpio_out_t_n[42]),
+        .O(GPIO_T[42]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[43]_INST_0 
+       (.I0(gpio_out_t_n[43]),
+        .O(GPIO_T[43]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[44]_INST_0 
+       (.I0(gpio_out_t_n[44]),
+        .O(GPIO_T[44]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[45]_INST_0 
+       (.I0(gpio_out_t_n[45]),
+        .O(GPIO_T[45]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[46]_INST_0 
+       (.I0(gpio_out_t_n[46]),
+        .O(GPIO_T[46]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[47]_INST_0 
+       (.I0(gpio_out_t_n[47]),
+        .O(GPIO_T[47]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[48]_INST_0 
+       (.I0(gpio_out_t_n[48]),
+        .O(GPIO_T[48]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[49]_INST_0 
+       (.I0(gpio_out_t_n[49]),
+        .O(GPIO_T[49]));
   LUT1 #(
     .INIT(2'h1)) 
     \GPIO_T[4]_INST_0 
@@ -3686,9 +3872,99 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
         .O(GPIO_T[4]));
   LUT1 #(
     .INIT(2'h1)) 
+    \GPIO_T[50]_INST_0 
+       (.I0(gpio_out_t_n[50]),
+        .O(GPIO_T[50]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[51]_INST_0 
+       (.I0(gpio_out_t_n[51]),
+        .O(GPIO_T[51]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[52]_INST_0 
+       (.I0(gpio_out_t_n[52]),
+        .O(GPIO_T[52]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[53]_INST_0 
+       (.I0(gpio_out_t_n[53]),
+        .O(GPIO_T[53]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[54]_INST_0 
+       (.I0(gpio_out_t_n[54]),
+        .O(GPIO_T[54]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[55]_INST_0 
+       (.I0(gpio_out_t_n[55]),
+        .O(GPIO_T[55]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[56]_INST_0 
+       (.I0(gpio_out_t_n[56]),
+        .O(GPIO_T[56]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[57]_INST_0 
+       (.I0(gpio_out_t_n[57]),
+        .O(GPIO_T[57]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[58]_INST_0 
+       (.I0(gpio_out_t_n[58]),
+        .O(GPIO_T[58]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[59]_INST_0 
+       (.I0(gpio_out_t_n[59]),
+        .O(GPIO_T[59]));
+  LUT1 #(
+    .INIT(2'h1)) 
     \GPIO_T[5]_INST_0 
        (.I0(gpio_out_t_n[5]),
         .O(GPIO_T[5]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[60]_INST_0 
+       (.I0(gpio_out_t_n[60]),
+        .O(GPIO_T[60]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[61]_INST_0 
+       (.I0(gpio_out_t_n[61]),
+        .O(GPIO_T[61]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[62]_INST_0 
+       (.I0(gpio_out_t_n[62]),
+        .O(GPIO_T[62]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[63]_INST_0 
+       (.I0(gpio_out_t_n[63]),
+        .O(GPIO_T[63]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[6]_INST_0 
+       (.I0(gpio_out_t_n[6]),
+        .O(GPIO_T[6]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[7]_INST_0 
+       (.I0(gpio_out_t_n[7]),
+        .O(GPIO_T[7]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[8]_INST_0 
+       (.I0(gpio_out_t_n[8]),
+        .O(GPIO_T[8]));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \GPIO_T[9]_INST_0 
+       (.I0(gpio_out_t_n[9]),
+        .O(GPIO_T[9]));
   LUT1 #(
     .INIT(2'h1)) 
     I2C0_SCL_T_INST_0
@@ -3819,9 +4095,9 @@ module Arty_Z7_20_processing_system7_0_0_processing_system7_v5_5_processing_syst
         .EMIOENET1PTPSYNCFRAMETX(ENET1_PTP_SYNC_FRAME_TX),
         .EMIOENET1SOFRX(ENET1_SOF_RX),
         .EMIOENET1SOFTX(ENET1_SOF_TX),
-        .EMIOGPIOI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,GPIO_I}),
-        .EMIOGPIOO({NLW_PS7_i_EMIOGPIOO_UNCONNECTED[63:6],GPIO_O}),
-        .EMIOGPIOTN({NLW_PS7_i_EMIOGPIOTN_UNCONNECTED[63:6],gpio_out_t_n}),
+        .EMIOGPIOI(GPIO_I),
+        .EMIOGPIOO(GPIO_O),
+        .EMIOGPIOTN(gpio_out_t_n),
         .EMIOI2C0SCLI(I2C0_SCL_I),
         .EMIOI2C0SCLO(I2C0_SCL_O),
         .EMIOI2C0SCLTN(I2C0_SCL_T_n),

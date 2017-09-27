@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
 // Date        : Mon Sep 25 22:09:56 2017
 // Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s01_data_fifo_0/Arty_Z7_20_s01_data_fifo_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Arty_Z7_20_s01_data_fifo_0 -prefix
+//               Arty_Z7_20_s01_data_fifo_0_ Arty_Z7_20_s01_data_fifo_0_stub.v
 // Design      : Arty_Z7_20_s01_data_fifo_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

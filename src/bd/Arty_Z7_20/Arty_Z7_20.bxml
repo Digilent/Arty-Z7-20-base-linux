@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="Arty_Z7_20" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1506402261"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1506402261"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1506402261"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1506553560"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1506553560"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1506553560"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Arty_Z7_20_axi_dynclk_0_0\Arty_Z7_20_axi_dynclk_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dynclk_0"/>
@@ -32,14 +32,6 @@
       </File>
       <File Name="ip\Arty_Z7_20_axi_gpio_shield_1_0\Arty_Z7_20_axi_gpio_shield_1_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_shield_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_axi_gpio_shield_2_0\Arty_Z7_20_axi_gpio_shield_2_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_gpio_shield_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -270,88 +262,14 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_12\Arty_Z7_20_auto_pc_12.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m11_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+      <File Name="hdl\Arty_Z7_20.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_11\Arty_Z7_20_auto_pc_11.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m10_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_10\Arty_Z7_20_auto_pc_10.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m09_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_9\Arty_Z7_20_auto_pc_9.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m08_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_8\Arty_Z7_20_auto_pc_8.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m07_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_7\Arty_Z7_20_auto_pc_7.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m06_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_6\Arty_Z7_20_auto_pc_6.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m05_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_5\Arty_Z7_20_auto_pc_5.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m04_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_4\Arty_Z7_20_auto_pc_4.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m03_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_3\Arty_Z7_20_auto_pc_3.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m02_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_2\Arty_Z7_20_auto_pc_2.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m01_couplers/auto_pc"/>
+      <File Name="ip\Arty_Z7_20_PWM_0_0\Arty_Z7_20_PWM_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PWM_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -359,14 +277,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Arty_Z7_20_auto_pc_1\Arty_Z7_20_auto_pc_1.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/m00_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Arty_Z7_20_auto_pc_13\Arty_Z7_20_auto_pc_13.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0_axi_periph/s00_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -412,12 +322,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hdl\Arty_Z7_20.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="Arty_Z7_20_ooc.xdc" Type="XDC">

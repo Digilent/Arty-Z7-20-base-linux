@@ -56,9 +56,6 @@
 `timescale 1ns/1ps
 
 module Arty_Z7_20_processing_system7_0_0 (
-GPIO_I, 
-GPIO_O, 
-GPIO_T, 
 I2C0_SDA_I, 
 I2C0_SDA_O, 
 I2C0_SDA_T, 
@@ -85,8 +82,6 @@ SPI0_SS_O,
 SPI0_SS1_O, 
 SPI0_SS2_O, 
 SPI0_SS_T, 
-UART1_TX, 
-UART1_RX, 
 USB0_PORT_INDCTL, 
 USB0_VBUS_PWRSELECT, 
 USB0_VBUS_PWRFAULT, 
@@ -202,9 +197,6 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-input [5 : 0] GPIO_I;
-output [5 : 0] GPIO_O;
-output [5 : 0] GPIO_T;
 input I2C0_SDA_I;
 output I2C0_SDA_O;
 output I2C0_SDA_T;
@@ -231,8 +223,6 @@ output SPI0_SS_O;
 output SPI0_SS1_O;
 output SPI0_SS2_O;
 output SPI0_SS_T;
-output UART1_TX;
-input UART1_RX;
 output [1 : 0] USB0_PORT_INDCTL;
 output USB0_VBUS_PWRSELECT;
 input USB0_VBUS_PWRFAULT;
@@ -365,7 +355,7 @@ input PS_PORB;
     .C_HIGH_OCM_EN(0),
     .C_FCLK_CLK0_FREQ(100.0),
     .C_FCLK_CLK1_FREQ(118.181816),
-    .C_FCLK_CLK2_FREQ(76.92308),
+    .C_FCLK_CLK2_FREQ(75.0),
     .C_FCLK_CLK3_FREQ(50.0),
 	.C_M_AXI_GP0_ENABLE_STATIC_REMAP(0),
 	.C_M_AXI_GP1_ENABLE_STATIC_REMAP(0),

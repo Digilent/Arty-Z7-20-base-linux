@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
 // Date        : Mon Sep 25 22:09:16 2017
 // Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_s00_regslice_0/Arty_Z7_20_s00_regslice_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Arty_Z7_20_s00_regslice_0 -prefix
+//               Arty_Z7_20_s00_regslice_0_ Arty_Z7_20_s00_regslice_0_sim_netlist.v
 // Design      : Arty_Z7_20_s00_regslice_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -367,7 +367,6 @@ endmodule
 (* G_AXI_WID_INDEX = "73" *) (* G_AXI_WID_WIDTH = "0" *) (* G_AXI_WLAST_INDEX = "72" *) 
 (* G_AXI_WLAST_WIDTH = "1" *) (* G_AXI_WPAYLOAD_WIDTH = "73" *) (* G_AXI_WSTRB_INDEX = "64" *) 
 (* G_AXI_WSTRB_WIDTH = "8" *) (* G_AXI_WUSER_INDEX = "73" *) (* G_AXI_WUSER_WIDTH = "0" *) 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_13_axi_register_slice" *) 
 module Arty_Z7_20_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice
    (aclk,
     aresetn,

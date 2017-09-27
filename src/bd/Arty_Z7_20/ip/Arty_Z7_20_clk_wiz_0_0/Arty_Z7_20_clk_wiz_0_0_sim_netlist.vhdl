@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
--- Date        : Mon Sep 25 22:06:23 2017
+-- Date        : Wed Sep 27 16:06:44 2017
 -- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_clk_wiz_0_0/Arty_Z7_20_clk_wiz_0_0_sim_netlist.vhdl
@@ -18,7 +18,7 @@ entity Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -32,6 +32,7 @@ architecture STRUCTURE of Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz 
   signal clk_out2_Arty_Z7_20_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_Arty_Z7_20_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_Arty_Z7_20_clk_wiz_0_0 : STD_LOGIC;
+  signal reset_high : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
@@ -129,7 +130,15 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       DWE => '0',
       LOCKED => locked,
       PWRDWN => '0',
-      RST => reset
+      RST => reset_high
+    );
+plle2_adv_inst_i_1: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => resetn,
+      O => reset_high
     );
 end STRUCTURE;
 library IEEE;
@@ -140,7 +149,7 @@ entity Arty_Z7_20_clk_wiz_0_0 is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    reset : in STD_LOGIC;
+    resetn : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -156,6 +165,6 @@ inst: entity work.Arty_Z7_20_clk_wiz_0_0_Arty_Z7_20_clk_wiz_0_0_clk_wiz
       clk_out1 => clk_out1,
       clk_out2 => clk_out2,
       locked => locked,
-      reset => reset
+      resetn => resetn
     );
 end STRUCTURE;
