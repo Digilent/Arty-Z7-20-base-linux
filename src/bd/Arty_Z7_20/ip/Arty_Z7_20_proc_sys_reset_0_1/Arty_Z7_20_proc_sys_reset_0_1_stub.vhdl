@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
--- Date        : Mon Sep 25 22:06:19 2017
--- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+-- Date        : Tue Mar 27 21:55:59 2018
+-- Host        : ubuntu running 64-bit Ubuntu 16.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_proc_sys_reset_0_1/Arty_Z7_20_proc_sys_reset_0_1_stub.vhdl
+--               /home/digilent/work/git/Arty-Z7-20-base-linux/src/bd/Arty_Z7_20/ip/Arty_Z7_20_proc_sys_reset_0_1/Arty_Z7_20_proc_sys_reset_0_1_stub.vhdl
 -- Design      : Arty_Z7_20_proc_sys_reset_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -34,6 +34,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "slowest_sync_clk,ext_reset_in,aux_reset_in,mb_debug_sys_rst,dcm_locked,mb_reset,bus_struct_reset[0:0],peripheral_reset[0:0],interconnect_aresetn[0:0],peripheral_aresetn[0:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2017.2.1";
+attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2017.4";
 begin
 end;

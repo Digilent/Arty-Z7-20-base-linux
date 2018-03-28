@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
---Date        : Wed Sep 27 16:05:44 2017
---Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+--Date        : Tue Mar 27 21:52:19 2018
+--Host        : ubuntu running 64-bit Ubuntu 16.04.3 LTS
 --Command     : generate_target Arty_Z7_20_wrapper.bd
 --Design      : Arty_Z7_20_wrapper
 --Purpose     : IP block netlist
@@ -13,6 +13,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Arty_Z7_20_wrapper is
   port (
+    DDC_In_scl_io : inout STD_LOGIC;
+    DDC_In_sda_io : inout STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -34,6 +36,9 @@ entity Arty_Z7_20_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    HDMI_DDC_scl_io : inout STD_LOGIC;
+    HDMI_DDC_sda_io : inout STD_LOGIC;
+    HDMI_HPD_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     TMDS_In_clk_n : in STD_LOGIC;
     TMDS_In_clk_p : in STD_LOGIC;
     TMDS_In_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -63,21 +68,16 @@ entity Arty_Z7_20_wrapper is
     Vp_Vn_v_n : in STD_LOGIC;
     Vp_Vn_v_p : in STD_LOGIC;
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    ddc_in_scl_io : inout STD_LOGIC;
-    ddc_in_sda_io : inout STD_LOGIC;
-    hdmi_ddc_scl_io : inout STD_LOGIC;
-    hdmi_ddc_sda_io : inout STD_LOGIC;
-    hdmi_hpd_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_in_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     rgbled : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    shield_IIC_scl_io : inout STD_LOGIC;
+    shield_IIC_sda_io : inout STD_LOGIC;
+    shield_SPI_io0_io : inout STD_LOGIC;
+    shield_SPI_io1_io : inout STD_LOGIC;
+    shield_SPI_sck_io : inout STD_LOGIC;
+    shield_SPI_ss_io : inout STD_LOGIC;
     shield_dp0_dp13_tri_io : inout STD_LOGIC_VECTOR ( 13 downto 0 );
-    shield_iic_scl_io : inout STD_LOGIC;
-    shield_iic_sda_io : inout STD_LOGIC;
-    shield_spi_io0_io : inout STD_LOGIC;
-    shield_spi_io1_io : inout STD_LOGIC;
-    shield_spi_sck_io : inout STD_LOGIC;
-    shield_spi_ss_io : inout STD_LOGIC;
     sws_2bits_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sys_clock : in STD_LOGIC
   );
@@ -187,18 +187,18 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
     IO : inout STD_LOGIC
   );
   end component IOBUF;
-  signal ddc_in_scl_i : STD_LOGIC;
-  signal ddc_in_scl_o : STD_LOGIC;
-  signal ddc_in_scl_t : STD_LOGIC;
-  signal ddc_in_sda_i : STD_LOGIC;
-  signal ddc_in_sda_o : STD_LOGIC;
-  signal ddc_in_sda_t : STD_LOGIC;
-  signal hdmi_ddc_scl_i : STD_LOGIC;
-  signal hdmi_ddc_scl_o : STD_LOGIC;
-  signal hdmi_ddc_scl_t : STD_LOGIC;
-  signal hdmi_ddc_sda_i : STD_LOGIC;
-  signal hdmi_ddc_sda_o : STD_LOGIC;
-  signal hdmi_ddc_sda_t : STD_LOGIC;
+  signal DDC_In_scl_i : STD_LOGIC;
+  signal DDC_In_scl_o : STD_LOGIC;
+  signal DDC_In_scl_t : STD_LOGIC;
+  signal DDC_In_sda_i : STD_LOGIC;
+  signal DDC_In_sda_o : STD_LOGIC;
+  signal DDC_In_sda_t : STD_LOGIC;
+  signal HDMI_DDC_scl_i : STD_LOGIC;
+  signal HDMI_DDC_scl_o : STD_LOGIC;
+  signal HDMI_DDC_scl_t : STD_LOGIC;
+  signal HDMI_DDC_sda_i : STD_LOGIC;
+  signal HDMI_DDC_sda_o : STD_LOGIC;
+  signal HDMI_DDC_sda_t : STD_LOGIC;
   signal leds_4bits_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal leds_4bits_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal leds_4bits_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
@@ -215,6 +215,24 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
   signal leds_4bits_tri_t_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal leds_4bits_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal leds_4bits_tri_t_3 : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal shield_IIC_scl_i : STD_LOGIC;
+  signal shield_IIC_scl_o : STD_LOGIC;
+  signal shield_IIC_scl_t : STD_LOGIC;
+  signal shield_IIC_sda_i : STD_LOGIC;
+  signal shield_IIC_sda_o : STD_LOGIC;
+  signal shield_IIC_sda_t : STD_LOGIC;
+  signal shield_SPI_io0_i : STD_LOGIC;
+  signal shield_SPI_io0_o : STD_LOGIC;
+  signal shield_SPI_io0_t : STD_LOGIC;
+  signal shield_SPI_io1_i : STD_LOGIC;
+  signal shield_SPI_io1_o : STD_LOGIC;
+  signal shield_SPI_io1_t : STD_LOGIC;
+  signal shield_SPI_sck_i : STD_LOGIC;
+  signal shield_SPI_sck_o : STD_LOGIC;
+  signal shield_SPI_sck_t : STD_LOGIC;
+  signal shield_SPI_ss_i : STD_LOGIC;
+  signal shield_SPI_ss_o : STD_LOGIC;
+  signal shield_SPI_ss_t : STD_LOGIC;
   signal shield_dp0_dp13_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal shield_dp0_dp13_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal shield_dp0_dp13_tri_i_10 : STD_LOGIC_VECTOR ( 10 to 10 );
@@ -271,33 +289,15 @@ architecture STRUCTURE of Arty_Z7_20_wrapper is
   signal shield_dp0_dp13_tri_t_7 : STD_LOGIC_VECTOR ( 7 to 7 );
   signal shield_dp0_dp13_tri_t_8 : STD_LOGIC_VECTOR ( 8 to 8 );
   signal shield_dp0_dp13_tri_t_9 : STD_LOGIC_VECTOR ( 9 to 9 );
-  signal shield_iic_scl_i : STD_LOGIC;
-  signal shield_iic_scl_o : STD_LOGIC;
-  signal shield_iic_scl_t : STD_LOGIC;
-  signal shield_iic_sda_i : STD_LOGIC;
-  signal shield_iic_sda_o : STD_LOGIC;
-  signal shield_iic_sda_t : STD_LOGIC;
-  signal shield_spi_io0_i : STD_LOGIC;
-  signal shield_spi_io0_o : STD_LOGIC;
-  signal shield_spi_io0_t : STD_LOGIC;
-  signal shield_spi_io1_i : STD_LOGIC;
-  signal shield_spi_io1_o : STD_LOGIC;
-  signal shield_spi_io1_t : STD_LOGIC;
-  signal shield_spi_sck_i : STD_LOGIC;
-  signal shield_spi_sck_o : STD_LOGIC;
-  signal shield_spi_sck_t : STD_LOGIC;
-  signal shield_spi_ss_i : STD_LOGIC;
-  signal shield_spi_ss_o : STD_LOGIC;
-  signal shield_spi_ss_t : STD_LOGIC;
 begin
 Arty_Z7_20_i: component Arty_Z7_20
      port map (
-      DDC_In_scl_i => ddc_in_scl_i,
-      DDC_In_scl_o => ddc_in_scl_o,
-      DDC_In_scl_t => ddc_in_scl_t,
-      DDC_In_sda_i => ddc_in_sda_i,
-      DDC_In_sda_o => ddc_in_sda_o,
-      DDC_In_sda_t => ddc_in_sda_t,
+      DDC_In_scl_i => DDC_In_scl_i,
+      DDC_In_scl_o => DDC_In_scl_o,
+      DDC_In_scl_t => DDC_In_scl_t,
+      DDC_In_sda_i => DDC_In_sda_i,
+      DDC_In_sda_o => DDC_In_sda_o,
+      DDC_In_sda_t => DDC_In_sda_t,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -319,13 +319,13 @@ Arty_Z7_20_i: component Arty_Z7_20
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      HDMI_DDC_scl_i => hdmi_ddc_scl_i,
-      HDMI_DDC_scl_o => hdmi_ddc_scl_o,
-      HDMI_DDC_scl_t => hdmi_ddc_scl_t,
-      HDMI_DDC_sda_i => hdmi_ddc_sda_i,
-      HDMI_DDC_sda_o => hdmi_ddc_sda_o,
-      HDMI_DDC_sda_t => hdmi_ddc_sda_t,
-      HDMI_HPD_tri_i(0) => hdmi_hpd_tri_i(0),
+      HDMI_DDC_scl_i => HDMI_DDC_scl_i,
+      HDMI_DDC_scl_o => HDMI_DDC_scl_o,
+      HDMI_DDC_scl_t => HDMI_DDC_scl_t,
+      HDMI_DDC_sda_i => HDMI_DDC_sda_i,
+      HDMI_DDC_sda_o => HDMI_DDC_sda_o,
+      HDMI_DDC_sda_t => HDMI_DDC_sda_t,
+      HDMI_HPD_tri_i(0) => HDMI_HPD_tri_i(0),
       TMDS_In_clk_n => TMDS_In_clk_n,
       TMDS_In_clk_p => TMDS_In_clk_p,
       TMDS_In_data_n(2 downto 0) => TMDS_In_data_n(2 downto 0),
@@ -369,24 +369,24 @@ Arty_Z7_20_i: component Arty_Z7_20
       leds_4bits_tri_t(1) => leds_4bits_tri_t_1(1),
       leds_4bits_tri_t(0) => leds_4bits_tri_t_0(0),
       rgbled(5 downto 0) => rgbled(5 downto 0),
-      shield_IIC_scl_i => shield_iic_scl_i,
-      shield_IIC_scl_o => shield_iic_scl_o,
-      shield_IIC_scl_t => shield_iic_scl_t,
-      shield_IIC_sda_i => shield_iic_sda_i,
-      shield_IIC_sda_o => shield_iic_sda_o,
-      shield_IIC_sda_t => shield_iic_sda_t,
-      shield_SPI_io0_i => shield_spi_io0_i,
-      shield_SPI_io0_o => shield_spi_io0_o,
-      shield_SPI_io0_t => shield_spi_io0_t,
-      shield_SPI_io1_i => shield_spi_io1_i,
-      shield_SPI_io1_o => shield_spi_io1_o,
-      shield_SPI_io1_t => shield_spi_io1_t,
-      shield_SPI_sck_i => shield_spi_sck_i,
-      shield_SPI_sck_o => shield_spi_sck_o,
-      shield_SPI_sck_t => shield_spi_sck_t,
-      shield_SPI_ss_i => shield_spi_ss_i,
-      shield_SPI_ss_o => shield_spi_ss_o,
-      shield_SPI_ss_t => shield_spi_ss_t,
+      shield_IIC_scl_i => shield_IIC_scl_i,
+      shield_IIC_scl_o => shield_IIC_scl_o,
+      shield_IIC_scl_t => shield_IIC_scl_t,
+      shield_IIC_sda_i => shield_IIC_sda_i,
+      shield_IIC_sda_o => shield_IIC_sda_o,
+      shield_IIC_sda_t => shield_IIC_sda_t,
+      shield_SPI_io0_i => shield_SPI_io0_i,
+      shield_SPI_io0_o => shield_SPI_io0_o,
+      shield_SPI_io0_t => shield_SPI_io0_t,
+      shield_SPI_io1_i => shield_SPI_io1_i,
+      shield_SPI_io1_o => shield_SPI_io1_o,
+      shield_SPI_io1_t => shield_SPI_io1_t,
+      shield_SPI_sck_i => shield_SPI_sck_i,
+      shield_SPI_sck_o => shield_SPI_sck_o,
+      shield_SPI_sck_t => shield_SPI_sck_t,
+      shield_SPI_ss_i => shield_SPI_ss_i,
+      shield_SPI_ss_o => shield_SPI_ss_o,
+      shield_SPI_ss_t => shield_SPI_ss_t,
       shield_dp0_dp13_tri_i(13) => shield_dp0_dp13_tri_i_13(13),
       shield_dp0_dp13_tri_i(12) => shield_dp0_dp13_tri_i_12(12),
       shield_dp0_dp13_tri_i(11) => shield_dp0_dp13_tri_i_11(11),
@@ -432,33 +432,33 @@ Arty_Z7_20_i: component Arty_Z7_20
       sws_2bits_tri_i(1 downto 0) => sws_2bits_tri_i(1 downto 0),
       sys_clock => sys_clock
     );
-ddc_in_scl_iobuf: component IOBUF
+DDC_In_scl_iobuf: component IOBUF
      port map (
-      I => ddc_in_scl_o,
-      IO => ddc_in_scl_io,
-      O => ddc_in_scl_i,
-      T => ddc_in_scl_t
+      I => DDC_In_scl_o,
+      IO => DDC_In_scl_io,
+      O => DDC_In_scl_i,
+      T => DDC_In_scl_t
     );
-ddc_in_sda_iobuf: component IOBUF
+DDC_In_sda_iobuf: component IOBUF
      port map (
-      I => ddc_in_sda_o,
-      IO => ddc_in_sda_io,
-      O => ddc_in_sda_i,
-      T => ddc_in_sda_t
+      I => DDC_In_sda_o,
+      IO => DDC_In_sda_io,
+      O => DDC_In_sda_i,
+      T => DDC_In_sda_t
     );
-hdmi_ddc_scl_iobuf: component IOBUF
+HDMI_DDC_scl_iobuf: component IOBUF
      port map (
-      I => hdmi_ddc_scl_o,
-      IO => hdmi_ddc_scl_io,
-      O => hdmi_ddc_scl_i,
-      T => hdmi_ddc_scl_t
+      I => HDMI_DDC_scl_o,
+      IO => HDMI_DDC_scl_io,
+      O => HDMI_DDC_scl_i,
+      T => HDMI_DDC_scl_t
     );
-hdmi_ddc_sda_iobuf: component IOBUF
+HDMI_DDC_sda_iobuf: component IOBUF
      port map (
-      I => hdmi_ddc_sda_o,
-      IO => hdmi_ddc_sda_io,
-      O => hdmi_ddc_sda_i,
-      T => hdmi_ddc_sda_t
+      I => HDMI_DDC_sda_o,
+      IO => HDMI_DDC_sda_io,
+      O => HDMI_DDC_sda_i,
+      T => HDMI_DDC_sda_t
     );
 leds_4bits_tri_iobuf_0: component IOBUF
      port map (
@@ -487,6 +487,48 @@ leds_4bits_tri_iobuf_3: component IOBUF
       IO => leds_4bits_tri_io(3),
       O => leds_4bits_tri_i_3(3),
       T => leds_4bits_tri_t_3(3)
+    );
+shield_IIC_scl_iobuf: component IOBUF
+     port map (
+      I => shield_IIC_scl_o,
+      IO => shield_IIC_scl_io,
+      O => shield_IIC_scl_i,
+      T => shield_IIC_scl_t
+    );
+shield_IIC_sda_iobuf: component IOBUF
+     port map (
+      I => shield_IIC_sda_o,
+      IO => shield_IIC_sda_io,
+      O => shield_IIC_sda_i,
+      T => shield_IIC_sda_t
+    );
+shield_SPI_io0_iobuf: component IOBUF
+     port map (
+      I => shield_SPI_io0_o,
+      IO => shield_SPI_io0_io,
+      O => shield_SPI_io0_i,
+      T => shield_SPI_io0_t
+    );
+shield_SPI_io1_iobuf: component IOBUF
+     port map (
+      I => shield_SPI_io1_o,
+      IO => shield_SPI_io1_io,
+      O => shield_SPI_io1_i,
+      T => shield_SPI_io1_t
+    );
+shield_SPI_sck_iobuf: component IOBUF
+     port map (
+      I => shield_SPI_sck_o,
+      IO => shield_SPI_sck_io,
+      O => shield_SPI_sck_i,
+      T => shield_SPI_sck_t
+    );
+shield_SPI_ss_iobuf: component IOBUF
+     port map (
+      I => shield_SPI_ss_o,
+      IO => shield_SPI_ss_io,
+      O => shield_SPI_ss_i,
+      T => shield_SPI_ss_t
     );
 shield_dp0_dp13_tri_iobuf_0: component IOBUF
      port map (
@@ -585,47 +627,5 @@ shield_dp0_dp13_tri_iobuf_9: component IOBUF
       IO => shield_dp0_dp13_tri_io(9),
       O => shield_dp0_dp13_tri_i_9(9),
       T => shield_dp0_dp13_tri_t_9(9)
-    );
-shield_iic_scl_iobuf: component IOBUF
-     port map (
-      I => shield_iic_scl_o,
-      IO => shield_iic_scl_io,
-      O => shield_iic_scl_i,
-      T => shield_iic_scl_t
-    );
-shield_iic_sda_iobuf: component IOBUF
-     port map (
-      I => shield_iic_sda_o,
-      IO => shield_iic_sda_io,
-      O => shield_iic_sda_i,
-      T => shield_iic_sda_t
-    );
-shield_spi_io0_iobuf: component IOBUF
-     port map (
-      I => shield_spi_io0_o,
-      IO => shield_spi_io0_io,
-      O => shield_spi_io0_i,
-      T => shield_spi_io0_t
-    );
-shield_spi_io1_iobuf: component IOBUF
-     port map (
-      I => shield_spi_io1_o,
-      IO => shield_spi_io1_io,
-      O => shield_spi_io1_i,
-      T => shield_spi_io1_t
-    );
-shield_spi_sck_iobuf: component IOBUF
-     port map (
-      I => shield_spi_sck_o,
-      IO => shield_spi_sck_io,
-      O => shield_spi_sck_i,
-      T => shield_spi_sck_t
-    );
-shield_spi_ss_iobuf: component IOBUF
-     port map (
-      I => shield_spi_ss_o,
-      IO => shield_spi_ss_io,
-      O => shield_spi_ss_i,
-      T => shield_spi_ss_t
     );
 end STRUCTURE;

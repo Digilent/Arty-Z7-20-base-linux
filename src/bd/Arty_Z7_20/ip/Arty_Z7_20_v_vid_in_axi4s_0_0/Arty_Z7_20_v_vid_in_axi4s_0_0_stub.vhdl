@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
--- Date        : Mon Sep 25 22:07:36 2017
--- Host        : DESKTOP-9HMNAI5 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+-- Date        : Tue Mar 27 21:56:20 2018
+-- Host        : ubuntu running 64-bit Ubuntu 16.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/sam_work/git/digilent/Arty-Z7-20-base/src/bd/Arty_Z7_20/ip/Arty_Z7_20_v_vid_in_axi4s_0_0/Arty_Z7_20_v_vid_in_axi4s_0_0_stub.vhdl
+--               /home/digilent/work/git/Arty-Z7-20-base-linux/src/bd/Arty_Z7_20/ip/Arty_Z7_20_v_vid_in_axi4s_0_0/Arty_Z7_20_v_vid_in_axi4s_0_0_stub.vhdl
 -- Design      : Arty_Z7_20_v_vid_in_axi4s_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -52,6 +52,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "vid_io_in_clk,vid_io_in_ce,vid_io_in_reset,vid_active_video,vid_vblank,vid_hblank,vid_vsync,vid_hsync,vid_field_id,vid_data[23:0],aclk,aclken,aresetn,m_axis_video_tdata[23:0],m_axis_video_tvalid,m_axis_video_tready,m_axis_video_tuser,m_axis_video_tlast,fid,vtd_active_video,vtd_vblank,vtd_hblank,vtd_vsync,vtd_hsync,vtd_field_id,overflow,underflow,axis_enable";
 attribute X_CORE_INFO : string;
-attribute X_CORE_INFO of stub : architecture is "v_vid_in_axi4s_v4_0_6,Vivado 2017.2.1";
+attribute X_CORE_INFO of stub : architecture is "v_vid_in_axi4s_v4_0_7,Vivado 2017.4";
 begin
 end;
