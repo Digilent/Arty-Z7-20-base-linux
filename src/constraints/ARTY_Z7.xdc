@@ -64,7 +64,7 @@ set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports { shield
 set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { shield_SPI_sck_io }]; #IO_L19P_T3_35 Sch=ck_sck
 set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { shield_IIC_scl_io }]; #IO_L24N_T3_34 Sch=ck_scl
 set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { shield_IIC_sda_io }]; #IO_L24P_T3_34 Sch=ck_sda
-set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { shield_SPI_ss_io }]; #IO_L6P_T0_35 Sch=ck_ss
+set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { shield_SPI_ss_io }]; #IO_L6P_T0_35 Sch=ck_ss
 #set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { crypto_sda }]; #IO_25_35 Sch=crypto_sda
 #set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { hdmi_rx_cec }]; #IO_L13N_T2_MRCC_35 Sch=hdmi_rx_cec
 set_property -dict { PACKAGE_PIN P19   IOSTANDARD TMDS_33     } [get_ports { TMDS_In_clk_n }]; #IO_L13N_T2_MRCC_34 Sch=hdmi_rx_clk_n
